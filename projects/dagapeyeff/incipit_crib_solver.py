@@ -31,6 +31,7 @@ from cipher_lab.stats import (
 from projects.dagapeyeff.benchmarks import evaluate_against_competition
 from projects.dagapeyeff.cartographic_grid import read_diagonal_matrix_transpose
 from projects.dagapeyeff.corpus import get_digit_pairs, get_stripped_14x13_pairs
+from projects.dagapeyeff.two_square import pairs_to_coordinates
 from projects.dagapeyeff.two_square_annealer import (
     STANDARD_ALPHABET,
     TwoSquareAnnealer,
@@ -306,7 +307,7 @@ def run_incipit_crib_solver(
             seed=rng.randint(1, 1000000),
         )
         annealer.pairs = pairs
-        annealer.coords = [(annealer.row_map.get(p[0], 0), annealer.col_map.get(p[1], 0)) for p in pairs]
+        annealer.coords = pairs_to_coordinates(pairs)
         annealer._precompute_fixed_indices()
 
         # Seed initial state with pinned letters

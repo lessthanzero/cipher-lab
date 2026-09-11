@@ -37,6 +37,7 @@ from projects.dagapeyeff.kerckhoffs_defect import (
     apply_columnar_transposition_direction,
     get_standard_key_order,
 )
+from projects.dagapeyeff.two_square import pairs_to_coordinates
 from projects.dagapeyeff.two_square_annealer import (
     TwoSquareAnnealer,
     TwoSquareState,
@@ -157,13 +158,13 @@ def run_exact_14key_sweep(
     best_result: Optional[TranspositionSweepResult] = None
 
     for kw in EXACT_14_CANDIDATE_KEYS:
-        if (time.time() - start_time) >= (time_budget_secs - 5.0):
+        if (time.time() - start_time) >= time_budget_secs:
             break
 
         ranks = get_standard_key_order(kw)
 
         for geom_name, base_pairs, w, h in geometries:
-            if (time.time() - start_time) >= (time_budget_secs - 5.0):
+            if (time.time() - start_time) >= time_budget_secs:
                 break
 
             # Adapt key order to grid dimensions
@@ -181,7 +182,8 @@ def run_exact_14key_sweep(
 
             for direction in directions:
                 for order in orders:
-                    if (time.time() - start_time) >= (time_budget_secs - 5.0):
+                    remaining_s = time_budget_secs - (time.time() - start_time)
+                    if remaining_s <= 0.2:
                         break
 
                     combo_idx += 1
@@ -208,12 +210,13 @@ def run_exact_14key_sweep(
                     )
                     # Override pairs
                     annealer.pairs = t_pairs
-                    annealer.coords = [(annealer.row_map.get(p[0], 0), annealer.col_map.get(p[1], 0)) for p in t_pairs]
+                    annealer.coords = pairs_to_coordinates(t_pairs)
                     annealer._precompute_fixed_indices()
 
                     # Fast search burst
+                    burst_s = min(5.0, max(0.5, remaining_s))
                     chain_state = annealer.run_two_square_chain(
-                        duration_secs=5.0,
+                        duration_secs=burst_s,
                         initial_temp=20.0,
                         cooling_rate=0.9998,
                     )

@@ -159,12 +159,12 @@ def run_sequential_discovery(
     # Calculate sub-budgets dynamically
     budget_p1 = min(20.0, total_budget_mins * 0.25)
     budget_p2 = min(25.0, total_budget_mins * 0.30)
-    budget_p3 = max(5.0, total_budget_mins - budget_p1 - budget_p2)
+    budget_p3 = max(0.1, total_budget_mins - budget_p1 - budget_p2)
 
     # -------------------------------------------------------------
     # PHASE 1: Exact 14-Key Sweep
     # -------------------------------------------------------------
-    print("\n>>> LAUNCHING PHASE 1: EXACT 14-KEY DOUBLE TRANSPOSITION SWEEP")
+    print("\n>>> LAUNCHING PHASE 1: EXACT 14-KEY DOUBLE TRANSPOSITION SWEEP", flush=True)
     t0 = time.time()
     p1_results = run_exact_14key_sweep(
         data_dir=data_dir,
@@ -172,14 +172,14 @@ def run_sequential_discovery(
         seed=seed,
     )
     elapsed_p1 = (time.time() - t0) / 60.0
-    print(f">>> PHASE 1 FINISHED in {elapsed_p1:.2f} mins.")
+    print(f">>> PHASE 1 FINISHED in {elapsed_p1:.2f} mins.", flush=True)
 
     # -------------------------------------------------------------
     # PHASE 2: Incipit Crib Constraint Solver
     # -------------------------------------------------------------
-    remaining_mins = max(5.0, (total_budget_secs - (time.time() - start_time)) / 60.0)
-    actual_p2_budget = min(budget_p2, remaining_mins - 10.0)
-    print(f"\n>>> LAUNCHING PHASE 2: INCIPIT CRIB CONSTRAINT ENGINE (Budget: {actual_p2_budget:.1f} mins)")
+    remaining_mins = max(0.1, (total_budget_secs - (time.time() - start_time)) / 60.0)
+    actual_p2_budget = min(budget_p2, remaining_mins * 0.45)
+    print(f"\n>>> LAUNCHING PHASE 2: INCIPIT CRIB CONSTRAINT ENGINE (Budget: {actual_p2_budget:.1f} mins)", flush=True)
     t0 = time.time()
     run_incipit_crib_solver(
         data_dir=data_dir,
@@ -187,13 +187,13 @@ def run_sequential_discovery(
         seed=seed + 1,
     )
     elapsed_p2 = (time.time() - t0) / 60.0
-    print(f">>> PHASE 2 FINISHED in {elapsed_p2:.2f} mins.")
+    print(f">>> PHASE 2 FINISHED in {elapsed_p2:.2f} mins.", flush=True)
 
     # -------------------------------------------------------------
     # PHASE 3: Deep Annealing Run
     # -------------------------------------------------------------
-    remaining_mins = max(5.0, (total_budget_secs - (time.time() - start_time)) / 60.0)
-    print(f"\n>>> LAUNCHING PHASE 3: DEEP MULTI-CHAIN ANNEALING (Budget: {remaining_mins:.1f} mins)")
+    remaining_mins = max(0.1, (total_budget_secs - (time.time() - start_time)) / 60.0)
+    print(f"\n>>> LAUNCHING PHASE 3: DEEP MULTI-CHAIN ANNEALING (Budget: {remaining_mins:.1f} mins)", flush=True)
     t0 = time.time()
     run_deep_annealing_phase(
         data_dir=data_dir,
@@ -201,7 +201,7 @@ def run_sequential_discovery(
         seed=seed + 2,
     )
     elapsed_p3 = (time.time() - t0) / 60.0
-    print(f">>> PHASE 3 FINISHED in {elapsed_p3:.2f} mins.")
+    print(f">>> PHASE 3 FINISHED in {elapsed_p3:.2f} mins.", flush=True)
 
     # -------------------------------------------------------------
     # Final Campaign Ledger Audit
