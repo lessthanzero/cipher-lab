@@ -70,7 +70,7 @@ def run_competitive_discovery(
 
     # 0. Engage OpenAI GPT-6 Astra for Hypothesis Seeding
     print("\n[+] STEP 0: Engaging OpenAI GPT-6 Astra Advisor for Cartographic & Nihilist Seeding...")
-    astra_seeds = query_astra_cartographic_nihilist(model=model_name, timeout_secs=45.0)
+    astra_seeds = query_astra_cartographic_nihilist(model=model_name, timeout_secs=60.0)
     print(f"[*] Astra Analysis: {astra_seeds.get('nihilist_analysis', astra_seeds.get('hypotheses_summary'))}")
     
     keywords_pool = astra_seeds.get("seed_polybius_keywords", [
