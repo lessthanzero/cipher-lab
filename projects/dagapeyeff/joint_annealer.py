@@ -16,6 +16,7 @@ from typing import Any, Dict, List, Optional, Tuple
 from cipher_lab.loop import CipherDiscoveryLoop
 from cipher_lab.stats import QuadgramScorer
 from projects.dagapeyeff.benchmarks import evaluate_against_competition
+from projects.dagapeyeff.cartographic_corpus import calculate_cartographic_lexical_bonus
 from projects.dagapeyeff.corpus import (
     get_digit_pairs,
     get_payload_digits,
@@ -55,13 +56,15 @@ class JointDagapeyeffAnnealer:
 
     def __init__(
         self,
-        grid_mode: str = "14x14",
+        grid_mode: str = "14x13_stripped",
         language: str = "english",
-        seed_keyword: str = "SCHUVALOF",
+        seed_keyword: str = "NIHILIST",
+        lexical_bonus_weight: float = 0.15,
         seed: int = 42,
     ) -> None:
         self.grid_mode = grid_mode
         self.language = language
+        self.lexical_bonus_weight = lexical_bonus_weight
         self.rng = random.Random(seed)
         self.scorer = QuadgramScorer(language=language)
         
@@ -162,7 +165,15 @@ class JointDagapeyeffAnnealer:
         new_pt = self._decode(t_pairs, new_alpha)
         new_q = self.scorer.score_total(new_pt)
 
-        delta = new_q - current_state.score_q
+        # Calculate guided score if lexical bonus enabled
+        if self.lexical_bonus_weight > 0.0:
+            cur_lex = calculate_cartographic_lexical_bonus(current_state.candidate_pt)
+            new_lex = calculate_cartographic_lexical_bonus(new_pt)
+            cur_guided = current_state.score_q + (self.lexical_bonus_weight * cur_lex)
+            new_guided = new_q + (self.lexical_bonus_weight * new_lex)
+            delta = new_guided - cur_guided
+        else:
+            delta = new_q - current_state.score_q
 
         # Acceptance check
         accept = False

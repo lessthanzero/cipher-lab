@@ -13,10 +13,17 @@ import time
 from pathlib import Path
 
 from cipher_lab.loop import CipherDiscoveryLoop
-from cipher_lab.stats import QuadgramScorer
-
-from projects.dagapeyeff.astra_advisor import query_astra_advisor
+from projects.dagapeyeff.astra_advisor import (
+    query_astra_advisor,
+    query_astra_cartographic_nihilist,
+)
 from projects.dagapeyeff.benchmarks import evaluate_against_competition
+from projects.dagapeyeff.cartographic_corpus import (
+    DIAGNOSTIC_ROOTS,
+    NIHILIST_INDICATOR_TERMS,
+    ORDNANCE_SURVEY_TERMS,
+    calculate_cartographic_lexical_bonus,
+)
 from projects.dagapeyeff.corpus import (
     get_digit_pairs,
     get_payload_digits,
@@ -59,15 +66,16 @@ def run_competitive_discovery(
     print("=" * 80)
 
     # 0. Engage OpenAI GPT-6 Astra for Hypothesis Seeding
-    print("\n[+] STEP 0: Engaging OpenAI GPT-6 Astra Advisor for Hypothesis Seeding...")
-    astra_seeds = query_astra_advisor(model=model_name, timeout_secs=45.0)
-    print(f"[*] Astra Hypotheses Summary: {astra_seeds.get('hypotheses_summary')}")
+    print("\n[+] STEP 0: Engaging OpenAI GPT-6 Astra Advisor for Cartographic & Nihilist Seeding...")
+    astra_seeds = query_astra_cartographic_nihilist(model=model_name, timeout_secs=45.0)
+    print(f"[*] Astra Analysis: {astra_seeds.get('nihilist_analysis', astra_seeds.get('hypotheses_summary'))}")
     
-    russian_keywords = astra_seeds.get("seed_polybius_keywords", [
-        "SCHUVALOF", "SCHUVALOV", "AGAPEYEFF", "AGAPYEV", "ROSSIYA",
-        "KARTOGRAFIYA", "MOSKVA", "PETROGRAD", "TOPOGRAF", "CAMOUFLAGE",
+    keywords_pool = astra_seeds.get("seed_polybius_keywords", [
+        "NIHILIST", "NIHIL", "SCHUVALOF", "SCHUWALOW", "ORDNANCESURVEY",
+        "RETRIANGULATION", "CASSINI", "TRIGPOINT", "BENCHMARK",
+        "KARTOGRAFIYA", "TOPOGRAFIYA", "AGAPEYEFF", "ROSSIYA",
     ])
-    print(f"[*] Seeded Keywords ({len(russian_keywords)}): {', '.join(russian_keywords[:6])}...")
+    print(f"[*] Seeded Keywords ({len(keywords_pool)}): {', '.join(keywords_pool[:8])}...")
     if astra_seeds.get("candidate_cribs"):
         print(f"[*] Candidate Cribs: {', '.join(astra_seeds.get('candidate_cribs')[:5])}...")
 
@@ -160,43 +168,47 @@ def run_competitive_discovery(
     print("\n[+] MODULE D: Russian Nihilist Keywords & Slavic Transliteration Sweeps...")
     ru_scorer = QuadgramScorer(language="russian_translit")
 
-    for kw in russian_keywords:
+    for kw in keywords_pool[:12]:
         if loop.is_time_exhausted():
             break
 
         alpha = make_polybius_alphabet(kw)
         kw_engine = KerckhoffsEngine(key_alphabet=alpha)
         
-        # Test direct reading with Russian keyword square
+        # Test direct reading with keyword square
         pt_kw = kw_engine.decode_pair_stream(pairs_196)
         ru_score_kw = ru_scorer.score(pt_kw)
         loop.evaluate_candidate(
-            hypothesis_name=f"H_russian_kw_{kw}",
+            hypothesis_name=f"H_nihilist_kw_{kw}",
             key_class="russian_nihilist_keyword",
-            key_desc=f"Polybius square with Russian keyword '{kw}' (ru_score={ru_score_kw:.2f})",
+            key_desc=f"Polybius square with keyword '{kw}' (ru_score={ru_score_kw:.2f})",
             candidate_pt=pt_kw,
         )
 
-    # 6. Module E: High-Throughput Joint Simulated Annealing Engine
+    # 6. Module E: High-Throughput Cartographic Guided Annealing Engine
     if enable_joint_annealing:
-        print("\n[+] MODULE E: High-Throughput Joint Simulated Annealing Engine (~16k trials/s)...")
-        print("    Searching joint spaces: [Pair-Transposition Keys] x [5x5 Polybius Alphabets]")
+        print("\n[+] MODULE E: Cartographic Dictionary-Guided Annealing on 14x13 (~16k trials/s)...")
+        print("    Targeting 14x13 Grid (182 pairs) with Ordnance Survey & Nihilist Lexical Guidance")
         
-        modes = ["pos97_corrected", "14x13_stripped", "14x14"]
-        languages = ["english", "russian_translit"]
+        # 75% 14x13_stripped, 15% pos97_corrected, 10% 14x14 controls
+        modes = [
+            "14x13_stripped", "14x13_stripped", "14x13_stripped",
+            "pos97_corrected", "14x14", "14x13_stripped",
+        ]
+        languages = ["english", "english", "russian_translit"]
         chain_idx = 0
 
         while not loop.is_time_exhausted():
             chain_idx += 1
             mode = modes[(chain_idx - 1) % len(modes)]
             lang = languages[(chain_idx - 1) % len(languages)]
-            seed_kw = rng.choice(russian_keywords)
+            seed_kw = rng.choice(keywords_pool)
 
             remaining_s = loop.time_budget_secs - (time.time() - loop.start_time)
             if remaining_s <= 5:
                 break
             
-            chain_duration = min(60.0, remaining_s)
+            chain_duration = min(120.0, remaining_s)
             elapsed_m = (time.time() - loop.start_time) / 60.0
             print(f"\n  [*] Annealing Chain {chain_idx} [{elapsed_m:.2f}/{time_budget_mins:.1f}m]: mode={mode}, lang={lang}, seed_kw={seed_kw}, budget={chain_duration:.0f}s")
             
@@ -204,6 +216,7 @@ def run_competitive_discovery(
                 grid_mode=mode,
                 language=lang,
                 seed_keyword=seed_kw,
+                lexical_bonus_weight=0.20,
                 seed=rng.randint(1, 100000),
             )
             
@@ -214,10 +227,13 @@ def run_competitive_discovery(
                 loop=loop,
             )
 
+            # Check for emergent cartographic or Nihilist keywords
+            matched_terms = [t for t in ORDNANCE_SURVEY_TERMS + NIHILIST_INDICATOR_TERMS if t in best_chain_state.candidate_pt]
+
             # Evaluate best candidate from this chain
             eval_res = loop.evaluate_candidate(
-                hypothesis_name=f"H_joint_sa_{mode}_{lang}_c{chain_idx}",
-                key_class=f"joint_sa_{mode}",
+                hypothesis_name=f"H_carto_sa_{mode}_{lang}_c{chain_idx}",
+                key_class=f"carto_guided_{mode}",
                 key_desc=f"Annealed {lang} (Q={best_chain_state.score_q:.1f}), Alpha={best_chain_state.alphabet[:8]}...",
                 candidate_pt=best_chain_state.candidate_pt,
             )
@@ -230,6 +246,8 @@ def run_competitive_discovery(
                 len(best_chain_state.candidate_pt),
             )
             print(f"      Chain Result: Q={total_q:.1f} (Marland Record: {comp['marland_record_q']}), chi_sq={comp['candidate_chi_sq']:.1f}, status={comp['competition_status']}")
+            if matched_terms:
+                print(f"      [!] Emergent Cartographic / Nihilist Matches: {matched_terms}")
             print(f"      Plaintext Preview: \"{best_chain_state.candidate_pt[:60]}...\"")
 
     # Final Checkpointing & Statistics
@@ -256,7 +274,7 @@ def run_competitive_discovery(
 
 def main() -> None:
     parser = argparse.ArgumentParser(description="D'Agapeyeff Autonomous Competitive Discovery Runner")
-    parser.add_argument("--time-budget-mins", default=30.0, type=float, help="Wall-clock time budget in minutes")
+    parser.add_argument("--time-budget-mins", default=120.0, type=float, help="Wall-clock time budget in minutes")
     parser.add_argument("--iterations", default=25, type=int, help="Iterations per module")
     parser.add_argument("--enable-joint-annealing", action="store_true", default=True, help="Enable joint simulated annealing")
     parser.add_argument("--model", default="gpt-6-astra", type=str, help="LLM referee and advisor model")

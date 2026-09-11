@@ -124,21 +124,58 @@ def query_astra_advisor(
     return _fallback_seeds()
 
 
+def query_astra_cartographic_nihilist(
+    model: str = "gpt-6-astra",
+    timeout_secs: float = 60.0,
+) -> Dict[str, Any]:
+    """Query OpenAI GPT-6 Astra specifically focusing on the NIHILIST and 1939 Ordnance Survey hypothesis."""
+    prompt = """
+SPECIFIC OBSERVATION & INQUIRY:
+In our computational discovery run on the 14x13 stripped grid (182 pairs), a top candidate decryption produced the string:
+"...SOATERNIHLLRL..."
+The researcher noticed that 'NIHLL' is phonetically and orthographically very close to 'NIHIL' / 'NIHILIST'.
+In 'Codes and Ciphers' (1939), Alexander D'Agapeyeff explicitly introduces the Russian Nihilist cipher immediately alongside the challenge cipher, using a worked example of Count Peter Shuvalov ('SCHUVALOF').
+Simultaneously, D'Agapeyeff was a professional cartographer writing 'Maps' (Oxford University Press) discussing the 1939 British Ordnance Survey Retriangulation (Martin Hotine), Cassini projection, trig points, and grid references.
+
+QUESTIONS FOR ASTRA:
+1. Could 'NIHILIST' or 'NIHIL' serve as a key, preamble, or indicator word in this cipher?
+2. What are the most probable 1939 British Ordnance Survey coordinate phrases, sheet notations, or map scale formulas?
+3. Propose 10-15 targeted compound keywords and crib phrases combining 'NIHILIST' and 1939 British cartography for a 2-hour simulated annealing run on the 14x13 grid.
+
+Respond in valid JSON:
+{
+  "nihilist_analysis": "Assessment of NIHLL / Nihilist connection",
+  "seed_polybius_keywords": [
+    "NIHILIST", "ORDNANCESURVEY", ... (12-16 keywords)
+  ],
+  "candidate_cribs": [
+    "CRIB1", "CRIB2", ... (10-15 authentic cartographic & Nihilist crib phrases)
+  ],
+  "structural_suggestions": [
+    "suggestion 1", "suggestion 2"
+  ]
+}
+"""
+    return query_astra_advisor(prompt=prompt, model=model, timeout_secs=timeout_secs)
+
+
 def _fallback_seeds() -> Dict[str, Any]:
     """Deterministic fallback seeds if Astra is offline or times out."""
     return {
         "hypotheses_summary": "Fallback seeds derived from D'Agapeyeff's worked example and Russian cartographic origin.",
         "seed_polybius_keywords": [
-            "SCHUVALOF", "SCHUVALOV", "AGAPEYEFF", "AGAPYEV", "ROSSIYA",
-            "KARTOGRAFIYA", "MOSKVA", "PETROGRAD", "TOPOGRAF", "CAMOUFLAGE",
-            "NIHILIST", "KERCKHOFFS", "MAPSECTION", "TRIANGULATION",
+            "NIHILIST", "NIHIL", "SCHUVALOF", "SCHUWALOW", "ORDNANCESURVEY",
+            "RETRIANGULATION", "CASSINI", "TRIGPOINT", "BENCHMARK",
+            "KARTOGRAFIYA", "TOPOGRAFIYA", "AGAPEYEFF", "ROSSIYA",
+            "MAPSECTION", "TRIANGULATION", "COUNTRYSIDE",
         ],
         "candidate_cribs": [
-            "KARTOGRAFIYA", "SEKRETNO", "SCHUVALOF", "POSITION", "LATITUDE",
-            "LONGITUDE", "COORDINATES", "SEVER", "VOSTOK",
+            "NIHILIST", "ORDNANCE SURVEY", "RETRIANGULATION", "ONE INCH MAP",
+            "SHEET NUMBER", "GRID REFERENCE", "CONTOUR LINES", "TRUE NORTH",
+            "MAGNETIC NORTH", "DEGREES MINUTES", "SCALE OF MAP",
         ],
         "structural_suggestions": [
-            "Test 14th column removal (182 pairs) with SCHUVALOF keyword alphabet.",
-            "Apply Pos 97 correction 04 -> 75 alongside Russian transliterated scoring.",
+            "Test 14th column removal (182 pairs) with NIHILIST / ORDNANCESURVEY keyword alphabet.",
+            "Apply lexical bonus for Ordnance Survey and Nihilist vocabulary roots.",
         ],
     }

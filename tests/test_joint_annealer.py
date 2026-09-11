@@ -36,3 +36,16 @@ def test_joint_annealer_short_chain():
     assert best_state is not None
     assert len(best_state.candidate_pt) == 196
     assert best_state.score_q > -3000.0
+
+from projects.dagapeyeff.cartographic_corpus import calculate_cartographic_lexical_bonus
+
+
+def test_cartographic_lexical_bonus():
+    # Coherent cartographic string
+    carto_str = "ORDNANCESURVEYSHEETNUMBERTENRETRIANGULATION"
+    random_str = "QZXJVKWPBFMZQZXJVKWPBFMZ"
+    assert calculate_cartographic_lexical_bonus(carto_str) > calculate_cartographic_lexical_bonus(random_str)
+
+    # Nihilist root matches
+    nihil_str = "SOMETHINGNIHILISTCIPHER"
+    assert calculate_cartographic_lexical_bonus(nihil_str) > 20.0
