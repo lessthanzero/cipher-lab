@@ -49,3 +49,32 @@ def test_cartographic_lexical_bonus():
     # Nihilist root matches
     nihil_str = "SOMETHINGNIHILISTCIPHER"
     assert calculate_cartographic_lexical_bonus(nihil_str) > 20.0
+
+
+def test_joint_annealer_additive_key():
+    # Test post-transposition additive key
+    ann_post = JointDagapeyeffAnnealer(
+        grid_mode="14x13_stripped",
+        language="english",
+        seed_keyword="NIHILIST",
+        additive_order="post_transposition",
+        initial_additive_keyword="SCHUVALOF",
+    )
+    assert ann_post.additive_order == "post_transposition"
+    assert ann_post.additive_key_period == 9
+    best_post = ann_post.run_annealing_chain(duration_secs=0.3)
+    assert best_post is not None
+    assert len(best_post.candidate_pt) == 182
+
+    # Test pre-transposition additive key
+    ann_pre = JointDagapeyeffAnnealer(
+        grid_mode="14x14",
+        language="english",
+        seed_keyword="ORDNANCESURVEY",
+        additive_order="pre_transposition",
+        additive_key_period=7,
+    )
+    assert ann_pre.additive_order == "pre_transposition"
+    best_pre = ann_pre.run_annealing_chain(duration_secs=0.3)
+    assert best_pre is not None
+    assert len(best_pre.candidate_pt) == 196

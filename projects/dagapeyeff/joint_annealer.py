@@ -23,6 +23,12 @@ from projects.dagapeyeff.corpus import (
     get_stripped_14x13_pairs,
 )
 from projects.dagapeyeff.kerckhoffs import KerckhoffsEngine
+from projects.dagapeyeff.nihilist_additive import (
+    coords_to_pairs,
+    derive_additive_key_from_keyword,
+    pairs_to_coords,
+    subtract_additive_key,
+)
 
 
 def make_polybius_alphabet(keyword: str) -> str:
@@ -49,10 +55,12 @@ class AnnealingState:
     score_q: float
     norm_score: float
     candidate_pt: str
+    additive_key: Optional[List[Tuple[int, int]]] = None
+    additive_order: str = "none"
 
 
 class JointDagapeyeffAnnealer:
-    """Jointly optimizes pair-stream transposition and Polybius square substitution."""
+    """Jointly optimizes pair-stream transposition, Polybius square substitution, and modular additive keys."""
 
     def __init__(
         self,
@@ -60,11 +68,16 @@ class JointDagapeyeffAnnealer:
         language: str = "english",
         seed_keyword: str = "NIHILIST",
         lexical_bonus_weight: float = 0.15,
+        additive_order: str = "none",
+        additive_key_period: int = 0,
+        initial_additive_keyword: Optional[str] = None,
         seed: int = 42,
     ) -> None:
         self.grid_mode = grid_mode
         self.language = language
         self.lexical_bonus_weight = lexical_bonus_weight
+        self.additive_order = additive_order
+        self.additive_key_period = additive_key_period
         self.rng = random.Random(seed)
         self.scorer = QuadgramScorer(language=language)
         
@@ -88,9 +101,17 @@ class JointDagapeyeffAnnealer:
         self.initial_alphabet = make_polybius_alphabet(seed_keyword)
         self.best_state: Optional[AnnealingState] = None
 
+        # Setup initial additive key
+        if initial_additive_keyword:
+            self.initial_additive_key = derive_additive_key_from_keyword(initial_additive_keyword, self.initial_alphabet)
+            self.additive_key_period = len(self.initial_additive_key)
+        elif additive_key_period > 0:
+            self.initial_additive_key = [(self.rng.randrange(5), self.rng.randrange(5)) for _ in range(additive_key_period)]
+        else:
+            self.initial_additive_key = None
+
     def _decode(self, pairs: List[str], alphabet: str) -> str:
         """Fast decode pairs using given 25-letter alphabet."""
-        # Precompute (r, c) -> char lookup
         grid_chars = {}
         idx = 0
         for r in range(1, 6):
@@ -108,6 +129,32 @@ class JointDagapeyeffAnnealer:
                     c = 1
                 chars.append(grid_chars.get((r, c), "?"))
         return "".join(chars)
+
+    def _decode_state(
+        self,
+        pairs: List[str],
+        row_key: List[int],
+        col_key: List[int],
+        alphabet: str,
+        additive_key: Optional[List[Tuple[int, int]]],
+        additive_order: str,
+    ) -> str:
+        """Decode with optional pre- or post-transposition modular subtraction."""
+        if additive_order == "post_transposition" and additive_key:
+            coords = pairs_to_coords(pairs)
+            dec_coords = subtract_additive_key(coords, additive_key)
+            sub_pairs = coords_to_pairs(dec_coords)
+            trans_pairs = self._transpose(sub_pairs, row_key, col_key)
+            return self._decode(trans_pairs, alphabet)
+        elif additive_order == "pre_transposition" and additive_key:
+            trans_pairs = self._transpose(pairs, row_key, col_key)
+            coords = pairs_to_coords(trans_pairs)
+            dec_coords = subtract_additive_key(coords, additive_key)
+            sub_pairs = coords_to_pairs(dec_coords)
+            return self._decode(sub_pairs, alphabet)
+        else:
+            trans_pairs = self._transpose(pairs, row_key, col_key)
+            return self._decode(trans_pairs, alphabet)
 
     def _transpose(self, pairs: List[str], row_key: List[int], col_key: List[int]) -> List[str]:
         """Apply Kerckhoffs transposition on pairs."""
@@ -141,13 +188,18 @@ class JointDagapeyeffAnnealer:
         new_row_key = current_state.row_key[:]
         new_col_key = current_state.col_key[:]
         new_alpha_list = list(current_state.alphabet)
+        new_additive_key = [k for k in current_state.additive_key] if current_state.additive_key else None
 
         mutation_type = self.rng.random()
-        if mutation_type < 0.35:
+        if new_additive_key and mutation_type < 0.25:
+            # Mutate one position in additive key
+            idx = self.rng.randrange(len(new_additive_key))
+            new_additive_key[idx] = (self.rng.randrange(5), self.rng.randrange(5))
+        elif mutation_type < 0.55:
             # Swap 2 columns
             i, j = self.rng.sample(range(self.width), 2)
             new_col_key[i], new_col_key[j] = new_col_key[j], new_col_key[i]
-        elif mutation_type < 0.60:
+        elif mutation_type < 0.80:
             # Swap 2 rows
             i, j = self.rng.sample(range(self.num_rows), 2)
             new_row_key[i], new_row_key[j] = new_row_key[j], new_row_key[i]
@@ -161,8 +213,9 @@ class JointDagapeyeffAnnealer:
             new_col_key[i : j + 1] = reversed(new_col_key[i : j + 1])
 
         new_alpha = "".join(new_alpha_list)
-        t_pairs = self._transpose(self.pairs, new_row_key, new_col_key)
-        new_pt = self._decode(t_pairs, new_alpha)
+        new_pt = self._decode_state(
+            self.pairs, new_row_key, new_col_key, new_alpha, new_additive_key, current_state.additive_order
+        )
         new_q = self.scorer.score_total(new_pt)
 
         # Calculate guided score if lexical bonus enabled
@@ -193,6 +246,8 @@ class JointDagapeyeffAnnealer:
                 score_q=new_q,
                 norm_score=new_q / (len(new_pt) - 3),
                 candidate_pt=new_pt,
+                additive_key=new_additive_key,
+                additive_order=current_state.additive_order,
             )
             if self.best_state is None or new_q > self.best_state.score_q:
                 self.best_state = new_state
@@ -215,9 +270,11 @@ class JointDagapeyeffAnnealer:
         col_key = list(range(self.width))
         self.rng.shuffle(row_key)
         self.rng.shuffle(col_key)
+        init_additive_key = [k for k in self.initial_additive_key] if self.initial_additive_key else None
         
-        t_pairs = self._transpose(self.pairs, row_key, col_key)
-        pt = self._decode(t_pairs, self.initial_alphabet)
+        pt = self._decode_state(
+            self.pairs, row_key, col_key, self.initial_alphabet, init_additive_key, self.additive_order
+        )
         init_q = self.scorer.score_total(pt)
 
         current_state = AnnealingState(
@@ -228,6 +285,8 @@ class JointDagapeyeffAnnealer:
             score_q=init_q,
             norm_score=init_q / (len(pt) - 3),
             candidate_pt=pt,
+            additive_key=init_additive_key,
+            additive_order=self.additive_order,
         )
         self.best_state = current_state
 

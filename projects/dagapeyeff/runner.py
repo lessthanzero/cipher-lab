@@ -186,16 +186,26 @@ def run_competitive_discovery(
             candidate_pt=pt_kw,
         )
 
-    # 6. Module E: High-Throughput Cartographic Guided Annealing Engine
+    # 6. Module E: High-Throughput Cartographic Guided Annealing with Nihilist Additive Keys
     if enable_joint_annealing:
-        print("\n[+] MODULE E: Cartographic Dictionary-Guided Annealing on 14x13 (~16k trials/s)...")
-        print("    Targeting 14x13 Grid (182 pairs) with Ordnance Survey & Nihilist Lexical Guidance")
+        print("\n[+] MODULE E: Exhaustive Annealing with Nihilist Additive Keys (~16k trials/s)...")
+        print("    Testing Secondary Additive Keys: [PRE-TRANSPOSITION vs POST-TRANSPOSITION vs NONE]")
+        print("    Targeting 14x13 Grid (182 pairs) with Ordnance Survey & Nihilist Additive Periods")
         
-        # 75% 14x13_stripped, 15% pos97_corrected, 10% 14x14 controls
+        # Grid modes (70% 14x13_stripped)
         modes = [
             "14x13_stripped", "14x13_stripped", "14x13_stripped",
             "pos97_corrected", "14x14", "14x13_stripped",
         ]
+        # Rotating additive orders
+        additive_orders = ["post_transposition", "pre_transposition", "post_transposition", "none"]
+        # Rotating additive keywords and periods
+        additive_keywords = [
+            "SCHUVALOF", "NIHILIST", "AGAPEYEFF", "MOSKVA",
+            "ORDNANCE", "RUSSIAN", "PETROGRAD", "CASSINI", None,
+        ]
+        additive_periods = [5, 7, 8, 9, 10, 13, 14]
+        
         languages = ["english", "english", "russian_translit"]
         chain_idx = 0
 
@@ -204,20 +214,29 @@ def run_competitive_discovery(
             mode = modes[(chain_idx - 1) % len(modes)]
             lang = languages[(chain_idx - 1) % len(languages)]
             seed_kw = rng.choice(keywords_pool)
+            
+            # Select additive strategy
+            add_order = additive_orders[(chain_idx - 1) % len(additive_orders)]
+            add_kw = additive_keywords[(chain_idx - 1) % len(additive_keywords)]
+            add_period = 0 if add_order == "none" else (len(add_kw) if add_kw else rng.choice(additive_periods))
 
             remaining_s = loop.time_budget_secs - (time.time() - loop.start_time)
             if remaining_s <= 5:
                 break
             
-            chain_duration = min(120.0, remaining_s)
+            chain_duration = min(75.0, remaining_s)
             elapsed_m = (time.time() - loop.start_time) / 60.0
-            print(f"\n  [*] Annealing Chain {chain_idx} [{elapsed_m:.2f}/{time_budget_mins:.1f}m]: mode={mode}, lang={lang}, seed_kw={seed_kw}, budget={chain_duration:.0f}s")
+            add_desc = f"{add_order} (kw={add_kw}, L={add_period})" if add_order != "none" else "none"
+            print(f"\n  [*] Annealing Chain {chain_idx} [{elapsed_m:.2f}/{time_budget_mins:.1f}m]: mode={mode}, lang={lang}, seed_kw={seed_kw}, additive={add_desc}, budget={chain_duration:.0f}s")
             
             annealer = JointDagapeyeffAnnealer(
                 grid_mode=mode,
                 language=lang,
                 seed_keyword=seed_kw,
-                lexical_bonus_weight=0.20,
+                lexical_bonus_weight=0.15,
+                additive_order=add_order,
+                additive_key_period=add_period,
+                initial_additive_keyword=add_kw,
                 seed=rng.randint(1, 100000),
             )
             
@@ -233,9 +252,9 @@ def run_competitive_discovery(
 
             # Evaluate best candidate from this chain
             eval_res = loop.evaluate_candidate(
-                hypothesis_name=f"H_carto_sa_{mode}_{lang}_c{chain_idx}",
-                key_class=f"carto_guided_{mode}",
-                key_desc=f"Annealed {lang} (Q={best_chain_state.score_q:.1f}), Alpha={best_chain_state.alphabet[:8]}...",
+                hypothesis_name=f"H_additive_{add_order}_{mode}_{lang}_c{chain_idx}",
+                key_class=f"additive_{add_order}_{mode}",
+                key_desc=f"Additive {add_desc}, Annealed {lang} (Q={best_chain_state.score_q:.1f}), Alpha={best_chain_state.alphabet[:8]}...",
                 candidate_pt=best_chain_state.candidate_pt,
             )
             
@@ -275,7 +294,7 @@ def run_competitive_discovery(
 
 def main() -> None:
     parser = argparse.ArgumentParser(description="D'Agapeyeff Autonomous Competitive Discovery Runner")
-    parser.add_argument("--time-budget-mins", default=120.0, type=float, help="Wall-clock time budget in minutes")
+    parser.add_argument("--time-budget-mins", default=60.0, type=float, help="Wall-clock time budget in minutes")
     parser.add_argument("--iterations", default=25, type=int, help="Iterations per module")
     parser.add_argument("--enable-joint-annealing", action="store_true", default=True, help="Enable joint simulated annealing")
     parser.add_argument("--model", default="gpt-6-astra", type=str, help="LLM referee and advisor model")
