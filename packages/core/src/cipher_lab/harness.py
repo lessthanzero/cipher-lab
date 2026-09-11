@@ -5,6 +5,7 @@ from __future__ import annotations
 import json
 import os
 import random
+import shutil
 import subprocess
 import time
 from datetime import UTC, datetime
@@ -136,17 +137,63 @@ Respond in JSON:
   "rationale": "one-sentence explanation"
 }}
 """
+        # 1. Check if model is codex / gpt-6-astra
+        if "astra" in preferred_model or preferred_model.startswith("gpt-"):
+            codex_bin = shutil.which("codex") or "/opt/homebrew/bin/codex"
+            if codex_bin and os.path.exists(codex_bin):
+                try:
+                    t0 = time.time()
+                    proc = subprocess.run(
+                        [
+                            codex_bin, "exec", "--ephemeral", "--skip-git-repo-check",
+                            "--sandbox", "read-only", "-m", preferred_model, prompt
+                        ],
+                        stdin=subprocess.DEVNULL,
+                        capture_output=True,
+                        text=True,
+                        timeout=self.timeout,
+                    )
+                    lat = (time.time() - t0) * 1000
+                    if proc.returncode == 0:
+                        raw_out = proc.stdout.strip()
+                        # Extract JSON object from output
+                        json_str = raw_out
+                        if "{" in raw_out and "}" in raw_out:
+                            json_str = raw_out[raw_out.find("{") : raw_out.rfind("}") + 1]
+                        resp_json = json.loads(json_str)
+                        record_local_models_usage("blinded_foil_eval", preferred_model, len(prompt)//4, 150, lat)
+                        
+                        selected_letter = resp_json.get("selected_option", "NONE").upper()
+                        chosen_idx = ord(selected_letter) - 65 if len(selected_letter) == 1 and selected_letter in "ABCD" else -1
+                        
+                        is_candidate_selected = (chosen_idx == target_index)
+                        is_decoy_selected = (chosen_idx >= 0 and chosen_idx != target_index)
+                        
+                        return {
+                            "status": "success",
+                            "candidate_selected": is_candidate_selected,
+                            "decoy_selected": is_decoy_selected,
+                            "coherence_score": resp_json.get("linguistic_coherence_score", 0.0),
+                            "confidence": resp_json.get("confidence", 0.0),
+                            "rationale": resp_json.get("rationale", ""),
+                        }
+                except Exception as e:
+                    print(f"[*] Codex referee fallback: {e}")
+
+        # 2. Fallback to Ollama (local or remote)
         health = self.probe_health()
         endpoint = LOCAL_OLLAMA_URL
         if not health["local"]["reachable"] and health["remote"]["reachable"]:
             endpoint = REMOTE_OLLAMA_URL
+
+        ollama_model = "phi4-mini:latest" if "astra" in preferred_model else preferred_model
 
         try:
             t0 = time.time()
             r = httpx.post(
                 f"{endpoint}/api/generate",
                 json={
-                    "model": preferred_model,
+                    "model": ollama_model,
                     "prompt": prompt,
                     "stream": False,
                     "format": "json",
@@ -156,7 +203,7 @@ Respond in JSON:
             lat = (time.time() - t0) * 1000
             if r.status_code == 200:
                 resp_json = json.loads(r.json().get("response", "{}"))
-                record_local_models_usage("blinded_foil_eval", preferred_model, len(prompt)//4, 100, lat)
+                record_local_models_usage("blinded_foil_eval", ollama_model, len(prompt)//4, 100, lat)
                 
                 selected_letter = resp_json.get("selected_option", "NONE").upper()
                 chosen_idx = ord(selected_letter) - 65 if len(selected_letter) == 1 and selected_letter in "ABCD" else -1
