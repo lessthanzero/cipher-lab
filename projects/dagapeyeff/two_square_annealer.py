@@ -103,6 +103,17 @@ class TwoSquareAnnealer:
             self.pairs = get_stripped_14x13_pairs()
             self.width = 13
             self.height = 14
+        elif grid_mode == "diagonal_pelling_182":
+            from projects.dagapeyeff.cartographic_grid import read_diagonal_matrix_transpose
+            diag_196 = read_diagonal_matrix_transpose(raw_196, width=14)
+            self.pairs = diag_196[:182]
+            self.width = 14
+            self.height = 13
+        elif grid_mode == "diagonal_pelling_196":
+            from projects.dagapeyeff.cartographic_grid import read_diagonal_matrix_transpose
+            self.pairs = read_diagonal_matrix_transpose(raw_196, width=14)
+            self.width = 14
+            self.height = 14
         else:
             self.pairs = raw_196
             self.width = 14

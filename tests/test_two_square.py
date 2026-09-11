@@ -79,3 +79,18 @@ def test_two_square_grid_mode_14x13():
     state = annealer.anneal(max_iterations=1000)
     assert len(state.candidate_pt) == 182
     assert -1500.0 < state.score_q < 0.0
+
+
+def test_two_square_diagonal_pelling_182():
+    """Verify TwoSquareAnnealer supports diagonal_pelling_182 mode."""
+    annealer = TwoSquareAnnealer(
+        grid_mode="diagonal_pelling_182",
+        orientation="vertical",
+        dual_alphabets=True,
+        pairing_mode="sequential",
+        seed=101,
+    )
+    state = annealer.anneal(max_iterations=1000)
+    assert len(state.candidate_pt) == 182
+    assert -1500.0 < state.score_q < 0.0
+    assert "04" not in annealer.pairs
