@@ -13,6 +13,7 @@ import time
 from pathlib import Path
 
 from cipher_lab.loop import CipherDiscoveryLoop
+from cipher_lab.stats import QuadgramScorer
 from projects.dagapeyeff.astra_advisor import (
     query_astra_advisor,
     query_astra_cartographic_nihilist,
