@@ -95,7 +95,7 @@ def query_astra_advisor(
     try:
         proc = subprocess.run(
             cmd,
-            stdin=subprocess.DEVNULL,
+            input="",
             capture_output=True,
             text=True,
             timeout=timeout_secs,

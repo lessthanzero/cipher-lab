@@ -146,9 +146,10 @@ Respond in JSON:
                     proc = subprocess.run(
                         [
                             codex_bin, "exec", "--ephemeral", "--skip-git-repo-check",
-                            "--sandbox", "read-only", "-m", preferred_model, prompt
+                            "--sandbox", "read-only", "-c", 'model_reasoning_effort="low"',
+                            "-m", preferred_model, prompt
                         ],
-                        stdin=subprocess.DEVNULL,
+                        input="",
                         capture_output=True,
                         text=True,
                         timeout=self.timeout,
