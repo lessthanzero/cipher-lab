@@ -33,6 +33,7 @@ from projects.dagapeyeff.corpus import (
 from projects.dagapeyeff.joint_annealer import JointDagapeyeffAnnealer, make_polybius_alphabet
 from projects.dagapeyeff.kerckhoffs import KerckhoffsEngine
 from projects.dagapeyeff.two_square_annealer import TwoSquareAnnealer
+from projects.dagapeyeff.desync_attack import DesyncAnnealer
 
 
 def run_competitive_discovery(
@@ -283,6 +284,47 @@ def run_competitive_discovery(
                 print(f"      Two-Square Result: Q={total_q:.1f} (Marland Record: {comp['marland_record_q']}, Delta: {comp['delta_q']:+.1f}), chi_sq={comp['candidate_chi_sq']:.1f}, status={comp['competition_status']}")
                 if matched_terms:
                     print(f"      [!] Emergent Cartographic / Nihilist Matches: {matched_terms}")
+            elif attack_mode == "desync":
+                # Execute Desynchronization Slip / Traverse Chain
+                desync_types = ["boustrophedon", "dropped_slip", "diagonal", "split_pos97", "inserted_slip"]
+                att_type = desync_types[(chain_idx - 1) % len(desync_types)]
+                print(f"\n  [*] Desync Slip Chain {chain_idx} [{elapsed_m:.2f}/{time_budget_mins:.1f}m]: type={att_type}, grid={mode}, lang={lang}, seed_kw={seed_kw}, budget={chain_duration:.0f}s")
+
+                annealer_desync = DesyncAnnealer(
+                    attack_type=att_type,
+                    grid_mode=mode,
+                    language=lang,
+                    seed_keyword=seed_kw,
+                    lexical_bonus_weight=0.15,
+                    seed=rng.randint(1, 100000),
+                )
+
+                best_chain_state = annealer_desync.run_desync_chain(
+                    duration_secs=chain_duration,
+                    initial_temp=20.0,
+                    cooling_rate=0.9998,
+                    loop=loop,
+                )
+
+                matched_terms = [t for t in ORDNANCE_SURVEY_TERMS + NIHILIST_INDICATOR_TERMS if t in best_chain_state.candidate_pt]
+
+                eval_res = loop.evaluate_candidate(
+                    hypothesis_name=f"H_desync_{att_type}_{mode}_{lang}_c{chain_idx}",
+                    key_class=f"desync_{att_type}_{mode}",
+                    key_desc=f"Desync {att_type} (param={best_chain_state.slip_parameter}), Annealed {lang} (Q={best_chain_state.score_q:.1f}), Alpha={best_chain_state.alphabet[:8]}...",
+                    candidate_pt=best_chain_state.candidate_pt,
+                )
+
+                total_q = loop.scorer.score_total(best_chain_state.candidate_pt)
+                comp = evaluate_against_competition(
+                    total_q,
+                    eval_res.metadata.get("chi_squared", 999.0),
+                    eval_res.index_of_coincidence,
+                    len(best_chain_state.candidate_pt),
+                )
+                print(f"      Desync Result: Q={total_q:.1f} (Marland Record: {comp['marland_record_q']}, Delta: {comp['delta_q']:+.1f}), chi_sq={comp['candidate_chi_sq']:.1f}, status={comp['competition_status']}")
+                if matched_terms:
+                    print(f"      [!] Emergent Cartographic / Nihilist Matches: {matched_terms}")
                 print(f"      Plaintext Preview: \"{best_chain_state.candidate_pt[:60]}...\"")
 
             else:
@@ -359,7 +401,7 @@ def main() -> None:
     parser.add_argument("--time-budget-mins", default=60.0, type=float, help="Wall-clock time budget in minutes")
     parser.add_argument("--iterations", default=25, type=int, help="Iterations per module")
     parser.add_argument("--enable-joint-annealing", action="store_true", default=True, help="Enable joint simulated annealing")
-    parser.add_argument("--attack-mode", default="two_square", choices=["two_square", "joint_additive", "hybrid"], help="Attack mode")
+    parser.add_argument("--attack-mode", default="two_square", choices=["two_square", "joint_additive", "hybrid", "desync"], help="Attack mode")
     parser.add_argument("--model", default="gpt-6-astra", type=str, help="LLM referee and advisor model")
     parser.add_argument("--data-dir", default="./data/derived", type=Path, help="Data directory")
     args = parser.parse_args()
