@@ -125,13 +125,17 @@ def run_worker_loop(
         remaining_s = time_budget_secs - (time.time() - start_time)
         chain_duration = min(60.0, max(5.0, remaining_s * 0.1))
 
-        # Sample parameters
+        # Sample parameters with Bayesian prior on empirically proven configurations
         label, ranks = rng.choice(key_pool)
-        traversal = rng.choice(traversals)
-        direction = rng.choice(directions)
-        order = rng.choice(orders)
-        pairing = "sequential" if rng.random() < 0.75 else "vertical_grid"
-        dual = True if rng.random() < 0.8 else False
+        traversal = rng.choices(
+            ["cartesian_bottom_up", "boustrophedon_horiz", "standard"],
+            weights=[0.60, 0.25, 0.15],
+            k=1,
+        )[0]
+        direction = "standard_encryption" if rng.random() < 0.85 else "kerckhoffs_decryption"
+        order = "row_then_col" if rng.random() < 0.85 else "col_then_row"
+        pairing = "sequential" if rng.random() < 0.80 else "vertical_grid"
+        dual = True if rng.random() < 0.90 else False
 
         col_order = ranks
         row_ranks = ranks[:h]
@@ -165,7 +169,7 @@ def run_worker_loop(
             language="english",
             seed_keyword1=kw1,
             seed_keyword2=kw2,
-            lexical_bonus_weight=0.15,
+            lexical_bonus_weight=0.20,
             seed=rng.randint(1, 1000000),
         )
         annealer.pairs = final_pairs
@@ -173,13 +177,13 @@ def run_worker_loop(
         annealer._precompute_fixed_indices()
 
         raw_state = annealer.run_two_square_chain(
-            duration_secs=chain_duration * 0.85,
+            duration_secs=chain_duration * 0.80,
             initial_temp=25.0,
             cooling_rate=0.9998,
         )
 
-        # 4. Greedy hill-climbing polish
-        polished = polish_state_hill_climb(annealer, raw_state, max_steps=200)
+        # 4. Greedy hill-climbing polish (deeper steps)
+        polished = polish_state_hill_climb(annealer, raw_state, max_steps=350)
 
         pt = polished.candidate_pt
         q_score = scorer.score_total(pt)

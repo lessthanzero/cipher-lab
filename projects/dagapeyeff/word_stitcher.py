@@ -30,7 +30,11 @@ from cipher_lab.stats import (
 )
 from projects.dagapeyeff.admiralty_sweep import generate_hydrographical_duplicate_rankings
 from projects.dagapeyeff.benchmarks import evaluate_against_competition
-from projects.dagapeyeff.cartographic_grid import read_diagonal_matrix_transpose
+from projects.dagapeyeff.cartographic_grid import (
+    read_cartesian_bottom_up,
+    read_cartographic_boustrophedon,
+    read_diagonal_matrix_transpose,
+)
 from projects.dagapeyeff.corpus import get_digit_pairs
 from projects.dagapeyeff.exact_14key_sweep import apply_generalized_double_transposition
 from projects.dagapeyeff.hydrographical_deep_runner import (
@@ -293,13 +297,14 @@ def run_beam_word_stitcher(
     print("=" * 80, flush=True)
     return beam
 
-
 def get_winning_admiralty_transposed_pairs(
-    variant_name: str = "hydro_tie_AL_HR_RR",
+
+    variant_name: str = "hydro_tie_AR_HR_RR",
     direction: str = "standard_encryption",
     order: str = "row_then_col",
+    traversal: str = "cartesian_bottom_up",
 ) -> List[str]:
-    """Derive transposed pairs using the top-performing Admiralty key permutation."""
+    """Derive transposed pairs using the top-performing Admiralty key permutation and traversal."""
     variants = dict(generate_hydrographical_duplicate_rankings())
     ranks = variants.get(variant_name, variants["hydro_std_ltr"])
 
@@ -313,7 +318,7 @@ def get_winning_admiralty_transposed_pairs(
     for r_i, (orig_i, _) in enumerate(row_indexed):
         row_order[orig_i] = r_i
 
-    return apply_generalized_double_transposition(
+    transposed = apply_generalized_double_transposition(
         diag_182,
         col_order=col_order,
         row_order=row_order,
@@ -321,16 +326,26 @@ def get_winning_admiralty_transposed_pairs(
         order=order,
     )
 
+    if traversal == "cartesian_bottom_up":
+        return read_cartesian_bottom_up(transposed, width=w)
+    elif traversal == "boustrophedon_horiz":
+        return read_cartographic_boustrophedon(transposed, width=w, vertical=False)
+    elif traversal == "boustrophedon_vert":
+        return read_cartographic_boustrophedon(transposed, width=w, vertical=True)
+    else:
+        return transposed
+
 
 def main() -> None:
     parser = argparse.ArgumentParser(description="Beam-Search Word Stitching & Language Model Polish")
-    parser.add_argument("--alphabet1", default="OCLAIMYWUSPNRETBDHGKQFXZV", type=str, help="Seed alphabet 1")
-    parser.add_argument("--alphabet2", default="YLCOIMNHDSETVRAXPKFZWBQGU", type=str, help="Seed alphabet 2")
-    parser.add_argument("--variant", default="hydro_tie_AL_HR_RR", type=str, help="Admiralty key variant")
+    parser.add_argument("--alphabet1", default="FDCOALPNUIGSRETHYWVKXQMBZ", type=str, help="Seed alphabet 1")
+    parser.add_argument("--alphabet2", default="WIMDTVRHGNESCLAXOKUQZPFYB", type=str, help="Seed alphabet 2")
+    parser.add_argument("--variant", default="hydro_tie_AR_HR_RR", type=str, help="Admiralty key variant")
+    parser.add_argument("--traversal", default="cartesian_bottom_up", type=str, help="Cartographic grid traversal")
     parser.add_argument("--direction", default="standard_encryption", type=str, help="Transposition direction")
     parser.add_argument("--order", default="row_then_col", type=str, help="Transposition order")
-    parser.add_argument("--beam-width", default=15, type=int, help="Beam width")
-    parser.add_argument("--max-depth", default=8, type=int, help="Max beam depth")
+    parser.add_argument("--beam-width", default=20, type=int, help="Beam width")
+    parser.add_argument("--max-depth", default=10, type=int, help="Max beam depth")
     parser.add_argument("--data-dir", default="./data/derived", type=Path, help="Data directory")
     args = parser.parse_args()
 
@@ -338,6 +353,7 @@ def main() -> None:
         variant_name=args.variant,
         direction=args.direction,
         order=args.order,
+        traversal=args.traversal,
     )
     run_beam_word_stitcher(
         seed_a1=args.alphabet1,
@@ -351,3 +367,4 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
+
