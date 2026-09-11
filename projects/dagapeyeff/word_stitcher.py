@@ -28,7 +28,11 @@ from cipher_lab.stats import (
     calculate_chi_squared,
     calculate_index_of_coincidence,
 )
+from projects.dagapeyeff.admiralty_sweep import generate_hydrographical_duplicate_rankings
 from projects.dagapeyeff.benchmarks import evaluate_against_competition
+from projects.dagapeyeff.cartographic_grid import read_diagonal_matrix_transpose
+from projects.dagapeyeff.corpus import get_digit_pairs
+from projects.dagapeyeff.exact_14key_sweep import apply_generalized_double_transposition
 from projects.dagapeyeff.hydrographical_deep_runner import (
     get_hydrographical_transposed_pairs,
     polish_state_hill_climb,
@@ -290,16 +294,51 @@ def run_beam_word_stitcher(
     return beam
 
 
+def get_winning_admiralty_transposed_pairs(
+    variant_name: str = "hydro_tie_AL_HR_RR",
+    direction: str = "standard_encryption",
+    order: str = "row_then_col",
+) -> List[str]:
+    """Derive transposed pairs using the top-performing Admiralty key permutation."""
+    variants = dict(generate_hydrographical_duplicate_rankings())
+    ranks = variants.get(variant_name, variants["hydro_std_ltr"])
+
+    raw_196 = get_digit_pairs()
+    diag_182 = read_diagonal_matrix_transpose(raw_196, width=14)[:182]
+    w, h = 14, 13
+    col_order = ranks
+    row_ranks = ranks[:h]
+    row_indexed = sorted(list(enumerate(row_ranks)), key=lambda x: (x[1], x[0]))
+    row_order = [0] * h
+    for r_i, (orig_i, _) in enumerate(row_indexed):
+        row_order[orig_i] = r_i
+
+    return apply_generalized_double_transposition(
+        diag_182,
+        col_order=col_order,
+        row_order=row_order,
+        mode=direction,
+        order=order,
+    )
+
+
 def main() -> None:
     parser = argparse.ArgumentParser(description="Beam-Search Word Stitching & Language Model Polish")
-    parser.add_argument("--alphabet1", default="DLTYOHCPUASNRIEBWMGKXFZVQ", type=str, help="Seed alphabet 1")
-    parser.add_argument("--alphabet2", default="COMLHNRGSDEAYTFQBIVUKPXZW", type=str, help="Seed alphabet 2")
-    parser.add_argument("--beam-width", default=12, type=int, help="Beam width")
-    parser.add_argument("--max-depth", default=6, type=int, help="Max beam depth")
+    parser.add_argument("--alphabet1", default="OCLAIMYWUSPNRETBDHGKQFXZV", type=str, help="Seed alphabet 1")
+    parser.add_argument("--alphabet2", default="YLCOIMNHDSETVRAXPKFZWBQGU", type=str, help="Seed alphabet 2")
+    parser.add_argument("--variant", default="hydro_tie_AL_HR_RR", type=str, help="Admiralty key variant")
+    parser.add_argument("--direction", default="standard_encryption", type=str, help="Transposition direction")
+    parser.add_argument("--order", default="row_then_col", type=str, help="Transposition order")
+    parser.add_argument("--beam-width", default=15, type=int, help="Beam width")
+    parser.add_argument("--max-depth", default=8, type=int, help="Max beam depth")
     parser.add_argument("--data-dir", default="./data/derived", type=Path, help="Data directory")
     args = parser.parse_args()
 
-    pairs = get_hydrographical_transposed_pairs()
+    pairs = get_winning_admiralty_transposed_pairs(
+        variant_name=args.variant,
+        direction=args.direction,
+        order=args.order,
+    )
     run_beam_word_stitcher(
         seed_a1=args.alphabet1,
         seed_a2=args.alphabet2,
