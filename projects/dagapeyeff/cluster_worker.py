@@ -156,9 +156,26 @@ def run_worker_loop(
         # 2. Cartographic drafting traversal
         final_pairs = apply_traversal_on_pairs(t_pairs, traversal=traversal, width=w)
 
-        # 3. Two-Square Annealer
-        kw1 = rng.choice(NAUTICAL_CARTOGRAPHIC_KEYWORDS)
-        kw2 = rng.choice(NAUTICAL_CARTOGRAPHIC_KEYWORDS)
+        # 3. Two-Square Annealer with Spiral & Record Basin Seeding
+        seed_mode = rng.random()
+        if seed_mode < 0.35:
+            # Seed directly from all-time record basin
+            init_a1 = "BDCOATXLUIGSRENHPWMYFZKQV"
+            init_a2 = "WIMLTVRGCNESDYAKOZUBXFPHQ"
+        elif seed_mode < 0.70:
+            # Seed Square 1 with horizontal_rtl and Square 2 with spiral_in
+            from projects.dagapeyeff.polybius_reverse_key import make_polybius_grid
+            kw1 = rng.choice(["COASTGUARD", "HYDROGRAPHICAL", "ADMIRALTY", "SURVEYOR", "DRAUGHTSMAN"])
+            kw2 = rng.choice(["ROSYTH", "NAVIGATION", "CHATHAM", "PORTSMOUTH", "DEVONPORT", "WHITEHALL"])
+            init_a1 = make_polybius_grid(kw1, method="horizontal_rtl")
+            init_a2 = make_polybius_grid(kw2, method="spiral_in")
+        else:
+            # Unconstrained nautical keywords
+            from projects.dagapeyeff.two_square_annealer import make_polybius_alphabet
+            kw1 = rng.choice(NAUTICAL_CARTOGRAPHIC_KEYWORDS)
+            kw2 = rng.choice(NAUTICAL_CARTOGRAPHIC_KEYWORDS)
+            init_a1 = make_polybius_alphabet(kw1)
+            init_a2 = make_polybius_alphabet(kw2) if dual else init_a1
 
         annealer = TwoSquareAnnealer(
             grid_mode="custom",
@@ -167,11 +184,11 @@ def run_worker_loop(
             pairing_mode=pairing,
             with_transposition=False,
             language="english",
-            seed_keyword1=kw1,
-            seed_keyword2=kw2,
             lexical_bonus_weight=0.20,
             seed=rng.randint(1, 1000000),
         )
+        annealer.init_alpha1 = init_a1
+        annealer.init_alpha2 = init_a2 if dual else init_a1
         annealer.pairs = final_pairs
         annealer.coords = pairs_to_coordinates(final_pairs)
         annealer._precompute_fixed_indices()
