@@ -157,7 +157,7 @@ def run_deep_keyword_pair_sweep(
             pt = engine.decipher_coordinates(coords)
             q = scorer.score_total(pt)
 
-            if q > -880.0:
+            if True:
                 chi = calculate_chi_squared(pt)
                 ioc = calculate_index_of_coincidence(pt)
                 res = DeepPairResult(
