@@ -15,10 +15,8 @@ from typing import List
 
 from cipher_lab.harness import RemoteComputeWorker
 from cipher_lab.ledger import EpistemicLedger
-from cipher_lab.stats import calculate_empirical_p_value, order_shuffle_null
+
 from projects.rohonc.corpus import (
-    FOLIO_TRANSCRIPTIONS,
-    ROHONC_CORE_SIGNS,
     ROHONC_PROVENANCE,
     get_all_rohonc_lines,
     get_all_rohonc_tokens,
@@ -26,7 +24,6 @@ from projects.rohonc.corpus import (
 )
 from projects.rohonc.stats import (
     calculate_entropy_profile,
-    calculate_sign_frequencies,
     run_comprehensive_epigraphic_analysis,
 )
 

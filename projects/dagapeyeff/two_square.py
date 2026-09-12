@@ -13,8 +13,7 @@ Supports:
 
 from __future__ import annotations
 
-from typing import Any, Dict, List, Optional, Tuple
-
+from typing import Dict, List, Optional, Tuple
 
 # Standard Polybius coordinate mapping for D'Agapeyeff
 ROW_MAP: Dict[str, int] = {"6": 0, "7": 1, "8": 2, "9": 3, "0": 4}

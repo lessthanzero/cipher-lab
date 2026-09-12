@@ -9,7 +9,6 @@ Admiralty, Royal Navy, Ordnance Survey, and Patent Draughtsman documents.
 from __future__ import annotations
 
 import argparse
-import json
 import time
 from dataclasses import dataclass
 from pathlib import Path
@@ -17,10 +16,10 @@ from typing import Dict, List, Optional, Set, Tuple
 
 from cipher_lab.ledger import EpistemicLedger
 from cipher_lab.stats import (
-    QuadgramScorer,
     calculate_chi_squared,
     calculate_index_of_coincidence,
 )
+
 from projects.dagapeyeff.admiralty_sweep import generate_hydrographical_duplicate_rankings
 from projects.dagapeyeff.cartographic_grid import (
     read_cartesian_bottom_up,
@@ -29,10 +28,8 @@ from projects.dagapeyeff.cartographic_grid import (
 from projects.dagapeyeff.corpus import get_digit_pairs
 from projects.dagapeyeff.exact_14key_sweep import apply_generalized_double_transposition
 from projects.dagapeyeff.hydrographical_deep_runner import polish_state_hill_climb
-from projects.dagapeyeff.incipit_crib_solver import check_vertical_twosquare_crib_consistency
 from projects.dagapeyeff.two_square import (
     STANDARD_ALPHABET,
-    TwoSquareEngine,
     pairs_to_coordinates,
 )
 from projects.dagapeyeff.two_square_annealer import (
@@ -285,7 +282,7 @@ def run_crib_lock_attack(
     diag_182 = read_diagonal_matrix_transpose(raw_196, width=14)[:182]
     rankings_dict = dict(generate_hydrographical_duplicate_rankings())
     ranks = rankings_dict["hydro_tie_AR_HR_RR"]
-    w, h = 14, 13
+    _w, h = 14, 13
     col_order = ranks
     row_ranks = ranks[:h]
     row_indexed = sorted(list(enumerate(row_ranks)), key=lambda x: (x[1], x[0]))

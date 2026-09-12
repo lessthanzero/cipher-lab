@@ -23,6 +23,7 @@ from cipher_lab.stats import (
     QuadgramScorer,
     calculate_index_of_coincidence,
 )
+
 from projects.dagapeyeff.benchmarks import evaluate_against_competition
 from projects.dagapeyeff.cartographic_corpus import calculate_cartographic_lexical_bonus
 from projects.dagapeyeff.corpus import (

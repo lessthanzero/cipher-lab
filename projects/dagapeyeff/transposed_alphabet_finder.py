@@ -16,8 +16,7 @@ across column widths W in [4, 5, 6, 7, 8, 9, 10] and reading topologies.
 
 from __future__ import annotations
 
-import itertools
-from typing import Dict, List, Set, Tuple
+from typing import List, Set
 
 from projects.dagapeyeff.admiralty_sweep import ADMIRALTY_KEYWORDS_14
 from projects.dagapeyeff.cartographic_corpus import (

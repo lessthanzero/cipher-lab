@@ -6,10 +6,6 @@ and Russian Nihilist cipher indicator vocabulary.
 
 from __future__ import annotations
 
-import re
-from typing import Dict, List, Set
-
-
 # 1. 1939 British Ordnance Survey & Retriangulation Vocabulary
 ORDNANCE_SURVEY_TERMS = [
     "ORDNANCESURVEY", "RETRIANGULATION", "TRIGPOINT", "BENCHMARK",

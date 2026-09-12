@@ -1,4 +1,3 @@
-import pytest
 from projects.dagapeyeff.nihilist_additive import (
     add_additive_key,
     coords_to_pairs,

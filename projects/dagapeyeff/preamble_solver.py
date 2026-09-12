@@ -15,19 +15,16 @@ dispatch headers:
 from __future__ import annotations
 
 import argparse
-import itertools
-import json
 import time
 from dataclasses import dataclass
 from pathlib import Path
-from typing import Dict, List, Optional, Tuple
+from typing import List
 
 from cipher_lab.ledger import EpistemicLedger
 from cipher_lab.stats import (
     QuadgramScorer,
-    calculate_chi_squared,
-    calculate_index_of_coincidence,
 )
+
 from projects.dagapeyeff.admiralty_sweep import generate_hydrographical_duplicate_rankings
 from projects.dagapeyeff.cartographic_grid import (
     read_cartesian_bottom_up,
@@ -102,7 +99,7 @@ def run_preamble_solver(
     diag_182 = read_diagonal_matrix_transpose(raw_196, width=14)[:182]
     rankings_dict = dict(generate_hydrographical_duplicate_rankings())
     ranks = rankings_dict["hydro_tie_AR_HR_RR"]
-    w, h = 14, 13
+    _w, h = 14, 13
     col_order = ranks
     row_ranks = ranks[:h]
     row_indexed = sorted(list(enumerate(row_ranks)), key=lambda x: (x[1], x[0]))
@@ -201,7 +198,7 @@ def run_preamble_solver(
 
 def main() -> None:
     parser = argparse.ArgumentParser(description="Preamble Header Solver")
-    args = parser.parse_args()
+    parser.parse_args()
     run_preamble_solver()
 
 

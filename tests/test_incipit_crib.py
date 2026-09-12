@@ -5,7 +5,6 @@ from projects.dagapeyeff.incipit_crib_solver import (
     build_crib_constrained_alphabet,
     check_vertical_twosquare_crib_consistency,
 )
-from projects.dagapeyeff.two_square_annealer import STANDARD_ALPHABET
 
 
 def test_candidate_incipits_loaded():

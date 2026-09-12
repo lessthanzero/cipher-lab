@@ -11,8 +11,7 @@ import os
 import shutil
 import subprocess
 import tempfile
-from typing import Any, Dict, List, Optional
-
+from typing import Any, Dict, Optional
 
 DAGAPEYEFF_SYSTEM_PROMPT = """You are an elite cryptanalytic advisor specializing in WWII-era historical ciphers, 
 Slavic linguistic interference, Russian Nihilist ciphers, and British SOE operational security."""
@@ -93,7 +92,7 @@ def query_astra_advisor(
     ]
 
     try:
-        proc = subprocess.run(
+        subprocess.run(
             cmd,
             input="",
             capture_output=True,

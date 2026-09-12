@@ -14,13 +14,11 @@ Features:
 from __future__ import annotations
 
 import argparse
-import json
-import random
 import subprocess
 import time
 from dataclasses import dataclass
 from pathlib import Path
-from typing import Dict, List, Optional, Set, Tuple
+from typing import List, Optional, Set, Tuple
 
 from cipher_lab.ledger import EpistemicLedger
 from cipher_lab.stats import (
@@ -28,6 +26,7 @@ from cipher_lab.stats import (
     calculate_chi_squared,
     calculate_index_of_coincidence,
 )
+
 from projects.dagapeyeff.admiralty_sweep import generate_hydrographical_duplicate_rankings
 from projects.dagapeyeff.benchmarks import evaluate_against_competition
 from projects.dagapeyeff.cartographic_grid import (
@@ -38,18 +37,15 @@ from projects.dagapeyeff.cartographic_grid import (
 from projects.dagapeyeff.corpus import get_digit_pairs
 from projects.dagapeyeff.exact_14key_sweep import apply_generalized_double_transposition
 from projects.dagapeyeff.hydrographical_deep_runner import (
-    get_hydrographical_transposed_pairs,
     polish_state_hill_climb,
 )
 from projects.dagapeyeff.two_square import (
-    STANDARD_ALPHABET,
     pairs_to_coordinates,
 )
 from projects.dagapeyeff.two_square_annealer import (
     TwoSquareAnnealer,
     TwoSquareState,
 )
-
 
 ENGLISH_CORE_LEXICON = {
     # Directional / Cartographic / Nautical

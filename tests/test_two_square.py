@@ -1,10 +1,9 @@
 """Unit tests for Two-Square Engine and Optimizer."""
 
-import pytest
 from projects.dagapeyeff.two_square import (
     TwoSquareEngine,
-    pairs_to_coordinates,
     coordinates_to_pairs,
+    pairs_to_coordinates,
 )
 from projects.dagapeyeff.two_square_annealer import TwoSquareAnnealer
 

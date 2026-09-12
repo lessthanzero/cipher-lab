@@ -7,19 +7,17 @@ across 14x13 and 14x14 grids with hill-climbing on the Polybius alphabet square.
 from __future__ import annotations
 
 import json
-import math
-import random
 import time
 from pathlib import Path
 from typing import Any, Dict, List
 
-from cipher_lab.stats import QuadgramScorer, calculate_index_of_coincidence
-from projects.dagapeyeff.benchmarks import evaluate_against_competition
+from cipher_lab.stats import QuadgramScorer
+
 from projects.dagapeyeff.corpus import get_digit_pairs, get_stripped_14x13_pairs
 from projects.dagapeyeff.desync_attack import (
+    apply_boustrophedon_traverse,
     apply_dropped_pair_slip,
     apply_inserted_pair_slip,
-    apply_boustrophedon_traverse,
     make_polybius_alphabet,
 )
 
@@ -27,7 +25,7 @@ from projects.dagapeyeff.desync_attack import (
 def run_exhaustive_sweep() -> Dict[str, Any]:
     scorer = QuadgramScorer(language="english")
     pairs_182 = get_stripped_14x13_pairs()
-    pairs_196 = get_digit_pairs()
+    get_digit_pairs()
 
     ROW_MAP = {"6": 0, "7": 1, "8": 2, "9": 3, "0": 4}
     COL_MAP = {"1": 0, "2": 1, "3": 2, "4": 3, "5": 4}

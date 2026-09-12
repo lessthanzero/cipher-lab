@@ -21,6 +21,7 @@ from cipher_lab.stats import (
     QuadgramScorer,
     calculate_index_of_coincidence,
 )
+
 from projects.dagapeyeff.benchmarks import evaluate_against_competition
 from projects.dagapeyeff.cartographic_corpus import calculate_cartographic_lexical_bonus
 from projects.dagapeyeff.corpus import (
@@ -30,8 +31,6 @@ from projects.dagapeyeff.corpus import (
 from projects.dagapeyeff.kerckhoffs import KerckhoffsEngine
 from projects.dagapeyeff.two_square import (
     STANDARD_ALPHABET,
-    TwoSquareEngine,
-    pairs_to_coordinates,
 )
 
 
@@ -232,7 +231,7 @@ class DesyncAnnealer:
             return -9999.0, -9999.0, 999.0, 0.0
 
         q_tot = self.scorer.score_total(clean)
-        q_norm = q_tot / (n - 3)
+        q_tot / (n - 3)
         bonus = calculate_cartographic_lexical_bonus(clean) * self.lexical_bonus_weight
         chi2 = self.calculate_chi_squared(clean)
         ioc = calculate_index_of_coincidence(clean)

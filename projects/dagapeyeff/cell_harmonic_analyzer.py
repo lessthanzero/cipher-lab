@@ -11,7 +11,8 @@ from __future__ import annotations
 import collections
 from typing import Dict, List, Tuple
 
-from cipher_lab.stats import QuadgramScorer, calculate_chi_squared, calculate_index_of_coincidence
+from cipher_lab.stats import QuadgramScorer
+
 from projects.dagapeyeff.algebraic_cell_extractor import get_winning_coordinates
 from projects.dagapeyeff.two_square import STANDARD_ALPHABET, TwoSquareEngine
 

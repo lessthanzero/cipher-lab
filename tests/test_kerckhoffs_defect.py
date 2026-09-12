@@ -2,22 +2,17 @@
 
 from __future__ import annotations
 
-import pytest
-
-from projects.dagapeyeff.kerckhoffs_defect import (
-    BOOK_KEYWORDS,
-    get_historical_shuvalof_ranks,
-    get_standard_key_order,
-    apply_columnar_transposition_direction,
-    apply_double_kerckhoffs_transposition,
-)
 from projects.dagapeyeff.clerical_repair import (
     apply_row0_correction,
-    strip_column_14_margin,
-    strip_row_14_margin,
     get_all_row0_variants,
+    strip_column_14_margin,
 )
 from projects.dagapeyeff.corpus import get_digit_pairs
+from projects.dagapeyeff.kerckhoffs_defect import (
+    BOOK_KEYWORDS,
+    apply_columnar_transposition_direction,
+    get_historical_shuvalof_ranks,
+)
 
 
 def test_book_keywords_catalog() -> None:

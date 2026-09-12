@@ -1,8 +1,8 @@
 """Unit tests for HYDROGRAPHICAL Deep Runner."""
 
 from projects.dagapeyeff.hydrographical_deep_runner import (
-    get_hydrographical_transposed_pairs,
     NAUTICAL_CARTOGRAPHIC_KEYWORDS,
+    get_hydrographical_transposed_pairs,
 )
 
 

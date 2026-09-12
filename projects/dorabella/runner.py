@@ -7,21 +7,19 @@ with strict twin-negative surrogate gating and DuckDB ledger tracking.
 from __future__ import annotations
 
 import argparse
-import time
 from pathlib import Path
-from typing import Dict, List, Optional
+from typing import Optional
 
 from cipher_lab.ledger import EpistemicLedger
 from cipher_lab.stats import QuadgramScorer
+
 from projects.dorabella.annealer import DorabellaAnnealer, DorabellaCandidate
 from projects.dorabella.corpus import DORABELLA_TOKENS, get_dorabella_unicity
 from projects.dorabella.hypotheses import (
-    ALPHABET_24,
     ELGAR_KEYWORDS,
     generate_frequency_tiered_mapping,
     generate_keyword_alphabet_24,
 )
-from projects.dorabella.symbols import decode_tokens
 
 
 def run_dorabella_discovery(

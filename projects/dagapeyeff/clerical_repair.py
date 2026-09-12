@@ -12,10 +12,9 @@ Models and systematically repairs the documented physical defects in the 1939 te
 
 from __future__ import annotations
 
-from typing import Dict, List, Optional, Tuple
-from projects.dagapeyeff.cartographic_grid import pairs_to_grid, grid_to_pairs
-from projects.dagapeyeff.corpus import get_digit_pairs, get_stripped_14x13_pairs
+from typing import Dict, List
 
+from projects.dagapeyeff.cartographic_grid import pairs_to_grid
 
 # Index 97 (row 6, column 13) is '04'
 ANOMALY_INDEX_97 = 97

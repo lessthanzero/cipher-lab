@@ -17,15 +17,12 @@ and geographic dictionary.
 from __future__ import annotations
 
 import argparse
-import itertools
-import json
 import time
-from dataclasses import dataclass
 from pathlib import Path
-from typing import Dict, List, Optional, Set, Tuple
+from typing import Dict, List, Set
 
 from cipher_lab.ledger import EpistemicLedger
-from cipher_lab.stats import QuadgramScorer
+
 from projects.dagapeyeff.admiralty_sweep import ADMIRALTY_KEYWORDS_14
 from projects.dagapeyeff.hydrographical_deep_runner import NAUTICAL_CARTOGRAPHIC_KEYWORDS
 from projects.dagapeyeff.two_square import STANDARD_ALPHABET
@@ -233,7 +230,7 @@ def run_polybius_reverse_engineering(data_dir: Path = Path("./data/derived")) ->
 
 def main() -> None:
     parser = argparse.ArgumentParser(description="Polybius Mnemonic Reverse-Key Solver")
-    args = parser.parse_args()
+    parser.parse_args()
     run_polybius_reverse_engineering()
 
 

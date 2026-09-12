@@ -2,17 +2,13 @@
 
 from __future__ import annotations
 
-import pytest
-
 from projects.dagapeyeff.cartographic_grid import (
     CARTOGRAPHIC_OPERATORS,
-    pairs_to_grid,
     grid_to_pairs,
+    pairs_to_grid,
     read_cartesian_bottom_up,
-    read_easting_first,
     read_diagonal_matrix_transpose,
-    read_contour_spiral,
-    read_cartographic_boustrophedon,
+    read_easting_first,
 )
 from projects.dagapeyeff.corpus import get_digit_pairs
 

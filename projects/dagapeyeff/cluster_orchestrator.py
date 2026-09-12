@@ -13,7 +13,6 @@ import json
 import subprocess
 import time
 from pathlib import Path
-from typing import Any, Dict, List, Optional
 
 from cipher_lab.ledger import EpistemicLedger
 
@@ -30,7 +29,7 @@ def launch_remote_worker(
     cmd = (
         f"ssh {remote_host} "
         f"\"cd ~/Developer/cipher-lab && "
-        f"/home/sashakatin/Developer/cipher-lab/.venv/bin/python -m projects.dagapeyeff.cluster_worker "
+        f"~/.local/bin/uv run python -m projects.dagapeyeff.cluster_worker "
         f"--node-name fedora_pc "
         f"--num-workers {num_workers} "
         f"--task-family {task_family} "
@@ -167,7 +166,7 @@ def run_distributed_campaign(
             if mac_output.exists():
                 try:
                     with open(mac_output, "r", encoding="utf-8") as f:
-                        mac_lines = [json.loads(l) for l in f if l.strip()]
+                        mac_lines = [json.loads(line) for line in f if line.strip()]
                     mac_count = len(mac_lines)
                     if mac_lines:
                         top_mac = max(mac_lines, key=lambda x: x["q_score"])

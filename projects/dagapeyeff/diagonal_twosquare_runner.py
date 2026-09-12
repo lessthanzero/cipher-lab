@@ -17,15 +17,15 @@ import argparse
 import random
 import time
 from pathlib import Path
-from typing import Dict, List, Optional
+from typing import Optional
 
 from cipher_lab.ledger import EpistemicLedger
-from cipher_lab.loop import CipherDiscoveryLoop
 from cipher_lab.stats import (
     QuadgramScorer,
     calculate_chi_squared,
     calculate_index_of_coincidence,
 )
+
 from projects.dagapeyeff.benchmarks import evaluate_against_competition
 from projects.dagapeyeff.cartographic_corpus import (
     NIHILIST_INDICATOR_TERMS,
@@ -34,9 +34,7 @@ from projects.dagapeyeff.cartographic_corpus import (
 from projects.dagapeyeff.two_square_annealer import (
     TwoSquareAnnealer,
     TwoSquareState,
-    make_polybius_alphabet,
 )
-
 
 BOOK_KEYWORDS_POOL = [
     "ORDNANCESURVEY",
@@ -123,7 +121,7 @@ def run_diagonal_twosquare_discovery(
             initial_temp=25.0,
             cooling_rate=0.9998,
         )
-        elapsed_chain = max(0.001, time.time() - t0)
+        max(0.001, time.time() - t0)
 
         # Scoring & Analysis
         pt = chain_state.candidate_pt

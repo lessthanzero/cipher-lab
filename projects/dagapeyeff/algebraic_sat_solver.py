@@ -7,14 +7,14 @@ seeded by the marginal posterior consensus from 14,173 ledger trials.
 
 from __future__ import annotations
 
-from typing import Dict, List, Optional, Tuple
+from typing import Dict, Tuple
 
 import z3
+from cipher_lab.stats import QuadgramScorer, calculate_chi_squared, calculate_index_of_coincidence
 
 from projects.dagapeyeff.algebraic_cell_extractor import get_winning_coordinates
 from projects.dagapeyeff.linguistic_reconstruction import compute_posterior_consensus
 from projects.dagapeyeff.two_square import STANDARD_ALPHABET, TwoSquareEngine
-from cipher_lab.stats import QuadgramScorer, calculate_chi_squared, calculate_index_of_coincidence
 
 
 def solve_consensus_via_z3(confidence_threshold: float = 0.80) -> None:
@@ -127,7 +127,7 @@ def solve_consensus_via_z3(confidence_threshold: float = 0.80) -> None:
         chi = calculate_chi_squared(pt)
         ioc = calculate_index_of_coincidence(pt)
 
-        print(f"\nDecrypted Plaintext (182 positions):")
+        print("\nDecrypted Plaintext (182 positions):")
         print(f"\"{pt}\"")
         print(f"Q-Score: {q:.1f} | Chi2: {chi:.1f} | IoC: {ioc:.4f}")
     else:

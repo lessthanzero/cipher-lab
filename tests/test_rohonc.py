@@ -2,10 +2,7 @@
 
 from __future__ import annotations
 
-import pytest
-
 from projects.rohonc.corpus import (
-    FOLIO_TRANSCRIPTIONS,
     ROHONC_CORE_SIGNS,
     ROHONC_PROVENANCE,
     SHAPE_FAMILIES,
@@ -18,7 +15,6 @@ from projects.rohonc.stats import (
     calculate_directionality_metrics,
     calculate_entropy_profile,
     calculate_linguistic_proximities,
-    calculate_sign_frequencies,
     fit_zipf_mandelbrot,
     run_comprehensive_epigraphic_analysis,
 )

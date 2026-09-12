@@ -28,6 +28,7 @@ from cipher_lab.stats import (
     calculate_chi_squared,
     calculate_index_of_coincidence,
 )
+
 from projects.dagapeyeff.benchmarks import evaluate_against_competition
 from projects.dagapeyeff.cartographic_grid import read_diagonal_matrix_transpose
 from projects.dagapeyeff.corpus import get_digit_pairs, get_stripped_14x13_pairs
@@ -35,9 +36,7 @@ from projects.dagapeyeff.two_square import pairs_to_coordinates
 from projects.dagapeyeff.two_square_annealer import (
     STANDARD_ALPHABET,
     TwoSquareAnnealer,
-    TwoSquareState,
 )
-
 
 CANDIDATE_INCIPITS = [
     # Cartographic / Ordnance Survey
@@ -326,7 +325,7 @@ def run_incipit_crib_solver(
         q_score = scorer.score_total(pt)
         chi = calculate_chi_squared(pt)
         ioc = calculate_index_of_coincidence(pt)
-        comp = evaluate_against_competition(q_score, chi, ioc, len(pt))
+        evaluate_against_competition(q_score, chi, ioc, len(pt))
 
         print(f"    Score: Q={q_score:.1f} | chi_sq={chi:.1f} | IoC={ioc:.4f}")
         print(f"    Plaintext Preview: \"{pt[:70]}...\"")

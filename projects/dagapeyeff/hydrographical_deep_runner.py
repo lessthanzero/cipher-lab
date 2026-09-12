@@ -19,7 +19,7 @@ import argparse
 import random
 import time
 from pathlib import Path
-from typing import Dict, List, Optional, Tuple
+from typing import List, Optional
 
 from cipher_lab.ledger import EpistemicLedger
 from cipher_lab.stats import (
@@ -27,6 +27,7 @@ from cipher_lab.stats import (
     calculate_chi_squared,
     calculate_index_of_coincidence,
 )
+
 from projects.dagapeyeff.benchmarks import evaluate_against_competition
 from projects.dagapeyeff.cartographic_grid import read_diagonal_matrix_transpose
 from projects.dagapeyeff.corpus import get_digit_pairs
@@ -34,12 +35,9 @@ from projects.dagapeyeff.exact_14key_sweep import apply_generalized_double_trans
 from projects.dagapeyeff.kerckhoffs_defect import get_standard_key_order
 from projects.dagapeyeff.two_square import pairs_to_coordinates
 from projects.dagapeyeff.two_square_annealer import (
-    STANDARD_ALPHABET,
     TwoSquareAnnealer,
     TwoSquareState,
-    make_polybius_alphabet,
 )
-
 
 NAUTICAL_CARTOGRAPHIC_KEYWORDS = [
     "HYDROGRAPHICAL",

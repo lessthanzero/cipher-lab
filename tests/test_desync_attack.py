@@ -1,12 +1,9 @@
 """Unit tests for Desynchronization Slip & Traverse Attacks."""
 
-import pytest
 from projects.dagapeyeff.desync_attack import (
-    apply_dropped_pair_slip,
-    apply_inserted_pair_slip,
-    apply_boustrophedon_traverse,
-    apply_diagonal_traverse,
     DesyncAnnealer,
+    apply_boustrophedon_traverse,
+    apply_dropped_pair_slip,
 )
 
 

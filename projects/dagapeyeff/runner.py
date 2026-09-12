@@ -14,26 +14,24 @@ from pathlib import Path
 
 from cipher_lab.loop import CipherDiscoveryLoop
 from cipher_lab.stats import QuadgramScorer
+
 from projects.dagapeyeff.astra_advisor import (
-    query_astra_advisor,
     query_astra_cartographic_nihilist,
 )
 from projects.dagapeyeff.benchmarks import evaluate_against_competition
 from projects.dagapeyeff.cartographic_corpus import (
-    DIAGNOSTIC_ROOTS,
     NIHILIST_INDICATOR_TERMS,
     ORDNANCE_SURVEY_TERMS,
-    calculate_cartographic_lexical_bonus,
 )
 from projects.dagapeyeff.corpus import (
     get_digit_pairs,
     get_payload_digits,
     get_stripped_14x13_pairs,
 )
+from projects.dagapeyeff.desync_attack import DesyncAnnealer
 from projects.dagapeyeff.joint_annealer import JointDagapeyeffAnnealer, make_polybius_alphabet
 from projects.dagapeyeff.kerckhoffs import KerckhoffsEngine
 from projects.dagapeyeff.two_square_annealer import TwoSquareAnnealer
-from projects.dagapeyeff.desync_attack import DesyncAnnealer
 
 
 def run_competitive_discovery(
@@ -242,7 +240,6 @@ def run_competitive_discovery(
                 pairing = two_sq_pairings[(chain_idx - 1) % len(two_sq_pairings)]
                 trans = two_sq_trans[(chain_idx - 1) % len(two_sq_trans)]
 
-                two_sq_desc = f"{orient}_dual{is_dual}_pair{pairing}_trans{trans}"
                 print(f"\n  [*] Two-Square Chain {chain_idx} [{elapsed_m:.2f}/{time_budget_mins:.1f}m]: {orient} (dual={is_dual}, pairing={pairing}, trans={trans}), grid={mode}, kw=({seed_kw}, {seed_kw2}), budget={chain_duration:.0f}s")
 
                 annealer_ts = TwoSquareAnnealer(

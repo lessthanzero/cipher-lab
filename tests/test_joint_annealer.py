@@ -1,4 +1,4 @@
-import pytest
+from projects.dagapeyeff.cartographic_corpus import calculate_cartographic_lexical_bonus
 from projects.dagapeyeff.joint_annealer import (
     JointDagapeyeffAnnealer,
     make_polybius_alphabet,
@@ -36,8 +36,6 @@ def test_joint_annealer_short_chain():
     assert best_state is not None
     assert len(best_state.candidate_pt) == 196
     assert best_state.score_q > -3000.0
-
-from projects.dagapeyeff.cartographic_corpus import calculate_cartographic_lexical_bonus
 
 
 def test_cartographic_lexical_bonus():

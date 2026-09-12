@@ -9,6 +9,7 @@ Based on scholarly codicology and paleographical consensus:
 from __future__ import annotations
 
 from typing import Any, Dict, List, NamedTuple, Optional
+
 from cipher_lab.models import CipherProvenance
 
 ROHONC_PROVENANCE = CipherProvenance(

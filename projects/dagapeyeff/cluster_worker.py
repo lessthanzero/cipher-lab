@@ -15,23 +15,22 @@ from __future__ import annotations
 import argparse
 import concurrent.futures
 import json
-import os
 import random
 import time
 from dataclasses import asdict, dataclass
 from pathlib import Path
-from typing import Any, Dict, List, Optional, Tuple
+from typing import List
 
 from cipher_lab.stats import (
     QuadgramScorer,
     calculate_chi_squared,
     calculate_index_of_coincidence,
 )
+
 from projects.dagapeyeff.admiralty_sweep import (
     ADMIRALTY_KEYWORDS_14,
     generate_hydrographical_duplicate_rankings,
 )
-from projects.dagapeyeff.benchmarks import evaluate_against_competition
 from projects.dagapeyeff.cartographic_grid import (
     read_cartesian_bottom_up,
     read_cartographic_boustrophedon,
@@ -47,7 +46,6 @@ from projects.dagapeyeff.kerckhoffs_defect import get_standard_key_order
 from projects.dagapeyeff.two_square import pairs_to_coordinates
 from projects.dagapeyeff.two_square_annealer import (
     TwoSquareAnnealer,
-    TwoSquareState,
 )
 
 
@@ -115,9 +113,6 @@ def run_worker_loop(
             ranks = get_standard_key_order(kw)
             key_pool.append((kw, ranks[:w] if len(ranks) >= w else (ranks * 2)[:w]))
 
-    traversals = ["standard", "cartesian_bottom_up", "boustrophedon_horiz"]
-    directions = ["standard_encryption", "kerckhoffs_decryption"]
-    orders = ["row_then_col", "col_then_row"]
 
     chain_idx = 0
     while (time.time() - start_time) < (time_budget_secs - 5.0):

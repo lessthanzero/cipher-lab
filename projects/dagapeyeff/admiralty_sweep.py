@@ -23,12 +23,11 @@ Systematically evaluates:
 from __future__ import annotations
 
 import argparse
-import itertools
 import random
 import time
 from dataclasses import dataclass
 from pathlib import Path
-from typing import Dict, List, Optional, Tuple
+from typing import List, Optional, Tuple
 
 from cipher_lab.ledger import EpistemicLedger
 from cipher_lab.stats import (
@@ -36,6 +35,7 @@ from cipher_lab.stats import (
     calculate_chi_squared,
     calculate_index_of_coincidence,
 )
+
 from projects.dagapeyeff.benchmarks import evaluate_against_competition
 from projects.dagapeyeff.cartographic_grid import read_diagonal_matrix_transpose
 from projects.dagapeyeff.corpus import get_digit_pairs
@@ -45,9 +45,7 @@ from projects.dagapeyeff.kerckhoffs_defect import get_standard_key_order
 from projects.dagapeyeff.two_square import pairs_to_coordinates
 from projects.dagapeyeff.two_square_annealer import (
     TwoSquareAnnealer,
-    TwoSquareState,
 )
-
 
 ADMIRALTY_KEYWORDS_14 = [
     "HYDROGRAPHICAL",
@@ -237,7 +235,7 @@ def run_admiralty_sweep(
                 q_score = scorer.score_total(pt)
                 chi = calculate_chi_squared(pt)
                 ioc = calculate_index_of_coincidence(pt)
-                comp = evaluate_against_competition(q_score, chi, ioc, len(pt))
+                evaluate_against_competition(q_score, chi, ioc, len(pt))
 
                 res = AdmiraltySweepResult(
                     keyword_label=label,

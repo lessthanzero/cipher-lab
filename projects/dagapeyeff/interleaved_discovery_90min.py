@@ -17,7 +17,7 @@ import argparse
 import random
 import time
 from pathlib import Path
-from typing import Dict, List, Optional, Tuple
+from typing import List, Optional, Tuple
 
 from cipher_lab.ledger import EpistemicLedger
 from cipher_lab.stats import (
@@ -25,6 +25,7 @@ from cipher_lab.stats import (
     calculate_chi_squared,
     calculate_index_of_coincidence,
 )
+
 from projects.dagapeyeff.admiralty_sweep import (
     ADMIRALTY_KEYWORDS_14,
     generate_hydrographical_duplicate_rankings,
@@ -44,15 +45,13 @@ from projects.dagapeyeff.two_square_annealer import (
     TwoSquareState,
 )
 from projects.dagapeyeff.word_stitcher import (
-    count_dictionary_words,
-    query_fedora_ollama,
     run_beam_word_stitcher,
 )
 
 
 def get_all_admiralty_key_configurations() -> List[Tuple[str, List[int]]]:
     """Compile comprehensive library of Admiralty keywords and duplicate-ranking permutations."""
-    w, h = 14, 13
+    w, _h = 14, 13
     configs: List[Tuple[str, List[int]]] = []
 
     # 1. Duplicate ranking variants of HYDROGRAPHICAL
@@ -92,7 +91,7 @@ def run_continuous_interleaved_campaign(
 
     raw_196 = get_digit_pairs()
     diag_182 = read_diagonal_matrix_transpose(raw_196, width=14)[:182]
-    w, h = 14, 13
+    _w, h = 14, 13
 
     key_configs = get_all_admiralty_key_configurations()
     directions = ["standard_encryption", "kerckhoffs_decryption"]
@@ -175,7 +174,7 @@ def run_continuous_interleaved_campaign(
             q_score = scorer.score_total(pt)
             chi = calculate_chi_squared(pt)
             ioc = calculate_index_of_coincidence(pt)
-            comp = evaluate_against_competition(q_score, chi, ioc, len(pt))
+            evaluate_against_competition(q_score, chi, ioc, len(pt))
 
             # Record in DuckDB ledger
             trial_id = f"inter_c{cycle}_{label[:6]}_{int(time.time()*1000)%1000000}"

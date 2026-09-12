@@ -12,7 +12,7 @@ from __future__ import annotations
 
 import math
 from collections import Counter
-from typing import Dict, List, Set, Tuple
+from typing import Dict, List, Set
 
 from projects.rohonc.corpus import ROHONC_CORE_SIGNS
 from projects.rohonc.models import (
@@ -219,7 +219,6 @@ def calculate_codebook_morphology(tokens: List[str], core_sign_ids: Set[str]) ->
     yule_k = 10000.0 * (s2 / (n * n)) if n > 1 else 0.0
     
     # Lempel-Ziv Complexity estimation (normalized)
-    s = "".join(tokens)
     lz_parts = set()
     i = 0
     while i < len(tokens):

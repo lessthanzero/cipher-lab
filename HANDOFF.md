@@ -9,7 +9,7 @@
 ## 1. What Has Been Completed
 
 1. **Repository Boundary Separation**:
-   - Established `/Users/sashakatin/Developer/cipher-lab` as the sibling repository to `ancient-text-lab`.
+   - Established `cipher-lab` as the sibling repository to `ancient-text-lab`.
    - Partitioned the 6 research targets based on mathematical and epistemic properties:
      - **`ancient-text-lab`**: Natural ancient writing systems & epigraphic scripts (`projects/indus/` and `projects/rongorongo/` scaffolded).
      - **`cipher-lab`**: Historical ciphers, tachygraphy, and cryptograms (`dagapeyeff`, `rohonc`, `dorabella`, `shugborough`).
@@ -19,7 +19,7 @@
    - `models.py`: Strict epistemic layers (`Observation`, `Transcription`, `Interpretation`, `CandidateSolution`, `Falsification`), `UnicityCheck`, `CandidateEvaluation`.
    - `stats.py`: High-performance 0-token metrics: Index of Coincidence, Shannon entropy, conditional entropy, Kasiski examination, log-likelihood `QuadgramScorer`, order-shuffled Monte Carlo null surrogates, empirical $p$-value computation.
    - `solvers.py`: $5 \times 5$ / $6 \times 6$ Polybius checkerboard encoder/decoder, columnar transposition permutations, simulated annealing optimizer.
-   - `harness.py`: Local Ollama (`phi4-mini:latest`, `qwen2.5-coder:7b`, `gemma3:12b`) + remote Fedora PC worker (`100.103.226.101:11434`) routing, Darwin virtual memory accounting (`vm_stat` cache pages), unified telemetry to `~/.local/share/local-models/usage.jsonl`, double-blind refereeing with negative-control foils.
+   - `harness.py`: Local Ollama (`phi4-mini:latest`, `qwen2.5-coder:7b`, `gemma3:12b`) + remote worker routing, Darwin virtual memory accounting (`vm_stat` cache pages), unified telemetry to `~/.local/share/local-models/usage.jsonl`, double-blind refereeing with negative-control foils.
    - `ledger.py`: Append-only DuckDB / Parquet ledger (`epistemic_ledger.duckdb`) tracking all trials, mutations, rejections, unicity gates, and multiplicity-corrected denominators.
    - `loop.py`: `CipherDiscoveryLoop` integrating Gate 0 (Unicity distance), Gate 1 (0-token math & null surrogates), and Gate 2 (Double-blind foil referee).
 
@@ -45,7 +45,7 @@
 2. **Execute First Active Discovery Loop (D'Agapeyeff)**:
    - Run:
      ```bash
-     cd /Users/sashakatin/Developer/cipher-lab
+     cd cipher-lab
      uv run python -m projects.dagapeyeff.runner
      ```
    - Inspect output and the generated DuckDB ledger at `data/derived/epistemic_ledger.duckdb`.
@@ -64,7 +64,7 @@
 
 ```bash
 # Enter cipher-lab workspace
-cd /Users/sashakatin/Developer/cipher-lab
+cd cipher-lab
 
 # Run tests
 uv run --package cipher-lab pytest

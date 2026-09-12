@@ -17,6 +17,7 @@ from cipher_lab.stats import (
     calculate_chi_squared,
     calculate_index_of_coincidence,
 )
+
 from projects.dorabella.corpus import DORABELLA_TOKENS
 from projects.dorabella.hypotheses import ALPHABET_24, scramble_tokens
 from projects.dorabella.symbols import decode_tokens

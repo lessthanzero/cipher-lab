@@ -23,7 +23,7 @@ Token encoding: token_id = (hump_count - 1) * 8 + orientation_id (0 <= token_id 
 from __future__ import annotations
 
 from dataclasses import dataclass
-from typing import Dict, List, Tuple
+from typing import Dict, List
 
 from projects.dorabella.corpus import DORABELLA_TOKENS
 

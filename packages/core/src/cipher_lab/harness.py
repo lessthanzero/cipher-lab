@@ -14,8 +14,8 @@ from typing import Any, Optional
 
 import httpx
 
-LOCAL_OLLAMA_URL = "http://127.0.0.1:11434"
-REMOTE_OLLAMA_URL = "http://100.103.226.101:11434"
+LOCAL_OLLAMA_URL = os.getenv("LOCAL_OLLAMA_URL", "http://127.0.0.1:11434")
+REMOTE_OLLAMA_URL = os.getenv("REMOTE_OLLAMA_URL", "http://127.0.0.1:11434")
 
 
 def get_darwin_available_memory_gb() -> float:

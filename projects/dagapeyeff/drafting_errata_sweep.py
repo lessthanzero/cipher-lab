@@ -11,11 +11,10 @@ made when preparing 'Codes and Ciphers' (1939):
 from __future__ import annotations
 
 import argparse
-import json
 import time
 from dataclasses import dataclass
 from pathlib import Path
-from typing import Dict, List, Optional, Tuple
+from typing import List, Optional, Tuple
 
 from cipher_lab.ledger import EpistemicLedger
 from cipher_lab.stats import (
@@ -23,8 +22,8 @@ from cipher_lab.stats import (
     calculate_chi_squared,
     calculate_index_of_coincidence,
 )
+
 from projects.dagapeyeff.admiralty_sweep import generate_hydrographical_duplicate_rankings
-from projects.dagapeyeff.benchmarks import evaluate_against_competition
 from projects.dagapeyeff.cartographic_grid import (
     read_cartesian_bottom_up,
     read_diagonal_matrix_transpose,
@@ -71,7 +70,7 @@ def run_drafting_errata_sweep(
 ) -> List[ErrataTrialResult]:
     """Execute drafting errata sweep across known failure modes."""
     ledger = EpistemicLedger(ledger_dir=data_dir)
-    scorer = QuadgramScorer(language="english")
+    QuadgramScorer(language="english")
 
     print("=" * 80, flush=True)
     print("OPTION 1: HAND-DRAFTING ERRATA & TRANSPOSITION SLIP SWEEP", flush=True)
@@ -81,7 +80,7 @@ def run_drafting_errata_sweep(
     raw_196 = get_digit_pairs()
     rankings_dict = dict(generate_hydrographical_duplicate_rankings())
     base_ranks = rankings_dict["hydro_tie_AR_HR_RR"]
-    w, h = 14, 13
+    _w, h = 14, 13
 
     # Define drafting errata configurations
     errata_configs: List[Tuple[str, str, List[str], List[int], List[int]]] = []
@@ -164,7 +163,7 @@ def run_drafting_errata_sweep(
 
     for idx, (err_type, desc, pairs_input, col_ord, row_ord) in enumerate(errata_configs, 1):
         curr_w = len(col_ord)
-        curr_h = len(row_ord)
+        len(row_ord)
 
         t_pairs = apply_generalized_double_transposition(
             pairs_input,

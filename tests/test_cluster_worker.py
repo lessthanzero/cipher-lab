@@ -1,8 +1,8 @@
 """Unit tests for Cluster Worker module."""
 
 from projects.dagapeyeff.cluster_worker import (
-    apply_traversal_on_pairs,
     ClusterTrialResult,
+    apply_traversal_on_pairs,
 )
 
 

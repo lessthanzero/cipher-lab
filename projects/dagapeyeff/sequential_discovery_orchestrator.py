@@ -13,10 +13,9 @@ from __future__ import annotations
 
 import argparse
 import random
-import subprocess
 import time
 from pathlib import Path
-from typing import Dict, List, Optional
+from typing import Optional
 
 from cipher_lab.ledger import EpistemicLedger
 from cipher_lab.stats import (
@@ -24,9 +23,8 @@ from cipher_lab.stats import (
     calculate_chi_squared,
     calculate_index_of_coincidence,
 )
+
 from projects.dagapeyeff.benchmarks import evaluate_against_competition
-from projects.dagapeyeff.cartographic_grid import read_diagonal_matrix_transpose
-from projects.dagapeyeff.corpus import get_digit_pairs, get_stripped_14x13_pairs
 from projects.dagapeyeff.exact_14key_sweep import run_exact_14key_sweep
 from projects.dagapeyeff.incipit_crib_solver import run_incipit_crib_solver
 from projects.dagapeyeff.two_square_annealer import (
@@ -159,14 +157,14 @@ def run_sequential_discovery(
     # Calculate sub-budgets dynamically
     budget_p1 = min(20.0, total_budget_mins * 0.25)
     budget_p2 = min(25.0, total_budget_mins * 0.30)
-    budget_p3 = max(0.1, total_budget_mins - budget_p1 - budget_p2)
+    max(0.1, total_budget_mins - budget_p1 - budget_p2)
 
     # -------------------------------------------------------------
     # PHASE 1: Exact 14-Key Sweep
     # -------------------------------------------------------------
     print("\n>>> LAUNCHING PHASE 1: EXACT 14-KEY DOUBLE TRANSPOSITION SWEEP", flush=True)
     t0 = time.time()
-    p1_results = run_exact_14key_sweep(
+    run_exact_14key_sweep(
         data_dir=data_dir,
         time_budget_mins=budget_p1,
         seed=seed,

@@ -11,15 +11,15 @@ import math
 import random
 import time
 from dataclasses import dataclass
-from typing import Any, Dict, List, Optional, Tuple
+from typing import List, Optional, Tuple
 
 from cipher_lab.loop import CipherDiscoveryLoop
 from cipher_lab.stats import QuadgramScorer
+
 from projects.dagapeyeff.benchmarks import evaluate_against_competition
 from projects.dagapeyeff.cartographic_corpus import calculate_cartographic_lexical_bonus
 from projects.dagapeyeff.corpus import (
     get_digit_pairs,
-    get_payload_digits,
     get_stripped_14x13_pairs,
 )
 from projects.dagapeyeff.kerckhoffs import KerckhoffsEngine
@@ -307,7 +307,7 @@ class JointDagapeyeffAnnealer:
 
             # Log to discovery loop periodically or when viable
             if iterations % 2000 == 0 and loop is not None:
-                comp = evaluate_against_competition(
+                evaluate_against_competition(
                     self.best_state.score_q,
                     999.0,
                     0.065,

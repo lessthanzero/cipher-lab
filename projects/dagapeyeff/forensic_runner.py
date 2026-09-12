@@ -14,39 +14,31 @@ import argparse
 import random
 import time
 from pathlib import Path
-from typing import Dict, List, Tuple
+from typing import List
 
 from cipher_lab.ledger import EpistemicLedger
-from cipher_lab.loop import CipherDiscoveryLoop
 from cipher_lab.stats import (
     QuadgramScorer,
     calculate_chi_squared,
     calculate_index_of_coincidence,
-    calculate_empirical_p_value,
-    order_shuffle_null,
 )
+
 from projects.dagapeyeff.benchmarks import evaluate_against_competition
 from projects.dagapeyeff.cartographic_grid import (
     CARTOGRAPHIC_OPERATORS,
-    read_cartesian_bottom_up,
     read_diagonal_matrix_transpose,
-    read_easting_first,
 )
 from projects.dagapeyeff.clerical_repair import (
     get_all_row0_variants,
     strip_column_14_margin,
 )
-from projects.dagapeyeff.corpus import get_digit_pairs, get_payload_digits
+from projects.dagapeyeff.corpus import get_digit_pairs
 from projects.dagapeyeff.joint_annealer import make_polybius_alphabet
-from projects.dagapeyeff.kerckhoffs import KerckhoffsEngine
 from projects.dagapeyeff.kerckhoffs_defect import (
     BOOK_KEYWORDS,
-    apply_columnar_transposition_direction,
     apply_double_kerckhoffs_transposition,
     get_historical_shuvalof_ranks,
-    get_standard_key_order,
 )
-
 
 ROW_MAP = {"6": 0, "7": 1, "8": 2, "9": 3, "0": 4}
 COL_MAP = {"1": 0, "2": 1, "3": 2, "4": 3, "5": 4}
@@ -214,14 +206,13 @@ def run_forensic_biographical_sweep(
                         best_hypothesis = f"H_kerckhoffs_{rank_label}_{direction_mode}_w{target_w}_{kw_name}"
 
     # 4. Sweep 4: High-Speed Annealing on Top Forensic Structures
-    print(f"\n[+] STAGE 4: High-Speed Annealing on Top Forensic Geometry...")
+    print("\n[+] STAGE 4: High-Speed Annealing on Top Forensic Geometry...")
     diag_196 = read_diagonal_matrix_transpose(pairs_raw, width=14)
     diag_182 = diag_196[:182]
     
     current_alpha = make_polybius_alphabet("ORDNANCESURVEY")
     best_sa_pt = decode_pairs_fast(diag_182, current_alpha)
     best_sa_q = scorer.score_total(best_sa_pt)
-    best_sa_alpha = current_alpha
 
     t_sa_start = time.time()
     steps = 0
@@ -241,13 +232,12 @@ def run_forensic_biographical_sweep(
         delta = cand_q - best_sa_q
         if delta > 0 or random.random() < pow(2.71828, delta / temp):
             best_sa_q = cand_q
-            best_sa_alpha = cand_alpha
             best_sa_pt = cand_pt
             current_alpha = cand_alpha
             if cand_q > best_candidate_score:
                 best_candidate_score = cand_q
                 best_candidate_pt = cand_pt
-                best_hypothesis = f"H_sa_diagonal_pelling_182"
+                best_hypothesis = "H_sa_diagonal_pelling_182"
 
         temp *= cooling
 

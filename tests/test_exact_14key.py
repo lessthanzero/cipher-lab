@@ -1,8 +1,8 @@
 """Unit tests for Exact 14-Key Double Transposition Sweep."""
 
 from projects.dagapeyeff.exact_14key_sweep import (
-    apply_generalized_double_transposition,
     EXACT_14_CANDIDATE_KEYS,
+    apply_generalized_double_transposition,
 )
 from projects.dagapeyeff.kerckhoffs_defect import get_standard_key_order
 

@@ -18,7 +18,7 @@ And for any known character p2 at odd position i+1:
 from __future__ import annotations
 
 import collections
-from typing import Dict, List, Set, Tuple
+from typing import Dict, List, Tuple
 
 from projects.dagapeyeff.admiralty_sweep import generate_hydrographical_duplicate_rankings
 from projects.dagapeyeff.cartographic_grid import (
@@ -36,7 +36,7 @@ def get_winning_coordinates() -> List[Tuple[int, int]]:
     diag_182 = read_diagonal_matrix_transpose(raw_196, width=14)[:182]
     rankings_dict = dict(generate_hydrographical_duplicate_rankings())
     ranks = rankings_dict["hydro_tie_AR_HR_RR"]
-    w, h = 14, 13
+    _w, h = 14, 13
     col_order = ranks
     row_ranks = ranks[:h]
     row_indexed = sorted(list(enumerate(row_ranks)), key=lambda x: (x[1], x[0]))

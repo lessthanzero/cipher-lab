@@ -18,7 +18,7 @@ import random
 import time
 from dataclasses import dataclass
 from pathlib import Path
-from typing import Dict, List, Optional, Tuple
+from typing import List, Optional
 
 from cipher_lab.ledger import EpistemicLedger
 from cipher_lab.stats import (
@@ -26,6 +26,7 @@ from cipher_lab.stats import (
     calculate_chi_squared,
     calculate_index_of_coincidence,
 )
+
 from projects.dagapeyeff.benchmarks import evaluate_against_competition
 from projects.dagapeyeff.cartographic_grid import (
     grid_to_pairs,
@@ -40,9 +41,7 @@ from projects.dagapeyeff.kerckhoffs_defect import (
 from projects.dagapeyeff.two_square import pairs_to_coordinates
 from projects.dagapeyeff.two_square_annealer import (
     TwoSquareAnnealer,
-    TwoSquareState,
 )
-
 
 EXACT_14_CANDIDATE_KEYS = [
     "ORDNANCESURVEY",     # 14 letters - Exact match for 14x14 grid
@@ -70,7 +69,7 @@ def apply_generalized_double_transposition(
 ) -> List[str]:
     """Execute double transposition with arbitrary column and row key permutations."""
     width = len(col_order)
-    height = len(row_order)
+    len(row_order)
 
     if order == "col_then_row":
         # Step 1: Column transposition
@@ -225,7 +224,7 @@ def run_exact_14key_sweep(
                     q_score = scorer.score_total(pt)
                     chi = calculate_chi_squared(pt)
                     ioc = calculate_index_of_coincidence(pt)
-                    comp = evaluate_against_competition(q_score, chi, ioc, len(pt))
+                    evaluate_against_competition(q_score, chi, ioc, len(pt))
 
                     res = TranspositionSweepResult(
                         keyword=kw,

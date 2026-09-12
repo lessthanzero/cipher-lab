@@ -10,10 +10,9 @@ worked example of double columnar transposition:
 
 from __future__ import annotations
 
-from typing import Dict, List, Optional, Tuple
-from cipher_lab.stats import QuadgramScorer
-from projects.dagapeyeff.cartographic_grid import pairs_to_grid, grid_to_pairs
+from typing import Dict, List
 
+from projects.dagapeyeff.cartographic_grid import grid_to_pairs, pairs_to_grid
 
 # Historical Key Phrases and Words directly appearing in D'Agapeyeff's books
 BOOK_KEYWORDS: Dict[str, str] = {

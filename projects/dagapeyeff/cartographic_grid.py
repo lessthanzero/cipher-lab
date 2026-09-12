@@ -10,7 +10,7 @@ cartographer and patent draughtsman:
 
 from __future__ import annotations
 
-from typing import List, Tuple
+from typing import List
 
 
 def pairs_to_grid(pairs: List[str], width: int = 14) -> List[List[str]]:
