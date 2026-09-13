@@ -212,3 +212,31 @@ def test_shugborough_experiment_runner(tmp_path: Path) -> None:
     assert "shugborough_info_theory_baseline" in trial_ids
     assert "shugborough_epigraphic_stone_audit" in trial_ids
     assert "debunk_polyalphabetic_magdalen" in trial_ids
+
+
+def test_shugborough_triple_check() -> None:
+    """Verify that the triple-check audit executes and confirms all three axes."""
+    from projects.shugborough.triple_check_audit import ShugboroughTripleCheck
+
+    report = ShugboroughTripleCheck.run_triple_check()
+    assert "TRIPLE-CHECK COMPLETE" in report["verdict"]
+
+    # Audit 1: Codicological
+    a1 = report["audit_1"]
+    assert a1.audit_number == 1
+    assert "VERIFIED" in a1.status
+    assert any("Interpunct Verification" in f for f in a1.key_findings)
+    assert any("U vs V Typographic Cut" in f for f in a1.key_findings)
+
+    # Audit 2: Cryptanalytic
+    a2 = report["audit_2"]
+    assert a2.audit_number == 2
+    assert "VERIFIED" in a2.status
+    assert any("Anagram Exhaustion" in f for f in a2.key_findings)
+    assert any("Caesar Shifts" in f for f in a2.key_findings)
+
+    # Audit 3: Epigraphic & Historical
+    a3 = report["audit_3"]
+    assert a3.audit_number == 3
+    assert "CHARACTERIZED" in a3.status
+    assert any("Dis Manibus" in f for f in a3.key_findings)
