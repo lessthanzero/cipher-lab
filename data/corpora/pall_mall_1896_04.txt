@@ -1,0 +1,1558 @@
+SECRETS IN CIPHER. 
+
+
+number left unmade by him would still require a row of thirty-six 
+figures to express it—so infinitesimal are fifty-two and a half millions 
+of arrangements when compared with the almost infinite number of 
+them which may be made out of thirty-two playing cards ; evidently, 
+then, guess-work would not be of much help towards a solution of 
+a message written in the “ Pack of Cards” cipher. 
+
+The eniire population of the world is, approximately, 1500 
+millions. Let every one of these men, women and children now 
+begin to make the different arrangements of thirty-two cards, and 
+let them work continuously for one hundred years at the rate of 
+one arrangement per minute—deaths and births being suspended 
+for a century for the sake of our experiment—certainly, the work 
+of sorting thirty-two playing cards for one hundred years by the 
+whole population of the world would have exhausted in 1996 some 
+few of the possible arrangements: a mere trifle, however—only 
+78,840,000,000,000,o00o—and thus the number &/¢ unmade would 
+still require a row of thirty-six figures to express it. Therefore, as the 
+world’s population ‘would not be of much use in doing this little 
+piece of work with the thirty-two playing cards shown in No. 46, we 
+will call in astronomy to help us with the sorting of these bits of 
+pasteboard used for the “ Pack of Cards” cipher. 
+
+There are about one hundred million stars visible at the eye- 
+piece of the Lick telescope: let us assume that each of these 
+stars contains a population one million times larger than that of the 
+earth, and let us set at work all these populations of all these 
+stars. Let us and our helpers in the stars work together at sorting 
+these cards into different arrangements, at the rate of one arrange- 
+ment per second for each person on the earth or in the stars. At 
+the end of more than fifty-five thousand years from the present 
+time (1896) we should by the aid of the vast populations of these 
+one hundred million stars have exhausted all the possible arrange- 
+ments of the thirty-two cards shown in No. 46. This is an 
+extraordinary fact to lie so quietly hidden in the simple-looking 
+illustration on page 608, but I do not ask you to be content 
+with my bare statement—here is the calculation set out, so that 
+any one who cares to check my results may do so. 
+
+I may suggest that it will be found convenient to make this 
+calculation by the aid of a table of logarithms ; although, if the four 
+walls of a spare room be available—and also a pair of steps—the 
+calculation may be worked on the wall-paper with a piece of black 
+chalk or charcoal; the computer descending his ladder step by step 
+and shifting it round the room as he proceeds. 
+
+This “ Pack of Cards” cipher is in more ways than one a very 
+remarkable device. 
+
+The Foreign Office cipher shown in No. 47 is a combination of 
+numerals, letters, and peculiarly formed symbols. The original is 
+much larger than the piece of it here shown, but this piece will 
+suffice to make the method quite clear. 
+
+First, there is a choice of five different letters for the repre- 
+sentation in a cipher message of each letter of the alphabet. The 
+
+
+611 
+
+
+
+
+
+
+
+
+Years. 
+= 55,000 approximately. 
+
+
+‘ x 60 x 24 x 365°25 x 1,500,000,000 ) mf (60 x 60 x 24 x 365°25 x 1,500,000,000 x 1,000,000 x conn) 
+
+
+- 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+612 THE PALL MALL MAGAZINE. 
+
+
+five two-figure numbers at 
+the left top corner of 
+No. 47 were used to inform 
+the reader of the cipher 
+which row of letters had 
+been substituted for the 
+actual letters which origin- 
+ally composed the real 
+meaning of the consular 
+despatch. For example, 
+if the number 58 was 
+prefixed to the cipher-letter 
+the consul would then find 
+the solution along the 
+line of small letters which 
+begins 7d As x, etc., and 
+similarly for the other four 
+lines of small letters. These 
+numbers would be changed 
+more than once in_ the 
+
+
+
+
+
+No. 47.—Facsimile of a portion of a Foreign Office Cipher during the se? 
+reign of George Ill, “Cipher for Consul Davison at Algiers,” Writing of one despatch, but 
+
+
+ee Te ee Free. the necessary information 
+
+
+as to a change was readily conveyed to Consul Davison by the insertion of the 
+particular two-figure number connected with each one of the five lines of small 
+letters shown in the upper part of No. 47. 
+
+Then comes the reference to the peculiarly formed symbols—five of which 
+may be seen in the middle and at the right of No. 47. “MB. The following 
+Marks may sometimes be used to signify what is expressed opposite to them, 
+without writing the Word at full Length, and this Mark + may serve for ¢4 which 
+is so common in our Language.” There are in the original document several 
+columns of these ‘ Marks,” and they denote short useful words that often occur 
+in writing. 
+
+Last, we have the reference to the use of numerals in the cipher despatches 
+passing to and from Consul Davison at Algiers in the time of George III. “ W.B. 
+The following Figures are to stand for the Words to which they are affixed opposite.” 
+We see the meaning of the eight two-figure numbers at the bottom of No. 47, and 
+many others were written on the original cipher. For example, 84 = Ships, 67 = 
+Governor, 21 = fitted out, and 49 == Xebecks. ‘The last time I met this word Xedecks 
+was about twenty years ago, when I was reading an early tale by Captain Marryat 
+called Zhe Log of a Privateers-man. It was there spelt Xebegue; and for the 
+information of those who do not know the meaning of this term, it may be 
+interesting to state that an Xedec—to have a third spelling of it—-is a small 
+three-masted vessel formerly much used by the Algerine pirates, and now used to 
+a small extent in the Mediterranean: hence the reference to these vessels in the 
+cipher of Consul Davison, who was stationed at Algiers just 116 years ago. 
+
+The Heraldic cipher shown in Nos. 48, 49 and 50, is a very curious instance 
+of emblematic cipher. I found it among some old Foreign Office papers of the 
+eighteenth century, and I have shown it here because of its quaintness, and because 
+the key itself (see No. 48) was disguised as a heraldic device. The twenty-four 
+little tufts contained in the nine divisions of this shield denote the letters of the 
+
+
+
+
+
+
+
+
+SECRETS IN CIPHER. 613 
+
+
+alphabet—/ and V being omitted. For example, 
+the top left-hand division of the shield contains 
+the three letters 4, B, C; the centre division con- 
+tains the two letters 47 and 1; the bottom right- 
+hand division contains X, Y, Z. The amplification 
+of this secret key, which is given in No. 49, shows 
+us how to denote each of the three (or two) letters 
+represented in each of the nine divisions of the 
+shield by the three (or two) tufts which each 
+division contains. 
+
+In No. 49 the thick divisional lines of the 
+shield in No. 48 are repeated in the form of the 
+angles made by these divisional lines on the shield. 
+Taking, for convenience, the top left-hand division 
+of No. 48, which relates to the three letters 4, B 
+and C, we copy the angle of this particular division 
+
+
+
+
+
+
+
+
+. : . : No. 48 —The Heraldic Cipher. 
+three times in No. 49: adding one tick for 4, two Eighteenth Century. 
+
+
+ticks for B, and three ticks for C: and thus we sath ated 
+see in No. 49 the cipher marks which stand for 4, &, and C respectively. 
+Again, take the centre division of the shield in No. 48—which is a square: as 
+
+
+this division contains only two letters 
+
+
+(47 and JV), we enter it only twice in 
+J jiu 
+
+
+D lll le No. 49, adding one tick for AZ and two 
+
+
+= a an oo SS oo ticks for 1, thereby obtaining the symbols 
+
+ee ee ee ee for these two letters which were used in 
+
+“1 “I 7 rT TT r 4 r the writing of the cipher message, a short 
+specimen of which is shown in No. 50. 
+
+SNe No. — a Ga Comparison of the cipher message 
+
++ Amplification of the secret Sey shown % NO. 8. in) No. so with the amplified key in 
+
+
+No. 49 will show, by mere inspection, that the secret writing is: Plot known. Fly. 
+
+Regarded as a mode of secret writing this Heraldic cipher is not a good one. 
+Unlike some of the others, which baffle the decipherer even if he know the principle 
+of the cipher, this one is most readily solved when once the method of it is known. 
+No doubt the. peculiar form of the key in No. 48 was purposely designed in 
+order to baffle the chance finder of it: but this key—even without the amplification 
+of it which I have given for the sake of clearness—would not for long remain a 
+mystery to any one accustomed to deal with cipher: there are too many tell-tale 
+features about it—despite its heraldic appearance. Of course, the crown arrangement 
+at the top of the shield is without meaning, and it was added merely to keep up 
+the appearance of a heraldic device. The only significant parts of the shield are the 
+twenty-four little tufts and the thick divisional lines. Ten minutes’ examination 
+of the shield would suffice to expose its secret to any fairly competent decipherer, 
+whilst the Hebraic-looking cipher letter shown in No. 50 would also soon be read 
+even in the absence of the key. 
+
+Here, then, is the explanation of the cipher-sentence with which I ended Part III. 
+(see last month’s number 
+
+
+of this Magazine).  In- 
+spection of that sentence c al L "4 al (J ™ CJ 3 ~ i 
+
+
+by the light of Nos. 49 
+
+
+
+
+
+a a 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+: No. 50.—The Heraldic Cipher. 
+and 50 will show that III, A cipher message: “ Plot known! Fly.” 
+
+
+
+
+
+
+
+
+614 THE PALL MALL MAGAZINE. 
+
+
+
+
+
+
+
+
+"7 its meaning 
+is: You will 
+read this sen- 
+months and J duad to think of possible causes of your tence in less 
+time than I 
+spent in writ- 
+
+. : , : . ing it. 
+not be Surprised bo Kmour Chis. hy sBamath $ hotding nan 
+oub awa. 3 stul hope Wy reane my pardow from the ciphers 
+
+
+I have ever 
+
+
+Det eashursh amd, fe aya sot may darhing. wife . Mart. - come across 
+a 
+
+
+—and_ they 
+No. 51.—The Checker-board Cipher. Used by Russian Political Prisoners. are not a few 
+
+I. Illustration of an open letter, passing the scrutiny of the Russian Cipher-bureau, but which 
+contains the secret message : ‘‘ Plot discovered. Burn the Orloff papers in Moscow.” — the one 
+
+
+that most 
+excites my admiration for the masterly ingenuity displayed is that illustrated in 
+Nos. 51, 52, 53, 54. It is the mode of secret writing used by Russian political 
+prisoners, who, under certain conditions and restrictions, are sometimes permitted 
+to send and to receive letters, all of which have to undergo the scrutiny of the 
+officials attached to the Russian cipher bureau. 
+
+In No. 51 we see an illustration of a letter which is apparently quite 
+unsophisticated, both as regards the text of it and the handwriting, and which 
+would not excite the suspicions of the most vigilant officer of the Russian cipher 
+bureau. Their tests of the application of heat, or of chemical re-agents, might be 
+stringently applied to this letter, for sympathetic or invisible ink plays no part in 
+this clever device—and yet this simple-looking letter transmits a vitally important 
+message to its addressee, through the hands and under the very eyes of the most 
+subtle and experienced officials on the staff of the much-dreaded and merciless 
+Russian police. 
+
+When we take up a pen and write, we do not usually connect all the letters 
+that compose each word: for example, as I write these words, I see that, 
+involuntarily, I have written wswad/ly in two little groups of letters—wsu-ally : example 
+in two parts—ex-ample: involuntarily in five parts—in-vo-lunt-ari-ly : etc. In this 
+peculiarity of handwriting lies the secret of this most ingenious cipher: the slight 
+and almost imperceptible “ breaks” that exist in most of the words shown in No. 51 
+form the basis of a cipher which has never been surpassed for ingenuity and 
+simplicity—for it rests upon a simple peculiarity that is common to the handwriting 
+of the ma- 
+
+
+dearest Hoa. de lotta has come fiom upa fr now four 
+
+
+silone. Dur Soul died hore iw the mumes last wee, you will 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+jority of 3 5 ei as 4 :1I 4 2: a. 
+ee MYD EARES TOL G ANO LETT ERHA SCOM E FROM YO UFOR NOWF OUR 
+9eO ple 
+or I ae ee a i Ee 2:8 f ee ee 
+Western M ONT HSA NDID READT O T HINKO FPOS SI B LECAU S ESOF Y OU 
+nationalities. 4 ae Te es ae a ex Se ee oss 4s 
+het us RSIL ENCEO URPA UL DIE DHE REIN THEM IN ESL A STWEE KYO UWIL 
+i h aig oii : 2 ee s 2 5 ty ae S . ue 
+trace the LNOT BE SUR P RIS EDTO KN O WT H ISM YSTRE N G THI SHOLD I 
+reading of 5 ; fie | ee ’ Se --s 2:3 
+the secret NGOUT ANDI ST ILLH OPE TO RECE IVE MYP ARD ON FRO 
+Cate ye tan : a . eee a 5 2: 7 
+message con- MPET ERS BURG H AND TOA GAIN SEEMY DA _ RLINGWIFEALEXE 
+tained in No. 
+51 after the No. 52.—The ‘Checker-board” Cipher. Used by Russian Political Prisoners. 
+Aa 
+
+
+Il. The first stage of the process employed by the receiver of the cipher in order to read the 
+letter has left secret message contained in No. 51. (For explanation, see text.) 
+
+
+
+
+
+
+
+
+SECRETS IN CIPHER. 615 
+
+
+
+
+
+the hands of the wretched prisoner—who, with much care, 
+
+
+
+
+
+designedly “breaks” his words, in certain places—after it has § 35 = P | 34.= © 
+passed the scrutiny of the cipher bureau, and when it reaches J ** ~ “| 4? = ® 
+the hands of the unhappy wife. SOMERS ‘alesis 
+
+In the first place, the wife begins to write out the letter as sh A - - i 
+in No. 52, dividing into separate groups of 1, 2, 3, 4, or 5 “i i a st ne > 
+letters, the consecutive words of the original letter. Here I Jy; - s|3; =P 
+must point out that unless the last stroke of the last letter §f13 = c}ur = 
+of a word in No. 51 point upward, that letter is always 344 = of 35 = F 
+understood to be connected with the first letter of the next 5! Vitis = £ 
+word. For example, the y of my does not point upward, so 915 = = |42 = 8 
+it is held to be connected with the d@ of dearest: as the first §47 ~ * | = 
+“break” occurs after the @ of dearest, so the first little group JS ~ ~|* = 7 
+written out by the wife is the Myp shown in No. 52, and . _— on _— 
+she writes a 3 over this group because it contains three letters. ot = Ula @ - 
+The next connected group of letters is given by the EARES §4. — g|43 = 
+of dearest: this is accordingly entered in No. 52 and a 5 ff33 = nJ13 = c 
+written above it: the last stroke of the ¢ of dearest in No. 51 44 = T | 245 ° 
+does not point upward, so it is to be connected with the of J 23 = H}s2 = w 
+of olga (a “break” occurs after this 7), and thus Tot is the 5 = = | 
+
+
+
+
+
+
+
+
+
+
+
+next group written by the wife in No. 52. And so the first 
+process of reading the secret message goes on; where the last No. 53 ~The “Checker- 
+
+
+a board” Cipher. I1l. The 
+stroke of the last letter of a word points upward (as in the second, and final, stage 
+
+
+o of No in No. 51), that letter ends a cipher group as well . ee nee 
+a at Z by the receiver of the 
+
+as the word of which it is the last letter: see the ANo of cipher in order to read 
+No. 52, the a of which forms part of this group of three the secret message : 
+cas “Plot discovered. Burn 
+
+letters, because the @ of e/ga does not point upward, and the Orloff Papers in 
+
+
+because the full-stop after o/ga has no significance whatever to Moscow.’ 
+the decipherer of the hidden message. 
+
+Thus, the letter in No. 51 is re-written as in No. 52—more quickly than 
+the process is described—the last significant group being the D A at the bottom 
+of No. 52: the group of fourteen letters that follows this D a has no meaning to the 
+wife, because she sees that no “break” occurs in No. 51 as regards these fourteen 
+letters ... rding wife, Alexe. The last stroke of the g in darling does not point 
+upward, nor does the e of wéfe, and so these last fourteen letters form one unmeaning 
+group, which is only entered in No. §2 for the sake of completeness. 
+
+I have mentioned that when the wife writes in No. 52 all the successive little 
+groups of connected letters, she also writes above each 
+group the numeral which represents the number of letters 
+tf, |s|c |p |e] in each group: to these numerals she now turns in order 
+to finally read the secret message. She separates these 
+___|___|__] numerals into consecutive pairs (see the dots between each 
+3. |™M/N|o| Pf pair in No. 52), and writes them in the form shown in 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Eo oy lel No. 53: 35; 32, 34, etc. The wife then looks at her 
+f |||“ checker-board,” illustrated in No. 54, and sees that ¢hirty- 
+s v | w | x | y¥ |Z] five equals P, that thirty-one equals ZL, that ¢hirty-four 
+
+
+
+
+
+, equals O, etc.: the unit-figures being at the top of No. 54 
+No. 54.—The “Checker-board ’ ba ip uth ‘ 
+Cipher. IV. The Key checker. and the ten-figures at the left-hand side of it. 
+ene Spe tes : By thus referring to the “checker-board” given in 
+v= 2@lt.: 00 = 4 - Of% . . . 
+> ee ee No. 54, the secret message is easily read off, and it proves 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+616 THE PALL MALL MAGAZINE. 
+
+
+
+
+
+tobe: Plot discovered. Burn 
+the Orloff papers in Moscow. 
+@® 32" 15° 15° 44 32, 15. 24° 33° 35. II “42° 24° 43°34" 33° 32 34" 33° 14° Il 54 Truly, this cipher is a striking 
+® T Y R A N T T Y R A N T rT Y R A N T fe Y R illustration of the inventive 
+ingenuity that is bred by dire 
+necessity, brought about by 
+© 76°69'57°55'65°59°68'87'77'22'75 68°87 88°75'43'67'77'58°65'96 | injustice, tyranny, and cruelty. 
+The four illustrations, Nos. 
+
+
+No. 55.—Modern Numerical Cipher used by Russian Nihilists. This cipher 55, 56, 57 and 58, relate to 
+is akin, in principle, to that used for diplomatic despatches, and it . ae coitia® 
+defies detection if the key-word committed to memory by two corre- a mode of secret " ruamg, 
+spondents be unknown to the would-be decipherer (TYRANT is the that is almost as ingenious 
+
+D ( w 1 ° 
+key-word here). J. The conversion of the message shown in line @® as that illustrated by Nos. 
+into the cipher shown in line ©. (For explanation, sce text.) : : 
+51-54, and which is abso- 
+
+
+lutely indecipherable if the key-word agreed upon by two correspondents be 
+unknown. This numerical cipher is used by the Russian political prisoners who are 
+suspected or convicted of complicity in nihilism: by the use of this inscrutable 
+cipher these prisoners defy the ingenuity of the Russian cipher bureau even if letters 
+written in this cipher fall into the hands of the officials—for this method is not, 
+of course, used for “open” letters which the writer knows will be examined by the 
+cipher bureau. 
+
+Here is the explanation of this cipher. No. 55 shows in line © the message to 
+be communicated to a friend, who knows that the word 7 YRAWNT is the key-word 
+agreed upon for these cipher messages. In order to convert this message into 
+cipher, the writer enters in line © of No. 55 the numerical equivalent of each of 
+the letters of his message, which numbers are obtained by reference to the “lettered- 
+square” shown in No. 58: thus, 47 = 32, E = 15, T = 44, etc. Having 
+completed line © in No. 55, the writer fills in line @ by writing the key-word 
+TYRANT along the line, until all the spaces occupied by his message are equally 
+occupied by the key-word or by part of it: thus, in the present instance, as 
+there are twenty-one letters in the message, he writes the key-word three times and 
+one-half—see line @ in No. 55. Then, in line @, he enters the numbers that 
+correspond to the letters of the word 7 YRAN7, which, as for line ©, he takes from 
+the lettered-square given in No. 58. The conversion of the message into cipher is 
+completed in line ©, which is obtained by adding together the numbers in lines 
+2 and 4 shown in No. 55. This, then, is the cipher to be sent away, and No. 56 
+shows the form in which it would be sent; and it may safely be said that no 
+person—not even one who is acquainted with this mode of cipher—-can decipher the 
+meaning of No. 56 unless he know that the key-word committed to memory is 
+TYRANT. All the usual aids to solving cipher are useless here, for the same 
+letter of the real message is represented in the cipher by numbers that are different. 
+For example, in No. 56, the m of mee? is re- 
+presented by 76, the m of me by 65, the m of 
+Monday by 43, the first e of meet by 69, the 76° 69° 57° 55°65 "59°68 
+second e of meet by 65, the e of me by 59, 
+etc. It will now be perceived what an 87°77° 22°75 ° 68° 87°88 
+admirable cipher this is, for no clue is given 
+by it as to the hidden meaning: in some 75°43 °67°77 58° 65 * 96 
+numerical and other ciphers, the frequency 
+of the sign that stands for the letter e will eR : 
+
+: ‘ 3 No. 56.—Modern Numerical Cipher used by Russian 
+often give a clue, as will also the sign Nihilists. II. The cipher letter. 
+
+
+sts driv so wae ire gee 
+
+
+©) 44°$4°42°11°33°44°44°54°42°11'33°4444°54°42°11'33°44°44°54°42 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+SECRETS IN CIPHER. 617 
+
+
+
+
+
+
+
+
+
+
+
+that represents the’ double 
+4, and there are many 
+other details for which 
+the practised decipherer , 
+is keenly on the alert: © 76°69°57°55°65°59°68°87°77°22°75 68°87 °88°75°43°67°77'58°65'9C° 
+here he is completely [[@) 44'54'42°11'33°44'44'54°42°11'33'44'44'54'42'11'33'44'44'54'42" @ 
+baffled, for the numerical ® 32°15°15"44°32°15'24°33°35°11'42°24°43'34'33'32°34'33'14'11'54° @ 
+equivalents of the same I@mee TM E‘ILN'P aR i S°O N'M oN oD ay’ @ 
+letter of the alphabet vary t— 
+
+
+in nitely in ) No. 57-—Modern Numerical Cipher used by Russian Nihilists. J1l, The 
+defi ns die the course of reading of the cipher letter shown in No. Ll. by means of the key-word 
+
+
+—— KEY WORD —— 
+TYRANT 
+
+
+44°54°42°11'33'45° 
+
+
+
+
+
+
+
+
+
+
+
+a single message, and this TYRANT, and dy reference to the lettered-square shown in No. IV. 
+protean nature of the cipher Fr nets ae a 
+
+
+is its most characteristic feature—and yet it is simplicity itself. 
+
+When the recipient of the cipher wishes to read the secret message, he proceeds 
+as is set out in No. 57: he writes in line © the numbers which compose the 
+cipher, and which he copies from No. 56; in line © he writes numbers that 
+correspond to the letters of the key-word 7 YRANT, and which numbers he obtains 
+from the lettered square in No. 58; he then subtracts the numbers in line © from 
+those in line @, and writes the result in line @; and, finally, in line © he 
+enters the letters which correspond with the numbers in line @, and which letters 
+he reads at a glance from the lettered-square given in No. 58: he then reads off 
+the message, Meet me in Paris on Monday. 
+
+It is interesting to note that the lettered-square shown in No. 58, and which 
+plays the second réé in this cipher, as it does also in the other Russian cipher 
+illustrated in Nos. 51—-54, is a device that is extensively used by the inmates 
+of Russian prisons. Many of the prisoners are so expert in the use of this 
+square that they do not need to write it upon paper or upon the wall of their 
+cells, but it is pictured in the mind and employed in various ways. For example, 
+a prisoner wants to communicate with the man.in the cell next to his own, who, 
+almost for a certainty, is also acquainted with the use of this square—he wishes 
+to ask, Who are you? and he raps on the wall between the two cells, thus: 
+5 Traps a pause, 2 raps a pause (W); 2 raps a pause, 3 raps a pause (/7); 
+3 Taps a pause, 4 raps a pause (QO); and so on, until the question has been 
+rapped out on the wall (see No. 58). Again, if two prisoners are in sight of each 
+other, they will word this lettered-square by the aid of holding up 1, 2, 3, 4 or 
+5 fingers in the proper sequence; and, at night, if a candle and a handkerchief 
+be available, a conversation is similarly carried on by alternately obscuring and 
+disclosing the light of the candle with the handkerchief until 
+3 | +|5 the sentence is completed. 
+
+‘ere There are various other ingenious ways of utilising this 
+
+-——|— — — lettered-square ; and as the Russian intellect is quick and 
+2u' |° |") 1) S47 subtle, and as many of these prisoners are men of high 
+L|M | N ©} PT] intelligence, it can readily be perceived what an invaluable 
+44e |Rr|s tr x] thing to these prisoners is this little square, with its twenty- 
+five letters and its five numbers: it is no exaggeration to say 
+
+that the mental activity and the interest produced by using 
+No. 58—Modern Numerical this square for purposes of communication has saved many 
+Cipher used by Russian / 
+
+
+Nihilists. IV. The lettered- Wretched prisoner from madness or from suicide. 
+
+square. (11=A:12=B: 
+
+18=C: et.: 5=X: 
+
+bh = Y: 65 =Z. And now I—the showman—have shown you—the lookers- 
+
+
+
+
+
+2 
+
+
+I 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+wn 
+< 
+< 
+< 
+~ 
+< 
+NS 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+618 THE PALL MALL MAGAZINE. 
+
+
+on—nearly all that I have gathered together about these secret ciphers. There are 
+still two or three more devices, such as inserting between the visible lines of writing on 
+a letter-page another message, written in ink that remains invisible until chemically 
+treated or until heated ; but this is too well known a device to be worthy of special 
+illustration. There is also the “Dictionary” cipher, of which the Duke of Portland 
+has a specimen. In this device two precisely similar dictionaries were numbered 
+down the margin of each page, a different number being written against each 
+word printed on the pages of the dictionary. So that when using this cipher, a 
+writer merely turned up the page of the book that contained the printed word 
+he wanted, and then wrote—not the word, but the number written against it in 
+the margin of his dictionary. A simple process, that merely had to be repeated 
+by the addressee of such a cipher-letter to enable him, by the aid of his prepared 
+dictionary, to at once read the secret message sent to him. 
+
+The concluding sentences of Parts I., II., and III. have each been written in 
+cipher and later on explained. Here is the concluding sentence of Part IV., 
+and last, of this account of Secrets in Cipher. It has been written by means of 
+the device illustrated and exactly explained in Nos. 55 to 58, but the key-word 
+TYRANT there used has not been used for this concluding sentence; therefore 
+the meaning of the cipher which now follows will never be solved by any one. The 
+“box,” which for us has been unlocked to let out the cipher secrets of past 
+centuries, has now closed and firmly shut its fastenings for one hundred years of 
+future time. 
+
+
+Joun Ho tr SCHOOLING. 
+
+
+
+
+
+0200606 600000 
+S2Go0oSo00 00000 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+HE = second-class 
+railway carriage 
+in which I jour- 
+
+neyed from Verona to Mantua 
+
+was quite old enough to have been 
+in existence in the days of Romeo, 
+
+and at first I was inclined to assume 
+that it was the identical carriage in which 
+he fled from the vengeance of the Verona 
+government after his “ difficulty,” as the Americans would 
+cali it, with Tybalt. But it was not long before I perceived 
+that neither Romeo, nor any one else, would ever have thought of the 
+Verona-Mantua railway as a means of flight. Romeo was compelled to 
+
+travel rapidly, and therefore he either walked or rode to Mantua. Nobody takes 
+the Verona-Mantua train who has not abundance of leisure, for, next to the 
+
+South-Eastern train between Cannon Street and Charing Cross, it is the slowest 
+
+railway train in Europe. 
+
+The country between Verona and Mantua is flat, with the exception of a range 
+of low hills westward of the line. It is thoroughly irrigated, and every inch of 
+ground is cultivated. The average Italian, who estimates the beauty of a landscape 
+by its productiveness per acre, regards this part of Lombardy as one of the most 
+beautiful parts of Italy. It is, however, by no means an uninteresting region, for 
+it has been the scene of a dozen hard-fought battles. The train passes within 
+sight of the monuments erected on the battle-fields of Solferino and Custozza, and 
+within a short distance of those of Goito and Curtatone. Custozza has been a 
+fatal field for Italy, for it was there that the Piedmontese were beaten by Radetsky 
+in 1848; and the Italians were beaten by their own general, the brave and honest 
+La Marmora, in 1866. A more loyal and chivalrous patriot than La Marmora 
+never lived ; but when, to use the words of one of his contemporaries, he “ knocked 
+his stupid head against the Quadrilateral ” at Custozza, he demonstrated that a general 
+may have every personal and civic virtue, and be at the same time the deadliest 
+foe of the army which he commands. 
+
+The approach to Mantua is not unlike the approach to Venice. The town is 
+nearly surrounded by a broad lake made by the expansion of the Mincio; and as 
+
+
+o1g 
+
+
+
+
+
+
+
+
+
+
+
+620 THE PALL MALL MAGAZINE. 
+
+
+the train rolls over the long bridge, and the traveller watches the fishing-boats 
+with their painted sails glide between him and the tall red towers of the city, he 
+is filled with admiration or the picturesqueness of Mantua. Suddenly a chorus of 
+thousands of frogs breaks on his ear, and a dozen mosquitoes settle on his brow, 
+and he begins to wonder if it is possible for a foreigner to sleep in Mantua without 
+contracting fever and perilling his soul by midnight address to the mosquitoes. 
+
+The cabmen had struck the day I arrived in Mantua, and the open space in 
+the rear of the station was deserted, except by the omnibus of the Hotel Croce 
+Verde. When I reached the hotel, and found that no cab could be had, I hired 
+the omnibus, for a drive through the town. It was a small omnibus, with a double 
+share of the maddening rattle which usually characterises that sort of vehicle. The 
+driver conducted me to all the points of interest in the city, and I was regarded 
+by the crowds in the street with something of the admiration which a Roman 
+general driving in his chariot on the day of his triumph must have awakened. 
+
+I should never have known half as much about Romeo as I now know, had 
+it not been for the builder of that omnibus, who had ornamented the interior with 
+a large mirror occupying all the space at the forward end of the vehicle. It 
+was a maddening mirror, for it constantly showed me Mantua and its inhabitants 
+reversed. Looking into the mirror I seemed to be constantly approaching places 
+which I was in reality leaving behind. A dozen times a pretty Mantuan girl would 
+flash her eyes at me from the mirror, and when I eagerly leaned out of the window, 
+expecting that the omnibus would presently overtake and pass her, I found that 
+it had already left her so far behind that I could not identify her. To a man 
+possessed as I was at the time with the unholy thirst for snapshot photographs, this 
+sort of thing was extremely annoying ; and finally, the mirror gave me a headache 
+as well as a lesion of the temper. I began to see strange sights in it, which I 
+could not see from the windows of the omnibus, no matter how wildly I might 
+twist my neck. At times the Mantuan streets seemed centuries older in the mirror 
+than they seemed to my unassisted eyes. After a while I understood the meaning 
+of this strange phenomenon. That mirror was not merely reversing the vision of 
+the modern Mantua, but it was giving me glimpses of the Mantua of the year 1300 
+or thereabouts—the Mantua that Romeo saw and Shakespeare dreamed of. I hold 
+that mirror responsible for the odd adventure which happened to me during my 
+stay in Mantua, and on the whole, at this distance of time, I am rather grateful 
+to the builder of that omnibus, though his mirror did embitter my life during that 
+long drive through, across, and around Mantua. 
+
+I had taken with me one of those dictionaries of elegant quotations written by 
+the indefatigable scissors of Mr. Augustus Hare, and put forth by him under the 
+pretext that they are guide-books. Mr. Hare remarks that when you “tread the 
+deserted and silent streets in the older town, and the five squares of the deserted 
+palace, so solemn in their utterly decaying and mouldering splendour, you feel as 
+if you were dead. . . . All is placid, stagnant decay. . . . All is damp, mossy, and 
+mouldy. When a human figure comes stealthily round a corner it startles you 
+that anything can be living here besides yourself.” This is all very pretty, but 
+unfortunately it is very far from being true. The chief streets of Mantua are 
+crowded, and the side streets are no more silent and deserted than are the side 
+streets of Milan or Florence. I looked in vain for the grass and-moss and decay 
+of which Mr. Hare speaks. I did, however, note that the city was well supplied 
+with electric lights, and in three or four of the shops, as I drove past, I caught 
+sight of a man standing with the handles of a telephone at his ears, and that 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+WITH ROMEO IN MANTUA. 
+
+
+
+
+
+“It was a maddening mirror.” 
+
+
+agonised expression of face which the telephonic listener invariably assumes. 
+Mantua is a busy, and for Italy a prosperous town, and it ought, in common 
+with many other Italian towns, to demand an immediate apology and retraction 
+from Mr. Hare. 
+
+But most of us who have visited Italy know by this time that Mr. Hare’s 
+relations with Italy are, so to speak, strained. He is the only one of the great 
+powers of Europe that has persistently refused to recognise the Italian kingdom. 
+When he has occasion to speak of the Italian Government he is careful to call it 
+the “Subalpine,” or the “ Sardinian,” or the “ Piedmontese” Government. He is 
+a staunch apologist for Papal rule in Rome and Austrian rule in Lombardy, and 
+there is nothing that the Italian Government has done that does not meet with 
+his warm disapproval. Naturally, this is very painful to all patriotic Italians. It 
+is said that when a new English Ambassador comes to Rome, the first thing that 
+the King says to him is, “Tell us, for the love of Heaven! how can Italy secure 
+the recognition of Mr. Hare?” To Mr. Hare’s vision the busy, teeming streets 
+of Mantua are deserted and grass-grown now that the “Sardinian” flag floats over 
+the town. And then, perhaps, when Mr. Hare visited Mantua, the inhabitants 
+had notice of his coming, and shut themselves up. This would explain his belief 
+that the streets are deserted, though it would hardly explain the moss and grass 
+which he fancies that he found. 
+
+After my drive through Mantua, I went back to the hotel for dinner. I can 
+
+
+
+
+
+
+
+
+
+
+
+622 THE PALL MALL MAGAZINE. 
+
+
+
+
+
+Castella di San Giorgio, Mantua, 
+
+
+speak freely of the Croce Verde, for it no longer exists as an hotel. The proprietor 
+has marched with the times, and, yielding to a thirst for electric lights and modern 
+drainage, has closed, the Croce Verde and opened a new and modernised hotel, 
+where the Cook’s tourist can obtain his plain boiled potatoes and the rest of his 
+accustomed cookery. I am not going to describe my dinner, though it will long 
+linger in my memory as a typically Italian dinner—than which no higher praise could 
+be given to it. The dining-room was large and cool, for vines shaded the windows, 
+and the stone floor was sprinkled assiduously by a small boy, who was clearly a 
+gardener’s assistant, and who scrutinised the corners of the room with the evident 
+expectation of finding fresh salads in the act of sprouting. There were two waiters 
+in dress coats of the time of Romeo, and they were assisted by the landlord himself, 
+who wore a morning-jacket as a badge of superior rank. The wine was the full-bodied 
+Grignolino, guiltless of water, and perhaps a trifle too demonstrative in boasting of 
+near kinship to vinegar. It was a wholesome, satisfying dinner, and when I had 
+finished my bit of Parmegiano, and lighted my Minghetti cigar, I was able to reply 
+with some little enthusiasm to the waiter’s kindly question as to how I had enjoyed 
+the “kitchen ” of the Croce Verde. 
+
+“I suppose Romeo stopped at this hotel when he came to Mantua ?” I remarked. 
+
+“ Precisely,” replied the waiter. ‘The Signor Romeo always comes here to dine ; 
+and behold him! at this very moment!” 
+
+As he spoke a young lieutenant of dersag/ieri entered the room, and hanging up 
+his hat and sabre, seated himself with a bow at my table. 
+
+“This,” said the waiter, “is the Signor Lieutenant Romeo dei Montecchi.— 
+Signor lieutenant! this egregious foreigner was at this very moment demanding of 
+your news. Permit that I present him to you. The Signor is an Englishman of 
+the most distinct.” 
+
+
+
+
+
+WITH ROMEO IN MANTUA. 623 
+
+
+
+
+
+“** Behold him !'” 
+
+
+The young man smiled an irresistible smile, that at once made me feel that we 
+were old acquaintances ; and, making me a military bow, with a sharp click of his 
+meeting boot-heels, said that he was charmed to meet me. 
+
+“And so,” I said, after the preliminary exchange of social inanities, “you are 
+teally the Romeo of whom so much poetry has been written ? ” 
+
+“The same, at your service,” he replied, with his black eyes twinkling. “I had 
+to leave Verona for a little while after that unfortunate affair with the poor Signor 
+Tibaldo, but I am in no hurry to return. Mantua is a second country to me.” 
+
+“ And the Signorina Giulietta?” I asked. ‘Is she waiting for you at Verona?” 
+
+“Oh yes!” he replied. ‘ At this precise moment she has gone to the Exhibition 
+at Milan with her governess, but she will return in a few days.” 
+
+“T never knew before that you were in the Jdersaglter’,” I remarked, somewhat 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+624 THE PALL MALL MAGAZINE. 
+
+
+doubtfully ; for the presence of Romeo in Mantua several centuries after his death at 
+Verona, as reported by Shakespeare, somewhat puzzled me. 
+
+“That is strange,” he answered. “I have been seven years in my regiment, and 
+the Signor Shakkaspeera ought to have known it.” 
+
+“Shakespeare seems to have made several mistakes,” I continued. ‘“ He said that 
+both you and the Signorina Giulietta were dead : I trust that this was a mistake ?” 
+
+“Entirely a mistake,” he replied. “Your Shakkaspeera said that we had 
+committed suicide by taking poison. Why should I take poison merely because 
+one pretty girl was dead? Mantua is full of pretty girls. Only a man with the 
+spleen, who had never seen our Italian girls, and had never dined at the Croce Verde, 
+would dream of taking poison.” 
+
+I spent an hour at the dinner-table with the young lieutenant, and then accepted 
+his invitation to take a stroll with him. By this time I had become fully reconciled 
+to the presence of Romeo in Mantua in the year 1894. I remembered the magic 
+mirror of the omnibus, and decided that it was responsible for the visible presence of 
+Romeo. Had it not shown me curious medizval streets when I was driving through 
+the town—streets that were quite invisible when I looked out of the window in search 
+of them? If the mirror could do this, it could easily bring back the people of the 
+Mantua of the fourteenth century. 
+
+The chief street was a blaze of electric light as we turned into it from the courtyard 
+of the Croce Verde. Before the caffés groups of Romeo’s brother-officers were sitting, 
+mingled with grave and respectable townsmen, fulfilling the daily duty of discussing 
+the political situation. ‘The sidewalk, under the heavy arcades, was crowded with men 
+and women, and the beauty of the latter struck me as affording an easy explanation of 
+Romeo’s acquiescence in his exile from Verona. It was amusing to see how delight- 
+fully the young man swaggered down the street. I learned then for the first time that 
+it is possible for an officer of dersaglieri, provided he is young and handsome, to 
+swagger in a way that is not only entirely unobjectionable, but positively attractive. 
+He had a whispered compliment or an admiring glance for every pretty woman 
+whom we passed, and I doubt if even the severest of English spinsters could have been 
+angry with him, had it been possible for him to whisper to her that she was sémpatica. 
+
+As we passed through the Piazza Dante, with its statue of a humpbacked boy in 
+a nightshirt seated under a Gothic canopy on the side of a wall, and called for some 
+inexplicable reason a statue of Vergil, I asked Romeo if his family was still at feud 
+with the Capulets. 
+
+He laughed scornfully. “Signore!” he said, “my father is associated with the 
+Marchese dei Capuletti in business. They have a contract for lighting the Corso with 
+electricity, and they play dominoes together every night. Your Shakkaspeera was 
+shamefully wrong in accusing us of quarrelling. I had to call out my old friend 
+Tibaldo, because of certain remarks made by him which I do not at this moment 
+recollect, on a subject which I have now forgotten, but there was really no quarrel 
+between us.” 
+
+“There is another thing I would like to ask, if I have your permission,” I pursued. 
+“Shakespeare says you were in love with some one the very night you met the 
+Signorina Giulietta, and that you instantly forgot your first love. I never could under- 
+stand how one could change his affections so suddenly: tell me, did Shakespeare tell 
+the truth in this matter?” 
+
+“For once he did,” replied my friend. “ But what is there strange about my 
+having been in love, and why should you doubt it? I have been in love many, many 
+times, and hope to live to be in love many more. It is the chief amusement of life, 
+
+
+
+
+
+
+
+
+WITH ROMEO IN MANTUA. 
+
+
+Piazza Dante, Mantua. 
+my dear friend, and I cannot think what you English are made of that you are content 
+with a single love.” 
+
+“ And you have fallen in love since you loved Giulietta ?” I cried. 
+
+“That was some time ago,” he replied ; “and what would life have been to me if 
+I had loved none but her? Ah! there is such a beautiful woman here in Mantua 
+at this very moment. If you saw her you would say, ‘Romeo! if you do not love 
+that woman you will be no more my friend.’ ” 
+
+We were in the great Piazza Sordello, where stands the Ducal Palace once 
+inhabited by the Gonzagas. The moon seemed poised on a corner of the summit of the 
+lofty “ Tower of the Cage,” and in the middle of the Piazza rose a marble monument 
+to the martyrs of Italian freedom. And here, in the moonlight.that fell impartially 
+
+VoL. VIIT.—No. 36. 40 
+
+
+
+
+
+
+
+
+“'* This bridge,’ said Romeo, ‘always pleased me.'” 
+
+
+620 
+
+
+
+
+
+
+
+
+WITH ROMEO IN MANTUA. 627 
+
+
+
+
+
+Piazza Sordello, 
+
+
+on medizval tower and modern statue, was Romeo, cheerfully telling me of his 
+faithlessness to Juliet! It was becoming exasperating, the way in which the centuries 
+were mixing themselves together. 
+
+“€om2 on,” cried Romeo: “we must go down to the bridge of San Giorgio, and 
+hear the frogs at their singing.” 
+
+We passed through a low archway, and, after skirting the broad, dry ditch that 
+surrounds the ancient Gonzaga Castle, we reached the shore of the lake. ‘Thousands 
+of frogs were croaking, as they croaked in the days of Vergil and the nights of 
+Dante. It is at least two thousand years since this hoarse concert began, and never 
+for a single moment has it ceased, either day or night. 
+
+“Listen to them,” said Romeo. ‘When I first came to Mantua they annoyed 
+me. Now I like them. Just so you English people have croaked about constancy 
+and the like ever since your Shakkaspeera described me as foolish boy. But. the 
+world takes its way in spite of the frogs.” 
+
+Romeo was becoming philosophical, which was totally out of accord with my 
+conception of him, and I hurried him away from the neighbourhood of the frogs. 
+He presently took the lead, and in a few moments he had brought me to the great 
+bridge called the Argine Mulino, which crosses the lake, and combines in_ itself 
+the varied functions of bridge, dam, mill, and granary. The water rushing under 
+its arches turns a dozen vast water-wheels, and these in turn set in motion the 
+millstones in a dozen stone mills which occupy all of one side of the bridge. 
+
+“This bridge,” said Romeo, “always pleased me. It was built in the twelfth 
+century, and so you see that it is even older than I.” 
+
+“ Let us sit down,” I said; “I want to ask you more about Verona, and 
+your life there. Here is a stone bench. Tell me, now, do you expect to marry the 
+Signorina Giulietta ?” 
+
+
+
+
+
+= 
+3 
+= 
+= 
+5 
+a 
+oJ 
+= 
+5 
+3 
+— 
+& 
+3s 
+Ss 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+WITH ROMEO IN MANTUA. 629 
+
+“Am I quite mad?” he replied. “I must tell you that the Capuletti are no 
+longer rich. The Marchese lost his fortune in building new houses in Verona, which 
+there is no one to buy. Therefore the Signorina has no dowry, and of course 
+marriage is impossible. It is a pity, for I love her dearly ; but what would you have ? 
+Perhaps if her papa makes another fortune with the electric light we shall marry, 
+but at present we must content ourselves with loving—which, my friend, is much less 
+expensive and far more pleasant than marrying.” 
+
+“And what does Friar Lawrence say to this?” I demanded, becoming indignant 
+at Romeo’s want of sentiment. 
+
+“Ah! you mean the excellent Don Lorenzo? Yes: Shakkaspeera has written 
+truly of him, for he isa good man. He says that we would be mad to think of 
+marriage, and he advises the Signorina to marry my friend Benvoglio. He is a good 
+devil, Benvoglio, and has a nice little property. Yes, I am of the opinion that Don 
+Lorenzo’s advice should be followed.” 
+
+*‘T suppose that Mercutio was also a good devil?” I remarked. 
+
+“T know whom you mean,” said Romeo, “though you pronounce his name 
+after your English fashion. Yes, he is not altogether bad, but oh! my friend! 
+he is so tiresome : I am glad to be in Mantua, where he cannot talk to me.” 
+
+“T thought he was dead,” I said. 
+
+“Oh, no! he still lives. He is an advocate, and he means to go to Parliament. 
+That is why he talks everybody deaf and dead.” 
+
+We walked back into the town. I liked Romeo, and in certain aspects admired 
+him, but I wished that he had remained dead in the tomb with Juliet. In that case he 
+would have been so delightfully romantic ; whereas now I found him as prosaic as 
+everything else in this prosaic century. 
+
+We came back through the quiet streets, where the sabre of Romeo clanked on 
+the pavement, and the stray and belated cats fled in fright. The cat, as every 
+naturalist knows, is extremely superstitious, and without doubt the Mantuan cats 
+recognised Romeo as a belated ghost. 
+
+“Tt is such a pity!” I exclaimed, speaking to myself. 
+
+“You were saying ?” hinted Romeo delicately. 
+
+I could not, in cold blood, inform the young man that it seemed a pity 
+that he had not remained dead ; so I merely remarked, “It is a pity that the ‘lean 
+apothecary ’ was an invention of Shakespeare. I should like to see him.” 
+
+“You mean the man who is said to have sold me the poison? ‘The story is 
+partly true and partly false. Shakkaspeera mistook a wine merchant for an apothecary, 
+that was all.” 
+
+“ And it was a very natural mistake,” I added, “ considering the sort of wine that 
+Shakespeare probably drank in his earlier days.” 
+
+“We will go and see the wine merchant,” said Romeo. ‘“ His wine is excellent, 
+and I suspect that Shakkaspeera may have seen me in the shop one day when | 
+had perhaps drank the least thought too much.” 
+
+He showed me the way to a little wine shop. It might have been the shop of 
+the lean and obscure apothecary, for it was insignificant in size, and situated in an 
+obscure street. But the wine was certainly good, and there did not seem to be 
+the least suggestion of any deadly poison in the big-bellied, genial-looking bottles 
+and flasks, that filled the shelves. 
+
+Over the wine I asked Romeo when he intended to return to Verona, and if 
+he meant to spend his evenings under Juliet’s balcony. He explained that he was 
+in disgrace, rusticated, so to speak, for thirty days, on account of his duel with Tybalt, 
+
+
+
+
+
+
+
+
+
+
+
+THE PALL MALL MAGAZINE. 
+
+
+
+
+
+630 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+but that he should be on duty with his regiment in Verona in the course of another 
+week. As to Juliet, he rejected with scorn the suggestion that he should pass his 
+evenings under her balcony. No! he would meet her frequently on her way to and 
+from church, and they could look into each other’s eyes. Then, too, he could 
+correspond with her by the help of her nurse, who, he maintained, was not a nurse 
+at all, but only her German governess. “Some day,” he added, “she will be 
+married, and then we can see each other as often as we please. Marriage is a most 
+excellent thing for a girl when she has no dowry and her lover is poor. After 
+marriage she can meet him and no one can find fault with her.” 
+
+I felt that Romeo’s morals had deteriorated in the last five hundred years, but it 
+was not worth while to remind him of the fact. He saw me home to my hotel, 
+and begged me to call on him should I ever come to Verona. Then he kissed me 
+on both cheeks, and after making me a bow that would have filled any Romeo ever 
+seen on the English stage with hopeless envy, he went away. 
+
+I left Mantua early the next morning. The landlord had gone to inspect his 
+new hotel, and the waiter who had introduced me to Romeo was invisible. To 
+this day, I have never been able satisfactorily to explain my meeting with Romeo. 
+Did I dream the whole affair, or did some jovial young officer practise a jest at my 
+expense, or had the magic mirror brought back to me across the long centuries the 
+Romeo of whom Shakespeare wrote ?. I do not know that I am required to guess the 
+true answer, and so I leave it, as it always will be to me, a mystery. 
+
+
+W. L. ALDEN 
+
+
+
+
+
+Statue of Vergil. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+h 
+[A “a 
+a I=} @ 
+
+
+Mm Amn An Ann 
+
+
+C= 
+a 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+“IS CHRISTIAN REUNION POSSIBLE?” 
+IF 
+
+
+S Christian Reunion possible? The question itself ought to be an impossible 
+one to those who believe in Christianity. But since the question is raised, 
+and that, as no one can doubt, in perfect good faith, I will try to answer it in 
+
+the sense in which it is asked, and to express the sentiments of some who think 
+that Reunion is not only possible but attainable, not only a pious aspiration but a 
+result to be laboured for in the strength of a con

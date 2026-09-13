@@ -64,3 +64,79 @@ def test_dorabella_annealer_fast_step() -> None:
     res = annealer.anneal(duration_secs=0.5, seed=42)
     assert len(res.plaintext) == 87
     assert res.q_score < 0
+
+
+def test_liszt_1886_corpus_integrity() -> None:
+    """Verify 1886 Liszt fragment structure, word segmentation, and provenance."""
+    from projects.dorabella.liszt_corpus import (
+        LISZT_1886_RAW,
+        LISZT_1886_WORDS,
+        LISZT_1886_WORD_LENGTHS,
+        LISZT_METADATA,
+        evaluate_dual_corpus,
+    )
+    from projects.dorabella.corpus import DORABELLA_AUTHENTIC_CONSENSUS
+
+    assert len(LISZT_1886_RAW) == 18
+    assert len(LISZT_1886_WORDS) == 4
+    assert [len(w) for w in LISZT_1886_WORDS] == [3, 6, 3, 6]
+    assert LISZT_METADATA.has_underscore is True
+    assert LISZT_METADATA.composer == "Franz Liszt"
+    assert "Les Préludes" in LISZT_METADATA.piece
+
+    # Test dual-corpus evaluator with identity mapping
+    key = {c: c for c in "ABCDEFGHIJKLMNOPQRSTUVWXYZ"}
+    eval_res = evaluate_dual_corpus(key, DORABELLA_AUTHENTIC_CONSENSUS)
+    assert len(eval_res["dorabella_plaintext"]) == 87
+    assert eval_res["liszt_words"] == ["BMK", "GKKOIM", "MCG", "KMBKCC"]
+    assert eval_res["liszt_plaintext"] == "BMK GKKOIM MCG KMBKCC_"
+
+
+def test_liszt_1886_midi_synthesis(tmp_path) -> None:
+    """Verify Liszt fragment can be synthesized into standard MIDI."""
+    from projects.dorabella.dual_musical_engine import DualMusicalCipherEngine
+
+    liszt_tokens = [16, 18, 14, 6, 14, 13, 2, 1, 10, 18, 2, 6, 14, 10, 16, 14, 2, 3]
+    engine = DualMusicalCipherEngine(tokens=liszt_tokens)
+    out_file = tmp_path / "test_liszt.mid"
+    engine.generate_midi_file(output_path=out_file, scale="e_minor", tempo_bpm=96)
+    assert out_file.exists()
+    assert out_file.stat().st_size > 100
+
+    out_wav = tmp_path / "test_liszt.wav"
+    engine.generate_wav_file(output_path=out_wav, scale="e_minor", tempo_bpm=96, timbre="flute")
+    assert out_wav.exists()
+    assert out_wav.stat().st_size > 1000
+
+
+
+def test_counterpoint_evaluator() -> None:
+    """Verify contrapuntal voice-leading alignment against Enigma and candidate themes."""
+    from projects.dorabella.counterpoint_evaluator import CounterpointEvaluator, DIES_IRAE_CANTUS
+
+    evaluator = CounterpointEvaluator()
+    res = evaluator.evaluate_alignment(DIES_IRAE_CANTUS, "Dies Irae", offset=1)
+    assert res.total_aligned_notes == 9
+    assert res.consonance_ratio > 0.80
+    assert res.parallel_fifths_count == 0
+    assert res.parallel_octaves_count == 0
+
+
+def test_vowel_restoration_engine() -> None:
+    """Verify shorthand consonant skeleton parsing and beam search expansion."""
+    from projects.dorabella.vowel_restoration_engine import ShorthandVowelRestorer, to_skeleton
+
+    assert to_skeleton("DORABELLA") == "DRBLL"
+    assert to_skeleton("EDWARD") == "DWRD"
+
+    restorer = ShorthandVowelRestorer()
+    assert "DRBLL" in restorer.skeleton_to_words
+    assert "DORABELLA" in restorer.skeleton_to_words["DRBLL"]
+
+    res = restorer.restore_sentence_beam_search("DRBLL", beam_width=5)
+    assert len(res) > 0
+    assert all(len(phrase) > 0 for score, phrase in res)
+
+
+
+
