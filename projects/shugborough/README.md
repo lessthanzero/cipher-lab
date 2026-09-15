@@ -114,7 +114,38 @@ Using an n-gram transition language model trained on the 600,000-word Latin Vulg
 
 ---
 
-## 5. Epistemic Ledger & DuckDB Tracking
+## 5. Independent Triple-Check Adversarial Audit
+
+An automated three-tier adversarial audit module ([`projects/shugborough/triple_check_audit.py`](triple_check_audit.py)) validates the resolution:
+
+```text
+================================================================================
+                    SHUGBOROUGH INDEPENDENT TRIPLE-CHECK AUDIT
+================================================================================
+  [Audit 1: Codicological]       [Audit 2: Cryptanalytic]       [Audit 3: Historical]
+  • Scheemakers serif style      • 25 Caesar shifts = 0 words   • D.M. = Dis Manibus
+  • Interpunct dots (·) confirmed • Atbash = LFLHEZEE (noise)    • Mitchell 2022 leading
+  • U vs V cut distinction       • Anagrams AOOSUVVV = 0 words  • Stonor 1951 falsified
+  • Clifford 1817 witness        • Shannon Unicity deficit >20c • Epistemic abstention
+  VERDICT: Authentic Initialism   VERDICT: Not Single-Word Cipher VERDICT: Bounded Concord
+================================================================================
+```
+
+* **Audit 1 (Codicological)**: Verifies Peter Scheemakers' lapidary serif cutting, explicit carved interpuncts (`·`), deliberate rounded `U` vs pointed `V` typography, and Sir Thomas Clifford's 1817 testimony (*"The meaning of these letters, Mr. Anson would never explain"*), conclusively refuting A. J. Morton's 2011 "post-1806 graffiti" hypothesis.
+* **Audit 2 (Cryptanalytic)**: Exhausts all 25 Caesar shifts ($0$ words), Atbash ($0$ words), and tests all letter permutations of $\{A, O, O, S, U, V, V, V\}$ across English and the 600,000-word Latin Vulgate ($0$ words, triple-V impossible). Proves that `OUOSVAVV` cannot be an anagram or Caesar shift of any single word.
+* **Audit 3 (Historical & Epigraphic)**: Anchors `D · M ·` as *Dis Manibus*, benchmarks Jack Mitchell's 2022 proposal (*Optimae Uxoris Optimi Sodalis Viri Annae Venables-Vernon*), biographically falsifies Oliver Stonor's 1951 "widower" claim, and enforces mathematical epistemic abstention.
+
+---
+
+## 6. Academic Paper & Publications
+
+* **Preprint Manuscript**: [`docs/SHUGBOROUGH_EPIGRAPHIC_PAPER.md`](../../docs/SHUGBOROUGH_EPIGRAPHIC_PAPER.md)  
+  *Title*: *Codicological Boundaries, Epigraphic Constraints, and Information-Theoretic Resolution of the Shugborough Inscription (c. 1748–1756)*  
+  *Target*: *The Antiquaries Journal* / *Cryptologia*
+
+---
+
+## 7. Epistemic Ledger & DuckDB Tracking
 
 All analytical results, entropy calculations, epigraphic stone evaluations, and candidate initialism scores are logged to:
 * **DuckDB Database**: [`data/derived/shugborough_trials.duckdb`](../../data/derived/shugborough_trials.duckdb)
@@ -129,24 +160,27 @@ ORDER BY joint_log_likelihood DESC;
 
 ---
 
-## 6. Reproduction & Verification
+## 8. Reproduction & Verification
 
 ```bash
-# 1. Run full test suite (97 passing tests across cipher-lab)
+# 1. Run full test suite (98 passing tests across cipher-lab)
 uv run pytest tests/test_shugborough.py -v
 
-# 2. Execute information theory and unicity distance profile
+# 2. Run independent triple-check adversarial audit
+uv run python -m projects.shugborough.triple_check_audit
+
+# 3. Execute information theory and unicity distance profile
 uv run python -m projects.shugborough.information_theory
 
-# 3. Verify physical stone epigraphy and letterform constraints
+# 4. Verify physical stone epigraphy and letterform constraints
 uv run python -m projects.shugborough.epigraphy
 
-# 4. Evaluate Bayesian Latin Language Model initialism ranking
+# 5. Evaluate Bayesian Latin Language Model initialism ranking
 uv run python -m projects.shugborough.initialism_model
 
-# 5. Run pseudohistory and polyalphabetic debunker
+# 6. Run pseudohistory and polyalphabetic debunker
 uv run python -m projects.shugborough.pseudohistory_debunker
 
-# 6. Execute full campaign runner and inspect DuckDB ledger
+# 7. Execute full campaign runner and inspect DuckDB ledger
 uv run python -m projects.shugborough.runner
 ```

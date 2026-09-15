@@ -16,6 +16,7 @@ While `ancient-text-lab` is dedicated to natural ancient writing systems and arc
 - **[D'Agapeyeff Decipherment Report](projects/dagapeyeff/README.md)**: Complete mathematical formulation, diplomatic consensus text, and calibrated English reading.
 - **[Dorabella Research Report](projects/dorabella/README.md)**: Epistemic ledger (40,752 trials), 1886 Liszt negative control, species counterpoint evaluation, and dual MIDI synthesis.
 - **[Shugborough Research Report](projects/shugborough/README.md)**: Epigraphic interpunct audit, Shannon unicity violation proof, Bayesian Latin initialism model, and pseudohistory refutations.
+- **[Shugborough Academic Preprint](docs/SHUGBOROUGH_EPIGRAPHIC_PAPER.md)**: Formal codicological, epigraphic, and information-theoretic resolution paper (*The Antiquaries Journal* / *Cryptologia*).
 - **[Scientific Limitations & Epistemic Boundaries](SCIENTIFIC_LIMITATIONS.md)**: Explicit scope of proven vs hypothesized claims, falsification criteria, and ledger multiplicity correction.
 - **[Community Review & Announcement Package](docs/ANNOUNCEMENT_AND_COMMUNITY_REVIEW.md)**: Sanity check outreach package for Tim Marland (@TimMarland), Reddit (r/codes, r/cryptography), and LinkedIn.
 
