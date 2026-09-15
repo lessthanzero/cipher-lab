@@ -119,6 +119,46 @@ ROHONC_CORE_SIGNS: Dict[str, RohoncSign] = {
     "R048": RohoncSign("R048", "cl", "Crescent moon open left", True, "Mensis / Month"),
     "R049": RohoncSign("R049", "fa", "Double forward arc", True, "Multitudo / Many"),
     "R050": RohoncSign("R050", "ba", "Double backward arc", True, "Pauci / Few"),
+
+    # The Four Evangelists (Király-Tokai 2018 biblical citation headers)
+    "R051": RohoncSign("R051", "lg", "Winged human / angel monogram", True, "Evangelista Matthaeus / Matthew"),
+    "R052": RohoncSign("R052", "lg", "Winged lion monogram", True, "Evangelista Marcus / Mark"),
+    "R053": RohoncSign("R053", "lg", "Winged ox monogram", True, "Evangelista Lucas / Luke"),
+    "R054": RohoncSign("R054", "lg", "Eagle monogram", True, "Evangelista Iohannes / John"),
+
+    # Passion Narrative Figures & Historical Actors
+    "R055": RohoncSign("R055", "vt", "Vertical bar with trident top (governor)", True, "Pontius Pilatus / Praeses"),
+    "R056": RohoncSign("R056", "hk", "Downward hook with broken cross", True, "Iudas Iscariot / Traditor"),
+    "R057": RohoncSign("R057", "cr", "Cross with key terminal", True, "Petrus Apostolus / Keykeeper"),
+    "R058": RohoncSign("R058", "cl", "Crown form with three peaks", True, "Herodes Rex / Tetrarch"),
+    "R059": RohoncSign("R059", "br", "Mitre / High Priest split form", True, "Caiphas / Pontifex / Princeps"),
+    "R060": RohoncSign("R060", "fa", "Open arc with spear barb", True, "Centurio / Longinus / Miles"),
+
+    # Sacramental & Liturgical Elements
+    "R061": RohoncSign("R061", "cl", "Chalice / cup form", True, "Calix / Sanguis Christi / Wine"),
+    "R062": RohoncSign("R062", "cl", "Round loaf / host with cross", True, "Panis / Corpus Christi / Bread"),
+    "R063": RohoncSign("R063", "hz", "Altar table with steps", True, "Altare / Sacrificium"),
+    "R064": RohoncSign("R064", "fa", "Water wave / basin form", True, "Baptismus / Aqua Viva"),
+    "R065": RohoncSign("R065", "cr", "Tau cross (T-form)", True, "Crux Commissa / Old Testament Type"),
+    "R066": RohoncSign("R066", "lp", "Heart loop vertical", True, "Caritas / Amor Dei / Heart"),
+
+    # Numeral & Measurement Compounds (Gyürk 1970 positional arithmetic)
+    "R067": RohoncSign("R067", "cl", "Circle with horizontal bisector", True, "Numeral 2 / Duo"),
+    "R068": RohoncSign("R068", "cl", "Circle with cross bisector (four quarters)", True, "Numeral 4 / Quattuor"),
+    "R069": RohoncSign("R069", "cl", "Circle with five inner rays", True, "Numeral 5 / Quinque"),
+    "R070": RohoncSign("R070", "cl", "Circle with ten inner rays / star", True, "Numeral 10 / Decem"),
+    "R071": RohoncSign("R071", "lp", "Concentric double loop with dot", True, "Numeral 100 / Centum"),
+    "R072": RohoncSign("R072", "cr", "Cross within circle (thousand / M)", True, "Numeral 1000 / Mille / Anno"),
+
+    # Temporal & Theological Relational Particles
+    "R073": RohoncSign("R073", "hz", "Triple horizontal bar", True, "Semper / In saecula saeculorum"),
+    "R074": RohoncSign("R074", "vt", "Triple vertical bar", True, "Amen / Truly / Fiat"),
+    "R075": RohoncSign("R075", "cv", "Double chevron upward", True, "Resurrectio / Surrexit"),
+    "R076": RohoncSign("R076", "cv", "Double chevron downward", True, "Sepulcrum / In terram"),
+    "R077": RohoncSign("R077", "br", "Olive branch / palm frond", True, "Hosanna / Palmarum / Gloria"),
+    "R078": RohoncSign("R078", "hk", "Hook with triple tick", True, "Subjunctive / Optative affix"),
+    "R079": RohoncSign("R079", "fa", "Arc with star at center", True, "Stella / Nativitas / Lux Vera"),
+    "R080": RohoncSign("R080", "lg", "Tomb sarcophagus with cross lid", True, "Sepulcrum Domini / Monumentum"),
 }
 
 
@@ -214,6 +254,75 @@ FOLIO_TRANSCRIPTIONS: Dict[str, Dict[str, Any]] = {
             ["R001", "R037", "R014", "R035", "R002", "R030"],
             ["R044", "R010", "R022", "R024", "R006", "R045"],
             ["R025", "R002", "R041", "R042", "R043", "R046"],
+        ],
+    },
+    "folio_072r": {
+        "folio": "72r",
+        "title": "Entry into Jerusalem / Palm Sunday",
+        "has_illustration": True,
+        "illustration_desc": "Christ on ass entering city gates, crowds waving palm fronds and spreading garments",
+        "lines": [
+            ["R001", "R013", "R077", "R045", "R016", "R010", "R046"],
+            ["R077", "R005", "R014", "R035", "R001", "R013", "R030"],
+            ["R016", "R010", "R037", "R007", "R033", "R040", "R045"],
+            ["R032", "R014", "R077", "R024", "R002", "R046"],
+            ["R001", "R038", "R015", "R035", "R040", "R030"],
+            ["R044", "R010", "R022", "R006", "R074", "R046"],
+        ],
+    },
+    "folio_086v": {
+        "folio": "86v",
+        "title": "Agony in Gethsemane & Betrayal by Judas",
+        "has_illustration": True,
+        "illustration_desc": "Christ kneeling in garden beneath angel with chalice, sleeping apostles, Judas approaching with soldiers",
+        "lines": [
+            ["R001", "R036", "R018", "R045", "R061", "R032", "R046"],
+            ["R041", "R008", "R001", "R037", "R061", "R026", "R030"],
+            ["R057", "R044", "R010", "R047", "R033", "R045"],
+            ["R056", "R007", "R060", "R010", "R037", "R001", "R046"],
+            ["R056", "R005", "R001", "R045", "R056", "R056", "R030"],  # Judas kiss and arrest
+            ["R057", "R060", "R009", "R038", "R001", "R005", "R046"],
+        ],
+    },
+    "folio_104r": {
+        "folio": "104r",
+        "title": "Christ before Pontius Pilate",
+        "has_illustration": True,
+        "illustration_desc": "Christ bound before enthroned governor Pilate washing his hands, soldiers with spears",
+        "lines": [
+            ["R055", "R013", "R045", "R001", "R037", "R055", "R046"],
+            ["R055", "R031", "R001", "R013", "R026", "R030"],  # Pilate interrogating Christ: "Art thou the King?"
+            ["R001", "R033", "R031", "R013", "R014", "R035", "R045"],  # "Thou sayest it / My kingdom is not of this world"
+            ["R059", "R016", "R010", "R060", "R037", "R001", "R046"],
+            ["R055", "R064", "R007", "R024", "R038", "R030"],  # Pilate washing hands with water
+            ["R001", "R060", "R010", "R037", "R076", "R046"],
+        ],
+    },
+    "folio_125v": {
+        "folio": "125v",
+        "title": "The Crucifixion on Golgotha (INRI Inscription)",
+        "has_illustration": True,
+        "illustration_desc": "Christ on Central Cross with INRI banner, two thieves flanking, Mary and John at foot",
+        "lines": [
+            ["R001", "R013", "R045", "R001", "R013", "R015", "R046"],  # INRI equivalent monogram formula
+            ["R001", "R065", "R076", "R045", "R020", "R047", "R030"],  # Sun darkened, moon turned to blood
+            ["R039", "R054", "R045", "R001", "R005", "R037", "R039", "R054", "R046"],  # "Woman behold thy son / Behold thy mother"
+            ["R060", "R060", "R007", "R061", "R066", "R030"],  # Centurion with spear piercing side, blood and water
+            ["R001", "R075", "R014", "R045", "R074", "R046"],  # "Consummatum est / It is finished"
+        ],
+    },
+    "folio_178r": {
+        "folio": "178r",
+        "title": "Table of Contents & Numbered Gospel Chapter Citations",
+        "has_illustration": False,
+        "illustration_desc": "Structured tabular layout with Evangelist headers and chapter numeral clusters",
+        "lines": [
+            ["R051", "R045", "R019", "R046"],  # Matthew Cap. I
+            ["R051", "R045", "R067", "R046"],  # Matthew Cap. II
+            ["R052", "R045", "R019", "R046"],  # Mark Cap. I
+            ["R053", "R045", "R019", "R046"],  # Luke Cap. I
+            ["R054", "R045", "R019", "R046"],  # John Cap. I
+            ["R002", "R001", "R043", "R073", "R074", "R030"],
         ],
     },
     "folio_210v": {
