@@ -106,6 +106,28 @@ KIRALY_TOKAI_CODEBOOK: Dict[str, CodebookEntry] = {
     "R045": CodebookEntry("R045", "delimiter", "Word Boundary Separator", 0.99, "·", "·", "dt"),
     "R046": CodebookEntry("R046", "delimiter", "Sentence Delimiter (:)", 0.99, ".", ".", "dt"),
     "R074": CodebookEntry("R074", "liturgical", "Amen / Truly / Fiat", 0.97, "Amen", "Ámen", "vt"),
+
+    # Old Testament & Passion Artifacts (R081-R100)
+    "R081": CodebookEntry("R081", "sacred_person", "Ioseph ab Arimathaea", 0.94, "Ioseph Arimathaea", "Arimatheai József", "br"),
+    "R082": CodebookEntry("R082", "historical_actor", "Adam / Protoplast", 0.93, "Adam", "Ádám", "vt"),
+    "R083": CodebookEntry("R083", "historical_actor", "Eva / Mater Viventium", 0.93, "Eva", "Éva", "vt"),
+    "R084": CodebookEntry("R084", "theological", "Arbor Vitae / Tree of Life", 0.92, "Lignum Vitae", "Élet fája", "br"),
+    "R085": CodebookEntry("R085", "theological", "Serpens / Diabolus", 0.95, "Serpens", "Kígyó / Ördög", "lp"),
+    "R086": CodebookEntry("R086", "liturgical", "Gladius Cherubim / Flaming Sword", 0.91, "Gladius Ignitus", "Lángpallos", "cr"),
+    "R087": CodebookEntry("R087", "sacramental", "Columna Flagellationis", 0.94, "Columna", "Oszlop", "vt"),
+    "R088": CodebookEntry("R088", "sacramental", "Corona Spinea / Crown of Thorns", 0.96, "Corona Spinea", "Töviskorona", "cl"),
+    "R089": CodebookEntry("R089", "historical_actor", "Chlamys Coccinea / Royal Robe", 0.90, "Chlamys", "Bíborpalást", "ba"),
+    "R090": CodebookEntry("R090", "sacramental", "Arundo / Reed Sceptre", 0.91, "Arundo", "Nádszál", "vt"),
+    "R091": CodebookEntry("R091", "sacred_person", "Moyses / Tablets of Law", 0.95, "Moyses", "Mózes", "hz"),
+    "R092": RohoncSign if False else CodebookEntry("R092", "sacred_person", "Elias Propheta", 0.94, "Elias", "Illés Próféta", "fa"),
+    "R093": CodebookEntry("R093", "theological", "Nubes / Glory of God", 0.92, "Nubes Gloriae", "Dicsőség Felhője", "lp"),
+    "R094": CodebookEntry("R094", "historical_actor", "Aegyptus / Land of Egypt", 0.91, "Aegyptus", "Egyiptom", "hz"),
+    "R095": CodebookEntry("R095", "sacred_person", "Sanctus Ioseph / Guardian", 0.95, "Sanctus Ioseph", "Szent József", "cr"),
+    "R096": CodebookEntry("R096", "liturgical", "Scriptum Est / Sicut Oportuit", 0.93, "Scriptum est", "Meg van írva", "hk"),
+    "R097": CodebookEntry("R097", "liturgical", "Gloria Patri / Doxologia", 0.96, "Gloria Patri", "Dicsőség az Atyának", "cr"),
+    "R098": CodebookEntry("R098", "ecclesiastical", "Scriptor / Notarius / Scribe", 0.92, "Scriptor", "Írnok", "vt"),
+    "R099": CodebookEntry("R099", "delimiter", "Explicit / Finis / The End", 0.98, "Finis", "Vége", "hz"),
+    "R100": CodebookEntry("R100", "liturgical", "Pax Vobiscum / Peace", 0.95, "Pax Vobiscum", "Békesség Veletek", "fa"),
 }
 
 

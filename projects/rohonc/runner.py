@@ -164,11 +164,12 @@ def main() -> None:
     parser.add_argument(
         "--mode",
         default="all",
-        choices=["all", "epigraphic", "codebook", "align", "debunk", "local", "remote"],
+        choices=["all", "epigraphic", "codebook", "align", "debunk", "local", "remote", "syllabic"],
         help="Execution mode",
     )
     parser.add_argument("--data-dir", default="./data/derived", type=Path, help="Data directory")
     parser.add_argument("--permutations", default=500, type=int, help="Monte Carlo permutations")
+    parser.add_argument("--language", default="hungarian", choices=["hungarian", "latin"], help="Language for syllabic annealer")
     parser.add_argument("--seed", default=42, type=int, help="Random seed")
     args = parser.parse_args()
 
@@ -183,6 +184,10 @@ def main() -> None:
 
     if args.mode in ("all", "debunk"):
         run_pseudohistory_debunking(args.data_dir)
+
+    if args.mode in ("all", "syllabic"):
+        from projects.rohonc.syllabic_annealer import run_syllabic_discovery
+        run_syllabic_discovery(iterations=2500, language=args.language, seed=args.seed, data_dir=args.data_dir)
 
     if args.mode in ("all", "local"):
         local_worker = RohoncLocalDiscoveryWorker(data_dir=args.data_dir)

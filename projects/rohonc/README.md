@@ -30,13 +30,16 @@
 
 ```
 projects/rohonc/
-├── corpus.py               # Core sign catalog (80 signs), 12 RTFF families, transcribed folios
+├── corpus.py               # Expanded catalog (100 signs), 12 RTFF families, 19 transcribed folios
 ├── stats.py                # Zipf-Mandelbrot fitting, entropy profiling, directionality audit
 ├── codebook.py             # Király-Tokai 50-entry codebook, NER scanner, cluster discovery
-├── liturgical_aligner.py   # 6-stage Passion Diatessaron alignment & Monte Carlo scoring
+├── liturgical_aligner.py   # 24-scene micro-Diatessaron & Smith-Waterman sequence aligner
 ├── debunker.py             # Mathematical falsification suite for pseudohistorical claims
+├── morpheme_clusterer.py   # Graph-theoretic morpheme clustering & positional affix classifier
+├── syllabic_annealer.py    # Simulated annealing solver for CV syllabograms (Old Hungarian/Latin)
 ├── discovery_mac.py        # Local Apple Silicon worker for codebook refinement & entity scanning
-├── discovery_pc.py         # Remote Fedora PC worker for large-scale Monte Carlo null sweeps
+├── discovery_pc.py         # Multi-core Fedora PC worker for large-scale Monte Carlo null sweeps
+├── continuous_coordinator.py # 30-min continuous dual-node orchestrator with telemetry heartbeats
 └── runner.py               # Master CLI orchestrator with DuckDB epistemic ledger logging
 ```
 
@@ -50,14 +53,18 @@ projects/rohonc/
 uv run python -m projects.rohonc.runner --mode all --permutations 1000
 ```
 
-### Run Local Darwin Discovery Cycle
+### Run Syllabic Phonetic Annealing (Old Hungarian or Latin)
 ```bash
-uv run python -m projects.rohonc.discovery_mac
+# Anneal CV syllabograms against 16th-century Old Hungarian lexicon
+uv run python -m projects.rohonc.runner --mode syllabic --language hungarian --seed 42
+
+# Anneal CV syllabograms against 16th-century Latin Vulgate lexicon
+uv run python -m projects.rohonc.runner --mode syllabic --language latin --seed 42
 ```
 
-### Run Distributed Monte Carlo Null Permutations on Remote PC
+### Run 30-Minute Continuous Dual-Node Discovery
 ```bash
-uv run python -m projects.rohonc.discovery_pc --permutations 2000
+uv run python -m projects.rohonc.continuous_coordinator --duration 1800 --heartbeat 60
 ```
 
 ### Run Automated Test Suite

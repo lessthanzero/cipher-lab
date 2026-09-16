@@ -159,6 +159,34 @@ ROHONC_CORE_SIGNS: Dict[str, RohoncSign] = {
     "R078": RohoncSign("R078", "hk", "Hook with triple tick", True, "Subjunctive / Optative affix"),
     "R079": RohoncSign("R079", "fa", "Arc with star at center", True, "Stella / Nativitas / Lux Vera"),
     "R080": RohoncSign("R080", "lg", "Tomb sarcophagus with cross lid", True, "Sepulcrum Domini / Monumentum"),
+
+    # Old Testament Prototypes & Biblical Realia
+    "R081": RohoncSign("R081", "br", "Branch with shroud drape", True, "Ioseph ab Arimathaea / Shroud"),
+    "R082": RohoncSign("R082", "vt", "Standing masculine figure with spade", True, "Adam / Protoplast / Man"),
+    "R083": RohoncSign("R083", "vt", "Standing feminine figure with spindle", True, "Eva / Mater Viventium / Woman"),
+    "R084": RohoncSign("R084", "br", "Stylized branched tree form", True, "Arbor Vitae / Lignum Crucis"),
+    "R085": RohoncSign("R085", "lp", "Serpentine undulating wave with crest", True, "Serpens / Diabolus / Draco"),
+    "R086": RohoncSign("R086", "cr", "Flaming sword / pointed cross", True, "Gladius Ignitus / Cherubim"),
+
+    # Passion Instruments & Judicial Realia
+    "R087": RohoncSign("R087", "vt", "Fluted vertical pillar", True, "Columna Flagellationis / Pillar"),
+    "R088": RohoncSign("R088", "cl", "Spike-ring circular band", True, "Corona Spinea / Crown of Thorns"),
+    "R089": RohoncSign("R089", "ba", "Draped mantle curve", True, "Chlamys Coccinea / Royal Robe"),
+    "R090": RohoncSign("R090", "vt", "Slender reed staff with plume", True, "Arundo / Sceptrum Fictum / Reed"),
+
+    # Theophanic & Prophetic Signs
+    "R091": RohoncSign("R091", "hz", "Twin arched tablets", True, "Moyses / Tabulae Testamenti / Lex"),
+    "R092": RohoncSign("R092", "fa", "Ascending arc with flame tips", True, "Elias / Propheta / Currus Ignis"),
+    "R093": RohoncSign("R093", "lp", "Billowing cloud cluster", True, "Nubes / Gloria Domini / Shekinah"),
+    "R094": RohoncSign("R094", "hz", "Pyramidal stepped base", True, "Aegyptus / Terra Servitutis"),
+    "R095": RohoncSign("R095", "cr", "Cross with carpenter square", True, "Ioseph Nutritor Domini / Guardian"),
+
+    # Textual & Colophon Rubrics
+    "R096": RohoncSign("R096", "hk", "Scroll flourish ligature", True, "Scriptum Est / Sicut Oportuit"),
+    "R097": RohoncSign("R097", "cr", "Doxological cross with radiant rays", True, "Gloria Patri / Doxologia"),
+    "R098": RohoncSign("R098", "vt", "Quill pen with ink-pot curve", True, "Scriptor / Amanuensis / Notarius"),
+    "R099": RohoncSign("R099", "hz", "Double terminating bar with dot", True, "Explicit / Finis / Telos"),
+    "R100": RohoncSign("R100", "fa", "Olive branch loop with peace knot", True, "Pax Vobiscum / Gratia Domini"),
 }
 
 
@@ -337,6 +365,96 @@ FOLIO_TRANSCRIPTIONS: Dict[str, Dict[str, Any]] = {
             ["R044", "R010", "R039", "R032", "R006", "R046"],
             ["R021", "R019", "R019", "R020", "R003", "R030"],  # Probable year notation 1593
             ["R001", "R024", "R006", "R045", "R046"],
+        ],
+    },
+    "folio_015v": {
+        "folio": "15v",
+        "title": "Fall of Man & Expulsion from Eden",
+        "has_illustration": True,
+        "illustration_desc": "Adam and Eve beside Tree of Knowledge with coiled serpent, cherub with flaming sword",
+        "lines": [
+            ["R082", "R083", "R084", "R045", "R085", "R046"],
+            ["R085", "R037", "R083", "R008", "R013", "R030"],
+            ["R002", "R001", "R031", "R082", "R045", "R046"],
+            ["R086", "R032", "R076", "R082", "R083", "R030"],
+            ["R001", "R006", "R084", "R075", "R045", "R046"],
+        ],
+    },
+    "folio_035r": {
+        "folio": "35r",
+        "title": "Flight into Egypt",
+        "has_illustration": True,
+        "illustration_desc": "Mary carrying infant Christ on ass led by Joseph, angel pointing toward Egypt",
+        "lines": [
+            ["R032", "R095", "R008", "R045", "R001", "R039", "R046"],
+            ["R058", "R060", "R010", "R037", "R001", "R030"],
+            ["R095", "R039", "R042", "R045", "R094", "R007", "R046"],
+            ["R032", "R005", "R014", "R024", "R045"],
+            ["R002", "R041", "R006", "R074", "R046"],
+        ],
+    },
+    "folio_050v": {
+        "folio": "50v",
+        "title": "The Transfiguration on Mount Tabor",
+        "has_illustration": True,
+        "illustration_desc": "Christ in radiant glory between Moses with tablets and Elijah, disciples prostrate below",
+        "lines": [
+            ["R001", "R006", "R093", "R045", "R091", "R092", "R046"],
+            ["R091", "R092", "R031", "R001", "R005", "R030"],
+            ["R057", "R054", "R044", "R045", "R093", "R046"],
+            ["R002", "R041", "R031", "R001", "R042", "R030"],
+            ["R001", "R005", "R013", "R074", "R046"],
+        ],
+    },
+    "folio_110v": {
+        "folio": "110v",
+        "title": "Flagellation & Crowning with Thorns",
+        "has_illustration": True,
+        "illustration_desc": "Christ bound to column scourged by soldiers, kneeling mockers with crown of thorns and reed",
+        "lines": [
+            ["R001", "R087", "R007", "R045", "R060", "R010", "R046"],
+            ["R060", "R088", "R037", "R001", "R089", "R030"],
+            ["R090", "R058", "R055", "R045", "R060", "R046"],
+            ["R001", "R014", "R035", "R038", "R076", "R030"],
+            ["R001", "R005", "R061", "R074", "R046"],
+        ],
+    },
+    "folio_212v": {
+        "folio": "212v",
+        "title": "Colophon Explicit & Scribe Doxology",
+        "has_illustration": False,
+        "illustration_desc": "Final chapter explicit formula with quill monogram and trinitarian doxology",
+        "lines": [
+            ["R096", "R001", "R002", "R043", "R025", "R046"],
+            ["R097", "R002", "R041", "R042", "R043", "R030"],
+            ["R098", "R019", "R074", "R045", "R099", "R046"],
+            ["R040", "R005", "R006", "R073", "R074", "R030"],
+            ["R001", "R100", "R045", "R046"],
+        ],
+    },
+    "folio_218v": {
+        "folio": "218v",
+        "title": "Chronological Table & Anno Mundi Calculation",
+        "has_illustration": False,
+        "illustration_desc": "Tabular column of additive and positional numeral clusters computing the year of Christ",
+        "lines": [
+            ["R072", "R069", "R071", "R069", "R070", "R067", "R019", "R046"],  # 1000 + 500 + 90 + 3 = 1593
+            ["R001", "R072", "R019", "R020", "R045", "R073", "R030"],
+            ["R002", "R072", "R068", "R071", "R045", "R046"],
+            ["R019", "R067", "R068", "R069", "R070", "R030"],
+            ["R001", "R074", "R045", "R046"],
+        ],
+    },
+    "folio_220r": {
+        "folio": "220r",
+        "title": "Final Benediction & Concluding Rubric",
+        "has_illustration": True,
+        "illustration_desc": "Ornamental Greek cross with alpha/omega rays, blessing hand, and final explicit rubric",
+        "lines": [
+            ["R001", "R005", "R002", "R043", "R025", "R046"],
+            ["R100", "R040", "R010", "R008", "R045", "R005", "R030"],
+            ["R044", "R010", "R004", "R010", "R006", "R046"],
+            ["R073", "R074", "R045", "R099", "R046"],
         ],
     },
 }
