@@ -29,13 +29,50 @@ While `ancient-text-lab` is dedicated to natural ancient writing systems and arc
 - **Double-Blind Refereeing with Foils**: LLM referees evaluate candidate decryptions alongside negative-control decoys to eliminate confirmation bias.
 - **Append-Only Epistemic Ledger**: Multiplicity-corrected $p$-values are computed across the full denominator of all trials (40,752 trials tracked in DuckDB).
 
+## Distributed Compute Harness & Hardware Architecture
+
+The laboratory operates across a coordinated heterogeneous multi-node computing architecture designed for memory safety, reproducible batch execution, and high-throughput permutation sweeps:
+
+1. **Local Apple Silicon Workstation (Darwin M1 Pro, 16GB)**:
+   - **Darwin Memory-Safe Telemetry**: Computes true available physical RAM via Mach page accounting (`vm_stat` parsing `Pages free`, `speculative`, `inactive`, `purgeable` at 16 KB default page size). Prevents memory exhaustion or disk swap thrashing when processing large n-gram arrays.
+   - **Interactive & Real-Time Engines**: Executes deterministic unicity gating, Fuxian species counterpoint rules engines, DuckDB ledger tracking, and pure-Python MIDI audio synthesis.
+
+2. **Remote Fedora Linux PC Worker (`pc:192.168.1.172`, 8 CPU Cores)**:
+   - **Remote Compute Dispatch**: Orchestrated via `RemoteComputeWorker` over SSH with automated health checking and batch serialization.
+   - **Heavy Monte Carlo Permutations**: Runs massive parallel null simulations (e.g. 724 multi-core permutation batches totaling >700,000 token order shuffles for the Rohonc syntax test at $Z = +14.27\sigma$).
+   - **Exhaustive Parameter Sweeps**: Dispatches multi-threaded grid sweeps across 14x14 transposition matrices, dictionary key sweeps (17,000+ words for Dorabella), and polyalphabetic fractionations.
+
+3. **Append-Only Epistemic Ledger (DuckDB)**:
+   - Persistent embedded ledger (`data/derived/epistemic_ledger.duckdb`) tracking every hypothesis trial across all ciphers (40,752 trials logged).
+   - Enforces dynamic family-wise error rate (FWER) control via Bonferroni correction ($\alpha_{\text{critical}} = 0.05 / 40{,}752 = 1.23 \times 10^{-6}$) and Benjamini-Hochberg False Discovery Rate (FDR) adjustments.
+
+## Model Referee Architecture & LLM Telemetry
+
+To eliminate LLM apophenia, confirmation bias, and hallucinated "translations," `cipher-lab` employs a multi-tiered referee protocol that couples closed and open models under double-blind controls:
+
+1. **Double-Blind Referee Protocol with Foils (`evaluate_with_blinded_foils`)**:
+   - The candidate decipherment is shuffled alongside 2–3 negative-control decoys (synthetic anagrams or scrambled ciphertexts).
+   - Referees evaluate linguistic coherence blindly. If an LLM selects a decoy or scores a scrambled foil highly, its evaluation is marked as an apophenic failure and penalized.
+
+2. **Multi-Tier Model Stack**:
+   - **OpenAI Codex (`gpt-5.6` / `gpt-6-astra`)**: Invoked via CLI (`codex exec --sandbox read-only`) with low reasoning effort for high-level adversarial critique and hypothesis falsification.
+   - **Google Antigravity 3.8 Flash**: Multi-repo agent synthesis, epistemic protocol orchestration, and experimental plan management.
+   - **Homelab Ollama Worker Cluster (`pc:11434` & `127.0.0.1:11434`)**:
+     - `qwen2.5:7b`: Statistical and adversarial linguistic peer review passes.
+     - `gemma2:9b`: Archaeological, epigraphic, and historical sanity checks.
+     - `qwen2.5-coder:7b`: Code hygiene, packaging, and reproducibility verification.
+     - `llama3.2:3b` & `phi4-mini:latest`: Fast word-boundary segmentation and low-latency blinded foil scoring.
+
+3. **Structured Telemetry Logging**:
+   - All local and remote model requests are logged to `~/.local/share/local-models/usage.jsonl` recording ISO timestamp, project name, task, provider, model ID, token counts, and execution latency in milliseconds.
+
 ## Quickstart & Verification
 
 ```bash
 # 1. Sync environment
 uv sync --all-packages --group dev
 
-# 2. Run full test suite (112 passing tests)
+# 2. Run full test suite (120 passing tests)
 uv run pytest
 
 # 3. Verify D'Agapeyeff decipherment

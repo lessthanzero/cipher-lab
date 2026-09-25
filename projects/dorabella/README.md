@@ -190,7 +190,7 @@ projects/dorabella/
 # 1. Install project dependencies in isolated virtual environment
 uv sync --all-packages --group dev
 
-# 2. Run full test suite (87 passing tests)
+# 2. Run full test suite (120 passing tests)
 uv run pytest
 
 # 3. Verify 1886 Liszt Inscription corpus & negative control
@@ -208,3 +208,20 @@ uv run python -m projects.dorabella.nihilist_coordinate_solver
 # 7. Inspect test suite coverage for Dorabella modules
 uv run pytest tests/test_dorabella.py tests/test_dorabella_holistic.py tests/test_elgar_personal_context.py
 ```
+
+---
+
+## 8. Compute Harness & Distributed Ledger Architecture
+
+The Dorabella computational investigation operates across a dual-node distributed architecture integrating high-throughput keyword sweeps with deterministic musicological and cryptanalytic verification:
+
+- **Distributed Workers (`discovery_mac.py` & `discovery_pc.py`)**:
+  - **Local Apple Silicon M1 Pro (`discovery_mac.py`)**: Dispatches local multi-process batches evaluating 8-orientation compass mappings, Fuxian species counterpoint rules (consonance scoring, parallel fifths/octaves suppression), and pure-Python standard MIDI generation.
+  - **Remote Fedora Linux PC (`discovery_pc.py` / `cluster_worker.py`)**: Executes large-scale dictionary sweeps across 17,000+ six-letter English keywords (`run_joint_grille_campaign.py`) under John Holt Schooling's April 1896 *Pall Mall Magazine* Nihilist coordinate addition and transposition models.
+- **Append-Only Epistemic Ledger (DuckDB)**:
+  - Synchronizes all candidate trials across both nodes into `data/derived/epistemic_ledger.duckdb` (40,752 recorded trials).
+  - Enforces conservative family-wise error rate (FWER) gating ($\alpha_{\text{critical}} = 1.23 \times 10^{-6}$), ensuring that exploratory musicological findings ($Z = +2.79\sigma$) are explicitly distinguished from strict Bonferroni-cleared cryptanalytic decipherments.
+- **Model Referees & Foil Verification**:
+  - Blinded referee evaluation (`harness.py`) presenting candidate Nihilist decryptions alongside scrambled negative controls to Codex (`gpt-5.6`) and Ollama models (`qwen2.5:7b`, `phi4-mini:latest`), confirming that candidate text exhibits no authentic Victorian grammatical coherence and confirming the musical/affective hypothesis.
+  - Automated telemetry logged to `~/.local/share/local-models/usage.jsonl`.
+

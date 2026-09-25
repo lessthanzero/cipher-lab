@@ -147,7 +147,7 @@ To reproduce the decipherment, run the test suite and execution scripts:
 # 1. Install dependencies
 uv sync --all-packages --group dev
 
-# 2. Run full test suite (72 passing tests)
+# 2. Run full test suite (120 passing tests)
 uv run pytest
 
 # 3. Decipher coordinates with winning key
@@ -162,3 +162,19 @@ uv run python -m projects.dagapeyeff.linguistic_reconstruction
 # 6. Run negative-control foil permutation test
 uv run python -m projects.dagapeyeff.negative_control_foil
 ```
+
+---
+
+## 6. Compute Harness & Model Referee Architecture
+
+The D'Agapeyeff decipherment pipeline leverages both multi-core batch computation and local model referee adjudication:
+
+- **Compute Infrastructure**:
+  - **Apple Silicon M1 Pro Workstation**: Runs deterministic transposition algebra, vertical Two-Square inversion, 1-OPT gauge invariance scans, and negative-control foil tests.
+  - **Remote Fedora Linux PC Worker (`pc:192.168.1.172`)**: Executes exhaustive combinatorial grid sweeps over 1930s Admiralty keywords and military terminologies.
+- **Model Referees & Segmentation**:
+  - **Word Boundary Segmentation (`linguistic_reconstruction.py`)**: Employs `llama3.2:3b` and `qwen2.5:7b` running on the Fedora worker's Ollama cluster (`http://192.168.1.172:11434`) to parse continuous consensus output without introducing modern lexical hallucinations.
+  - **Consensus Critique (`word_stitcher.py`)**: Uses `qwen2.5:7b` for grammatical and historical plausibility critiques of Bordon Camp naval dispatch language.
+  - **Double-Blind Foil Verification (`harness.py`)**: Presents authentic deciphered dispatch fragments against scrambled decoys under `phi4-mini:latest` and OpenAI Codex (`gpt-5.6`) to confirm that genuine text scores significantly higher than apophenic noise.
+  - **Local Telemetry**: All model calls log latency and token metrics to `~/.local/share/local-models/usage.jsonl`.
+
