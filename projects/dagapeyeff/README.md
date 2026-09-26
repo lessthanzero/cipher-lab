@@ -122,8 +122,8 @@ EXPERTS WING SIGNALS.
 
 ## 4. Mathematical Discoveries
 
-1. **The Pelling Diagonal Reflection & Null Column Deletion**:
-   Column 14 clusters all anomalous digits, including the unique digit `0` at position 97 (`04`). By reflecting the $14 \times 14$ grid diagonally, Column 14 becomes Row 14. Stripping this trailing padding row restores the exact natural English Index of Coincidence ($\text{IoC} = 0.0670$). Deleting before reflection catastrophically collapses fitness ($\Delta = -88.0$ points), proving D'Agapeyeff deleted the null row *after* matrix reflection.
+1. **The Pelling Diagonal Reflection & van Eykelen Column 14 Anomaly**:
+   Formatting the 196 pairs into a $14 \times 14$ grid isolates all 5 rarest anomalous symbols into the 14th column (clustering at indices that are multiples of both 2 and 7), including the unique digit `0` at position 97 (`04`), as first identified and documented by **Erik van Eykelen** ([@hackteck](https://x.com/hackteck), 14 March 2026). By reflecting the $14 \times 14$ grid diagonally (Nick Pelling's transpose hypothesis), Column 14 becomes Row 14. Stripping this trailing padding row restores the exact natural English Index of Coincidence ($\text{IoC} = 0.0670$). Deleting before reflection catastrophically collapses fitness ($\Delta = -88.0$ points), proving D'Agapeyeff deleted the null row *after* matrix reflection.
 
 2. **Algebraic 7-Cell Gauge Symmetry**:
    The 182-position ciphertext addresses **exactly 18 cells in Square 1** and **17 cells in Square 2**. The remaining 7 cells in Square 1 and 8 cells in Square 2 correspond to rare letters (`Q`, `Z`, `X`, `K`, `V`, `P`) that never appear in the ciphertext coordinates. Any Polybius square that correctly assigns the 18 active cells produces the identical 100% decipherment.
@@ -177,4 +177,17 @@ The D'Agapeyeff decipherment pipeline leverages both multi-core batch computatio
   - **Consensus Critique (`word_stitcher.py`)**: Uses `qwen2.5:7b` for grammatical and historical plausibility critiques of Bordon Camp naval dispatch language.
   - **Double-Blind Foil Verification (`harness.py`)**: Presents authentic deciphered dispatch fragments against scrambled decoys under `phi4-mini:latest` and OpenAI Codex (`gpt-5.6`) to confirm that genuine text scores significantly higher than apophenic noise.
   - **Local Telemetry**: All model calls log latency and token metrics to `~/.local/share/local-models/usage.jsonl`.
+
+---
+
+## 7. Foundational Research & Attributions
+
+This decipherment builds directly on the open, reproducible research shared by the independent cryptanalysis community:
+
+* **Erik van Eykelen ([@hackteck](https://x.com/hackteck))**:
+  * **14th Column Anomaly Discovery**: Observed and documented (14 March 2026) that formatting the 196 ciphertext pairs into a $14 \times 14$ grid isolates all 5 rarest anomalous symbols—including the sole '0' digit at position 97 (`04`)—into the 14th column, clustering at indices that are multiples of both 2 and 7. This insight was the decisive structural clue that identified Column 14 as non-payload margin padding.
+* **Tim Marland ([dagapeyeffresearch.com](https://dagapeyeffresearch.com))**:
+  * **7-Phase Computational Baseline**: Rigorous empirical foundation establishing the 196-pair $14 \times 14$ grid, Polybius digit-pair distributions ({6..0} × {1..5}), and pioneering the vertical Two-Square model ($Q = -692.13$) upon which this laboratory's search space was constructed.
+* **Nick Pelling ([ciphermysteries.com](https://ciphermysteries.com))**:
+  * **Diagonal Reflection Hypothesis**: Proposed reflecting the $14 \times 14$ coordinate grid across the main diagonal ($(r, c) \mapsto (c, r)$), which physically rotates the anomalous 14th column into the 14th trailing row.
 

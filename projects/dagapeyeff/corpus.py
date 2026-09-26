@@ -54,7 +54,11 @@ def get_14x14_pair_grid() -> List[List[str]]:
 
 
 def get_14th_column_pairs() -> List[str]:
-    """Return the 14 pairs located in the 14th column of the 14x14 grid."""
+    """Return the 14 pairs located in the 14th column of the 14x14 grid.
+
+    The 14th column anomaly was first identified by Erik van Eykelen (@hackteck,
+    14 March 2026), isolating all rare anomalous symbols into a single column.
+    """
     grid = get_14x14_pair_grid()
     return [row[13] for row in grid]
 

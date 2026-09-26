@@ -6,7 +6,7 @@ Modular, reproducible research infrastructure for computational analysis of hist
 
 While `ancient-text-lab` is dedicated to natural ancient writing systems and archaeological epigraphy (Linear A/B, Indus Script, Rongorongo, Phaistos Disc), `cipher-lab` focuses on deliberate artificial ciphers, early-modern shorthand systems, and historical enigmas:
 
-1. **[D’Agapeyeff Cipher (1939)](projects/dagapeyeff/README.md)**: 392 digits (196 pairs, digits 1–5). **Deciphered & Reconstructed** via Pelling diagonal reflection, 182-pair payload extraction, `HYDROGRAPHICAL` double transposition, and vertical Two-Square rectangle inversion ($Q = -760.67$, $\text{Cohen's } d = 4.49$ vs negative-control shuffles).
+1. **[D’Agapeyeff Cipher (1939)](projects/dagapeyeff/README.md)**: 392 digits (196 pairs, digits 1–5). **Deciphered & Reconstructed** by coupling Erik van Eykelen's 14th column anomaly and Nick Pelling's diagonal reflection with 182-pair payload extraction, Tim Marland's Two-Square baseline, `HYDROGRAPHICAL` double transposition, and vertical Two-Square rectangle inversion ($Q = -760.67$, $\text{Cohen's } d = 4.49$ vs negative-control shuffles).
 2. **[Dorabella Cipher (1897) & 1886 Liszt Inscription](projects/dorabella/README.md)**: 87 glyphs in 3 lines across 24 symbols. **Codicologically Bounded & Structurally Characterized** as a melodic cryptogram anticipating *Enigma Variations, Op. 36, Variation X ("Dorabella")*, cross-validated against the 1886 Liszt Inscription negative control ($N=18$), isolating John Holt Schooling's April 1896 Nihilist coordinate harmonic ($+5.08\sigma$ at lag 6), while establishing a definitive negative result for standard English prose across 17,000+ keywords.
 3. **[Rohonc Codex (c. 1530–1550)](projects/rohonc/README.md)**: 448 pages, ~87k characters, ~150 core signs, 87 Christian Passion illustrations. **Resolved as an Early-Modern Liturgical Tachygraphic Codebook & Controlled Syllabary** (Király & Tokai 2018; Láng 2021). Watermark anchored to Venetian mills (1530–1540, Briquet 541); unstructured hoax and modern forgery myths mathematically rejected ($Z = +14.27\sigma$ syntax permutation test); 50 core codebook entries mapped; formulaic liturgical collocations extracted (`Apostoli`, `Pater et Filius`, `Pilatus et Christus`); Diatessaron sequence aligned to Passion scenes (Folio 125v Golgotha Crucifixion $Z = +2.07\sigma, p = 0.048$).
 4. **[Shugborough Inscription (c. 1748–1756)](projects/shugborough/README.md)**: 8 letters (`OUOSVAVV`) flanked by `D · M ·` on Peter Scheemakers' Shepherd's Monument. **Codicologically Bounded & Epigraphically Characterized**: Shannon unicity violation ($N \ll U_0$) mathematically bounds single-key cryptanalysis; carved interpuncts (`·`) and rounded `U` vs pointed `V` letterforms prove an 18th-century memorial Latin initialism under *Dis Manibus*; Bayesian transition modeling benchmarks historical candidates while falsifying the popular "widower" and polyalphabetic "Magdalen" myths.
@@ -92,3 +92,13 @@ uv run python -m projects.shugborough.runner
 # 7. Verify Rohonc Codex codebook extraction, liturgical alignment & distributed MC
 uv run python -m projects.rohonc.runner --mode all
 ```
+
+## Acknowledgements & Community Attribution
+
+`cipher-lab` stands on the shoulders of the open-source and independent historical cryptanalysis community:
+- **Erik van Eykelen ([@hackteck](https://x.com/hackteck))**: For isolating the 14th Column Anomaly (14 March 2026) in D'Agapeyeff, which was the crucial structural observation that identified Column 14 as non-payload margin padding.
+- **Tim Marland ([dagapeyeffresearch.com](https://dagapeyeffresearch.com))**: For the foundational 7-phase computational analysis of D'Agapeyeff and pioneering the vertical Two-Square cipher hypothesis.
+- **Nick Pelling ([ciphermysteries.com](https://ciphermysteries.com))**: For proposing the diagonal reflection hypothesis across the $14 \times 14$ grid and tireless historical cipher research.
+- **Viktor Wase**: For the 2023 simulated annealing bounds establishing that Dorabella is mathematically non-monoalphabetic.
+- **Levente Zoltán Király & Gábor Tokai**; **Benedek Láng**: For the breakthrough codebook, controlled syllabary, and codicological decipherment of the Rohonc Codex.
+
