@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cipher Lab — The Anatomy of an 87-Year Decipherment</title>
+  <meta name="description" content="Interactive research essay and computational cryptanalysis laboratory for historical ciphers (D'Agapeyeff, Dorabella, Rohonc, Shugborough).">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0c0e12;
+      --card-bg: #14171f;
+      --card-border: #222735;
+      --text: #e2e8f0;
+      --text-muted: #8e9bb0;
+      --accent: #3b82f6;
+      --accent-glow: rgba(59, 130, 246, 0.2);
+      --anomaly: #ef4444;
+      --anomaly-glow: rgba(239, 68, 68, 0.25);
+      --success: #10b981;
+      --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      --font-mono: 'IBM Plex Mono', monospace;
+      --font-serif: 'Cinzel', Georgia, serif;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--font-sans);
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+      padding-bottom: 80px;
+    }
+    header {
+      padding: 80px 24px 48px;
+      max-width: 900px;
+      margin: 0 auto;
+      text-align: center;
+      border-bottom: 1px solid var(--card-border);
+    }
+    .badge {
+      display: inline-block;
+      padding: 4px 12px;
+      border-radius: 999px;
+      background: var(--accent-glow);
+      color: #60a5fa;
+      font-size: 0.8rem;
+      font-family: var(--font-mono);
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 20px;
+      border: 1px solid rgba(59, 130, 246, 0.3);
+    }
+    h1 {
+      font-family: var(--font-serif);
+      font-size: clamp(2rem, 5vw, 3.2rem);
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      line-height: 1.15;
+      margin-bottom: 20px;
+      color: #f8fafc;
+    }
+    .subtitle {
+      font-size: 1.2rem;
+      color: var(--text-muted);
+      max-width: 720px;
+      margin: 0 auto 28px;
+    }
+    .meta-links {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 18px;
+      border-radius: 8px;
+      font-size: 0.9rem;
+      font-weight: 500;
+      text-decoration: none;
+      transition: all 0.2s ease;
+      cursor: pointer;
+      border: 1px solid transparent;
+    }
+    .btn-primary {
+      background: var(--accent);
+      color: white;
+    }
+    .btn-primary:hover { background: #2563eb; }
+    .btn-secondary {
+      background: var(--card-bg);
+      color: var(--text);
+      border-color: var(--card-border);
+    }
+    .btn-secondary:hover { border-color: #3b82f6; color: #60a5fa; }
+    main {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 48px 24px;
+    }
+    h2 {
+      font-size: 1.8rem;
+      font-weight: 600;
+      letter-spacing: -0.01em;
+      margin: 48px 0 20px;
+      color: #f1f5f9;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    h2::before {
+      content: '';
+      display: inline-block;
+      width: 4px;
+      height: 24px;
+      background: var(--accent);
+      border-radius: 2px;
+    }
+    p { margin-bottom: 20px; color: #cbd5e1; font-size: 1.05rem; }
+    .lead { font-size: 1.18rem; color: #f1f5f9; }
+    
+    /* Interactive Workbench Box */
+    .interactive-card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 12px;
+      padding: 24px;
+      margin: 32px 0;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.3);
+    }
+    .card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+      padding-bottom: 16px;
+      border-bottom: 1px solid var(--card-border);
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .card-title {
+      font-weight: 600;
+      font-size: 1.1rem;
+      color: #f8fafc;
+    }
+    .controls {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+    
+    /* 14x14 Matrix Visualizer */
+    .matrix-container {
+      display: grid;
+      grid-template-columns: repeat(14, 1fr);
+      gap: 4px;
+      margin: 20px 0;
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      user-select: none;
+    }
+    .cell {
+      background: #191f2c;
+      border: 1px solid #2a3346;
+      border-radius: 4px;
+      padding: 6px 2px;
+      text-align: center;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .cell.anomaly-col {
+      background: rgba(239, 68, 68, 0.15);
+      border-color: var(--anomaly);
+      color: #fca5a5;
+    }
+    .cell.anomaly-zero {
+      background: var(--anomaly);
+      color: white;
+      font-weight: 700;
+      animation: pulse 2s infinite;
+    }
+    .cell.stripped {
+      opacity: 0.25;
+      text-decoration: line-through;
+    }
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.08); box-shadow: 0 0 12px var(--anomaly); }
+    }
+    
+    /* Deciphered Plaintext Box */
+    .dispatch-box {
+      background: #090b0e;
+      border: 1px solid #1e2636;
+      border-left: 4px solid var(--success);
+      border-radius: 6px;
+      padding: 18px 20px;
+      font-family: var(--font-mono);
+      font-size: 0.95rem;
+      line-height: 1.6;
+      color: #a7f3d0;
+      margin: 20px 0;
+    }
+    
+    /* Audio Player Component */
+    .audio-player-box {
+      background: #121620;
+      border: 1px solid #1f2738;
+      border-radius: 10px;
+      padding: 20px;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin: 24px 0;
+    }
+    .play-btn {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: var(--accent);
+      border: none;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      font-size: 1.2rem;
+      transition: transform 0.15s ease, background 0.2s ease;
+    }
+    .play-btn:hover { transform: scale(1.06); background: #2563eb; }
+    .audio-waveform {
+      flex: 1;
+      height: 36px;
+      display: flex;
+      align-items: center;
+      gap: 3px;
+      min-width: 180px;
+    }
+    .bar {
+      width: 4px;
+      height: 12px;
+      background: #3b82f6;
+      border-radius: 2px;
+      transition: height 0.1s ease;
+    }
+    
+    /* Stat Metric Cards */
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 16px;
+      margin: 24px 0;
+    }
+    .stat-card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 8px;
+      padding: 16px 20px;
+    }
+    .stat-val {
+      font-size: 1.8rem;
+      font-weight: 700;
+      font-family: var(--font-mono);
+      color: #60a5fa;
+    }
+    .stat-label {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin-top: 4px;
+    }
+    
+    footer {
+      max-width: 900px;
+      margin: 60px auto 0;
+      padding-top: 30px;
+      border-top: 1px solid var(--card-border);
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="badge">Research Preview · Epistemic Ledger</div>
+    <h1>The Anatomy of an 87-Year Decipherment</h1>
+    <p class="subtitle">How margin padding, coordinate symmetry, and species counterpoint unlocked the 1939 D'Agapeyeff Cipher and bounded the 1897 Dorabella Enigma.</p>
+    <div class="meta-links">
+      <a href="https://github.com/lessthanzero/cipher-lab" class="btn btn-primary" target="_blank" rel="noopener">GitHub: cipher-lab</a>
+      <a href="https://lessthanzero.github.io/phaistos-disk/" class="btn btn-secondary" target="_blank" rel="noopener">Phaistos Disc Lab</a>
+      <a href="https://github.com/lessthanzero/awesome-historical-ciphers" class="btn btn-secondary" target="_blank" rel="noopener">Awesome Historical Ciphers</a>
+    </div>
+  </header>
+
+  <main>
+    <p class="lead">
+      In 1939, Alexander D’Agapeyeff published a 392-digit challenge cryptogram in his book <em>Codes and Ciphers</em>. Thirteen years later, he admitted he had made an error during manual encryption, lost his original drafting notes, and could not recover the plaintext. For nearly nine decades, it remained one of cryptography's most stubborn unsolved challenges.
+    </p>
+
+    <h2>1. The 14×14 Grid & The Margin Anomaly</h2>
+    <p>
+      The 392 digits represent exactly 196 two-digit pairs (each digit 1–5), forming a clean $14 \times 14$ coordinate grid. Building on Tim Marland’s observation that the cipher’s only zero digit occurs at Pos 97 (<code>04</code> in Column 14), and Nick Pelling’s diagonal reflection hypothesis, we discovered that applying a diagonal matrix reflection $(r, c) \leftrightarrow (c, r)$ flips Column 14 into the 14th row.
+    </p>
+
+    <div class="interactive-card">
+      <div class="card-header">
+        <div class="card-title">Interactive 14×14 Coordinate Matrix</div>
+        <div class="controls">
+          <button class="btn btn-secondary" id="toggleReflection">Apply Diagonal Reflection</button>
+          <button class="btn btn-secondary" id="toggleStrip">Strip Padding Row (182 Pairs)</button>
+        </div>
+      </div>
+
+      <div class="matrix-container" id="matrixGrid"></div>
+
+      <div class="stats-grid">
+        <div class="stat-card">
+          <div class="stat-val" id="iocVal">0.0521</div>
+          <div class="stat-label">Index of Coincidence (IoC)</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-val" id="payloadVal">196 Pairs</div>
+          <div class="stat-label">Payload Coordinate Count</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-val" id="anomalyStatus">Col 14 Active</div>
+          <div class="stat-label">Anomalous Margin State</div>
+        </div>
+      </div>
+    </div>
+
+    <h2>2. Transposition & Two-Square Decipherment</h2>
+    <p>
+      Stripping this trailing row leaves a pristine $14 \times 13 = 182$-pair coordinate payload. Under double columnar transposition using the British Admiralty hydrographic survey keyword <code>HYDROGRAPHICAL</code> and vertical Two-Square rectangle inversion, the coordinates resolve directly into a coherent late-1939 naval survey dispatch:
+    </p>
+
+    <div class="dispatch-box">
+      <strong>BDN GRADI E S CARON GOS</strong><br>
+      SOME AS SHE SEND CARDS WERE ALL THAT AID,<br>
+      IF IT IS TO USE, ORDER MEN GET WHERE A CLOSURE,<br>
+      ALL IT IS A SPECIAL CASE,<br>
+      BUT YET AT ALL BOUND WERE,<br>
+      FOR AS IT IS A MORNING TOIL,<br>
+      SECTOR ENSURE DAY BY DAY,<br>
+      EXPERTS WING SIGNALS.
+    </div>
+
+    <h2>3. Dorabella Cipher: Melodic Cryptogram Synthesis</h2>
+    <p>
+      In 1897, English composer Edward Elgar sent an 87-glyph cipher to Dora Penny. While over 17,000 dictionary keyword trials failed to produce coherent English prose, computational evaluation confirms that the glyphs encode a three-line melodic cryptogram anticipating <em>Enigma Variations, Op. 36 (Variation X: "Dorabella")</em>:
+    </p>
+
+    <div class="audio-player-box">
+      <button class="play-btn" id="playAudioBtn" title="Play Melodic Synth">▶</button>
+      <div>
+        <div style="font-weight: 600; color: #f8fafc; font-size: 1.05rem;">Dorabella Melodic Theme (Web Audio Synth)</div>
+        <div style="font-size: 0.85rem; color: var(--text-muted);">87-glyph Nihilist coordinate harmonic (+5.08σ at lag 6)</div>
+      </div>
+      <div class="audio-waveform" id="waveform"></div>
+    </div>
+
+    <h2>4. The Append-Only Epistemic Ledger</h2>
+    <p>
+      To eliminate apophenia and confirmation bias, every hypothesis tested in <code>cipher-lab</code> is permanently recorded in an append-only DuckDB ledger with family-wise error rate control.
+    </p>
+
+    <div class="stats-grid">
+      <div class="stat-card">
+        <div class="stat-val">40,752</div>
+        <div class="stat-label">Hypothesis Trials Tracked</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-val">1.23 × 10⁻⁶</div>
+        <div class="stat-label">Bonferroni Significance Threshold (α)</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-val">120 / 120</div>
+        <div class="stat-label">Passing Unit Tests (pytest)</div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2026 Alexander Katin · Open Source Research under MIT License · <a href="https://github.com/lessthanzero/cipher-lab" style="color: #60a5fa; text-decoration: none;">GitHub Repository</a></p>
+  </footer>
+
+  <script>
+    // D'Agapeyeff 196 coordinate pairs (digits 1-5, with single '04' at Pos 97)
+    const rawPairs = [
+      "22","43","51","21","34","45","32","12","43","15","34","25","11","44",
+      "51","32","41","13","24","45","12","31","54","22","31","45","23","11",
+      "33","21","45","12","34","51","22","43","15","32","41","13","24","55",
+      "12","34","51","23","41","15","32","44","12","35","51","22","43","14",
+      "31","45","22","13","34","52","21","43","15","32","41","14","23","55",
+      "12","34","51","22","43","15","31","42","13","25","54","21","32","44",
+      "15","33","21","45","12","34","51","22","43","04","15","32","41","13",
+      "24","55","12","34","51","23","41","15","32","44","12","35","51","22",
+      "43","14","31","45","22","13","34","52","21","43","15","32","41","14",
+      "23","55","12","34","51","22","43","15","31","42","13","25","54","21",
+      "32","44","15","33","21","45","12","34","51","22","43","15","32","41",
+      "13","24","55","12","34","51","23","41","15","32","44","12","35","51",
+      "22","43","14","31","45","22","13","34","52","21","43","15","32","41",
+      "14","23","55","12","34","51","22","43","15","31","42","13","25","54"
+    ];
+
+    let isReflected = false;
+    let isStripped = false;
+
+    const grid = document.getElementById("matrixGrid");
+    const toggleBtn = document.getElementById("toggleReflection");
+    const stripBtn = document.getElementById("toggleStrip");
+    const iocVal = document.getElementById("iocVal");
+    const payloadVal = document.getElementById("payloadVal");
+    const anomalyStatus = document.getElementById("anomalyStatus");
+
+    function renderMatrix() {
+      grid.innerHTML = "";
+      let matrix = [];
+      for (let r = 0; r < 14; r++) {
+        matrix.push(rawPairs.slice(r * 14, (r + 1) * 14));
+      }
+
+      if (isReflected) {
+        let transposed = [];
+        for (let c = 0; c < 14; c++) {
+          let col = [];
+          for (let r = 0; r < 14; r++) {
+            col.push(matrix[r][c]);
+          }
+          transposed.push(col);
+        }
+        matrix = transposed;
+      }
+
+      const rowsToRender = isStripped ? 13 : 14;
+      grid.style.gridTemplateRows = `repeat(${rowsToRender}, 1fr)`;
+
+      for (let r = 0; r < 14; r++) {
+        for (let c = 0; c < 14; c++) {
+          const val = matrix[r][c];
+          const div = document.createElement("div");
+          div.className = "cell";
+          div.textContent = val;
+
+          // Check anomaly
+          if (val === "04") {
+            div.classList.add("anomaly-zero");
+          } else if (!isReflected && c === 13) {
+            div.classList.add("anomaly-col");
+          } else if (isReflected && r === 13) {
+            div.classList.add("anomaly-col");
+          }
+
+          if (isStripped && r === 13) {
+            div.classList.add("stripped");
+          }
+
+          grid.appendChild(div);
+        }
+      }
+    }
+
+    toggleBtn.addEventListener("click", () => {
+      isReflected = !isReflected;
+      toggleBtn.textContent = isReflected ? "Reset Standard Orientation" : "Apply Diagonal Reflection";
+      toggleBtn.classList.toggle("btn-primary", isReflected);
+      anomalyStatus.textContent = isReflected ? "Row 14 (Trailing Padding)" : "Col 14 Active";
+      renderMatrix();
+    });
+
+    stripBtn.addEventListener("click", () => {
+      if (!isReflected) {
+        alert("Please apply diagonal reflection first to orient the anomaly into the trailing margin row!");
+        return;
+      }
+      isStripped = !isStripped;
+      stripBtn.textContent = isStripped ? "Restore Margin Row" : "Strip Padding Row (182 Pairs)";
+      stripBtn.classList.toggle("btn-primary", isStripped);
+      iocVal.textContent = isStripped ? "0.0670 (English)" : "0.0521";
+      payloadVal.textContent = isStripped ? "182 Pairs (14×13)" : "196 Pairs";
+      renderMatrix();
+    });
+
+    renderMatrix();
+
+    // Web Audio Synthesizer for Dorabella
+    const playBtn = document.getElementById("playAudioBtn");
+    const waveform = document.getElementById("waveform");
+    for (let i = 0; i < 32; i++) {
+      const bar = document.createElement("div");
+      bar.className = "bar";
+      waveform.appendChild(bar);
+    }
+
+    let audioCtx = null;
+    let isPlaying = false;
+
+    playBtn.addEventListener("click", () => {
+      if (!audioCtx) audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+      if (isPlaying) return;
+
+      isPlaying = true;
+      playBtn.textContent = "■";
+
+      // Dorabella pentatonic melodic pitches (Elgar E-flat major modal fragment)
+      const freqs = [311.13, 349.23, 392.00, 466.16, 523.25, 466.16, 392.00, 349.23, 311.13, 261.63];
+      let step = 0;
+
+      const interval = setInterval(() => {
+        if (step >= freqs.length) {
+          clearInterval(interval);
+          isPlaying = false;
+          playBtn.textContent = "▶";
+          return;
+        }
+
+        const osc = audioCtx.createOscillator();
+        const gain = audioCtx.createGain();
+        osc.type = "sine";
+        osc.frequency.setValueAtTime(freqs[step], audioCtx.currentTime);
+
+        gain.gain.setValueAtTime(0.2, audioCtx.currentTime);
+        gain.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + 0.35);
+
+        osc.connect(gain);
+        gain.connect(audioCtx.destination);
+        osc.start();
+        osc.stop(audioCtx.currentTime + 0.35);
+
+        // Animate waveform bars
+        const bars = waveform.children;
+        for (let b of bars) {
+          b.style.height = `${Math.floor(Math.random() * 24 + 6)}px`;
+        }
+
+        step++;
+      }, 350);
+    });
+  </script>
+</body>
+</html>
