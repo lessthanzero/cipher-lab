@@ -1,9 +1,9 @@
 # Laboratory Action Items & Strategic Roadmap
 
 ## Phase 1: Visibility Operations & Upstream PR Tracking
-- [ ] **GitHub Pages Verification**:
-  - [ ] Confirm `cipher-lab` Settings → Pages → Source is set to **GitHub Actions**.
-  - [ ] Verify live deployment of the interactive research essay at `https://lessthanzero.github.io/cipher-lab/`.
+- [x] **GitHub Pages Verification**:
+  - [x] Confirm `cipher-lab` Settings → Pages → Source is set to **GitHub Actions**.
+  - [x] Verify live deployment of the interactive research essay at `https://lessthanzero.github.io/cipher-lab/` (HTTP 200).
 - [ ] **Upstream Awesome PR Monitoring**:
   - [ ] Monitor [`dh-tech/awesome-digital-humanities#97`](https://github.com/dh-tech/awesome-digital-humanities/pull/97) (Phaistos Disc Lab) and address maintainer feedback.
   - [ ] Monitor [`dh-tech/awesome-digital-humanities#98`](https://github.com/dh-tech/awesome-digital-humanities/pull/98) (Cipher Lab) and address maintainer feedback.
@@ -29,13 +29,14 @@
 ---
 
 ## Phase 3: Episteme Human-Agent Canvas Prototyping
-- [ ] **Prototype Scaffolding**:
-  - [ ] Initialize standalone repository `/Users/sashakatin/Developer/episteme-canvas` (React/Svelte + Canvas/SVG).
-  - [ ] Implement Decision DAG rendering engine adhering to [`docs/episteme_spec/AGENT_EVENT_SCHEMA.json`](docs/episteme_spec/AGENT_EVENT_SCHEMA.json).
-  - [ ] Implement tactile time-travel scrubber and rewind/forking primitives.
+- [x] **Prototype Scaffolding**:
+  - [x] Initialize standalone repository [`lessthanzero/episteme-canvas`](https://github.com/lessthanzero/episteme-canvas) (`/Users/sashakatin/Developer/episteme-canvas`).
+  - [x] Implement Decision DAG rendering engine adhering to [`docs/episteme_spec/AGENT_EVENT_SCHEMA.json`](docs/episteme_spec/AGENT_EVENT_SCHEMA.json).
+  - [x] Implement tactile time-travel scrubber, auto-play trajectory sequencer, and interactive fork/steering hooks.
+  - [x] Deploy live interactive web demo to GitHub Pages: [`https://lessthanzero.github.io/episteme-canvas/`](https://lessthanzero.github.io/episteme-canvas/) (HTTP 200).
 - [ ] **Epistemic Lens Integration**:
-  - [ ] Build visual confidence scoring component displaying Bonferroni/FDR thresholds.
-  - [ ] Implement blinded foil failure indicator on candidate hypothesis nodes.
+  - [x] Build visual confidence scoring component displaying Bonferroni/FDR thresholds and negative control foils.
+  - [ ] Implement live DuckDB-WASM query engine in-browser for dynamic trace analysis.
 - [ ] **OpenTelemetry Integration**:
   - [ ] Build lightweight OpenTelemetry AI trace adapter to stream live agent runs from LangGraph / custom Python loops.
 
