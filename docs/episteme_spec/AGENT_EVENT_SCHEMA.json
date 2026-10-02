@@ -1,0 +1,62 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "EpistemeAgentEvent",
+  "description": "Event schema for streaming agent trajectories into the Episteme Telemetry & Steering Canvas",
+  "type": "object",
+  "required": ["event_id", "trace_id", "timestamp", "type", "agent_id", "payload"],
+  "properties": {
+    "event_id": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "trace_id": {
+      "type": "string",
+      "description": "Correlation ID for the entire multi-agent session"
+    },
+    "parent_event_id": {
+      "type": ["string", "null"],
+      "description": "Parent node in the decision DAG (null for root step)"
+    },
+    "timestamp": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "agent_id": {
+      "type": "string",
+      "description": "Identifier for the agent (e.g., 'researcher', 'critic', 'executor')"
+    },
+    "type": {
+      "type": "string",
+      "enum": [
+        "hypothesis",
+        "tool_call",
+        "observation",
+        "epistemic_gate",
+        "human_intervention",
+        "branch_fork",
+        "resolution"
+      ]
+    },
+    "payload": {
+      "type": "object",
+      "properties": {
+        "title": { "type": "string" },
+        "content": { "type": "string" },
+        "tool_name": { "type": "string" },
+        "tool_args": { "type": "object" },
+        "tool_result": { "type": "object" },
+        "confidence_score": { "type": "number", "minimum": 0, "maximum": 1 },
+        "epistemic_bounds": {
+          "type": "object",
+          "properties": {
+            "p_value": { "type": "number" },
+            "fwer_adjusted_alpha": { "type": "number" },
+            "blinded_foil_passed": { "type": "boolean" },
+            "unicity_satisfied": { "type": "boolean" }
+          }
+        }
+      },
+      "required": ["title"]
+    }
+  }
+}
