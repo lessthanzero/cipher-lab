@@ -75,7 +75,7 @@ Synthesizing multi-peer discovery (Consilium: Qwen 2.5, AGY, Codex), continuing 
 - **Standalone Repository & Live Interactive Prototype**:
   - Published public repository: [**`lessthanzero/episteme-canvas`**](https://github.com/lessthanzero/episteme-canvas) (`/Users/sashakatin/Developer/episteme-canvas`).
   - **Live Web Application**: [**`https://lessthanzero.github.io/episteme-canvas/`**](https://lessthanzero.github.io/episteme-canvas/) (HTTP 200).
-  - Demonstrates SVG Decision DAG stage layout, dynamic bezier edges, time-travel trajectory scrubber, auto-play sequencer, epistemic referee verification inspector (FWER adjusted $\alpha$, blinded foils, unicity distance), and runtime human steering / fork injection.
+  - Demonstrates SVG Decision DAG stage layout, dynamic bezier edges, time-travel trajectory scrubber, auto-play sequencer, epistemic referee verification inspector (FWER adjusted $\alpha$, blinded foils, unicity distance), runtime human steering / fork injection, live Opentrons OT-2 Python protocol inspection, and 1-click ELIXIR RO-Crate 1.1 JSON-LD manifest download.
 
 ---
 
