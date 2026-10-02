@@ -43,12 +43,16 @@
 ---
 
 ## Phase 4: Competitive Hackathon Readiness
-- [ ] **Frontier AI Agent Hackathons**:
-  - [ ] Track calendar for upcoming AI Engineer World's Fair / London AI hackathons.
-  - [ ] Prepare two-minute live video demo of the Episteme interactive steering canvas.
+- [x] **Application Materials & Playbook Prepared**:
+  - [x] Prepared copy-paste application kit for London AI Agent Hackathon (*MAKE ME MONEY: AI Agent Hackathon*, Nov 2–21, 2026).
+  - [x] Prepared virtual registration statement of interest and platform alignment for *BioHackathon Europe 2026* (Nov 9–13, 2026, ELIXIR).
+  - [x] Scripted 2-minute video demo walkthrough for screencast recording.
+  - [x] Added dedicated Hackathon & Reviewer Quickstart Guide to [`lessthanzero/episteme-canvas`](https://github.com/lessthanzero/episteme-canvas/blob/main/README.md).
+- [ ] **Registration Submissions**:
+  - [ ] Submit application on [shipyard.london/hackathon](https://shipyard.london/hackathon) before October 31, 2026.
+  - [ ] Complete virtual registration on [biohackathon-europe.org](https://biohackathon-europe.org/).
 - [ ] **ScienceTech & Lab Automation Sprints**:
-  - [ ] Monitor Francis Crick Institute Innovation Challenge and BioHackathon Europe dates.
-  - [ ] Prepare case study showcasing Elsevier research UX and lab automation robotics workflows.
+  - [ ] Monitor Francis Crick Institute Innovation Challenge and King's Cross deep-tech meetups.
 
 ---
 
