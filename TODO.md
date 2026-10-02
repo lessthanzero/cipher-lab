@@ -1,43 +1,66 @@
-# TODO & Action Items: Biblical Cryptanalysis & Epigraphy Track
+# Laboratory Action Items & Strategic Roadmap
 
-## Phase 1: Qumran Cryptic Scripts (`projects/qumran_cryptic/`)
-- [ ] Create `projects/qumran_cryptic/alphabet.py`:
-  - [ ] Implement Cryptic A signary (22 Hebrew substitution glyphs with descriptions & transliteration tokens).
-  - [ ] Implement Cryptic B and Cryptic C sign inventories.
-- [ ] Create `projects/qumran_cryptic/corpus.py`:
-  - [ ] Catalog *4Q249* (*papCryptA Midrash Sefer Moshe*).
-  - [ ] Catalog *4Q250* (*Text Concerning the Spirits*).
-  - [ ] Catalog *4Q313* (*Creation & Sabbath Shirot*).
-  - [ ] Catalog *4Q317* (*Phases of the Moon* Enochic lunar calendar).
-  - [ ] Catalog *4Q362/4Q363* (*Cryptic B* fragments).
-- [ ] Create `projects/qumran_cryptic/solver.py`:
-  - [ ] Build Qumran sectarian Hebrew Markov n-gram language model (1QS, 1QM, CD).
-  - [ ] Build simulated annealing substitution solver.
-- [ ] Create `projects/qumran_cryptic/runner.py`:
-  - [ ] Connect to `EpistemicLedger` in `data/derived/epistemic_ledger.duckdb`.
-- [ ] Create `tests/test_qumran_cryptic.py`:
-  - [ ] Verify Cryptic A character bijection.
-  - [ ] Verify decryption of known *4Q249* passages.
+## Phase 1: Visibility Operations & Upstream PR Tracking
+- [ ] **GitHub Pages Verification**:
+  - [ ] Confirm `cipher-lab` Settings → Pages → Source is set to **GitHub Actions**.
+  - [ ] Verify live deployment of the interactive research essay at `https://lessthanzero.github.io/cipher-lab/`.
+- [ ] **Upstream Awesome PR Monitoring**:
+  - [ ] Monitor [`dh-tech/awesome-digital-humanities#97`](https://github.com/dh-tech/awesome-digital-humanities/pull/97) (Phaistos Disc Lab) and address maintainer feedback.
+  - [ ] Monitor [`dh-tech/awesome-digital-humanities#98`](https://github.com/dh-tech/awesome-digital-humanities/pull/98) (Cipher Lab) and address maintainer feedback.
+  - [ ] Monitor [`sobolevn/awesome-cryptography#298`](https://github.com/sobolevn/awesome-cryptography/pull/298) (Cipher Lab).
+- [ ] **Hub Repository Maintenance**:
+  - [ ] Review incoming issues/PRs on [`lessthanzero/awesome-historical-ciphers`](https://github.com/lessthanzero/awesome-historical-ciphers).
+  - [ ] Submit `awesome-historical-ciphers` to [sindresorhus/awesome](https://github.com/sindresorhus/awesome) once it reaches ~25 stars.
 
-## Phase 2: Systematic Biblical Atbash & Reciprocal Ciphers (`projects/biblical_atbash/`)
-- [ ] Create `projects/biblical_atbash/cipher.py`:
-  - [ ] Implement Atbash ($\\aleph \\leftrightarrow \\text{ת}, \\beth \\leftrightarrow \\text{ש}, \\dots$).
-  - [ ] Implement Albam ($\\aleph \\leftrightarrow \\text{ל}, \\beth \\leftrightarrow \\text{מ}, \\dots$).
-  - [ ] Implement Atbah (pairs summing to 10 or 100).
-- [ ] Create `projects/biblical_atbash/lexicon.py`:
-  - [ ] Build curated classical Biblical Hebrew root/lemma vocabulary (~2,000+ entries from BDB).
-- [ ] Create `projects/biblical_atbash/corpus_loader.py`:
-  - [ ] Load curated prophetic and poetic texts (Jeremiah 25, 51; Isaiah 7; Job 20-21; Ezekiel 23).
-- [ ] Create `projects/biblical_atbash/null_engine.py`:
-  - [ ] Build $N=10,000$ Monte Carlo order-shuffled surrogate generator to calculate empirical Z-scores and FDR-adjusted p-values for dictionary collisions.
-- [ ] Create `projects/biblical_atbash/runner.py`:
-  - [ ] Execute corpus scan and record trials to `EpistemicLedger`.
-- [ ] Create `tests/test_biblical_atbash.py`:
-  - [ ] Test Jeremiah 25:26 `ששך` -> `בבל` (Atbash).
-  - [ ] Test Jeremiah 51:1 `לב קמי` -> `כשדים` (Atbash).
-  - [ ] Test Isaiah 7:6 `טבאל` -> `רמלא` (Albam).
+---
 
-## Phase 3: Verification & Integration
-- [ ] Run full test suite: `uv run pytest` (target: 100% passing).
-- [ ] Run linter: `uv run ruff check packages tests projects`.
-- [ ] Commit and push exclusively to `forgejo/main`.
+## Phase 2: Community Outreach Execution
+- [ ] **Specialist Peer Inquiries**:
+  - [ ] Send D'Agapeyeff review message to **Tim Marland** (`dagapeyeffresearch.com`) using [`docs/ANNOUNCEMENT_AND_COMMUNITY_REVIEW.md`](docs/ANNOUNCEMENT_AND_COMMUNITY_REVIEW.md).
+  - [ ] Share diagonal reflection verification with **Nick Pelling** (`ciphermysteries.com`).
+  - [ ] Pitch D'Agapeyeff & Rohonc guest post / tip to **Klaus Schmeh** (*Cipherbrain*, `cipherbrain.net`).
+- [ ] **Reddit Posts**:
+  - [ ] Post D'Agapeyeff decipherment hypothesis & sanity check request to `r/codes` and `r/cryptography`.
+  - [ ] Post Phaistos Disc interactive workbench to `r/Archaeology` and `r/linguistics`.
+- [ ] **Hacker News (Show HN)**:
+  - [ ] Submit Phaistos Disc Lab (`https://lessthanzero.github.io/phaistos-disk/workbench/`) on a Tuesday/Wednesday morning using template in [`docs/visibility/COMMUNITY_OUTREACH_PLAYBOOK.md`](docs/visibility/COMMUNITY_OUTREACH_PLAYBOOK.md).
+  - [ ] Submit Cipher Lab interactive essay (`https://lessthanzero.github.io/cipher-lab/`).
+
+---
+
+## Phase 3: Episteme Human-Agent Canvas Prototyping
+- [ ] **Prototype Scaffolding**:
+  - [ ] Initialize standalone repository `/Users/sashakatin/Developer/episteme-canvas` (React/Svelte + Canvas/SVG).
+  - [ ] Implement Decision DAG rendering engine adhering to [`docs/episteme_spec/AGENT_EVENT_SCHEMA.json`](docs/episteme_spec/AGENT_EVENT_SCHEMA.json).
+  - [ ] Implement tactile time-travel scrubber and rewind/forking primitives.
+- [ ] **Epistemic Lens Integration**:
+  - [ ] Build visual confidence scoring component displaying Bonferroni/FDR thresholds.
+  - [ ] Implement blinded foil failure indicator on candidate hypothesis nodes.
+- [ ] **OpenTelemetry Integration**:
+  - [ ] Build lightweight OpenTelemetry AI trace adapter to stream live agent runs from LangGraph / custom Python loops.
+
+---
+
+## Phase 4: Competitive Hackathon Readiness
+- [ ] **Frontier AI Agent Hackathons**:
+  - [ ] Track calendar for upcoming AI Engineer World's Fair / London AI hackathons.
+  - [ ] Prepare two-minute live video demo of the Episteme interactive steering canvas.
+- [ ] **ScienceTech & Lab Automation Sprints**:
+  - [ ] Monitor Francis Crick Institute Innovation Challenge and BioHackathon Europe dates.
+  - [ ] Prepare case study showcasing Elsevier research UX and lab automation robotics workflows.
+
+---
+
+## Phase 5: Ongoing Bibleistics & Epigraphy Track
+- [ ] **Qumran Cryptic Scripts (`projects/qumran_cryptic/`)**:
+  - [ ] Create `alphabet.py`: Cryptic A, B, and C character bijection inventories.
+  - [ ] Create `corpus.py`: Catalog *4Q249* (*papCryptA Midrash Sefer Moshe*), *4Q313*, *4Q317*.
+  - [ ] Create `solver.py`: Qumran sectarian Hebrew Markov n-gram model (1QS, 1QM, CD).
+  - [ ] Create `runner.py`: Connect to DuckDB epistemic ledger.
+  - [ ] Create `tests/test_qumran_cryptic.py`.
+- [ ] **Biblical Atbash Sweep (`projects/biblical_atbash/`)**:
+  - [ ] Create `cipher.py`: Atbash, Albam, and Atbah transformations over consonantal Hebrew.
+  - [ ] Create `lexicon.py`: Curated classical Hebrew lemma dictionary.
+  - [ ] Create `null_engine.py`: $N=10,000$ Monte Carlo order-shuffled surrogate generator.
+  - [ ] Create `runner.py`: Corpus-wide sweep confirming Jeremiah 25:26 (`ששך` -> `בבל`) and testing disputed candidates.
+  - [ ] Create `tests/test_biblical_atbash.py`.
