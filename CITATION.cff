@@ -1,0 +1,21 @@
+cff-version: 1.2.0
+message: "If you use this research software or its decipherment models, please cite it as below."
+authors:
+  - family-names: "Katin"
+    given-names: "Alexander"
+title: "Cipher Lab: Modular, Reproducible Research Infrastructure for Computational Cryptanalysis of Historical Ciphers"
+version: 1.0.0
+date-released: 2026-10-02
+url: "https://github.com/lessthanzero/cipher-lab"
+repository-code: "https://github.com/lessthanzero/cipher-lab"
+license: MIT
+keywords:
+  - "cryptanalysis"
+  - "historical ciphers"
+  - "D'Agapeyeff cipher"
+  - "Dorabella cipher"
+  - "Rohonc codex"
+  - "Shugborough inscription"
+  - "digital humanities"
+  - "epistemic ledger"
+  - "reproducible research"
