@@ -72,6 +72,10 @@ Synthesizing multi-peer discovery (Consilium: Qwen 2.5, AGY, Codex), continuing 
     3. **Human Steerability & Rewind**: Timeline scrubbing, constraint injection, and state-forking.
 - **Agent Event Schema**: [`docs/episteme_spec/AGENT_EVENT_SCHEMA.json`](docs/episteme_spec/AGENT_EVENT_SCHEMA.json)
   - Standardized JSON Schema aligned with OpenTelemetry AI semantic conventions.
+- **Standalone Repository & Live Interactive Prototype**:
+  - Published public repository: [**`lessthanzero/episteme-canvas`**](https://github.com/lessthanzero/episteme-canvas) (`/Users/sashakatin/Developer/episteme-canvas`).
+  - **Live Web Application**: [**`https://lessthanzero.github.io/episteme-canvas/`**](https://lessthanzero.github.io/episteme-canvas/) (HTTP 200).
+  - Demonstrates SVG Decision DAG stage layout, dynamic bezier edges, time-travel trajectory scrubber, auto-play sequencer, epistemic referee verification inspector (FWER adjusted $\alpha$, blinded foils, unicity distance), and runtime human steering / fork injection.
 
 ---
 
