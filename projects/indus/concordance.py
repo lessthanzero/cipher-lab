@@ -79,6 +79,21 @@ class IndusConcordance:
             return entry.wells_ids[0]
         return None
 
+    def wells_to_parpola(self, wells_id: str) -> Optional[str]:
+        """Map Wells ID (e.g. 'W740' or '740') to primary Parpola ID (e.g. 'P324')."""
+        w_norm = wells_id if wells_id.startswith("W") else f"W{wells_id.zfill(3)}"
+        p_list = self._wells_to_parpola.get(w_norm)
+        if p_list:
+            return p_list[0]
+        return None
+
+    def wells_to_mahadevan(self, wells_id: str) -> Optional[str]:
+        """Map Wells ID to primary Mahadevan ID via Parpola anchor."""
+        p_id = self.wells_to_parpola(wells_id)
+        if p_id:
+            return self.parpola_to_mahadevan(p_id)
+        return None
+
     def normalize_sequence(
         self,
         sequence: Sequence[str],
@@ -90,7 +105,8 @@ class IndusConcordance:
         Parameters
         ----------
         sequence : Sequence[str]
-            List of sign identifiers (default assume Parpola format 'P###').
+            List of sign identifiers in Parpola ('P###'), Mahadevan ('M###'),
+            or Wells ('W###' or '###') format.
         target_catalog : str
             One of 'mahadevan', 'parpola', or 'wells'.
         unmapped_policy : str
@@ -99,23 +115,39 @@ class IndusConcordance:
         target = target_catalog.lower()
         normalized: list[str] = []
 
-        for sign in sequence:
+        for raw_sign in sequence:
+            sign = raw_sign.strip()
+            if not sign:
+                continue
+
             mapped_sign: Optional[str] = None
             if target == "mahadevan":
                 if sign.startswith("P"):
                     mapped_sign = self.parpola_to_mahadevan(sign)
                 elif sign.startswith("M"):
                     mapped_sign = sign
+                elif sign.startswith("W") or sign.isdigit():
+                    mapped_sign = self.wells_to_mahadevan(sign)
+
             elif target == "wells":
                 if sign.startswith("P"):
                     mapped_sign = self.parpola_to_wells(sign)
+                elif sign.startswith("M"):
+                    p_id = self.mahadevan_to_parpola(sign)
+                    if p_id:
+                        mapped_sign = self.parpola_to_wells(p_id)
                 elif sign.startswith("W"):
                     mapped_sign = sign
+                elif sign.isdigit():
+                    mapped_sign = f"W{sign.zfill(3)}"
+
             elif target == "parpola":
                 if sign.startswith("M"):
                     mapped_sign = self.mahadevan_to_parpola(sign)
                 elif sign.startswith("P"):
                     mapped_sign = sign
+                elif sign.startswith("W") or sign.isdigit():
+                    mapped_sign = self.wells_to_parpola(sign)
 
             if mapped_sign:
                 normalized.append(mapped_sign)

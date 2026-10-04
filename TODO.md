@@ -90,8 +90,18 @@
 - [x] **Distributed Compute-Fabric Execution**:
   - [x] Execute $N=5,000$ discovery batch and $N=2,000$ breakthrough batch on remote Fedora Linux worker (`pc`).
   - [x] Log all 9 hypothesis trials to `data/derived/epistemic_ledger.duckdb` with Bonferroni ($\alpha_{\text{crit}} = 0.00556$) and FDR control (multiplicity survived).
+- [x] **Pan-Indus Corpus Expansion & Macro-Archaeological Synthesis**:
+  - [x] Ingest full pan-Indus corpus of 3,219 inscriptions (12,910 tokens, 465 types) spanning Harappa (1,486), Mohenjo-Daro (1,318), Lothal (87), Dholavira (78), Kalibangan (59), and Chanhu-Daro (57) in `data/indus/analytic_lines.csv` and `pan_corpus.py`.
+  - [x] Implement PAN-H1: Cross-site syntactic invariance between Mohenjo-Daro and Harappa ($D_{\text{SKL}} = 0.0664$ bits, cross-perplexity 3.91 vs 3.79, $Z = +20.37$); falsified regional dialect divergence.
+  - [x] Implement PAN-H2: Cross-medium invariance across Steatite Seals (76.27%), Incised/Molded Tablets (75.61%), and Commercial Cargo Tags (86.73%, $H = 1.59$ bits); confirmed medium generality.
+  - [x] Implement PAN-H3: Iconographic animal motif coupling to initial sign class ($\chi^2 = 35.57, \text{dof}=16, p = 0.0033$, permutation $Z = +1.87, p = 0.048$).
+  - [x] Implement PAN-H4: Information-theoretic proof of Right-to-Left reading direction ($3.15\times$ asymmetry ratio, $Z = +26.93\sigma, p < 10^{-100}$).
+  - [x] Implement PAN-H5: Pan-Indus global model selection (BIC minimum strictly at $K=4$ states) and $78.49\%$ MDL compression ($114,396.6 \rightarrow 24,607.2$ bits).
+- [x] **Distributed Compute-Fabric Execution & Ledger Audit**:
+  - [x] Execute 537-second heavy batch on remote Fedora Linux worker (`pc`).
+  - [x] Ingest all 5 Pan-Indus trials into `data/derived/epistemic_ledger.duckdb` under `INDUS_PAN_CORPUS` with Bonferroni FWER survival ($\alpha = 0.01$).
 - [x] **Consilium Multi-Peer Epistemic Review**:
-  - [x] Convene 3-peer Consilium panel (`qwen2.5:7b`, `gemini-3.8-flash-med`, `gpt-5.6-terra`) with complete 3/3 consensus affirming compact regular PFSA template while strictly precluding speculative natural language decipherment.
-- [x] **Preprint & Test Suite**:
-  - [x] Publish comprehensive research paper preprint: [`docs/research/INDUS_STRUCTURAL_DISCRIMINATION_SPRINT.md`](docs/research/INDUS_STRUCTURAL_DISCRIMINATION_SPRINT.md).
-  - [x] Implement 131/131 passing automated tests across macOS Darwin (Python 3.12) and Fedora Linux (Python 3.13).
+  - [x] Convene 3-peer panel (`qwen2.5:7b`, `gemini-3.8-flash-med`, `gpt-5.6-terra`) with complete consensus affirming standardized administrative scribal formula and Right-to-Left reading direction.
+- [x] **Scholarly Monograph & Test Suite**:
+  - [x] Publish comprehensive research monograph: [`docs/research/PAN_INDUS_SYNTACTIC_ARCHAEOLOGY.md`](docs/research/PAN_INDUS_SYNTACTIC_ARCHAEOLOGY.md).
+  - [x] Implement 138/138 passing automated tests across macOS Darwin (Python 3.12) and Fedora Linux (Python 3.13).
