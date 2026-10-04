@@ -95,14 +95,15 @@ Synthesizing multi-peer discovery (Consilium: Qwen 2.5, AGY, Codex), continuing 
 
 ## 4. Competitive Venues & Hackathon Strategy
 
-| Sector | Target Venues | Strategic ROI Evaluation |
+| Sector / Venue | Target Venues | Strategic ROI Evaluation |
 |---|---|---|
-| **Frontier AI Agent Hackathons** *(Top Pick #1)* | AI Engineer World's Fair / Summit, Anthropic London Hackathons, OpenAI ecosystem sprints | **Maximum Founder & VC Inbound**: 95% of entries are backend engineers with terminal scripts. A functional, tactile, canvas-steered multi-agent application routinely sweeps podiums and generates direct founding designer / executive inbound. |
-| **ScienceTech & Lab Automation** *(Top Pick #2)* | Francis Crick Innovation Challenge (King's Cross, London), Bio-IT World, BioHackathon Europe | **Maximum Institutional & Advisory Trust**: Capitalizes directly on your Elsevier and wet-lab robotics UX track record, yielding high-trust deep-tech advisory and enterprise consulting. |
-| **Applied Cryptography / ZK** | ZK Hack, ETHGlobal ZK/Privacy track | **High (if focused on Verifiable AI)**: Focus on privacy-preserving verifiable evaluation or reproducible research rather than token/DeFi projects. |
-| **Quant / FinTech Challenges** | Jane Street Puzzles, Citadel Data Open, Optiver | **Low (ROI Trap)**: Citadel evaluates student recruiting; Jane Street evaluates pen-and-paper probability; Optiver evaluates microsecond C++ execution. Interaction design carries zero scoring weight. |
-| **Home Automation & IoT** | Home Assistant Community, ESPHome, Matter | **Low-Medium**: Enthusiastic hobbyist community, but near-zero enterprise commercial budget or senior design leadership recognition. |
-| **Automotive CAN Bus** | DEF CON Car Hacking Village | **Medium-Low**: High friction; requires coordinated OEM vulnerability disclosures to avoid legal risk. |
+| **London Builder Hubs (Tier S+)** | AI Tinkerers London (Shoreditch / Central London), Luma curated sprints | **Maximum Founder & VC Inbound**: Code-only in-person demo nights. 3-minute projector demo of `episteme-canvas` directly reaches tier-1 venture partners (LocalGlobe, Air Street, Seedcamp) and technical founders seeking fractional heads of design / systems architecture. |
+| **Academic Deep-Tech (Tier A+)** | OxHack 2026 (Oxford University, 24–25 Oct) | **Unmatched Academic & Spinout Authority**: Attracts DeepMind, Oxford Science Enterprises, and biotech founders. Senior engineering and tactile UI sweeps student-heavy tracks. |
+| **Distributed AI Infrastructure (Tier A)** | Nebius x NVIDIA Global AI Hackathon (Late Oct, Devpost) | **High Enterprise Infra Consulting**: Enters with distributed GPU telemetry, NVIDIA TensorRT/Triton alignment, and DuckDB epistemic pre-gating. Benchmark: £800–£1,500/day contracts. |
+| **Frontier AI Agent Hackathons** | MAKE ME MONEY (London, Nov 2–21), AI Engineer World's Fair / Summit | **High Visibility**: Tactile canvas-steered multi-agent application routinely sweeps podiums and generates direct founding designer / executive inbound. |
+| **ScienceTech & Lab Automation** | BioHackathon Europe 2026 (ELIXIR, 9–13 Nov), Francis Crick Innovation Challenge | **Maximum Institutional & Advisory Trust**: Capitalizes directly on your Elsevier and wet-lab robotics UX track record, yielding high-trust deep-tech advisory and enterprise consulting. |
+| **High-Stakes Financial Agents (Tier B+)** | Binance Agentic AI Challenge (Mid-Nov) | **Contrarian Governance Play**: Enter Episteme as an epistemic risk telemetry layer (VaR bounds, slippage limits) rather than a speculative trading bot. |
+| **Low-ROI Traps to Avoid** | Lablab.ai continuous sprints, Qloo consumer taste graph, HackNotts/GreatUniHack | **Reject**: High noise, consumer toy dilution, or regional undergraduate recruiting fairs with zero senior advisory yield. |
 
 ---
 
