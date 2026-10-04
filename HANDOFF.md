@@ -3,8 +3,8 @@
 **Date**: 2026-10-05  
 **Laboratory**: Computational Cryptanalysis Laboratory (`cipher-lab`)  
 **Status**: Core Cipher Tracks Complete & Released (v1.0.0); Pan-Indus Macro-Syntactic Discovery & Archaeology Complete; Visibility Infrastructure & Upstream PRs Live; Episteme Canvas Scaffolded; Bibleistics Track Initialized  
-**Test Suite Baseline**: 141 / 141 passing tests (`uv run pytest` in ~18.6s on macOS Darwin, ~22.0s on Fedora Linux `pc`)  
-**Ledger State**: `data/derived/epistemic_ledger.duckdb` (40,770 trials logged with dynamic Bonferroni / FWER control; 18 trials under `INDUS_CORPUS` and `INDUS_PAN_CORPUS`)  
+**Test Suite Baseline**: 142 / 142 passing tests (`uv run pytest` in ~23s on macOS Darwin, ~22.0s on Fedora Linux `pc`)  
+**Ledger State**: `data/derived/epistemic_ledger.duckdb` (40,770 trials logged with dynamic Bonferroni / FWER control; 18 trials under `INDUS_CORPUS` and `INDUS_PAN_CORPUS`, all surviving multiplicity)  
 **Remotes**: Synchronized across GitHub `origin/main` (`lessthanzero/cipher-lab`) and local `forgejo/main`
 
 ---
