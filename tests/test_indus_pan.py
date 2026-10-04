@@ -154,3 +154,112 @@ def test_pan_indus_ledger_integration() -> None:
         assert stats["candidate_count"] == 0
         assert stats["minimum_empirical_p"] == 0.0001
         assert stats["has_survived_multiplicity"] is True
+
+
+def test_compound_clause_grammar(pan_corpus: PanIndusCorpus, analyzer: PanIndusAnalyzer) -> None:
+    """PAN-H6: Verify compound multi-clause regular grammar resolves the non-compliance gap."""
+    from projects.indus.compound_grammar import CompoundGrammarEngine
+
+    engine = CompoundGrammarEngine(analyzer=analyzer, corpus=pan_corpus)
+    report, parses = engine.evaluate_corpus()
+
+    assert report.total_inscriptions == 3043
+    # 1-clause baseline is ~44%
+    assert 0.40 <= report.one_clause_rate <= 0.48
+    # <=2 clauses must explain >= 84% of inscriptions
+    assert report.two_clause_rate >= 0.84
+    # <=3 clauses must explain >= 95% of inscriptions
+    assert report.three_clause_rate >= 0.95
+    # Unexplained rate must drop below 5%
+    assert report.unexplained_rate <= 0.05
+    # Clausal boundary resets must be overwhelmingly preceded by Class 4 (Terminal Jar Sink)
+    assert report.terminal_boundary_reset_ratio >= 0.60
+
+    # Test single parse dynamic programming segmentation
+    p_mono = engine.parse_inscription([0, 1, 2, 4], ["P001", "P060", "P147", "P324"])
+    assert p_mono.n_clauses == 1
+    assert p_mono.is_compliant is True
+
+    p_compound = engine.parse_inscription([0, 1, 4, 1, 4], ["P001", "P060", "P324", "P060", "P324"])
+    assert p_compound.n_clauses == 2
+    assert p_compound.clause_boundaries == (3,)
+    assert p_compound.boundary_transitions == ((4, 1),)
+
+    p_three = engine.parse_inscription([1, 4, 1, 4, 2, 4], ["P060", "P324", "P060", "P324", "P147", "P324"])
+    assert p_three.n_clauses == 3
+    assert p_three.clause_boundaries == (2, 4)
+
+
+def test_ligature_morphology_algebra(pan_corpus: PanIndusCorpus, analyzer: PanIndusAnalyzer) -> None:
+    """PAN-H7: Verify graphemic morphology and ligature decomposition algebra."""
+    from projects.indus.ligature_algebra import LigatureDecomposer, LigatureMorphologyAnalyzer
+
+    decomposer = LigatureDecomposer()
+    r, m, _ = decomposer.decompose("P324")
+    assert r == "JAR"
+
+    r_fish, m_fish, _ = decomposer.decompose("P048")
+    assert r_fish == "FISH"
+
+    morph = LigatureMorphologyAnalyzer(corpus=pan_corpus, analyzer=analyzer)
+    report = morph.evaluate_morphology()
+
+    assert report.n_analyzed_tokens > 12000
+    assert report.h_class_total > 2.0
+    # Modifier alone must reduce syntactic uncertainty (MI > 0.10 bits)
+    assert report.mi_modifier > 0.10
+    # Joint root + modifier must provide >= 0.50 bits of syntactic constraint
+    assert report.mi_joint > 0.50
+    # Positive synergistic information between root and modifier
+    assert report.synergy_delta_i > 0.0
+    # Chi-squared test must reject independence (p < 1e-10)
+    assert report.chi2_stat > 1000.0
+    assert report.chi2_p_value < 1e-10
+
+
+def test_dholavira_signboard_structural_fit(pan_corpus: PanIndusCorpus, analyzer: PanIndusAnalyzer) -> None:
+    """PAN-H8: Verify Dholavira Citadel Gateway Signboard decomposes into 4 monotonic formulaic clauses."""
+    from projects.indus.dholavira_signboard import DholaviraSignboardAnalyzer
+
+    s_analyzer = DholaviraSignboardAnalyzer(corpus=pan_corpus, analyzer=analyzer)
+    report = s_analyzer.analyze_signboard()
+
+    assert report.length == 10
+    assert report.is_four_clause_compliant is True
+    assert len(report.segments) == 4
+    assert report.delimiter_sign == "P378"
+    assert report.delimiter_frequency == 4
+    assert report.delimiter_positions == (0, 3, 7, 8)
+    assert report.boundary_transitions == ((2, 0), (4, 1), (4, 0))
+
+    # All four clausal segments must be strictly monotonic non-decreasing
+    assert all(seg.is_dag_monotonic for seg in report.segments)
+    assert report.segments[0].classes == (0, 1, 2)
+    assert report.segments[1].classes == (0, 4)
+    assert report.segments[2].classes == (1, 4)
+    assert report.segments[3].classes == (0, 0, 4)
+
+
+def test_ancient_comparative_typology(pan_corpus: PanIndusCorpus, analyzer: PanIndusAnalyzer) -> None:
+    """PAN-H9: Verify mathematical typological separation: Indus aligns with administrative accounts."""
+    from projects.indus.comparative_typology import AncientTypologyComparator
+
+    comp = AncientTypologyComparator(corpus=pan_corpus, analyzer=analyzer)
+    report = comp.run_comparative_benchmark()
+
+    assert "Indus_Cargo_Tags" in report.metrics
+    assert "Minoan_Linear_A" in report.metrics
+    assert "Proto_Elamite_Accounts" in report.metrics
+
+    # Commercial tags must display rigid feedforward syntax (> 85% DAG compliance, < 15% cyclicity)
+    m_tags = report.metrics["Indus_Cargo_Tags"]
+    assert m_tags.forward_dag_compliance > 0.85
+    assert m_tags.backward_cyclicity < 0.15
+
+    # Typological vector distance must place Indus closer to Proto-Elamite accounts than spoken language
+    assert report.is_closer_to_administrative_than_phonetic is True
+    assert report.indus_vs_proto_elamite_similarity < 0.25
+
+
+
+
