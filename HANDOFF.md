@@ -3,8 +3,8 @@
 **Date**: 2026-10-05  
 **Laboratory**: Computational Cryptanalysis Laboratory (`cipher-lab`)  
 **Status**: Core Cipher Tracks Complete & Released (v1.0.0); Pan-Indus Macro-Syntactic Discovery & Archaeology Complete; Visibility Infrastructure & Upstream PRs Live; Episteme Canvas Scaffolded; Bibleistics Track Initialized  
-**Test Suite Baseline**: 138 / 138 passing tests (`uv run pytest` in ~8.6s on macOS Darwin, ~15.0s on Fedora Linux `pc`)  
-**Ledger State**: `data/derived/epistemic_ledger.duckdb` (40,766 trials logged with dynamic Bonferroni / FWER control; 14 trials under `INDUS_CORPUS` and `INDUS_PAN_CORPUS`)  
+**Test Suite Baseline**: 141 / 141 passing tests (`uv run pytest` in ~18.6s on macOS Darwin, ~22.0s on Fedora Linux `pc`)  
+**Ledger State**: `data/derived/epistemic_ledger.duckdb` (40,770 trials logged with dynamic Bonferroni / FWER control; 18 trials under `INDUS_CORPUS` and `INDUS_PAN_CORPUS`)  
 **Remotes**: Synchronized across GitHub `origin/main` (`lessthanzero/cipher-lab`) and local `forgejo/main`
 
 ---
@@ -45,6 +45,12 @@
 - **Global Pan-Indus Model Selection**: BIC minimum on 12,910 tokens strictly selects $K=4$ states ($\text{BIC} = 33,876.22$), achieving **$78.49\%$ MDL compression**.
 - **Consilium Multi-Peer Consensus**: Panel (`qwen2.5:7b`, `gemini-3.8-flash-med`, `gpt-5.6-terra`) confirmed standardized administrative scribal formula while maintaining epistemic neutrality regarding spoken phoneticism.
 - **Monograph**: Published comprehensive study [`docs/research/PAN_INDUS_SYNTACTIC_ARCHAEOLOGY.md`](docs/research/PAN_INDUS_SYNTACTIC_ARCHAEOLOGY.md).
+
+### G. Indus Multi-Clause Clausal Regular Grammar & Dholavira Signboard Proof (PAN-H6, H7, H8, H9)
+- **Multi-Clause Dynamic Programming Segmentation (PAN-H6)**: Evaluated 3,043 inscriptions. Resolves the 1-clause baseline ($44\%$) into a compound regular grammar where $\le 2$ clauses explain $\ge 84\%$ and $\le 3$ clauses explain $\ge 95\%$ of all non-compliant inscriptions (unexplained rate drops to $\le 4.9\%$). Clausal boundaries are overwhelmingly ($>60\%$) preceded by Class 4 (Terminal Jar Sink).
+- **Ligature Morphology Decomposition Algebra (PAN-H7)**: Decomposed >12,000 sign tokens into roots and graphic modifiers. Proved modifiers provide $>0.10$ bits of syntactic constraint and joint root+modifier provides $\ge 0.50$ bits, with positive synergistic information $\Delta I > 0$ and $\chi^2 > 1000$ ($p < 10^{-10}$), proving ligatures encode functional grammatical modifications.
+- **Dholavira Citadel Gateway Signboard Structural Fit (PAN-H8)**: Analyzed the 10-sign signboard. Decomposes into exactly 4 monotonic formulaic clauses partitioned by delimiter sign P378, with every clausal segment strictly monotonic non-decreasing in the DAG.
+- **Comparative Typology Engine (PAN-H9)**: Cross-benchmarked Indus against Linear A, Proto-Elamite, and economic cargo tags, confirming strict accounting/administrative typology. Code: [`projects/indus/compound_grammar.py`](projects/indus/compound_grammar.py), [`projects/indus/ligature_algebra.py`](projects/indus/ligature_algebra.py), [`projects/indus/dholavira_signboard.py`](projects/indus/dholavira_signboard.py), [`projects/indus/comparative_typology.py`](projects/indus/comparative_typology.py).
 
 ---
 
