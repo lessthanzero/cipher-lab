@@ -1,0 +1,3913 @@
+{
+  "P000": {
+    "parpola_id": "P000",
+    "description": "Represents a section of significant damage or lost material",
+    "mahadevan_ids": [],
+    "wells_ids": []
+  },
+  "P001": {
+    "parpola_id": "P001",
+    "description": "Person carrying two burdens, \ue008",
+    "mahadevan_ids": [
+      "M012"
+    ],
+    "wells_ids": [
+      "W151"
+    ]
+  },
+  "P002": {
+    "parpola_id": "P002",
+    "description": "Person carrying two burdens, small vertical stroke between legs",
+    "mahadevan_ids": [
+      "M013"
+    ],
+    "wells_ids": []
+  },
+  "P003": {
+    "parpola_id": "P003",
+    "description": "Person carrying two burdens, triangle or diamond for a head",
+    "mahadevan_ids": [
+      "M011",
+      "M014"
+    ],
+    "wells_ids": [
+      "W159",
+      "W160",
+      "W161"
+    ]
+  },
+  "P004": {
+    "parpola_id": "P004",
+    "description": "Person carrying two burdens, jar handles for a head",
+    "mahadevan_ids": [
+      "M015"
+    ],
+    "wells_ids": [
+      "W153",
+      "W154",
+      "W155",
+      "W156",
+      "W158"
+    ]
+  },
+  "P005": {
+    "parpola_id": "P005",
+    "description": "Person carrying two burdens, jar handles for a head. Pitchfork off shoulder",
+    "mahadevan_ids": [],
+    "wells_ids": []
+  },
+  "P006": {
+    "parpola_id": "P006",
+    "description": "Two people, each carrying two burdens, carrying a tall hatched triangle between them",
+    "mahadevan_ids": [
+      "M016"
+    ],
+    "wells_ids": [
+      "W123"
+    ]
+  },
+  "P007": {
+    "parpola_id": "P007",
+    "description": "Person with flag for a head",
+    "mahadevan_ids": [
+      "M004"
+    ],
+    "wells_ids": [
+      "W105",
+      "W107"
+    ]
+  },
+  "P008": {
+    "parpola_id": "P008",
+    "description": "Person with two flags for a head",
+    "mahadevan_ids": [
+      "M005"
+    ],
+    "wells_ids": [
+      "W106"
+    ]
+  },
+  "P009": {
+    "parpola_id": "P009",
+    "description": "Person with three heads",
+    "mahadevan_ids": [
+      "M008"
+    ],
+    "wells_ids": [
+      "W100"
+    ]
+  },
+  "P010": {
+    "parpola_id": "P010",
+    "description": "Person with three heads, bracketed by right parentheses",
+    "mahadevan_ids": [
+      "M009"
+    ],
+    "wells_ids": [
+      "W101",
+      "W103"
+    ]
+  },
+  "P011": {
+    "parpola_id": "P011",
+    "description": "Person with round breasts and one raised arm",
+    "mahadevan_ids": [
+      "M017"
+    ],
+    "wells_ids": [
+      "W140"
+    ]
+  },
+  "P012": {
+    "parpola_id": "P012",
+    "description": "Person with an extra raised arm",
+    "mahadevan_ids": [
+      "M007"
+    ],
+    "wells_ids": [
+      "W098"
+    ]
+  },
+  "P013": {
+    "parpola_id": "P013",
+    "description": "Person with two arms and two legs, \ue06e",
+    "mahadevan_ids": [
+      "M001"
+    ],
+    "wells_ids": [
+      "W090"
+    ]
+  },
+  "P014": {
+    "parpola_id": "P014",
+    "description": "Person with two arms and two legs, small vertical stroke between legs",
+    "mahadevan_ids": [
+      "M003"
+    ],
+    "wells_ids": [
+      "W093"
+    ]
+  },
+  "P015": {
+    "parpola_id": "P015",
+    "description": "Person with two arms and two legs, bracketed by tall vertical lines",
+    "mahadevan_ids": [
+      "M002"
+    ],
+    "wells_ids": [
+      "W097"
+    ]
+  },
+  "P016": {
+    "parpola_id": "P016",
+    "description": "Two simple persons standing side by side",
+    "mahadevan_ids": [
+      "M002"
+    ],
+    "wells_ids": [
+      "W091"
+    ]
+  },
+  "P017": {
+    "parpola_id": "P017",
+    "description": "Person with two arms and two legs, standing on a long horizontal stroke",
+    "mahadevan_ids": [
+      "M043"
+    ],
+    "wells_ids": []
+  },
+  "P018": {
+    "parpola_id": "P018",
+    "description": "Person with two arms and two legs, standing on a long horizontal stroke, bracketed by tall vertical strokes",
+    "mahadevan_ids": [],
+    "wells_ids": []
+  },
+  "P019": {
+    "parpola_id": "P019",
+    "description": "Person with two arms and two legs, small leaf almost like a phallus on right thigh",
+    "mahadevan_ids": [
+      "M040"
+    ],
+    "wells_ids": [
+      "W137"
+    ]
+  },
+  "P020": {
+    "parpola_id": "P020",
+    "description": "Person with a half-height caret coming off the right foot",
+    "mahadevan_ids": [
+      "M041"
+    ],
+    "wells_ids": [
+      "W104"
+    ]
+  },
+  "P021": {
+    "parpola_id": "P021",
+    "description": "Person standing on two wagon wheels",
+    "mahadevan_ids": [
+      "M042"
+    ],
+    "wells_ids": [
+      "W118"
+    ]
+  },
+  "P022": {
+    "parpola_id": "P022",
+    "description": "Person with pitchfork head across waist",
+    "mahadevan_ids": [
+      "M038"
+    ],
+    "wells_ids": [
+      "W094"
+    ]
+  },
+  "P023": {
+    "parpola_id": "P023",
+    "description": "Person with short stick",
+    "mahadevan_ids": [
+      "M018"
+    ],
+    "wells_ids": [
+      "W095"
+    ]
+  },
+  "P024": {
+    "parpola_id": "P024",
+    "description": "Person with large animal leg",
+    "mahadevan_ids": [
+      "M037"
+    ],
+    "wells_ids": [
+      "W121"
+    ]
+  },
+  "P025": {
+    "parpola_id": "P025",
+    "description": "Person holding tree with branches",
+    "mahadevan_ids": [
+      "M021"
+    ],
+    "wells_ids": []
+  },
+  "P026": {
+    "parpola_id": "P026",
+    "description": "Person with pitchfork",
+    "mahadevan_ids": [
+      "M019"
+    ],
+    "wells_ids": [
+      "W130"
+    ]
+  },
+  "P027": {
+    "parpola_id": "P027",
+    "description": "Person with pitchfork, small vertical stroke between feet",
+    "mahadevan_ids": [
+      "M020"
+    ],
+    "wells_ids": [
+      "W131"
+    ]
+  },
+  "P028": {
+    "parpola_id": "P028",
+    "description": "Person with antenna",
+    "mahadevan_ids": [
+      "M023"
+    ],
+    "wells_ids": [
+      "W133"
+    ]
+  },
+  "P029": {
+    "parpola_id": "P029",
+    "description": "Person with two antennae",
+    "mahadevan_ids": [
+      "M024"
+    ],
+    "wells_ids": [
+      "W134"
+    ]
+  },
+  "P030": {
+    "parpola_id": "P030",
+    "description": "Person with short stick, several small vertical strokes coming away from stick",
+    "mahadevan_ids": [],
+    "wells_ids": [
+      "W145"
+    ]
+  },
+  "P031": {
+    "parpola_id": "P031",
+    "description": "Person with staff",
+    "mahadevan_ids": [
+      "M025"
+    ],
+    "wells_ids": [
+      "W142"
+    ]
+  },
+  "P032": {
+    "parpola_id": "P032",
+    "description": "Person with staff, caged by four small vertical strokes",
+    "mahadevan_ids": [
+      "M026"
+    ],
+    "wells_ids": [
+      "W144"
+    ]
+  },
+  "P033": {
+    "parpola_id": "P033",
+    "description": "Person with two staves",
+    "mahadevan_ids": [],
+    "wells_ids": [
+      "W143"
+    ]
+  },
+  "P034": {
+    "parpola_id": "P034",
+    "description": "Person with bow and arrow, but no bowstring",
+    "mahadevan_ids": [
+      "M027"
+    ],
+    "wells_ids": [
+      "W146"
+    ]
+  },
+  "P035": {
+    "parpola_id": "P035",
+    "description": "Person with bow and arrow",
+    "mahadevan_ids": [
+      "M028"
+    ],
+    "wells_ids": [
+      "W125",
+      "W126"
+    ]
+  },
+  "P036": {
+    "parpola_id": "P036",
+    "description": "Person with two bows and arrows",
+    "mahadevan_ids": [
+      "M029"
+    ],
+    "wells_ids": [
+      "W127"
+    ]
+  },
+  "P037": {
+    "parpola_id": "P037",
+    "description": "Person with triangular 'pincer'",
+    "mahadevan_ids": [
+      "M036"
+    ],
+    "wells_ids": [
+      "W122"
+    ]
+  },
+  "P038": {
+    "parpola_id": "P038",
+    "description": "Person with diamond connected to the right",
+    "mahadevan_ids": [
+      "M030"
+    ],
+    "wells_ids": [
+      "W119"
+    ]
+  },
+  "P039": {
+    "parpola_id": "P039",
+    "description": "Person with large leaf, dot in leaf",
+    "mahadevan_ids": [
+      "M031"
+    ],
+    "wells_ids": [
+      "W117"
+    ]
+  },
+  "P040": {
+    "parpola_id": "P040",
+    "description": "Person with U",
+    "mahadevan_ids": [
+      "M032"
+    ],
+    "wells_ids": [
+      "W110",
+      "W111"
+    ]
+  },
+  "P041": {
+    "parpola_id": "P041",
+    "description": "Person with U with vertical stroke inserted, stroke has a small dot at the bottom",
+    "mahadevan_ids": [
+      "M034"
+    ],
+    "wells_ids": [
+      "W112"
+    ]
+  },
+  "P042": {
+    "parpola_id": "P042",
+    "description": "Person with cat's paw",
+    "mahadevan_ids": [
+      "M035"
+    ],
+    "wells_ids": [
+      "W113"
+    ]
+  },
+  "P043": {
+    "parpola_id": "P043",
+    "description": "Deer facing to the right (see also P303)",
+    "mahadevan_ids": [
+      "M050"
+    ],
+    "wells_ids": [
+      "W340",
+      "W341",
+      "W342",
+      "W343",
+      "W344",
+      "W345",
+      "W347",
+      "W348"
+    ]
+  },
+  "P044": {
+    "parpola_id": "P044",
+    "description": "Deer facing to the left",
+    "mahadevan_ids": [
+      "M050"
+    ],
+    "wells_ids": [
+      "W346"
+    ]
+  },
+  "P045": {
+    "parpola_id": "P045",
+    "description": "Cow's leg with horizontal hatching",
+    "mahadevan_ids": [
+      "M084"
+    ],
+    "wells_ids": [
+      "W280"
+    ]
+  },
+  "P046": {
+    "parpola_id": "P046",
+    "description": "Cow's leg with horizontal hatching, bracketed by angled vertical lines",
+    "mahadevan_ids": [
+      "M085"
+    ],
+    "wells_ids": [
+      "W281"
+    ]
+  },
+  "P047": {
+    "parpola_id": "P047",
+    "description": "Vertical line with rounded and hatched decoration at the middle, capped by a caret hat",
+    "mahadevan_ids": [
+      "M398"
+    ],
+    "wells_ids": [
+      "W517",
+      "W518"
+    ]
+  },
+  "P048": {
+    "parpola_id": "P048",
+    "description": "Fish with no arms, caret hat, diagonal hatching throughout",
+    "mahadevan_ids": [
+      "M075"
+    ],
+    "wells_ids": [
+      "W243"
+    ]
+  },
+  "P049": {
+    "parpola_id": "P049",
+    "description": "Fish with no arms and no other decoration",
+    "mahadevan_ids": [],
+    "wells_ids": []
+  },
+  "P050": {
+    "parpola_id": "P050",
+    "description": "Fish with no other decoration",
+    "mahadevan_ids": [
+      "M059"
+    ],
+    "wells_ids": [
+      "W220"
+    ]
+  },
+  "P051": {
+    "parpola_id": "P051",
+    "description": "Fish with four small vertical strokes around the four corners",
+    "mahadevan_ids": [
+      "M060"
+    ],
+    "wells_ids": [
+      "W226"
+    ]
+  },
+  "P052": {
+    "parpola_id": "P052",
+    "description": "Fish and 'table' with four small vertical strokes around the four corners, 'table' has a small box on top",
+    "mahadevan_ids": [
+      "M061"
+    ],
+    "wells_ids": [
+      "W944"
+    ]
+  },
+  "P053": {
+    "parpola_id": "P053",
+    "description": "Simple fish inside parentheses, with a small tooth coming off the top right or the right paren",
+    "mahadevan_ids": [
+      "M062"
+    ],
+    "wells_ids": [
+      "W222"
+    ]
+  },
+  "P054": {
+    "parpola_id": "P054",
+    "description": "Simple fish and bird inside parentheses",
+    "mahadevan_ids": [
+      "M064"
+    ],
+    "wells_ids": [
+      "W940"
+    ]
+  },
+  "P055": {
+    "parpola_id": "P055",
+    "description": "Simple bird and fish inside parentheses",
+    "mahadevan_ids": [
+      "M064"
+    ],
+    "wells_ids": [
+      "W942",
+      "W943"
+    ]
+  },
+  "P056": {
+    "parpola_id": "P056",
+    "description": "Fish with a small vertical stroke in the body",
+    "mahadevan_ids": [
+      "M070"
+    ],
+    "wells_ids": [
+      "W231"
+    ]
+  },
+  "P057": {
+    "parpola_id": "P057",
+    "description": "Fish with a small vertical stroke in the body, caged by four small vertical strokes",
+    "mahadevan_ids": [
+      "M071"
+    ],
+    "wells_ids": [
+      "W232"
+    ]
+  },
+  "P058": {
+    "parpola_id": "P058",
+    "description": "Fish with a horizontal line through body",
+    "mahadevan_ids": [
+      "M072"
+    ],
+    "wells_ids": [
+      "W233"
+    ]
+  },
+  "P059": {
+    "parpola_id": "P059",
+    "description": "Fish with a horizontal line through body, caged by four small vertical lines",
+    "mahadevan_ids": [
+      "M073"
+    ],
+    "wells_ids": [
+      "W234"
+    ]
+  },
+  "P060": {
+    "parpola_id": "P060",
+    "description": "Fish with a caret shaped hat",
+    "mahadevan_ids": [
+      "M065"
+    ],
+    "wells_ids": [
+      "W235"
+    ]
+  },
+  "P061": {
+    "parpola_id": "P061",
+    "description": "Fish with a caret shaped hat, caged by four small vertical strokes",
+    "mahadevan_ids": [
+      "M066"
+    ],
+    "wells_ids": [
+      "W236"
+    ]
+  },
+  "P062": {
+    "parpola_id": "P062",
+    "description": "Fish with extra whiskers on cheeks",
+    "mahadevan_ids": [
+      "M067"
+    ],
+    "wells_ids": [
+      "W240",
+      "W242"
+    ]
+  },
+  "P063": {
+    "parpola_id": "P063",
+    "description": "Fish with extra whiskers on cheeks, caged by four small vertical strokes",
+    "mahadevan_ids": [
+      "M068"
+    ],
+    "wells_ids": [
+      "W241"
+    ]
+  },
+  "P064": {
+    "parpola_id": "P064",
+    "description": "Fish with extra legs",
+    "mahadevan_ids": [
+      "M074"
+    ],
+    "wells_ids": [
+      "W227",
+      "W228"
+    ]
+  },
+  "P065": {
+    "parpola_id": "P065",
+    "description": "Fish with bird wings and a three feather tail",
+    "mahadevan_ids": [
+      "M083"
+    ],
+    "wells_ids": [
+      "W244"
+    ]
+  },
+  "P066": {
+    "parpola_id": "P066",
+    "description": "Semi-realistic bird with no wings",
+    "mahadevan_ids": [
+      "M076",
+      "M077",
+      "M078"
+    ],
+    "wells_ids": [
+      "W264",
+      "W266",
+      "W268"
+    ]
+  },
+  "P067": {
+    "parpola_id": "P067",
+    "description": "Large left and right parentheses surrounding an upward-pointing bird with no wings",
+    "mahadevan_ids": [
+      "M081"
+    ],
+    "wells_ids": [
+      "W265",
+      "W267",
+      "W269",
+      "W270",
+      "W271"
+    ]
+  },
+  "P068": {
+    "parpola_id": "P068",
+    "description": "Duck in circular pond",
+    "mahadevan_ids": [
+      "M082"
+    ],
+    "wells_ids": [
+      "W952"
+    ]
+  },
+  "P069": {
+    "parpola_id": "P069",
+    "description": "Semi-realistic bird with no wings, swan's neck pointing backwards",
+    "mahadevan_ids": [
+      "M079"
+    ],
+    "wells_ids": [
+      "W262"
+    ]
+  },
+  "P070": {
+    "parpola_id": "P070",
+    "description": "Upward-pointing bird with wings",
+    "mahadevan_ids": [
+      "M080"
+    ],
+    "wells_ids": [
+      "W272"
+    ]
+  },
+  "P071": {
+    "parpola_id": "P071",
+    "description": "Leftward-pointing bird with vertical tail",
+    "mahadevan_ids": [
+      "M076"
+    ],
+    "wells_ids": [
+      "W260"
+    ]
+  },
+  "P072": {
+    "parpola_id": "P072",
+    "description": "Leftward-pointing bird with rooster tail",
+    "mahadevan_ids": [],
+    "wells_ids": []
+  },
+  "P073": {
+    "parpola_id": "P073",
+    "description": "Unknown asymmetric animal? Perhaps a fish with asymmetric fins and legs?",
+    "mahadevan_ids": [
+      "M051"
+    ],
+    "wells_ids": [
+      "W255"
+    ]
+  },
+  "P074": {
+    "parpola_id": "P074",
+    "description": "Unknown asymmetric animal? Perhaps a fish with asymmetric fins and legs? Attached on left to a tall vertical stroke",
+    "mahadevan_ids": [
+      "M052"
+    ],
+    "wells_ids": [
+      "W256"
+    ]
+  },
+  "P075": {
+    "parpola_id": "P075",
+    "description": "Leaf with 'pincers' coming off the right, possibly with small stroke legs off top and bottom of leaf",
+    "mahadevan_ids": [
+      "M053"
+    ],
+    "wells_ids": [
+      "W193",
+      "W797",
+      "W798"
+    ]
+  },
+  "P076": {
+    "parpola_id": "P076",
+    "description": "Squashed spider, with right two legs slightly more away from the body",
+    "mahadevan_ids": [
+      "M054",
+      "M055"
+    ],
+    "wells_ids": [
+      "W190",
+      "W192",
+      "W194"
+    ]
+  },
+  "P077": {
+    "parpola_id": "P077",
+    "description": "Two stacked leaves, with ladder going up and to the right from the center",
+    "mahadevan_ids": [
+      "M412"
+    ],
+    "wells_ids": [
+      "W201"
+    ]
+  },
+  "P078": {
+    "parpola_id": "P078",
+    "description": "Two stacked half-leaves (just the right half), with long stroke going up and to the right from the center",
+    "mahadevan_ids": [
+      "M310"
+    ],
+    "wells_ids": [
+      "W894"
+    ]
+  },
+  "P079": {
+    "parpola_id": "P079",
+    "description": "Two stacked leaves",
+    "mahadevan_ids": [
+      "M410"
+    ],
+    "wells_ids": [
+      "W200"
+    ]
+  },
+  "P080": {
+    "parpola_id": "P080",
+    "description": "Two stacked leaves, connected on left to a tall vertical stroke",
+    "mahadevan_ids": [
+      "M413"
+    ],
+    "wells_ids": [
+      "W203"
+    ]
+  },
+  "P081": {
+    "parpola_id": "P081",
+    "description": "Serif'd three sided hat, over two small dots connected by a diagonal line",
+    "mahadevan_ids": [],
+    "wells_ids": []
+  },
+  "P082": {
+    "parpola_id": "P082",
+    "description": "Two stacked leaves, two inverted caret legs on each leaf, and wings pointing away from each other on each leaf",
+    "mahadevan_ids": [
+      "M057"
+    ],
+    "wells_ids": [
+      "W205",
+      "W206",
+      "W207",
+      "W208",
+      "W209"
+    ]
+  },
+  "P083": {
+    "parpola_id": "P083",
+    "description": "Two stacked leaves, with lines coming away on the right of each leaf",
+    "mahadevan_ids": [
+      "M056"
+    ],
+    "wells_ids": [
+      "W204"
+    ]
+  },
+  "P084": {
+    "parpola_id": "P084",
+    "description": "Oval with several short strokes coming off the bottom, and a very small tree-like shape at the top.",
+    "mahadevan_ids": [
+      "M395"
+    ],
+    "wells_ids": [
+      "W285",
+      "W286",
+      "W287"
+    ]
+  },
+  "P085": {
+    "parpola_id": "P085",
+    "description": "Singly, symetrically bifurcated tall vertical stroke",
+    "mahadevan_ids": [
+      "M161"
+    ],
+    "wells_ids": [
+      "W064"
+    ]
+  },
+  "P086": {
+    "parpola_id": "P086",
+    "description": "Simple tree with branches at the top",
+    "mahadevan_ids": [
+      "M161",
+      "M162",
+      "M167",
+      "M168",
+      "M169"
+    ],
+    "wells_ids": [
+      "W390",
+      "W392",
+      "W405",
+      "W406",
+      "W407",
+      "W408"
+    ]
+  },
+  "P087": {
+    "parpola_id": "P087",
+    "description": "Simple tree with branches at the top, caged in four pairs of small vertical strokes",
+    "mahadevan_ids": [
+      "M164"
+    ],
+    "wells_ids": [
+      "W393"
+    ]
+  },
+  "P088": {
+    "parpola_id": "P088",
+    "description": "Simple tree with branches at the top, with a pitchfork head at either top or bottom",
+    "mahadevan_ids": [
+      "M165",
+      "M166"
+    ],
+    "wells_ids": [
+      "W394"
+    ]
+  },
+  "P089": {
+    "parpola_id": "P089",
+    "description": "Three pronged tree with caret hat",
+    "mahadevan_ids": [
+      "M163"
+    ],
+    "wells_ids": [
+      "W391"
+    ]
+  },
+  "P090": {
+    "parpola_id": "P090",
+    "description": "Tall vertical stroke, with M shaped diagonal wiggle through middle",
+    "mahadevan_ids": [],
+    "wells_ids": [
+      "W956"
+    ]
+  },
+  "P091": {
+    "parpola_id": "P091",
+    "description": "Horizontal line with multiple lines out the top, lines or U out the bottom",
+    "mahadevan_ids": [
+      "M174",
+      "M175"
+    ],
+    "wells_ids": [
+      "W350",
+      "W352",
+      "W353",
+      "W354"
+    ]
+  },
+  "P092": {
+    "parpola_id": "P092",
+    "description": "Pitchfork with tines",
+    "mahadevan_ids": [
+      "M171"
+    ],
+    "wells_ids": [
+      "W415"
+    ]
+  },
+  "P093": {
+    "parpola_id": "P093",
+    "description": "Two pitchforks with tines, facing each other vertically",
+    "mahadevan_ids": [
+      "M172"
+    ],
+    "wells_ids": [
+      "W417"
+    ]
+  },
+  "P094": {
+    "parpola_id": "P094",
+    "description": "Pitckfork with two vertical tines on ends, one triangular tine in the middle",
+    "mahadevan_ids": [],
+    "wells_ids": [
+      "W521"
+    ]
+  },
+  "P095": {
+    "parpola_id": "P095",
+    "description": "Pitckfork with two stacked heads",
+    "mahadevan_ids": [
+      "M173"
+    ],
+    "wells_ids": [
+      "W416"
+    ]
+  },
+  "P096": {
+    "parpola_id": "P096",
+    "description": "U where one arm has a double headed pitchfork, the other is a tree symbol",
+    "mahadevan_ids": [
+      "M348"
+    ],
+    "wells_ids": [
+      "W770",
+      "W772",
+      "W773"
+    ]
+  },
+  "P097": {
+    "parpola_id": "P097",
+    "description": "Pitckfork with two stacked heads, inside a rectangular box, possibly with a small tooth off the right edge of the box",
+    "mahadevan_ids": [],
+    "wells_ids": [
+      "W642"
+    ]
+  },
+  "P098": {
+    "parpola_id": "P098",
+    "description": "Vertical line with small horizontal lines coming off one side across the entire height",
+    "mahadevan_ids": [
+      "M176"
+    ],
+    "wells_ids": [
+      "W400",
+      "W402"
+    ]
+  },
+  "P099": {
+    "parpola_id": "P099",
+    "description": "Vertical line with small horizontal lines crossing it across the entire height",
+    "mahadevan_ids": [
+      "M177"
+    ],
+    "wells_ids": [
+      "W413"
+    ]
+  },
+  "P100": {
+    "parpola_id": "P100",
+    "description": "Wheat shaft. Vertical stroke with upward pointing diagonal strokes on both sides, going the full length of the shaft",
+    "mahadevan_ids": [
+      "M168"
+    ],
+    "wells_ids": [
+      "W411"
+    ]
+  },
+  "P101": {
+    "parpola_id": "P101",
+    "description": "Wheat shaft. Vertical stroke with upward pointing diagonal strokes on both sides, but leaves only at the top",
+    "mahadevan_ids": [
+      "M167"
+    ],
+    "wells_ids": []
+  },
+  "P102": {
+    "parpola_id": "P102",
+    "description": "Curved wheat shaft in two long vertical strokes. Wheat shaft is: curved stroke with upward pointing diagonal strokes on both sides, going the full length of the shaft",
+    "mahadevan_ids": [],
+    "wells_ids": [
+      "W412"
+    ]
+  },
+  "P103": {
+    "parpola_id": "P103",
+    "description": "Plant curving left, small leaf at top, larger leaf at middle forming two leaves on either side of stem",
+    "mahadevan_ids": [
+      "M400"
+    ],
+    "wells_ids": [
+      "W374"
+    ]
+  },
+  "P104": {
+    "parpola_id": "P104",
+    "description": "Plant curving left, small leaf at top, larger leaf at middle forming two leaves on either side of stem. Bracketed by two inward taperd vertical lines",
+    "mahadevan_ids": [
+      "M401"
+    ],
+    "wells_ids": [
+      "W375"
+    ]
+  },
+  "P105": {
+    "parpola_id": "P105",
+    "description": "Plant curving left, small leaf at top, larger leaf at middle forming two leaves on either side of stem. Standing on top of horizontal pedestal",
+    "mahadevan_ids": [],
+    "wells_ids": []
+  },
+  "P106": {
+    "parpola_id": "P106",
+    "description": "Flowering plant with 'sapling' on right, 'tree branch' on left",
+    "mahadevan_ids": [
+      "M351"
+    ],
+    "wells_ids": [
+      "W767"
+    ]
+  },
+  "P107": {
+    "parpola_id": "P107",
+    "description": "Flowering plant with 'sapling' on left, 'tree branch' on right, 'garlic' in center",
+    "mahadevan_ids": [
+      "M372"
+    ],
+    "wells_ids": [
+      "W768"
+    ]
+  },
+  "P108": {
+    "parpola_id": "P108",
+    "description": "The 'garlic' motif. Vertical stroke, broken by a circle with a dot in it",
+    "mahadevan_ids": [
+      "M397"
+    ],
+    "wells_ids": [
+      "W370",
+      "W371",
+      "W372"
+    ]
+  },
+  "P109": {
+    "parpola_id": "P109",
+    "description": "The 'garlic' motif next to a leaf with a small vertical center decoration, all inside a cage of four small vertical strokes",
+    "mahadevan_ids": [
+      "M377"
+    ],
+    "wells_ids": [
+      "W946"
+    ]
+  },
+  "P110": {
+    "parpola_id": "P110",
+    "description": "Upside-down heart symbol with horizontal hatching, with vertical stroke coming from bottom of heart. Heart has two small decorations coming off the top center",
+    "mahadevan_ids": [
+      "M327"
+    ],
+    "wells_ids": [
+      "W388"
+    ]
+  },
+  "P111": {
+    "parpola_id": "P111",
+    "description": "Upside-down heart symbol, with vertical stroke coming from bottom of heart",
+    "mahadevan_ids": [
+      "M325"
+    ],
+    "wells_ids": [
+      "W382"
+    ]
+  },
+  "P112": {
+    "parpola_id": "P112",
+    "description": "Upside-down heart symbol, possibly with vertical stroke coming from bottom of heart, vertical stroke decoration",
+    "mahadevan_ids": [
+      "M326"
+    ],
+    "wells_ids": [
+      "W384",
+      "W385"
+    ]
+  },
+  "P113": {
+    "parpola_id": "P113",
+    "description": "Upside-down heart symbol, possibly with vertical stroke coming from bottom of heart, vertical stroke decoration. On top of three horizontally adjacent triangles",
+    "mahadevan_ids": [],
+    "wells_ids": []
+  },
+  "P114": {
+    "parpola_id": "P114",
+    "description": "A single vertical line, with two person arms; head may be circle or continuation of line",
+    "mahadevan_ids": [
+      "M155"
+    ],
+    "wells_ids": [
+      "W070",
+      "W072"
+    ]
+  },
+  "P115": {
+    "parpola_id": "P115",
+    "description": "A single vertical line, with two person arms; head may be circle or continuation of line. Bracketed by inverted parentheses",
+    "mahadevan_ids": [
+      "M156"
+    ],
+    "wells_ids": [
+      "W073"
+    ]
+  },
+  "P116": {
+    "parpola_id": "P116",
+    "description": "A single vertical line, with two person arms; head is crossed by a horizontal decoration",
+    "mahadevan_ids": [
+      "M157"
+    ],
+    "wells_ids": [
+      "W071"
+    ]
+  },
+  "P117": {
+    "parpola_id": "P117",
+    "description": "Flowering plant with three stems that meet at the bottom",
+    "mahadevan_ids": [
+      "M367"
+    ],
+    "wells_ids": [
+      "W776",
+      "W783",
+      "W784",
+      "W785",
+      "W786"
+    ]
+  },
+  "P118": {
+    "parpola_id": "P118",
+    "description": "Flowering plant with two stems that meet at the bottom. Leaf with pincers between stems",
+    "mahadevan_ids": [
+      "M362",
+      "M363",
+      "M364"
+    ],
+    "wells_ids": [
+      "W777",
+      "W778",
+      "W782"
+    ]
+  },
+  "P119": {
+    "parpola_id": "P119",
+    "description": "Two top-aligned small vertical strokes (prefer P122)",
+    "mahadevan_ids": [
+      "M099"
+    ],
+    "wells_ids": []
+  },
+  "P120": {
+    "parpola_id": "P120",
+    "description": "A single small vertical line, then another vertical line with the bottom half slanting under the first line (like a Japanese 'ri' character).",
+    "mahadevan_ids": [
+      "M123"
+    ],
+    "wells_ids": [
+      "W060"
+    ]
+  },
+  "P121": {
+    "parpola_id": "P121",
+    "description": "Simple, half-height vertical stroke",
+    "mahadevan_ids": [
+      "M097",
+      "M098"
+    ],
+    "wells_ids": [
+      "W001"
+    ]
+  },
+  "P122": {
+    "parpola_id": "P122",
+    "description": "Two adjacent half-height simple vertical strokes",
+    "mahadevan_ids": [
+      "M099",
+      "M100"
+    ],
+    "wells_ids": [
+      "W002"
+    ]
+  },
+  "P123": {
+    "parpola_id": "P123",
+    "description": "Three adjacent half-height simple vertical strokes",
+    "mahadevan_ids": [
+      "M102",
+      "M103"
+    ],
+    "wells_ids": [
+      "W003"
+    ]
+  },
+  "P124": {
+    "parpola_id": "P124",
+    "description": "Four adjacent half-height simple vertical strokes",
+    "mahadevan_ids": [
+      "M104",
+      "M105"
+    ],
+    "wells_ids": [
+      "W004",
+      "W014"
+    ]
+  },
+  "P125": {
+    "parpola_id": "P125",
+    "description": "Five simple vertical strokes",
+    "mahadevan_ids": [
+      "M106",
+      "M107"
+    ],
+    "wells_ids": [
+      "W005",
+      "W015"
+    ]
+  },
+  "P126": {
+    "parpola_id": "P126",
+    "description": "Six short vertical strokes",
+    "mahadevan_ids": [
+      "M108",
+      "M109"
+    ],
+    "wells_ids": [
+      "W006",
+      "W016"
+    ]
+  },
+  "P127": {
+    "parpola_id": "P127",
+    "description": "Seven short vertical strokes",
+    "mahadevan_ids": [
+      "M110",
+      "M112"
+    ],
+    "wells_ids": [
+      "W007",
+      "W017"
+    ]
+  },
+  "P128": {
+    "parpola_id": "P128",
+    "description": "Eight short vertical strokes",
+    "mahadevan_ids": [
+      "M114"
+    ],
+    "wells_ids": [
+      "W018"
+    ]
+  },
+  "P129": {
+    "parpola_id": "P129",
+    "description": "Nine short vertical strokes",
+    "mahadevan_ids": [
+      "M115",
+      "M116"
+    ],
+    "wells_ids": [
+      "W019"
+    ]
+  },
+  "P130": {
+    "parpola_id": "P130",
+    "description": "Ten short vertical strokes",
+    "mahadevan_ids": [
+      "M118"
+    ],
+    "wells_ids": [
+      "W020"
+    ]
+  },
+  "P131": {
+    "parpola_id": "P131",
+    "description": "One tiny caret",
+    "mahadevan_ids": [
+      "M312"
+    ],
+    "wells_ids": []
+  },
+  "P132": {
+    "parpola_id": "P132",
+    "description": "Two tiny stacked carets",
+    "mahadevan_ids": [
+      "M313"
+    ],
+    "wells_ids": []
+  },
+  "P133": {
+    "parpola_id": "P133",
+    "description": "Three tiny stacked carets",
+    "mahadevan_ids": [
+      "M314"
+    ],
+    "wells_ids": []
+  },
+  "P134": {
+    "parpola_id": "P134",
+    "description": "Four tiny stacked carets",
+    "mahadevan_ids": [],
+    "wells_ids": []
+  },
+  "P135": {
+    "parpola_id": "P135",
+    "description": "Many tiny stacked carets",
+    "mahadevan_ids": [],
+    "wells_ids": []
+  },
+  "P136": {
+    "parpola_id": "P136",
+    "description": "Seven short vertical strokes, bracketed by parentheses",
+    "mahadevan_ids": [
+      "M111",
+      "M113"
+    ],
+    "wells_ids": [
+      "W048",
+      "W049"
+    ]
+  },
+  "P137": {
+    "parpola_id": "P137",
+    "description": "Nine short vertical strokes, capped by 'table' hat",
+    "mahadevan_ids": [
+      "M117"
+    ],
+    "wells_ids": [
+      "W051"
+    ]
+  },
+  "P138": {
+    "parpola_id": "P138",
+    "description": "Caret above a small vertical stroke",
+    "mahadevan_ids": [
+      "M153"
+    ],
+    "wells_ids": []
+  },
+  "P139": {
+    "parpola_id": "P139",
+    "description": "Two small vertical strokes over one small vertical stroke",
+    "mahadevan_ids": [
+      "M103"
+    ],
+    "wells_ids": [
+      "W013"
+    ]
+  },
+  "P140": {
+    "parpola_id": "P140",
+    "description": "Two stacked small vertical strokes",
+    "mahadevan_ids": [
+      "M101"
+    ],
+    "wells_ids": [
+      "W012"
+    ]
+  },
+  "P141": {
+    "parpola_id": "P141",
+    "description": "Three rows of off-center or slanted small vertical strokes",
+    "mahadevan_ids": [
+      "M119",
+      "M120"
+    ],
+    "wells_ids": [
+      "W025",
+      "W026",
+      "W027",
+      "W028",
+      "W029"
+    ]
+  },
+  "P142": {
+    "parpola_id": "P142",
+    "description": "Four small vertical strokes above the same, above the same",
+    "mahadevan_ids": [
+      "M121"
+    ],
+    "wells_ids": [
+      "W055"
+    ]
+  },
+  "P143": {
+    "parpola_id": "P143",
+    "description": "Four small vertical strokes above the same, above the same. Bracketed by right parentheses",
+    "mahadevan_ids": [
+      "M122"
+    ],
+    "wells_ids": [
+      "W057"
+    ]
+  },
+  "P144": {
+    "parpola_id": "P144",
+    "description": "One full-height vertical stroke",
+    "mahadevan_ids": [
+      "M086"
+    ],
+    "wells_ids": [
+      "W031"
+    ]
+  },
+  "P145": {
+    "parpola_id": "P145",
+    "description": "Two adjacent full-height vertical strokes",
+    "mahadevan_ids": [
+      "M087"
+    ],
+    "wells_ids": [
+      "W032"
+    ]
+  },
+  "P146": {
+    "parpola_id": "P146",
+    "description": "Two adjacent full-height vertical strokes, surrounded on either side by a vertical bar over another vertical bar",
+    "mahadevan_ids": [
+      "M088"
+    ],
+    "wells_ids": []
+  },
+  "P147": {
+    "parpola_id": "P147",
+    "description": "Three adjacent full-height vertical strokes",
+    "mahadevan_ids": [
+      "M089"
+    ],
+    "wells_ids": [
+      "W033"
+    ]
+  },
+  "P148": {
+    "parpola_id": "P148",
+    "description": "Three adjacent full-height vertical strokes. Small 'tree' off right side",
+    "mahadevan_ids": [
+      "M090",
+      "M091"
+    ],
+    "wells_ids": [
+      "W045",
+      "W046"
+    ]
+  },
+  "P149": {
+    "parpola_id": "P149",
+    "description": "Three adjacent full-height vertical strokes. Caret hat",
+    "mahadevan_ids": [
+      "M092"
+    ],
+    "wells_ids": [
+      "W044"
+    ]
+  },
+  "P150": {
+    "parpola_id": "P150",
+    "description": "Four adjacent full-height vertical strokes",
+    "mahadevan_ids": [
+      "M095"
+    ],
+    "wells_ids": [
+      "W034"
+    ]
+  },
+  "P151": {
+    "parpola_id": "P151",
+    "description": "Five adjacent simple tall vertical strokes",
+    "mahadevan_ids": [
+      "M096"
+    ],
+    "wells_ids": [
+      "W035"
+    ]
+  },
+  "P152": {
+    "parpola_id": "P152",
+    "description": "Three adjacent full-height vertical strokes, third (and maybe second) stroke is angled away slightly",
+    "mahadevan_ids": [
+      "M093",
+      "M094"
+    ],
+    "wells_ids": []
+  },
+  "P153": {
+    "parpola_id": "P153",
+    "description": "Three adjacent full-height vertical strokes, first stroke is angled away slightly",
+    "mahadevan_ids": [],
+    "wells_ids": []
+  },
+  "P154": {
+    "parpola_id": "P154",
+    "description": "Right parenthesis (perhaps with a backward curve at the bottom)",
+    "mahadevan_ids": [
+      "M287"
+    ],
+    "wells_ids": [
+      "W900"
+    ]
+  },
+  "P155": {
+    "parpola_id": "P155",
+    "description": "Wavy line caged by short double vertical strokes, possibly with a stroke missing",
+    "mahadevan_ids": [
+      "M289"
+    ],
+    "wells_ids": [
+      "W926"
+    ]
+  },
+  "P156": {
+    "parpola_id": "P156",
+    "description": "Right parenthesis with small, slightly inward-and-downward horizontal line from middle",
+    "mahadevan_ids": [
+      "M288"
+    ],
+    "wells_ids": [
+      "W901"
+    ]
+  },
+  "P157": {
+    "parpola_id": "P157",
+    "description": "Right parenthesis with small, diagonal stroke through it",
+    "mahadevan_ids": [],
+    "wells_ids": []
+  },
+  "P158": {
+    "parpola_id": "P158",
+    "description": "Right parenthesis with small tooth on it facing right",
+    "mahadevan_ids": [],
+    "wells_ids": []
+  },
+  "P159": {
+    "parpola_id": "P159",
+    "description": "Right parenthesis with small inward strokes on top, and a tooth outward on top",
+    "mahadevan_ids": [],
+    "wells_ids": []
+  },
+  "P160": {
+    "parpola_id": "P160",
+    "description": "Right parenthesis with small leaf at middle",
+    "mahadevan_ids": [
+      "M293"
+    ],
+    "wells_ids": [
+      "W920"
+    ]
+  },
+  "P161": {
+    "parpola_id": "P161",
+    "description": "Right parenthesis with small leaf at middle, stroke crossing top part of paren",
+    "mahadevan_ids": [],
+    "wells_ids": [
+      "W922"
+    ]
+  },
+  "P162": {
+    "parpola_id": "P162",
+    "description": "Right parenthesis with small lines away from it at top",
+    "mahadevan_ids": [
+      "M290"
+    ],
+    "wells_ids": [
+      "W903"
+    ]
+  },
+  "P163": {
+    "parpola_id": "P163",
+    "description": "Left parenthesis",
+    "mahadevan_ids": [
+      "M299"
+    ],
+    "wells_ids": [
+      "W909"
+    ]
+  },
+  "P164": {
+    "parpola_id": "P164",
+    "description": "Left parenthesis with small inward pointing tooth near top",
+    "mahadevan_ids": [
+      "M300"
+    ],
+    "wells_ids": [
+      "W902"
+    ]
+  },
+  "P165": {
+    "parpola_id": "P165",
+    "description": "Left parenthesis with small semicircle against the very middle",
+    "mahadevan_ids": [
+      "M301"
+    ],
+    "wells_ids": [
+      "W921"
+    ]
+  },
+  "P166": {
+    "parpola_id": "P166",
+    "description": "Left parenthesis with small semicircle against the very middle, diagonal line extending past the paren from the bottom of the semicircle",
+    "mahadevan_ids": [],
+    "wells_ids": []
+  },
+  "P167": {
+    "parpola_id": "P167",
+    "description": "Left parenthesis with small semicircle against the very middle, diagonal line extending past the paren from the bottom of the semicircle. T-bar diagonally against top of parenthesis",
+    "mahadevan_ids": [],
+    "wells_ids": []
+  },
+  "P168": {
+    "parpola_id": "P168",
+    "description": "Left parenthesis with small semicircle against the very middle, diagonal extending from bottom of semicircle, caret over all",
+    "mahadevan_ids": [],
+    "wells_ids": []
+  },
+  "P169": {
+    "parpola_id": "P169",
+    "description": "Left parenthesis with small semicircle against the very middle, diagonal extending from bottom of semicircle, caret over all, some damage",
+    "mahadevan_ids": [],
+    "wells_ids": []
+  },
+  "P170": {
+    "parpola_id": "P170",
+    "description": "Left parenthesis with small semicircle against the very middle, caret extending from top of semicircle",
+    "mahadevan_ids": [],
+    "wells_ids": []
+  },
+  "P171": {
+    "parpola_id": "P171",
+    "description": "Left parenthesis, two perpendiculars coming away both from top and bottom, caged by four small vertical strokes",
+    "mahadevan_ids": [
+      "M292"
+    ],
+    "wells_ids": []
+  },
+  "P172": {
+    "parpola_id": "P172",
+    "description": "Two slightly nested right parentheses",
+    "mahadevan_ids": [
+      "M294"
+    ],
+    "wells_ids": [
+      "W904",
+      "W927"
+    ]
+  },
+  "P173": {
+    "parpola_id": "P173",
+    "description": "Two slightly nested right parentheses, small tooth facing outward from top of right parenthesis",
+    "mahadevan_ids": [
+      "M295"
+    ],
+    "wells_ids": [
+      "W905",
+      "W928"
+    ]
+  },
+  "P174": {
+    "parpola_id": "P174",
+    "description": "Right parenthesis next to left parenthesis",
+    "mahadevan_ids": [
+      "M303"
+    ],
+    "wells_ids": [
+      "W906"
+    ]
+  },
+  "P175": {
+    "parpola_id": "P175",
+    "description": "Right parenthesis drawn in outline",
+    "mahadevan_ids": [
+      "M296"
+    ],
+    "wells_ids": [
+      "W923"
+    ]
+  },
+  "P176": {
+    "parpola_id": "P176",
+    "description": "Right parenthesis drawn in outline, horizontal hatching throughout",
+    "mahadevan_ids": [
+      "M297"
+    ],
+    "wells_ids": [
+      "W924"
+    ]
+  },
+  "P177": {
+    "parpola_id": "P177",
+    "description": "Many slightly nested right parentheses",
+    "mahadevan_ids": [
+      "M298"
+    ],
+    "wells_ids": [
+      "W908"
+    ]
+  },
+  "P178": {
+    "parpola_id": "P178",
+    "description": "Right facing bow, i.e. a vertical stroke with a right-parenthesis fully attached on the right",
+    "mahadevan_ids": [
+      "M304"
+    ],
+    "wells_ids": [
+      "W890"
+    ]
+  },
+  "P179": {
+    "parpola_id": "P179",
+    "description": "Right facing bow, i.e. a vertical stroke with a right-parenthesis fully attached on the right. Several small perpendiculars coming off top",
+    "mahadevan_ids": [
+      "M305"
+    ],
+    "wells_ids": [
+      "W891"
+    ]
+  },
+  "P180": {
+    "parpola_id": "P180",
+    "description": "Leaf, small perpendicular strokes radiating from the top. Surrounded by a capital Gamma",
+    "mahadevan_ids": [
+      "M306"
+    ],
+    "wells_ids": [
+      "W796"
+    ]
+  },
+  "P181": {
+    "parpola_id": "P181",
+    "description": "Lyre, or a left parenthesis with multiple vertical lines inside",
+    "mahadevan_ids": [
+      "M311"
+    ],
+    "wells_ids": [
+      "W896"
+    ]
+  },
+  "P182": {
+    "parpola_id": "P182",
+    "description": "Bow and arrow",
+    "mahadevan_ids": [
+      "M307"
+    ],
+    "wells_ids": [
+      "W892"
+    ]
+  },
+  "P183": {
+    "parpola_id": "P183",
+    "description": "Bow and arrow, caged by pairs of small vertical strokes",
+    "mahadevan_ids": [
+      "M308"
+    ],
+    "wells_ids": [
+      "W895"
+    ]
+  },
+  "P184": {
+    "parpola_id": "P184",
+    "description": "Tall, slightly narrow caret (mountain motif)",
+    "mahadevan_ids": [
+      "M134"
+    ],
+    "wells_ids": [
+      "W480"
+    ]
+  },
+  "P185": {
+    "parpola_id": "P185",
+    "description": "Tall, slightly narrow caret (mountain motif), with a bit of the right leg removed",
+    "mahadevan_ids": [
+      "M129"
+    ],
+    "wells_ids": [
+      "W066"
+    ]
+  },
+  "P186": {
+    "parpola_id": "P186",
+    "description": "A with right leg only partially formed, possibly with pitchfork foot on right",
+    "mahadevan_ids": [
+      "M178"
+    ],
+    "wells_ids": [
+      "W465",
+      "W467",
+      "W468",
+      "W469",
+      "W470",
+      "W471",
+      "W472",
+      "W473",
+      "W474",
+      "W475"
+    ]
+  },
+  "P187": {
+    "parpola_id": "P187",
+    "description": "A with right leg only partially formed, caged by pairs of small vertical strokes",
+    "mahadevan_ids": [
+      "M179"
+    ],
+    "wells_ids": [
+      "W466"
+    ]
+  },
+  "P188": {
+    "parpola_id": "P188",
+    "description": "Vertical line with diagonal going down from top right, diagonal going up from bottom left",
+    "mahadevan_ids": [
+      "M130"
+    ],
+    "wells_ids": [
+      "W435",
+      "W436"
+    ]
+  },
+  "P189": {
+    "parpola_id": "P189",
+    "description": "Caret with diagonal continuing upwards and left from the bottom left. Under a 'table' motif",
+    "mahadevan_ids": [
+      "M131"
+    ],
+    "wells_ids": [
+      "W454"
+    ]
+  },
+  "P190": {
+    "parpola_id": "P190",
+    "description": "A 'W' symbol",
+    "mahadevan_ids": [],
+    "wells_ids": [
+      "W452"
+    ]
+  },
+  "P191": {
+    "parpola_id": "P191",
+    "description": "A 'W' symbol with an extra stroke going down and left from the left tip ('wave' motif)",
+    "mahadevan_ids": [
+      "M132"
+    ],
+    "wells_ids": [
+      "W450"
+    ]
+  },
+  "P192": {
+    "parpola_id": "P192",
+    "description": "Two vertically stacked 'wave' motifs (see P191)",
+    "mahadevan_ids": [
+      "M133"
+    ],
+    "wells_ids": [
+      "W451"
+    ]
+  },
+  "P193": {
+    "parpola_id": "P193",
+    "description": "Person sitting with bent knees, no small tangent lines coming off the back",
+    "mahadevan_ids": [
+      "M047"
+    ],
+    "wells_ids": [
+      "W175"
+    ]
+  },
+  "P194": {
+    "parpola_id": "P194",
+    "description": "Person sitting with bent knees, four small tangent lines coming off the back",
+    "mahadevan_ids": [
+      "M048"
+    ],
+    "wells_ids": [
+      "W176",
+      "W177",
+      "W178",
+      "W179"
+    ]
+  },
+  "P195": {
+    "parpola_id": "P195",
+    "description": "Tall caret drawn in outline, with hatching throughout",
+    "mahadevan_ids": [
+      "M136"
+    ],
+    "wells_ids": [
+      "W484"
+    ]
+  },
+  "P196": {
+    "parpola_id": "P196",
+    "description": "Upside-down heart symbol",
+    "mahadevan_ids": [
+      "M323"
+    ],
+    "wells_ids": [
+      "W380"
+    ]
+  },
+  "P197": {
+    "parpola_id": "P197",
+    "description": "Tall caret drawn in outline, with diamond inscribed at the point",
+    "mahadevan_ids": [
+      "M135"
+    ],
+    "wells_ids": [
+      "W482"
+    ]
+  },
+  "P198": {
+    "parpola_id": "P198",
+    "description": "Tall lambda drawn in outline, with V or diamond inscribed at the connector",
+    "mahadevan_ids": [
+      "M259"
+    ],
+    "wells_ids": [
+      "W483"
+    ]
+  },
+  "P199": {
+    "parpola_id": "P199",
+    "description": "Two or three tall vertical strokes, with a small box off the right center of the second stroke",
+    "mahadevan_ids": [],
+    "wells_ids": [
+      "W058"
+    ]
+  },
+  "P200": {
+    "parpola_id": "P200",
+    "description": "Tall box with horizontal hatching throughout, possibly a small handle off right hand side",
+    "mahadevan_ids": [
+      "M258"
+    ],
+    "wells_ids": [
+      "W604",
+      "W605"
+    ]
+  },
+  "P201": {
+    "parpola_id": "P201",
+    "description": "Vertical stroke with a small slightly downward horizontal stroke at the left middle",
+    "mahadevan_ids": [],
+    "wells_ids": [
+      "W065"
+    ]
+  },
+  "P202": {
+    "parpola_id": "P202",
+    "description": "Vertical stroke with a triangular wing attached near the middle",
+    "mahadevan_ids": [
+      "M402"
+    ],
+    "wells_ids": [
+      "W365",
+      "W367",
+      "W368"
+    ]
+  },
+  "P203": {
+    "parpola_id": "P203",
+    "description": "Upside down 'Y' motif",
+    "mahadevan_ids": [
+      "M126"
+    ],
+    "wells_ids": []
+  },
+  "P204": {
+    "parpola_id": "P204",
+    "description": "Simple lambda but reversed horizontally, and the leg may not be quite connected to the long stem",
+    "mahadevan_ids": [
+      "M124",
+      "M125"
+    ],
+    "wells_ids": [
+      "W061",
+      "W062",
+      "W063"
+    ]
+  },
+  "P205": {
+    "parpola_id": "P205",
+    "description": "Prismed light rays, with opposite slanting on top vs bottom, more rays on bottom",
+    "mahadevan_ids": [
+      "M180"
+    ],
+    "wells_ids": [
+      "W289",
+      "W290",
+      "W291",
+      "W292",
+      "W293",
+      "W294",
+      "W295",
+      "W296",
+      "W297",
+      "W299",
+      "W300",
+      "W301",
+      "W302",
+      "W303",
+      "W304",
+      "W305",
+      "W306"
+    ]
+  },
+  "P206": {
+    "parpola_id": "P206",
+    "description": "Prismed lines like P205, but with a decoration on top. Possibly with an up and down caret attached at top right",
+    "mahadevan_ids": [
+      "M181"
+    ],
+    "wells_ids": [
+      "W307",
+      "W308",
+      "W309"
+    ]
+  },
+  "P207": {
+    "parpola_id": "P207",
+    "description": "Tall triangle with no decoration, either isocolese or more horn-shaped",
+    "mahadevan_ids": [],
+    "wells_ids": [
+      "W490"
+    ]
+  },
+  "P208": {
+    "parpola_id": "P208",
+    "description": "Tall triangle with vertical divider, either isocolese or more horn-shaped",
+    "mahadevan_ids": [
+      "M209"
+    ],
+    "wells_ids": [
+      "W500"
+    ]
+  },
+  "P209": {
+    "parpola_id": "P209",
+    "description": "Tall triangle with vertical divider, horizontal hatching throughout, either isocolese or more horn-shaped",
+    "mahadevan_ids": [
+      "M210"
+    ],
+    "wells_ids": [
+      "W502"
+    ]
+  },
+  "P210": {
+    "parpola_id": "P210",
+    "description": "Tall isoceles triangle with horizontal stripes",
+    "mahadevan_ids": [
+      "M204"
+    ],
+    "wells_ids": [
+      "W503"
+    ]
+  },
+  "P211": {
+    "parpola_id": "P211",
+    "description": "Horizontally striped isocolese triange, with serifed T on top",
+    "mahadevan_ids": [
+      "M206"
+    ],
+    "wells_ids": [
+      "W504"
+    ]
+  },
+  "P212": {
+    "parpola_id": "P212",
+    "description": "Horizontally striped isocolese triange, with serifed T on top, caged by four small vertical strokes",
+    "mahadevan_ids": [
+      "M207"
+    ],
+    "wells_ids": []
+  },
+  "P213": {
+    "parpola_id": "P213",
+    "description": "Horizontally striped isocolese triange, with serifed T on top, capped by a 'table' motif",
+    "mahadevan_ids": [
+      "M208"
+    ],
+    "wells_ids": [
+      "W505"
+    ]
+  },
+  "P214": {
+    "parpola_id": "P214",
+    "description": "Two adjacent carets",
+    "mahadevan_ids": [],
+    "wells_ids": []
+  },
+  "P215": {
+    "parpola_id": "P215",
+    "description": "Three tall, thin isoceles triangles",
+    "mahadevan_ids": [
+      "M230"
+    ],
+    "wells_ids": [
+      "W460"
+    ]
+  },
+  "P216": {
+    "parpola_id": "P216",
+    "description": "Three short isoceles triangles, above three short isocoles triangles but pointed downward",
+    "mahadevan_ids": [
+      "M231"
+    ],
+    "wells_ids": [
+      "W461"
+    ]
+  },
+  "P217": {
+    "parpola_id": "P217",
+    "description": "Isocolese triangle on top of vertical line (arrow? spear?)",
+    "mahadevan_ids": [
+      "M211"
+    ],
+    "wells_ids": [
+      "W520"
+    ]
+  },
+  "P218": {
+    "parpola_id": "P218",
+    "description": "Five pointed star, with lines completely connecting point to point",
+    "mahadevan_ids": [],
+    "wells_ids": []
+  },
+  "P219": {
+    "parpola_id": "P219",
+    "description": "A 'K' with a vertical line connecting the bottom point, and the top right arm is a rectangle",
+    "mahadevan_ids": [],
+    "wells_ids": []
+  },
+  "P221": {
+    "parpola_id": "P221",
+    "description": "Three triangles, one large isocoles pointing right on left, two small on right, all linked at the point of the left triangle",
+    "mahadevan_ids": [
+      "M233"
+    ],
+    "wells_ids": [
+      "W455"
+    ]
+  },
+  "P222": {
+    "parpola_id": "P222",
+    "description": "Three triangles, one large isocoles pointing right on left, two small on right, all linked at the point of the left triangle. Capped by a 'table' motif",
+    "mahadevan_ids": [
+      "M234"
+    ],
+    "wells_ids": [
+      "W456"
+    ]
+  },
+  "P223": {
+    "parpola_id": "P223",
+    "description": "Three triangles, one large isocoles pointing right on left, two small on right, all linked at the point of the left triangle, with a small tree growing from the lower right",
+    "mahadevan_ids": [
+      "M235"
+    ],
+    "wells_ids": [
+      "W457"
+    ]
+  },
+  "P224": {
+    "parpola_id": "P224",
+    "description": "A 'Bowtie' motif. Or, an 'X' with vertical line connecting the left points, and same on right",
+    "mahadevan_ids": [
+      "M214"
+    ],
+    "wells_ids": [
+      "W540"
+    ]
+  },
+  "P225": {
+    "parpola_id": "P225",
+    "description": "A 'Bowtie' motif. Or, an 'X' with vertical line connecting the left points, and same on right. Small vertical stroke in left side",
+    "mahadevan_ids": [],
+    "wells_ids": [
+      "W542"
+    ]
+  },
+  "P226": {
+    "parpola_id": "P226",
+    "description": "Bowtie with another left-pointing triangle attached on the right, hatching throughout",
+    "mahadevan_ids": [
+      "M215"
+    ],
+    "wells_ids": [
+      "W545"
+    ]
+  },
+  "P227": {
+    "parpola_id": "P227",
+    "description": "A 'Bowtie' motif, but without the vertical line connecting the right points",
+    "mahadevan_ids": [
+      "M225"
+    ],
+    "wells_ids": [
+      "W530"
+    ]
+  },
+  "P228": {
+    "parpola_id": "P228",
+    "description": "X with left points connected by vertical line, with another such X underneath, and a vertical bar connecting the cross-point of the two X's",
+    "mahadevan_ids": [
+      "M228",
+      "M309"
+    ],
+    "wells_ids": [
+      "W531",
+      "W533"
+    ]
+  },
+  "P229": {
+    "parpola_id": "P229",
+    "description": "A 'Bowtie' motif, but without the vertical line connecting the right points. Small 'v' coming off top right point",
+    "mahadevan_ids": [
+      "M226"
+    ],
+    "wells_ids": [
+      "W554"
+    ]
+  },
+  "P230": {
+    "parpola_id": "P230",
+    "description": "The 'pincer' motif. Right-pointing isocoles triangle on left, left-pointing isosceles triangle on right, with small part of right line removed in middle",
+    "mahadevan_ids": [
+      "M216"
+    ],
+    "wells_ids": [
+      "W550",
+      "W555"
+    ]
+  },
+  "P231": {
+    "parpola_id": "P231",
+    "description": "The 'pincer' motif, with vertical stroke through the middle point",
+    "mahadevan_ids": [
+      "M221"
+    ],
+    "wells_ids": [
+      "W556"
+    ]
+  },
+  "P232": {
+    "parpola_id": "P232",
+    "description": "Right-pointing isocoles triangle on left, left-pointing isosceles triangle on right, with small part of right line removed in middle. Two leaves coming out of the connecting point.",
+    "mahadevan_ids": [
+      "M219"
+    ],
+    "wells_ids": [
+      "W560",
+      "W561"
+    ]
+  },
+  "P233": {
+    "parpola_id": "P233",
+    "description": "The 'pincer' motif, with two vertically stacked leaves intersecting at the middle point. Caged by four small vertical strokes",
+    "mahadevan_ids": [
+      "M220"
+    ],
+    "wells_ids": [
+      "W562"
+    ]
+  },
+  "P234": {
+    "parpola_id": "P234",
+    "description": "Left-pointing isocoles triangle on right, right-pointing isosceles triangle on left, with small part of left line removed in middle.",
+    "mahadevan_ids": [
+      "M216"
+    ],
+    "wells_ids": [
+      "W551"
+    ]
+  },
+  "P235": {
+    "parpola_id": "P235",
+    "description": "The 'pincer' motif with 'rake' coming from lower left. Rake is a long stroke with multiple short perpendiculars coming off one side. Pincer is missing at least one of the pincer teeth",
+    "mahadevan_ids": [
+      "M227"
+    ],
+    "wells_ids": [
+      "W532"
+    ]
+  },
+  "P236": {
+    "parpola_id": "P236",
+    "description": "The 'pincer' motif with 'rake' coming from lower left. Rake is a long stroke with multiple short perpendiculars coming off one side.",
+    "mahadevan_ids": [],
+    "wells_ids": []
+  },
+  "P237": {
+    "parpola_id": "P237",
+    "description": "X with vertical connection on left two tips, right tips both have a slight vertical line toward each other, and three lines off the tip away from each other",
+    "mahadevan_ids": [
+      "M223"
+    ],
+    "wells_ids": [
+      "W564"
+    ]
+  },
+  "P238": {
+    "parpola_id": "P238",
+    "description": "X with vertical connection on left two tips, right tips both have a slight vertical line toward each other, and three lines off the tip away from each other. Line with three downward lines coming off left",
+    "mahadevan_ids": [
+      "M224"
+    ],
+    "wells_ids": [
+      "W565"
+    ]
+  },
+  "P239": {
+    "parpola_id": "P239",
+    "description": "An 'X' where each arm is decorated with wheat sheaves",
+    "mahadevan_ids": [],
+    "wells_ids": []
+  },
+  "P240": {
+    "parpola_id": "P240",
+    "description": "An 'X' with no decoration",
+    "mahadevan_ids": [
+      "M137"
+    ],
+    "wells_ids": [
+      "W645"
+    ]
+  },
+  "P241": {
+    "parpola_id": "P241",
+    "description": "An 'X' with no decoration, inside a cage of four small vertical strokes",
+    "mahadevan_ids": [],
+    "wells_ids": []
+  },
+  "P242": {
+    "parpola_id": "P242",
+    "description": "An 'X' with two vertical strokes inside each angle of the X",
+    "mahadevan_ids": [
+      "M140"
+    ],
+    "wells_ids": [
+      "W680"
+    ]
+  },
+  "P243": {
+    "parpola_id": "P243",
+    "description": "An 'X' with a 'table' hat",
+    "mahadevan_ids": [
+      "M139"
+    ],
+    "wells_ids": [
+      "W679"
+    ]
+  },
+  "P244": {
+    "parpola_id": "P244",
+    "description": "An 'X' with a 'caret' hat",
+    "mahadevan_ids": [
+      "M138"
+    ],
+    "wells_ids": [
+      "W678"
+    ]
+  },
+  "P245": {
+    "parpola_id": "P245",
+    "description": "An 'X' with vertical lines connected to each arm, forming two 'fat arrows' pointed toward each other",
+    "mahadevan_ids": [
+      "M141"
+    ],
+    "wells_ids": [
+      "W685"
+    ]
+  },
+  "P246": {
+    "parpola_id": "P246",
+    "description": "X with two vertical strokes through it, caged by 4 short pairs of vertical lines",
+    "mahadevan_ids": [
+      "M143"
+    ],
+    "wells_ids": [
+      "W689"
+    ]
+  },
+  "P247": {
+    "parpola_id": "P247",
+    "description": "X with two vertical strokes through it, caged by inverted parentheses",
+    "mahadevan_ids": [
+      "M144"
+    ],
+    "wells_ids": [
+      "W688"
+    ]
+  },
+  "P248": {
+    "parpola_id": "P248",
+    "description": "An 'X' with vertical lines connected to each arm, forming two 'fat arrows' pointed toward each other. All under a 'table' hat",
+    "mahadevan_ids": [
+      "M142"
+    ],
+    "wells_ids": []
+  },
+  "P249": {
+    "parpola_id": "P249",
+    "description": "An 'X' with vertical lines connected to each arm, forming two 'fat arrows' pointed toward each other. Pitchfork head going across the center",
+    "mahadevan_ids": [
+      "M145"
+    ],
+    "wells_ids": [
+      "W686"
+    ]
+  },
+  "P250": {
+    "parpola_id": "P250",
+    "description": "A vertical stroke with a smallish X centered on the top",
+    "mahadevan_ids": [
+      "M158"
+    ],
+    "wells_ids": [
+      "W080"
+    ]
+  },
+  "P251": {
+    "parpola_id": "P251",
+    "description": "An X on top of a vertical stroke, with a decorated triangle hanging off the upper right",
+    "mahadevan_ids": [
+      "M160"
+    ],
+    "wells_ids": [
+      "W081"
+    ]
+  },
+  "P252": {
+    "parpola_id": "P252",
+    "description": "A full-height vertical stroke with a smallish X near the top",
+    "mahadevan_ids": [],
+    "wells_ids": []
+  },
+  "P253": {
+    "parpola_id": "P253",
+    "description": "An X near the top of a vertical stroke, with a caret hat",
+    "mahadevan_ids": [
+      "M159"
+    ],
+    "wells_ids": [
+      "W083"
+    ]
+  },
+  "P254": {
+    "parpola_id": "P254",
+    "description": "Two or more crossed lines (line an X or *) with small perpendicular decorations (ovals? lines) at each tip",
+    "mahadevan_ids": [
+      "M146",
+      "M147"
+    ],
+    "wells_ids": [
+      "W683",
+      "W684"
+    ]
+  },
+  "P255": {
+    "parpola_id": "P255",
+    "description": "Two nested greater-than symbols, touching two nested less-than symbols",
+    "mahadevan_ids": [
+      "M149"
+    ],
+    "wells_ids": [
+      "W690"
+    ]
+  },
+  "P256": {
+    "parpola_id": "P256",
+    "description": "An X but drawn in outline",
+    "mahadevan_ids": [
+      "M150"
+    ],
+    "wells_ids": [
+      "W692"
+    ]
+  },
+  "P257": {
+    "parpola_id": "P257",
+    "description": "An X but drawn in outline. Three small adjacent triangles affixed diagonally to the top right arm",
+    "mahadevan_ids": [
+      "M151"
+    ],
+    "wells_ids": [
+      "W694"
+    ]
+  },
+  "P258": {
+    "parpola_id": "P258",
+    "description": "An X but drawn in outline, with tree stemming from bottom right corner",
+    "mahadevan_ids": [
+      "M152"
+    ],
+    "wells_ids": [
+      "W693"
+    ]
+  },
+  "P259": {
+    "parpola_id": "P259",
+    "description": "A central box, with orthogonal lines coming off in a pinwheel manner",
+    "mahadevan_ids": [],
+    "wells_ids": [
+      "W528"
+    ]
+  },
+  "P260": {
+    "parpola_id": "P260",
+    "description": "An octothorpe, possibly rotated 45 degrees (see similarity with P359)",
+    "mahadevan_ids": [
+      "M264"
+    ],
+    "wells_ids": []
+  },
+  "P261": {
+    "parpola_id": "P261",
+    "description": "Box with inward facing triangles on each corner, filled with small U's and X's",
+    "mahadevan_ids": [],
+    "wells_ids": []
+  },
+  "P262": {
+    "parpola_id": "P262",
+    "description": "Tall rectangle with no decoration",
+    "mahadevan_ids": [
+      "M237"
+    ],
+    "wells_ids": [
+      "W600",
+      "W625"
+    ]
+  },
+  "P263": {
+    "parpola_id": "P263",
+    "description": "Tall rectangle with no decoration, connected to a tall vertical stroke on the left by a short diagonal line",
+    "mahadevan_ids": [],
+    "wells_ids": []
+  },
+  "P264": {
+    "parpola_id": "P264",
+    "description": "Tall rectangle with two horizontal hatches going across the center",
+    "mahadevan_ids": [
+      "M238"
+    ],
+    "wells_ids": [
+      "W603"
+    ]
+  },
+  "P265": {
+    "parpola_id": "P265",
+    "description": "Tall rectangle with vertical full height bar inside, and a horizontal bar across the left or right area",
+    "mahadevan_ids": [
+      "M242"
+    ],
+    "wells_ids": [
+      "W621",
+      "W622"
+    ]
+  },
+  "P266": {
+    "parpola_id": "P266",
+    "description": "Tall rectangle with vertical full height bar inside, and a horizontal bar across the left or right area. Small U in the other area",
+    "mahadevan_ids": [
+      "M243"
+    ],
+    "wells_ids": [
+      "W623"
+    ]
+  },
+  "P267": {
+    "parpola_id": "P267",
+    "description": "Tall rectangle a box affixed to the left interior, the box has a horizontal crossbar",
+    "mahadevan_ids": [
+      "M239"
+    ],
+    "wells_ids": [
+      "W602"
+    ]
+  },
+  "P268": {
+    "parpola_id": "P268",
+    "description": "A grid of x by y cells",
+    "mahadevan_ids": [
+      "M241",
+      "M245"
+    ],
+    "wells_ids": [
+      "W615"
+    ]
+  },
+  "P269": {
+    "parpola_id": "P269",
+    "description": "A grid of x by y cells, with a tall vertical stroke on one side, both connected by a short diagonal line",
+    "mahadevan_ids": [
+      "M246"
+    ],
+    "wells_ids": [
+      "W616"
+    ]
+  },
+  "P270": {
+    "parpola_id": "P270",
+    "description": "Rectangle, taller than wide, with vertical strokes for teeth inside on top and bottom",
+    "mahadevan_ids": [
+      "M244"
+    ],
+    "wells_ids": [
+      "W630",
+      "W631",
+      "W632",
+      "W633",
+      "W634",
+      "W635",
+      "W636",
+      "W637",
+      "W638",
+      "W639"
+    ]
+  },
+  "P271": {
+    "parpola_id": "P271",
+    "description": "Rectangle, taller than wide, with vertical strokes for teeth inside on top and bottom. Two right parentheses inside everything",
+    "mahadevan_ids": [],
+    "wells_ids": [
+      "W640"
+    ]
+  },
+  "P272": {
+    "parpola_id": "P272",
+    "description": "Trapezoid with inner rectangle",
+    "mahadevan_ids": [
+      "M201"
+    ],
+    "wells_ids": [
+      "W362"
+    ]
+  },
+  "P273": {
+    "parpola_id": "P273",
+    "description": "Wide rectangle, with an X from corner to corner",
+    "mahadevan_ids": [],
+    "wells_ids": []
+  },
+  "P274": {
+    "parpola_id": "P274",
+    "description": "Tall central rectangle, flanked by two small boxes on the bottom",
+    "mahadevan_ids": [
+      "M257"
+    ],
+    "wells_ids": [
+      "W610"
+    ]
+  },
+  "P275": {
+    "parpola_id": "P275",
+    "description": "Square in middle, possibly with horizontal lines across, and lines coming from top and bottom",
+    "mahadevan_ids": [
+      "M253"
+    ],
+    "wells_ids": [
+      "W510",
+      "W511",
+      "W512",
+      "W513"
+    ]
+  },
+  "P276": {
+    "parpola_id": "P276",
+    "description": "Square at bottom with vertical bar coming off top middle",
+    "mahadevan_ids": [
+      "M249"
+    ],
+    "wells_ids": [
+      "W590"
+    ]
+  },
+  "P277": {
+    "parpola_id": "P277",
+    "description": "Square at bottom with vertical bar coming off top middle. Caged by four small vertical strokes",
+    "mahadevan_ids": [
+      "M250"
+    ],
+    "wells_ids": [
+      "W592"
+    ]
+  },
+  "P278": {
+    "parpola_id": "P278",
+    "description": "Square at bottom with vertical bar coming off top middle. Interior is the 'pincer' motif with two leaves at the middle",
+    "mahadevan_ids": [
+      "M251"
+    ],
+    "wells_ids": [
+      "W593"
+    ]
+  },
+  "P279": {
+    "parpola_id": "P279",
+    "description": "Square at bottom with vertical bar coming off top middle, and two diagonals also coming from the bottom of the vertical bar",
+    "mahadevan_ids": [],
+    "wells_ids": []
+  },
+  "P280": {
+    "parpola_id": "P280",
+    "description": "Box with vertical stroke off top center, horizontal striping",
+    "mahadevan_ids": [
+      "M252"
+    ],
+    "wells_ids": [
+      "W595"
+    ]
+  },
+  "P281": {
+    "parpola_id": "P281",
+    "description": "Vertical line with two small boxes attached to the top",
+    "mahadevan_ids": [
+      "M256"
+    ],
+    "wells_ids": [
+      "W611"
+    ]
+  },
+  "P282": {
+    "parpola_id": "P282",
+    "description": "Box on top left, vertical extender from bottom left, horizontal extenders all along the right side",
+    "mahadevan_ids": [
+      "M170"
+    ],
+    "wells_ids": [
+      "W950"
+    ]
+  },
+  "P283": {
+    "parpola_id": "P283",
+    "description": "Rectangle, but with bottom line missing, and bottom-half of left line missing (like backward greek capital gamma with a prominent serif)",
+    "mahadevan_ids": [
+      "M127"
+    ],
+    "wells_ids": [
+      "W440"
+    ]
+  },
+  "P284": {
+    "parpola_id": "P284",
+    "description": "Backward capital Gamma with serif, small vertical stroke inside the area",
+    "mahadevan_ids": [
+      "M128"
+    ],
+    "wells_ids": [
+      "W443"
+    ]
+  },
+  "P285": {
+    "parpola_id": "P285",
+    "description": "Trapezoid with no bottom line, bird-foot in bottom",
+    "mahadevan_ids": [
+      "M195"
+    ],
+    "wells_ids": [
+      "W572"
+    ]
+  },
+  "P286": {
+    "parpola_id": "P286",
+    "description": "Trapezoid with no bottom line, bird-foot in bottom, 'table' hat",
+    "mahadevan_ids": [
+      "M196"
+    ],
+    "wells_ids": [
+      "W573"
+    ]
+  },
+  "P287": {
+    "parpola_id": "P287",
+    "description": "Trapezoid with no bottom line, bird-foot in bottom. Two small vertical strokes on top",
+    "mahadevan_ids": [],
+    "wells_ids": []
+  },
+  "P288": {
+    "parpola_id": "P288",
+    "description": "Trapezoid with no bottom line, two short outward perpendiculars off bottom left and right and from top center, bird-foot in bottom",
+    "mahadevan_ids": [
+      "M194"
+    ],
+    "wells_ids": []
+  },
+  "P289": {
+    "parpola_id": "P289",
+    "description": "Trapezoid with no bottom line, small box resting on the top middle",
+    "mahadevan_ids": [
+      "M197"
+    ],
+    "wells_ids": [
+      "W575"
+    ]
+  },
+  "P290": {
+    "parpola_id": "P290",
+    "description": "Tall table. Underside has a horizontal line enclosing the top part of the underside, with vertical hatches inside. Small box on top of the table.",
+    "mahadevan_ids": [
+      "M198"
+    ],
+    "wells_ids": [
+      "W578",
+      "W579"
+    ]
+  },
+  "P291": {
+    "parpola_id": "P291",
+    "description": "Tall table. Underside has a horizontal line enclosing the top part of the underside, with vertical hatches inside. Small box on top of the table. Left paren attached to left side, paren has small semicircle at center. Semicircle has diagonal continuing through the paren.",
+    "mahadevan_ids": [],
+    "wells_ids": []
+  },
+  "P292": {
+    "parpola_id": "P292",
+    "description": "Tall table. Small decoration on top",
+    "mahadevan_ids": [
+      "M199",
+      "M200"
+    ],
+    "wells_ids": [
+      "W570",
+      "W571"
+    ]
+  },
+  "P293": {
+    "parpola_id": "P293",
+    "description": "Large 'H', possibly with top points connected by horizontal bar",
+    "mahadevan_ids": [
+      "M199"
+    ],
+    "wells_ids": [
+      "W315",
+      "W360"
+    ]
+  },
+  "P294": {
+    "parpola_id": "P294",
+    "description": "Large 'H', possibly with top points connected by horizontal bar. Table for a hat.",
+    "mahadevan_ids": [
+      "M203"
+    ],
+    "wells_ids": [
+      "W361"
+    ]
+  },
+  "P295": {
+    "parpola_id": "P295",
+    "description": "Large 'H', possibly with top points connected by horizontal bar. Vertical lines come down from the crossbar.",
+    "mahadevan_ids": [
+      "M188"
+    ],
+    "wells_ids": [
+      "W318"
+    ]
+  },
+  "P296": {
+    "parpola_id": "P296",
+    "description": "Two long vertical strokes, connected by multiple horizontal lines",
+    "mahadevan_ids": [
+      "M186"
+    ],
+    "wells_ids": [
+      "W317"
+    ]
+  },
+  "P297": {
+    "parpola_id": "P297",
+    "description": "Ladder motif. Two nearby vertical lines with a number of horizontal lines going across the middle, going the length of the verticals.",
+    "mahadevan_ids": [],
+    "wells_ids": []
+  },
+  "P298": {
+    "parpola_id": "P298",
+    "description": "An 'H', but the crossbar is multiple small boxes. Possibly with an upward tail coming from the bottom left",
+    "mahadevan_ids": [],
+    "wells_ids": [
+      "W319"
+    ]
+  },
+  "P299": {
+    "parpola_id": "P299",
+    "description": "Two 'H's, but the crossbars are multiple small boxes. H's share one of the vertical lines.",
+    "mahadevan_ids": [
+      "M185"
+    ],
+    "wells_ids": []
+  },
+  "P300": {
+    "parpola_id": "P300",
+    "description": "Two narrow vertical lines, three diagonals connecting them. Tail coming horizontally off top, right edge has a thin triangle sharing part of the edge",
+    "mahadevan_ids": [
+      "M187"
+    ],
+    "wells_ids": []
+  },
+  "P301": {
+    "parpola_id": "P301",
+    "description": "Small box with horizontal hatching, vertical lines coming from top left and bottom right corners",
+    "mahadevan_ids": [
+      "M254"
+    ],
+    "wells_ids": [
+      "W526",
+      "W527"
+    ]
+  },
+  "P302": {
+    "parpola_id": "P302",
+    "description": "Box in center. Vertical lines coming from top left and right. Vertical coming from bottom right, extended by a horizontal at the bottom.",
+    "mahadevan_ids": [
+      "M255"
+    ],
+    "wells_ids": [
+      "W363"
+    ]
+  },
+  "P303": {
+    "parpola_id": "P303",
+    "description": "H with two horizontal bars across the middle, with vertical lines dropping down from the crossbar",
+    "mahadevan_ids": [
+      "M182"
+    ],
+    "wells_ids": [
+      "W322",
+      "W323",
+      "W324",
+      "W325"
+    ]
+  },
+  "P304": {
+    "parpola_id": "P304",
+    "description": "H with two horizontal bars across the middle, with vertical lines dropping down from the crossbar. All connected by a short diagonal to a tall vertical stroke on left",
+    "mahadevan_ids": [
+      "M183"
+    ],
+    "wells_ids": [
+      "W321"
+    ]
+  },
+  "P305": {
+    "parpola_id": "P305",
+    "description": "Long horizontal at bottom, multiple vertical lines coming off for the entire length",
+    "mahadevan_ids": [
+      "M189"
+    ],
+    "wells_ids": [
+      "W420"
+    ]
+  },
+  "P306": {
+    "parpola_id": "P306",
+    "description": "Long horizontal at bottom, multiple vertical lines coming off for the entire length. Each vertical decorated near top, low horizontal is made of abutting small rectangles, possibly decorated",
+    "mahadevan_ids": [
+      "M190"
+    ],
+    "wells_ids": [
+      "W421",
+      "W422",
+      "W423",
+      "W425",
+      "W426",
+      "W427",
+      "W428",
+      "W429",
+      "W430"
+    ]
+  },
+  "P307": {
+    "parpola_id": "P307",
+    "description": "Box with open top, diagonal line coming off top right and outward. Bottom has a small rect with vertical lines",
+    "mahadevan_ids": [
+      "M191"
+    ],
+    "wells_ids": [
+      "W329"
+    ]
+  },
+  "P308": {
+    "parpola_id": "P308",
+    "description": "M with the bottom of the legs connected by a horizontal line, and vertical lines connected at midpoint by horizontal line",
+    "mahadevan_ids": [
+      "M192"
+    ],
+    "wells_ids": [
+      "W335"
+    ]
+  },
+  "P309": {
+    "parpola_id": "P309",
+    "description": "M with the bottom of the legs connected by horizontal lines, and vertical line decoration",
+    "mahadevan_ids": [
+      "M193"
+    ],
+    "wells_ids": [
+      "W336",
+      "W337",
+      "W338"
+    ]
+  },
+  "P310": {
+    "parpola_id": "P310",
+    "description": "Simple U with no other decoration",
+    "mahadevan_ids": [
+      "M328"
+    ],
+    "wells_ids": [
+      "W700"
+    ]
+  },
+  "P311": {
+    "parpola_id": "P311",
+    "description": "U with two small vertical strokes inside the top",
+    "mahadevan_ids": [
+      "M329"
+    ],
+    "wells_ids": [
+      "W701"
+    ]
+  },
+  "P312": {
+    "parpola_id": "P312",
+    "description": "U with three small vertical strokes inside the top",
+    "mahadevan_ids": [
+      "M330"
+    ],
+    "wells_ids": [
+      "W703"
+    ]
+  },
+  "P313": {
+    "parpola_id": "P313",
+    "description": "U with several small strokes off the bottom",
+    "mahadevan_ids": [
+      "M332"
+    ],
+    "wells_ids": [
+      "W732",
+      "W734"
+    ]
+  },
+  "P314": {
+    "parpola_id": "P314",
+    "description": "U with several small strokes off the bottom, caret hat",
+    "mahadevan_ids": [
+      "M334"
+    ],
+    "wells_ids": [
+      "W731"
+    ]
+  },
+  "P315": {
+    "parpola_id": "P315",
+    "description": "Large 'V' with a tall vertical coming from the vertex (making a large bird foot)",
+    "mahadevan_ids": [
+      "M365"
+    ],
+    "wells_ids": []
+  },
+  "P316": {
+    "parpola_id": "P316",
+    "description": "U with a long vertical stroke inserted into the gap of U",
+    "mahadevan_ids": [
+      "M336"
+    ],
+    "wells_ids": [
+      "W704",
+      "W705",
+      "W706",
+      "W707"
+    ]
+  },
+  "P317": {
+    "parpola_id": "P317",
+    "description": "U with several small strokes off the bottom, vertical line with possible decoration at bottom inserted into the U",
+    "mahadevan_ids": [
+      "M335"
+    ],
+    "wells_ids": [
+      "W735",
+      "W736"
+    ]
+  },
+  "P318": {
+    "parpola_id": "P318",
+    "description": "U with upward-bowed line or wagon wheel near the bottom",
+    "mahadevan_ids": [],
+    "wells_ids": [
+      "W712"
+    ]
+  },
+  "P319": {
+    "parpola_id": "P319",
+    "description": "U with X going from side to side near the bottom",
+    "mahadevan_ids": [],
+    "wells_ids": [
+      "W711"
+    ]
+  },
+  "P320": {
+    "parpola_id": "P320",
+    "description": "A cat's paw perhaps, two vertical strokes on each side, and four fingers, with fingers on one side a little shorter than the other",
+    "mahadevan_ids": [
+      "M341"
+    ],
+    "wells_ids": [
+      "W716",
+      "W717"
+    ]
+  },
+  "P321": {
+    "parpola_id": "P321",
+    "description": "Tall vertical on left, half vertical on top right, the right vertical then continues in a curve to connect to the bottom of the left vertical. Top is closed by a horizontal. Three vertical lines off top horizontal. Capped by 'table'.",
+    "mahadevan_ids": [
+      "M339"
+    ],
+    "wells_ids": [
+      "W719"
+    ]
+  },
+  "P322": {
+    "parpola_id": "P322",
+    "description": "Tall vertical on left, half vertical on top right, the right vertical then continues in a curve to connect to the bottom of the left vertical. Top is closed by a horizontal. Top is a sequence of small boxes",
+    "mahadevan_ids": [
+      "M338"
+    ],
+    "wells_ids": [
+      "W721"
+    ]
+  },
+  "P323": {
+    "parpola_id": "P323",
+    "description": "U with 'tree' motif sprouting from the bottom",
+    "mahadevan_ids": [],
+    "wells_ids": [
+      "W708",
+      "W709",
+      "W710"
+    ]
+  },
+  "P324": {
+    "parpola_id": "P324",
+    "description": "Classic jar symbol with two horizontal handles at the top of each arm pointed outward",
+    "mahadevan_ids": [
+      "M342"
+    ],
+    "wells_ids": [
+      "W740"
+    ]
+  },
+  "P325": {
+    "parpola_id": "P325",
+    "description": "Classic jar symbol with two horizontal handles at the top of each arm pointed outward, single small vertical stroke inside mouth of jar",
+    "mahadevan_ids": [
+      "M343"
+    ],
+    "wells_ids": [
+      "W741"
+    ]
+  },
+  "P326": {
+    "parpola_id": "P326",
+    "description": "Classic jar symbol with two horizontal handles at the top of each arm pointed outward, two small vertical strokes inside mouth of jar",
+    "mahadevan_ids": [
+      "M344"
+    ],
+    "wells_ids": [
+      "W742",
+      "W743",
+      "W744"
+    ]
+  },
+  "P327": {
+    "parpola_id": "P327",
+    "description": "Classic jar symbol with two horizontal handles at the top of each arm pointed outward, three small vertical strokes in mouth",
+    "mahadevan_ids": [
+      "M345"
+    ],
+    "wells_ids": [
+      "W745",
+      "W746",
+      "W747"
+    ]
+  },
+  "P328": {
+    "parpola_id": "P328",
+    "description": "Classic jar symbol with two horizontal handles at the top of each arm pointed outward, four small vertical strokes in mouth",
+    "mahadevan_ids": [],
+    "wells_ids": [
+      "W748"
+    ]
+  },
+  "P329": {
+    "parpola_id": "P329",
+    "description": "Classic jar symbol with two horizontal handles at the top of each arm pointed outward, three small vertical strokes in mouth. Three small strokes at bottom. Overlaid by a decorated caret",
+    "mahadevan_ids": [
+      "M346"
+    ],
+    "wells_ids": [
+      "W749"
+    ]
+  },
+  "P330": {
+    "parpola_id": "P330",
+    "description": "Classic jar symbol with two horizontal handles at the top of each arm pointed outward. Inside has a wagon wheel at bottom, attached to a double headed pitchfork at top",
+    "mahadevan_ids": [],
+    "wells_ids": [
+      "W751"
+    ]
+  },
+  "P331": {
+    "parpola_id": "P331",
+    "description": "U with jar handles on left, trifurcated tree on right",
+    "mahadevan_ids": [
+      "M352"
+    ],
+    "wells_ids": [
+      "W750"
+    ]
+  },
+  "P332": {
+    "parpola_id": "P332",
+    "description": "U with decorated branching at top",
+    "mahadevan_ids": [
+      "M347",
+      "M358"
+    ],
+    "wells_ids": [
+      "W752",
+      "W760"
+    ]
+  },
+  "P333": {
+    "parpola_id": "P333",
+    "description": "U with trifurcated trees for handles, very low X connecting the U legs near the bottom",
+    "mahadevan_ids": [
+      "M357"
+    ],
+    "wells_ids": [
+      "W761"
+    ]
+  },
+  "P334": {
+    "parpola_id": "P334",
+    "description": "U with trifurcated trees for handles, very low caret in outline with small diamond in the tip",
+    "mahadevan_ids": [
+      "M356"
+    ],
+    "wells_ids": []
+  },
+  "P335": {
+    "parpola_id": "P335",
+    "description": "U with trifurcations at the tips, with full height vertical stroke on left, connected together with horizontal stroke",
+    "mahadevan_ids": [
+      "M349"
+    ],
+    "wells_ids": [
+      "W765"
+    ]
+  },
+  "P336": {
+    "parpola_id": "P336",
+    "description": "U with trifurcated trees for handles, small check-mark on right side",
+    "mahadevan_ids": [
+      "M350"
+    ],
+    "wells_ids": [
+      "W764"
+    ]
+  },
+  "P337": {
+    "parpola_id": "P337",
+    "description": "U with trifurcated trees for handles, wagon wheel circumscribed fully within",
+    "mahadevan_ids": [
+      "M355"
+    ],
+    "wells_ids": [
+      "W753"
+    ]
+  },
+  "P338": {
+    "parpola_id": "P338",
+    "description": "Upside down U, with five small vertical strokes within",
+    "mahadevan_ids": [
+      "M317"
+    ],
+    "wells_ids": [
+      "W931"
+    ]
+  },
+  "P339": {
+    "parpola_id": "P339",
+    "description": "Upside down U, with a wagon wheel above two small vertical strokes within",
+    "mahadevan_ids": [
+      "M393"
+    ],
+    "wells_ids": [
+      "W930"
+    ]
+  },
+  "P340": {
+    "parpola_id": "P340",
+    "description": "Upside down U, with a small 'H' within",
+    "mahadevan_ids": [
+      "M316"
+    ],
+    "wells_ids": []
+  },
+  "P341": {
+    "parpola_id": "P341",
+    "description": "Four rounded lines going upward, curving into each other at top, with a caret hat above all, and two diagonal strokes across the four lines",
+    "mahadevan_ids": [
+      "M318"
+    ],
+    "wells_ids": [
+      "W932"
+    ]
+  },
+  "P342": {
+    "parpola_id": "P342",
+    "description": "A left and right paren connected only at the top, with the left paren swooping upward into the center from the bottom",
+    "mahadevan_ids": [
+      "M319"
+    ],
+    "wells_ids": [
+      "W165"
+    ]
+  },
+  "P343": {
+    "parpola_id": "P343",
+    "description": "A left and right paren connected only at the top, with the left paren swooping upward into the center from the bottom. Small diagonal coming off top-right",
+    "mahadevan_ids": [
+      "M320"
+    ],
+    "wells_ids": [
+      "W166"
+    ]
+  },
+  "P344": {
+    "parpola_id": "P344",
+    "description": "The 'headphones' motif. Upside down U with small cirles on each end",
+    "mahadevan_ids": [
+      "M321"
+    ],
+    "wells_ids": [
+      "W167"
+    ]
+  },
+  "P345": {
+    "parpola_id": "P345",
+    "description": "The 'headphones' motif. Upside down U with small cirles on each end. Tall 'Y' inscribed and attached inside",
+    "mahadevan_ids": [
+      "M322"
+    ],
+    "wells_ids": [
+      "W168"
+    ]
+  },
+  "P346": {
+    "parpola_id": "P346",
+    "description": "Capital 'T' with a small leaf oriented vertically attached to both sides of the top bar",
+    "mahadevan_ids": [
+      "M409"
+    ],
+    "wells_ids": [
+      "W171"
+    ]
+  },
+  "P347": {
+    "parpola_id": "P347",
+    "description": "Two leaves horizontally adjacent, with a small horizontal line connecting them",
+    "mahadevan_ids": [
+      "M408"
+    ],
+    "wells_ids": [
+      "W169"
+    ]
+  },
+  "P348": {
+    "parpola_id": "P348",
+    "description": "Two leaves horizontally adjacent, with a small horizontal line connecting them. Caged by two inward sloping vertical lines",
+    "mahadevan_ids": [
+      "M409"
+    ],
+    "wells_ids": [
+      "W170"
+    ]
+  },
+  "P349": {
+    "parpola_id": "P349",
+    "description": "Two vertical leaves, slightly overlapping",
+    "mahadevan_ids": [
+      "M403"
+    ],
+    "wells_ids": [
+      "W840"
+    ]
+  },
+  "P350": {
+    "parpola_id": "P350",
+    "description": "Two overlapping leaves, bracketed by two small stacked vertical lines on each side",
+    "mahadevan_ids": [
+      "M404"
+    ],
+    "wells_ids": []
+  },
+  "P351": {
+    "parpola_id": "P351",
+    "description": "Two vertical leaves, slightly overlapping. Small tree motif coming from right hand side",
+    "mahadevan_ids": [
+      "M405"
+    ],
+    "wells_ids": [
+      "W841"
+    ]
+  },
+  "P352": {
+    "parpola_id": "P352",
+    "description": "Two overlapping leaves with diagonal hatches across the three midsections, possibly with a cage of small vertical strokes",
+    "mahadevan_ids": [
+      "M407"
+    ],
+    "wells_ids": [
+      "W845"
+    ]
+  },
+  "P353": {
+    "parpola_id": "P353",
+    "description": "Three stacked leaves, possibly with vertical stroke through the center",
+    "mahadevan_ids": [
+      "M415",
+      "M417"
+    ],
+    "wells_ids": [
+      "W215",
+      "W216"
+    ]
+  },
+  "P354": {
+    "parpola_id": "P354",
+    "description": "Three stacked leaves. Caged by two tall vertical strokes",
+    "mahadevan_ids": [
+      "M416"
+    ],
+    "wells_ids": [
+      "W217"
+    ]
+  },
+  "P355": {
+    "parpola_id": "P355",
+    "description": "Simple leaf or diamond, possibly rotated 45 degrees",
+    "mahadevan_ids": [
+      "M261",
+      "M373",
+      "M374"
+    ],
+    "wells_ids": [
+      "W790",
+      "W850"
+    ]
+  },
+  "P356": {
+    "parpola_id": "P356",
+    "description": "Simple leaf or diamond, possibly rotated 45 degrees. Small tree of right hand side",
+    "mahadevan_ids": [
+      "M262"
+    ],
+    "wells_ids": [
+      "W860"
+    ]
+  },
+  "P357": {
+    "parpola_id": "P357",
+    "description": "Simple leaf, two small inverted carets off right, diagonal with orthogonal upware strokes on left",
+    "mahadevan_ids": [],
+    "wells_ids": []
+  },
+  "P358": {
+    "parpola_id": "P358",
+    "description": "Leaf with small strokes coming out diagonally on all four diagonals",
+    "mahadevan_ids": [],
+    "wells_ids": []
+  },
+  "P359": {
+    "parpola_id": "P359",
+    "description": "Diamond with two perpendiculars coming off each edge (see similarity with P260)",
+    "mahadevan_ids": [
+      "M264"
+    ],
+    "wells_ids": [
+      "W853"
+    ]
+  },
+  "P360": {
+    "parpola_id": "P360",
+    "description": "Leaf on vertical line, with sun rays coming out from the top",
+    "mahadevan_ids": [
+      "M399"
+    ],
+    "wells_ids": [
+      "W373"
+    ]
+  },
+  "P361": {
+    "parpola_id": "P361",
+    "description": "Diamond with diagonal line crossing lower right edge",
+    "mahadevan_ids": [
+      "M263"
+    ],
+    "wells_ids": [
+      "W851"
+    ]
+  },
+  "P362": {
+    "parpola_id": "P362",
+    "description": "Diamond with small flag coming from bottom",
+    "mahadevan_ids": [],
+    "wells_ids": [
+      "W859"
+    ]
+  },
+  "P363": {
+    "parpola_id": "P363",
+    "description": "Diamond with two horizontally adjacent boxes on a short vertical stick inside near bottom",
+    "mahadevan_ids": [
+      "M266"
+    ],
+    "wells_ids": [
+      "W858"
+    ]
+  },
+  "P364": {
+    "parpola_id": "P364",
+    "description": "Leaf with tree at bottom",
+    "mahadevan_ids": [
+      "M387"
+    ],
+    "wells_ids": [
+      "W803",
+      "W805",
+      "W806"
+    ]
+  },
+  "P365": {
+    "parpola_id": "P365",
+    "description": "Leaf with tree at bottom, caged by four small vertical strokes",
+    "mahadevan_ids": [
+      "M388",
+      "M390"
+    ],
+    "wells_ids": [
+      "W804",
+      "W807"
+    ]
+  },
+  "P366": {
+    "parpola_id": "P366",
+    "description": "Leaf with small vertical stroke inside",
+    "mahadevan_ids": [
+      "M375"
+    ],
+    "wells_ids": [
+      "W832"
+    ]
+  },
+  "P367": {
+    "parpola_id": "P367",
+    "description": "Leaf with small vertical stroke inside, small tooth coming off top right",
+    "mahadevan_ids": [
+      "M376"
+    ],
+    "wells_ids": [
+      "W834"
+    ]
+  },
+  "P368": {
+    "parpola_id": "P368",
+    "description": "Leaf with small dot inside",
+    "mahadevan_ids": [],
+    "wells_ids": [
+      "W808",
+      "W809",
+      "W810"
+    ]
+  },
+  "P369": {
+    "parpola_id": "P369",
+    "description": "Leaf with small square hatched decoration inside",
+    "mahadevan_ids": [
+      "M381"
+    ],
+    "wells_ids": [
+      "W812",
+      "W813",
+      "W814"
+    ]
+  },
+  "P370": {
+    "parpola_id": "P370",
+    "description": "Leaf with small square hatched decoration inside, small tooth off top right",
+    "mahadevan_ids": [],
+    "wells_ids": []
+  },
+  "P371": {
+    "parpola_id": "P371",
+    "description": "Leaf with small square hatched decoration inside, pitchfork head inside",
+    "mahadevan_ids": [
+      "M383"
+    ],
+    "wells_ids": [
+      "W815",
+      "W816"
+    ]
+  },
+  "P372": {
+    "parpola_id": "P372",
+    "description": "Leaf with diagonal-stroke central decoration",
+    "mahadevan_ids": [
+      "M379"
+    ],
+    "wells_ids": [
+      "W831",
+      "W833"
+    ]
+  },
+  "P373": {
+    "parpola_id": "P373",
+    "description": "Leaf with tooth off top-right, and tooth off bottom-left",
+    "mahadevan_ids": [],
+    "wells_ids": []
+  },
+  "P374": {
+    "parpola_id": "P374",
+    "description": "Leaf with stretched diamond overlapping from top right to top bottom",
+    "mahadevan_ids": [],
+    "wells_ids": []
+  },
+  "P375": {
+    "parpola_id": "P375",
+    "description": "Leaf. Diamond in center with vertical strokes out each edge to edge of leaf. Vertical lines similarly from top and bottom vertices",
+    "mahadevan_ids": [
+      "M384"
+    ],
+    "wells_ids": [
+      "W823"
+    ]
+  },
+  "P376": {
+    "parpola_id": "P376",
+    "description": "Leaf with diagonal overlapping cross hatching throughout",
+    "mahadevan_ids": [
+      "M380"
+    ],
+    "wells_ids": [
+      "W825"
+    ]
+  },
+  "P377": {
+    "parpola_id": "P377",
+    "description": "Circle with plus sign fully inscribed",
+    "mahadevan_ids": [],
+    "wells_ids": [
+      "W818"
+    ]
+  },
+  "P378": {
+    "parpola_id": "P378",
+    "description": "Wheel with 6 spokes with even angles",
+    "mahadevan_ids": [
+      "M391"
+    ],
+    "wells_ids": [
+      "W820"
+    ]
+  },
+  "P379": {
+    "parpola_id": "P379",
+    "description": "Wheel with 6 spokes with even angles, two tall vertical strokes on left, all caged by four small vertical strokes",
+    "mahadevan_ids": [
+      "M392"
+    ],
+    "wells_ids": []
+  },
+  "P380": {
+    "parpola_id": "P380",
+    "description": "2x2 grid, each cell has a small vertical stroke",
+    "mahadevan_ids": [
+      "M247"
+    ],
+    "wells_ids": [
+      "W626"
+    ]
+  },
+  "P381": {
+    "parpola_id": "P381",
+    "description": "Diamond with gridding, each grid cell has a small stroke in it",
+    "mahadevan_ids": [],
+    "wells_ids": [
+      "W879"
+    ]
+  },
+  "P382": {
+    "parpola_id": "P382",
+    "description": "Diamond with four small diamonds at each vertex",
+    "mahadevan_ids": [
+      "M284"
+    ],
+    "wells_ids": [
+      "W877"
+    ]
+  },
+  "P383": {
+    "parpola_id": "P383",
+    "description": "Diamond with four small diamonds at each vertex, caged by four small vertical strokes",
+    "mahadevan_ids": [
+      "M285"
+    ],
+    "wells_ids": [
+      "W878"
+    ]
+  },
+  "P384": {
+    "parpola_id": "P384",
+    "description": "Diamond with four small diamonds at each vertex, and a wagon wheel in the center",
+    "mahadevan_ids": [
+      "M286"
+    ],
+    "wells_ids": [
+      "W880"
+    ]
+  },
+  "P385": {
+    "parpola_id": "P385",
+    "description": "Diamond or leaf shape with a small diamond attached to the top",
+    "mahadevan_ids": [
+      "M267"
+    ],
+    "wells_ids": [
+      "W817",
+      "W861"
+    ]
+  },
+  "P386": {
+    "parpola_id": "P386",
+    "description": "Diamond or leaf shape directly above another, with small diamonds inside each at the center",
+    "mahadevan_ids": [
+      "M268"
+    ],
+    "wells_ids": [
+      "W202"
+    ]
+  },
+  "P387": {
+    "parpola_id": "P387",
+    "description": "Diamond with a small diamond attached to the top, two orthogonal strokes going through bottom left edge",
+    "mahadevan_ids": [
+      "M276"
+    ],
+    "wells_ids": []
+  },
+  "P388": {
+    "parpola_id": "P388",
+    "description": "Diamond with a small diamond attached to the top, lower left edge has a doubling parallel line inside the diamond",
+    "mahadevan_ids": [
+      "M275"
+    ],
+    "wells_ids": [
+      "W868"
+    ]
+  },
+  "P389": {
+    "parpola_id": "P389",
+    "description": "Diamond with several lines coming from top outward in a sunburst",
+    "mahadevan_ids": [
+      "M272"
+    ],
+    "wells_ids": [
+      "W865"
+    ]
+  },
+  "P390": {
+    "parpola_id": "P390",
+    "description": "Diamond with small diamond at top (and maybe even smaller diamond on right), small diamond at top has decoration off the bottom",
+    "mahadevan_ids": [
+      "M277",
+      "M279",
+      "M280",
+      "M282",
+      "M283"
+    ],
+    "wells_ids": [
+      "W869",
+      "W871"
+    ]
+  },
+  "P391": {
+    "parpola_id": "P391",
+    "description": "Diamond with small diamond at top (and maybe even smaller diamond on right), small diamond at top has decoration off the bottom, all caged by four small vertical strokes",
+    "mahadevan_ids": [
+      "M278"
+    ],
+    "wells_ids": [
+      "W870"
+    ]
+  },
+  "P392": {
+    "parpola_id": "P392",
+    "description": "Diamond with small diamond in top vertex, bird foot or tree coming off top left edge",
+    "mahadevan_ids": [
+      "M270"
+    ],
+    "wells_ids": [
+      "W863"
+    ]
+  },
+  "P393": {
+    "parpola_id": "P393",
+    "description": "Diamond with small diamond in top vertex, multiple trees off top right edge",
+    "mahadevan_ids": [
+      "M271"
+    ],
+    "wells_ids": [
+      "W864"
+    ]
+  },
+  "P394": {
+    "parpola_id": "P394",
+    "description": "Diamond with small diamond in top vertex, jar handles or trees coming from top vertex, one on each side",
+    "mahadevan_ids": [
+      "M274"
+    ],
+    "wells_ids": []
+  },
+  "P395": {
+    "parpola_id": "P395",
+    "description": "Diamond with small diamond in top vertex, rakes coming from top vertex, one on each side",
+    "mahadevan_ids": [
+      "M273"
+    ],
+    "wells_ids": []
+  },
+  "P396": {
+    "parpola_id": "P396",
+    "description": "Square with small square inside top left vertex, 9 slanted vertical strokes in a 3x3 pattern inside",
+    "mahadevan_ids": [
+      "M236"
+    ],
+    "wells_ids": [
+      "W628"
+    ]
+  }
+}

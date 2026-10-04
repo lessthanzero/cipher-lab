@@ -1,10 +1,10 @@
 # HANDOFF & STATE OF THE LAB: RESEARCH RESOLUTIONS, VISIBILITY INFRASTRUCTURE & STRATEGIC ROADMAP
 
-**Date**: 2026-10-02  
+**Date**: 2026-10-04  
 **Laboratory**: Computational Cryptanalysis Laboratory (`cipher-lab`)  
-**Status**: Core Cipher Tracks Complete & Released (v1.0.0); Visibility Infrastructure & Upstream PRs Live; Episteme Canvas Scaffolded; Bibleistics Track Initialized  
-**Test Suite Baseline**: 120 / 120 passing tests (`uv run pytest` in ~12.5s)  
-**Ledger State**: `data/derived/epistemic_ledger.duckdb` (40,752 trials logged with dynamic Bonferroni / FWER control)  
+**Status**: Core Cipher Tracks Complete & Released (v1.0.0); Indus Script Epistemic Discovery & Grammar Breakthrough Complete; Visibility Infrastructure & Upstream PRs Live; Episteme Canvas Scaffolded; Bibleistics Track Initialized  
+**Test Suite Baseline**: 131 / 131 passing tests (`uv run pytest` in ~8.6s on macOS Darwin, ~21.2s on Fedora Linux `pc`)  
+**Ledger State**: `data/derived/epistemic_ledger.duckdb` (40,761 trials logged with dynamic Bonferroni / FWER control; 9 trials under `INDUS_CORPUS`)  
 **Remotes**: Synchronized across GitHub `origin/main` (`lessthanzero/cipher-lab`) and local `forgejo/main`
 
 ---
@@ -29,6 +29,20 @@
 ### D. Shugborough Inscription (c. 1748–1756) — Epigraphic Initialism
 - **Unicity Distance Gate**: Proved that $N=8$ letters (`OUOSVAVV`) flanked by `D · M ·` violates Shannon unicity ($N \ll U_0 \approx 28$), proving mathematical underdetermination for substitution keys.
 - **Latin Epigraphic Model**: Interpuncts (`·`) and classical letterforms establish an 18th-century memorial Latin initialism under *Dis Manibus*, supported by Bayesian transition modeling.
+
+### E. Indus Script (c. 2600–1900 BCE) — Positional Slot Rigidity & Latent Grammar Induction
+- **Dual-Catalog Concordance**: Ingested 179 Mohenjo-Daro unicorn seal inscriptions (1,003 tokens, 182 types) harmonized across 396-sign concordance ($P \leftrightarrow M \leftrightarrow W$), establishing exact metric invariance (182 vs 179 sign types, 42.3% vs 41.9% singletons).
+- **Positional Slot Rigidity**: Boundary entropy ($H_0 = 3.32$ bits, jar sign sink) vs internal diversity ($H_1 = 5.91$ bits) confirmed by Friedman $\chi^2(3) = 45.39$ ($p = 7.64 \times 10^{-10}$) and Monte Carlo edge variance ($Z = +101.15, p = 0.0002$).
+- **Farmer-Sproat Repetition Deficit**: Internal sign repetition occurs in only 10.61% of texts (1.99% of tokens), suppressed by $Z = -5.81$ ($p = 0.0002$) against unconstrained linguistic baselines.
+- **Sproat Non-Linguistic Match**: Conditional block entropy drop ratio ($H_1/H_0 = 0.414$) matches synthetic non-linguistic heraldic controls ($0.453$), refuting the Rao et al. (2009) linguistic discrimination claim.
+- **Unicity Underdetermination & Combinatorial Scale**: Shannon unicity distance $U_0 = 907.5$ tokens mathematically bars unconstrained phonetic decipherment ($L_{\max} = 13 \ll U_0$). 5-slot positional matrix provides $612,460,800$ unique entity identifiers for Bronze Age commercial administration.
+- **Grammar Breakthrough Modules**:
+  - *Spectral Graph Decomposition*: Invariant eigengap at index 6 across Parpola and Mahadevan concordances discovers 5 functional sign classes with $82.2\%$ feedforward compliance.
+  - *HMM Topology Sweep*: Model selection sweep across $K \in \{2..8\}$ states strictly selects $K=4$ states as the global BIC minimum ($\text{BIC}=2,493.45$).
+  - *Viterbi Trajectory & Permutation Sieve*: Real inscriptions achieve $67.04\%$ monotonic DAG trajectory compliance, separating from frequency-shuffled surrogates by $Z = +17.85$ ($p < 0.0005$) over $N=2,000$ iterations on Fedora Linux.
+  - *MDL Compression*: 4-state regular grammar compresses corpus description length by $73.02\%$ ($7,530.3 \rightarrow 2,031.8$ bits).
+- **Consilium Multi-Peer Audit**: Unanimous 3/3 consensus (`qwen2.5:7b`, `gemini-3.8-flash-med`, `gpt-5.6-terra`) affirming compact regular administrative PFSA template while strictly precluding speculative natural language decipherment.
+- **Preprint**: Published updated [`docs/research/INDUS_STRUCTURAL_DISCRIMINATION_SPRINT.md`](docs/research/INDUS_STRUCTURAL_DISCRIMINATION_SPRINT.md) with all 9 trials surviving Bonferroni and FDR corrections in `epistemic_ledger.duckdb`.
 
 ---
 

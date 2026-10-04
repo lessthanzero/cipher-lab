@@ -1,0 +1,2437 @@
+[
+  {
+    "id": "M-100A",
+    "description": "unicorn IV seal",
+    "signs": [
+      "P013",
+      "P324",
+      "P073",
+      "P316",
+      "P122",
+      "P385"
+    ],
+    "sign_count": 6,
+    "source_code": "CISI_MAYIG"
+  },
+  {
+    "id": "M-101A",
+    "description": "unicorn IV seal",
+    "signs": [
+      "P086",
+      "P210",
+      "P324",
+      "P003",
+      "P122",
+      "P385"
+    ],
+    "sign_count": 6,
+    "source_code": "CISI_MAYIG"
+  },
+  {
+    "id": "M-102A",
+    "description": "unicorn IV seal",
+    "signs": [
+      "P004",
+      "P123",
+      "P154",
+      "P226"
+    ],
+    "sign_count": 4,
+    "source_code": "CISI_MAYIG"
+  },
+  {
+    "id": "M-103A",
+    "description": "unicorn IV seal",
+    "signs": [
+      "P086",
+      "P124",
+      "P122",
+      "P378"
+    ],
+    "sign_count": 4,
+    "source_code": "CISI_MAYIG"
+  },
+  {
+    "id": "M-104A",
+    "description": "unicorn IV seal",
+    "signs": [
+      "P013",
+      "P324",
+      "P050",
+      "P060",
+      "P359"
+    ],
+    "sign_count": 5,
+    "source_code": "CISI_MAYIG"
+  },
+  {
+    "id": "M-105A",
+    "description": "unicorn IV seal",
+    "signs": [
+      "P324",
+      "P324",
+      "P364",
+      "P056",
+      "P326",
+      "P120",
+      "P154"
+    ],
+    "sign_count": 7,
+    "source_code": "CISI_MAYIG"
+  },
+  {
+    "id": "M-106A",
+    "description": "unicorn IV seal",
+    "signs": [
+      "P324",
+      "P332",
+      "P000"
+    ],
+    "sign_count": 3,
+    "source_code": "CISI_MAYIG"
+  },
+  {
+    "id": "M-107A",
+    "description": "unicorn IV seal",
+    "signs": [
+      "P324",
+      "P238",
+      "P058",
+      "P122",
+      "P054",
+      "P071"
+    ],
+    "sign_count": 6,
+    "source_code": "CISI_MAYIG"
+  },
+  {
+    "id": "M-108A",
+    "description": "unicorn IV seal",
+    "signs": [
+      "P099",
+      "P378",
+      "P050",
+      "P201",
+      "P075",
+      "P230",
+      "P378"
+    ],
+    "sign_count": 7,
+    "source_code": "CISI_MAYIG"
+  },
+  {
+    "id": "M-109A",
+    "description": "unicorn IV seal",
+    "signs": [
+      "P324",
+      "P381",
+      "P050",
+      "P092",
+      "P122",
+      "P084",
+      "P011"
+    ],
+    "sign_count": 7,
+    "source_code": "CISI_MAYIG"
+  },
+  {
+    "id": "M-10A",
+    "description": "unicorn I seal",
+    "signs": [
+      "P086",
+      "P204",
+      "P114",
+      "P151",
+      "P316",
+      "P060",
+      "P364",
+      "P122",
+      "P067",
+      "P221"
+    ],
+    "sign_count": 10,
+    "source_code": "CISI_MAYIG"
+  },
+  {
+    "id": "M-110A",
+    "description": "unicorn IV seal",
+    "signs": [
+      "P000",
+      "P122",
+      "P385"
+    ],
+    "sign_count": 3,
+    "source_code": "CISI_MAYIG"
+  },
+  {
+    "id": "M-111A",
+    "description": "unicorn IV seal",
+    "signs": [
+      "P324",
+      "P160",
+      "P303",
+      "P058",
+      "P121",
+      "P378",
+      "P378"
+    ],
+    "sign_count": 7,
+    "source_code": "CISI_MAYIG"
+  },
+  {
+    "id": "M-112A",
+    "description": "unicorn IV seal",
+    "signs": [
+      "P324",
+      "P332",
+      "P056",
+      "P126",
+      "P111",
+      "P325",
+      "P285",
+      "P254"
+    ],
+    "sign_count": 8,
+    "source_code": "CISI_MAYIG"
+  },
+  {
+    "id": "M-113A",
+    "description": "unicorn IV seal",
+    "signs": [
+      "P324",
+      "P145",
+      "P349",
+      "P325",
+      "P120",
+      "P156"
+    ],
+    "sign_count": 6,
+    "source_code": "CISI_MAYIG"
+  },
+  {
+    "id": "M-114A",
+    "description": "unicorn IV seal",
+    "signs": [
+      "P324",
+      "P332",
+      "P283",
+      "P122",
+      "P205",
+      "P095"
+    ],
+    "sign_count": 6,
+    "source_code": "CISI_MAYIG"
+  },
+  {
+    "id": "M-115A",
+    "description": "unicorn IV seal",
+    "signs": [
+      "P086",
+      "P352",
+      "P011",
+      "P194",
+      "P364",
+      "P122",
+      "P205",
+      "P076"
+    ],
+    "sign_count": 8,
+    "source_code": "CISI_MAYIG"
+  },
+  {
+    "id": "M-116A",
+    "description": "unicorn IV seal",
+    "signs": [
+      "P324",
+      "P009",
+      "P194",
+      "P349",
+      "P139",
+      "P122",
+      "P385"
+    ],
+    "sign_count": 7,
+    "source_code": "CISI_MAYIG"
+  },
+  {
+    "id": "M-117A",
+    "description": "unicorn IV seal",
+    "signs": [
+      "P217",
+      "P147",
+      "P316",
+      "P050",
+      "P364",
+      "P142",
+      "P122",
+      "P378"
+    ],
+    "sign_count": 8,
+    "source_code": "CISI_MAYIG"
+  },
+  {
+    "id": "M-118A",
+    "description": "unicorn IV seal",
+    "signs": [
+      "P324",
+      "P096",
+      "P147",
+      "P316",
+      "P058",
+      "P364",
+      "P122",
+      "P385"
+    ],
+    "sign_count": 8,
+    "source_code": "CISI_MAYIG"
+  },
+  {
+    "id": "M-119A",
+    "description": "unicorn IV seal",
+    "signs": [
+      "P001",
+      "P309",
+      "P195",
+      "P122",
+      "P086",
+      "P035",
+      "P270",
+      "P145",
+      "P154",
+      "P230"
+    ],
+    "sign_count": 10,
+    "source_code": "CISI_MAYIG"
+  },
+  {
+    "id": "M-120A",
+    "description": "unicorn IV seal",
+    "signs": [
+      "P324",
+      "P009",
+      "P288",
+      "P325",
+      "P349",
+      "P044"
+    ],
+    "sign_count": 6,
+    "source_code": "CISI_MAYIG"
+  },
+  {
+    "id": "M-121A",
+    "description": "unicorn IV seal",
+    "signs": [
+      "P324",
+      "P154",
+      "P355",
+      "P058",
+      "P075"
+    ],
+    "sign_count": 5,
+    "source_code": "CISI_MAYIG"
+  },
+  {
+    "id": "M-122A",
+    "description": "unicorn IV seal",
+    "signs": [
+      "P217",
+      "P147",
+      "P316"
+    ],
+    "sign_count": 3,
+    "source_code": "CISI_MAYIG"
+  },
+  {
+    "id": "M-123A",
+    "description": "unicorn IV seal",
+    "signs": [
+      "P098",
+      "P014",
+      "P202",
+      "P114"
+    ],
+    "sign_count": 4,
+    "source_code": "CISI_MAYIG"
+  },
+  {
+    "id": "M-124A",
+    "description": "unicorn IV seal",
+    "signs": [
+      "P324",
+      "P175",
+      "P050",
+      "P145"
+    ],
+    "sign_count": 4,
+    "source_code": "CISI_MAYIG"
+  },
+  {
+    "id": "M-125A",
+    "description": "unicorn IV seal",
+    "signs": [
+      "P000",
+      "P144",
+      "P108"
+    ],
+    "sign_count": 3,
+    "source_code": "CISI_MAYIG"
+  },
+  {
+    "id": "M-126A",
+    "description": "unicorn IV seal",
+    "signs": [
+      "P000",
+      "P230",
+      "P234",
+      "P120",
+      "P256"
+    ],
+    "sign_count": 5,
+    "source_code": "CISI_MAYIG"
+  },
+  {
+    "id": "M-127A",
+    "description": "unicorn IV seal",
+    "signs": [
+      "P238",
+      "P324",
+      "P060",
+      "P324",
+      "P194"
+    ],
+    "sign_count": 5,
+    "source_code": "CISI_MAYIG"
+  },
+  {
+    "id": "M-128A",
+    "description": "unicorn IV seal",
+    "signs": [
+      "P324",
+      "P175",
+      "P364",
+      "P324",
+      "P208",
+      "P316"
+    ],
+    "sign_count": 6,
+    "source_code": "CISI_MAYIG"
+  },
+  {
+    "id": "M-129A",
+    "description": "unicorn IV seal",
+    "signs": [
+      "P217",
+      "P058",
+      "P062",
+      "P060",
+      "P325",
+      "P293"
+    ],
+    "sign_count": 6,
+    "source_code": "CISI_MAYIG"
+  },
+  {
+    "id": "M-12A",
+    "description": "unicorn II seal",
+    "signs": [
+      "P324",
+      "P086",
+      "P276",
+      "P058",
+      "P122",
+      "P202",
+      "P386",
+      "P182",
+      "P108"
+    ],
+    "sign_count": 9,
+    "source_code": "CISI_MAYIG"
+  },
+  {
+    "id": "M-130A",
+    "description": "unicorn IV seal",
+    "signs": [
+      "P324",
+      "P003",
+      "P050",
+      "P145",
+      "P122",
+      "P032"
+    ],
+    "sign_count": 6,
+    "source_code": "CISI_MAYIG"
+  },
+  {
+    "id": "M-131A",
+    "description": "unicorn IV seal",
+    "signs": [
+      "P324",
+      "P086",
+      "P276",
+      "P325",
+      "P086",
+      "P355"
+    ],
+    "sign_count": 6,
+    "source_code": "CISI_MAYIG"
+  },
+  {
+    "id": "M-132A",
+    "description": "unicorn IV seal",
+    "signs": [
+      "P004",
+      "P123",
+      "P226"
+    ],
+    "sign_count": 3,
+    "source_code": "CISI_MAYIG"
+  },
+  {
+    "id": "M-133A",
+    "description": "unicorn IV seal",
+    "signs": [
+      "P301",
+      "P230",
+      "P062",
+      "P050",
+      "P073",
+      "P369",
+      "P174",
+      "P110"
+    ],
+    "sign_count": 8,
+    "source_code": "CISI_MAYIG"
+  },
+  {
+    "id": "M-134A",
+    "description": "unicorn IV seal",
+    "signs": [
+      "P390",
+      "P145",
+      "P256"
+    ],
+    "sign_count": 3,
+    "source_code": "CISI_MAYIG"
+  },
+  {
+    "id": "M-135A",
+    "description": "unicorn IV seal",
+    "signs": [
+      "P217",
+      "P147",
+      "P316",
+      "P144"
+    ],
+    "sign_count": 4,
+    "source_code": "CISI_MAYIG"
+  },
+  {
+    "id": "M-136A",
+    "description": "unicorn IV seal",
+    "signs": [
+      "P013",
+      "P324",
+      "P050",
+      "P126",
+      "P144",
+      "P177",
+      "P226"
+    ],
+    "sign_count": 7,
+    "source_code": "CISI_MAYIG"
+  },
+  {
+    "id": "M-137A",
+    "description": "unicorn IV seal",
+    "signs": [
+      "P379"
+    ],
+    "sign_count": 1,
+    "source_code": "CISI_MAYIG"
+  },
+  {
+    "id": "M-138A",
+    "description": "unicorn IV seal",
+    "signs": [
+      "P324",
+      "P154",
+      "P125"
+    ],
+    "sign_count": 3,
+    "source_code": "CISI_MAYIG"
+  },
+  {
+    "id": "M-139A",
+    "description": "unicorn IV seal",
+    "signs": [
+      "P147",
+      "P368",
+      "P061",
+      "P325",
+      "P294"
+    ],
+    "sign_count": 5,
+    "source_code": "CISI_MAYIG"
+  },
+  {
+    "id": "M-13A",
+    "description": "unicorn II seal",
+    "signs": [
+      "P202",
+      "P205",
+      "P035"
+    ],
+    "sign_count": 3,
+    "source_code": "CISI_MAYIG"
+  },
+  {
+    "id": "M-140A",
+    "description": "unicorn IV seal",
+    "signs": [
+      "P324",
+      "P309",
+      "P145",
+      "P050",
+      "P201",
+      "P283",
+      "P221"
+    ],
+    "sign_count": 7,
+    "source_code": "CISI_MAYIG"
+  },
+  {
+    "id": "M-141A",
+    "description": "unicorn IV seal",
+    "signs": [
+      "P000",
+      "P122",
+      "P000"
+    ],
+    "sign_count": 3,
+    "source_code": "CISI_MAYIG"
+  },
+  {
+    "id": "M-142A",
+    "description": "unicorn IV seal",
+    "signs": [
+      "P022",
+      "P011",
+      "P122",
+      "P385"
+    ],
+    "sign_count": 4,
+    "source_code": "CISI_MAYIG"
+  },
+  {
+    "id": "M-143A",
+    "description": "unicorn IV seal",
+    "signs": [
+      "P324",
+      "P082",
+      "P122",
+      "P145",
+      "P170",
+      "P349"
+    ],
+    "sign_count": 6,
+    "source_code": "CISI_MAYIG"
+  },
+  {
+    "id": "M-144A",
+    "description": "unicorn IV seal",
+    "signs": [
+      "P324",
+      "P009",
+      "P092",
+      "P062",
+      "P122",
+      "P385"
+    ],
+    "sign_count": 6,
+    "source_code": "CISI_MAYIG"
+  },
+  {
+    "id": "M-145A",
+    "description": "unicorn IV seal",
+    "signs": [
+      "P324",
+      "P098",
+      "P031",
+      "P384"
+    ],
+    "sign_count": 4,
+    "source_code": "CISI_MAYIG"
+  },
+  {
+    "id": "M-146A",
+    "description": "unicorn IV seal",
+    "signs": [
+      "P324",
+      "P073",
+      "P160",
+      "P120",
+      "P256"
+    ],
+    "sign_count": 5,
+    "source_code": "CISI_MAYIG"
+  },
+  {
+    "id": "M-147A",
+    "description": "unicorn IV seal",
+    "signs": [
+      "P051",
+      "P364",
+      "P122",
+      "P050",
+      "P221",
+      "P217"
+    ],
+    "sign_count": 6,
+    "source_code": "CISI_MAYIG"
+  },
+  {
+    "id": "M-148A",
+    "description": "unicorn IV seal",
+    "signs": [
+      "P324",
+      "P385",
+      "P231"
+    ],
+    "sign_count": 3,
+    "source_code": "CISI_MAYIG"
+  },
+  {
+    "id": "M-149A",
+    "description": "unicorn IV seal",
+    "signs": [
+      "P324",
+      "P332",
+      "P283",
+      "P120",
+      "P230"
+    ],
+    "sign_count": 5,
+    "source_code": "CISI_MAYIG"
+  },
+  {
+    "id": "M-14A",
+    "description": "unicorn II seal",
+    "signs": [
+      "P324",
+      "P117",
+      "P210",
+      "P122",
+      "P385"
+    ],
+    "sign_count": 5,
+    "source_code": "CISI_MAYIG"
+  },
+  {
+    "id": "M-150A",
+    "description": "unicorn IV seal",
+    "signs": [
+      "P324",
+      "P368"
+    ],
+    "sign_count": 2,
+    "source_code": "CISI_MAYIG"
+  },
+  {
+    "id": "M-151A",
+    "description": "unicorn IV seal",
+    "signs": [
+      "P050",
+      "P201",
+      "P393"
+    ],
+    "sign_count": 3,
+    "source_code": "CISI_MAYIG"
+  },
+  {
+    "id": "M-152A",
+    "description": "unicorn IV seal",
+    "signs": [
+      "P324",
+      "P096",
+      "P122",
+      "P385"
+    ],
+    "sign_count": 4,
+    "source_code": "CISI_MAYIG"
+  },
+  {
+    "id": "M-153A",
+    "description": "unicorn IV seal",
+    "signs": [
+      "P067",
+      "P026",
+      "P076"
+    ],
+    "sign_count": 3,
+    "source_code": "CISI_MAYIG"
+  },
+  {
+    "id": "M-154A",
+    "description": "unicorn IV seal",
+    "signs": [
+      "P217",
+      "P050",
+      "P092",
+      "P122",
+      "P300",
+      "P182",
+      "P265"
+    ],
+    "sign_count": 7,
+    "source_code": "CISI_MAYIG"
+  },
+  {
+    "id": "M-155A",
+    "description": "unicorn IV seal",
+    "signs": [
+      "P324",
+      "P194",
+      "P144"
+    ],
+    "sign_count": 3,
+    "source_code": "CISI_MAYIG"
+  },
+  {
+    "id": "M-157A",
+    "description": "unicorn IV seal",
+    "signs": [
+      "P324",
+      "P154",
+      "P355",
+      "P058",
+      "P075",
+      "P121",
+      "P378"
+    ],
+    "sign_count": 7,
+    "source_code": "CISI_MAYIG"
+  },
+  {
+    "id": "M-158A",
+    "description": "unicorn IV seal",
+    "signs": [
+      "P086",
+      "P126",
+      "P120",
+      "P230"
+    ],
+    "sign_count": 4,
+    "source_code": "CISI_MAYIG"
+  },
+  {
+    "id": "M-159A",
+    "description": "unicorn IV seal",
+    "signs": [
+      "P324",
+      "P136",
+      "P325",
+      "P166",
+      "P290"
+    ],
+    "sign_count": 5,
+    "source_code": "CISI_MAYIG"
+  },
+  {
+    "id": "M-15A",
+    "description": "unicorn II seal",
+    "signs": [
+      "P013",
+      "P324",
+      "P194",
+      "P122",
+      "P385"
+    ],
+    "sign_count": 5,
+    "source_code": "CISI_MAYIG"
+  },
+  {
+    "id": "M-160A",
+    "description": "unicorn IV seal",
+    "signs": [
+      "P001",
+      "P048",
+      "P144",
+      "P122",
+      "P378",
+      "P325"
+    ],
+    "sign_count": 6,
+    "source_code": "CISI_MAYIG"
+  },
+  {
+    "id": "M-161A",
+    "description": "unicorn IV seal",
+    "signs": [
+      "P268",
+      "P268",
+      "P037",
+      "P123"
+    ],
+    "sign_count": 4,
+    "source_code": "CISI_MAYIG"
+  },
+  {
+    "id": "M-162A",
+    "description": "unicorn IV seal",
+    "signs": [
+      "P324",
+      "P332",
+      "P349",
+      "P230",
+      "P234",
+      "P123"
+    ],
+    "sign_count": 6,
+    "source_code": "CISI_MAYIG"
+  },
+  {
+    "id": "M-163A",
+    "description": "unicorn IV seal",
+    "signs": [
+      "P217",
+      "P050",
+      "P092",
+      "P120",
+      "P378"
+    ],
+    "sign_count": 5,
+    "source_code": "CISI_MAYIG"
+  },
+  {
+    "id": "M-164A",
+    "description": "unicorn IV seal",
+    "signs": [
+      "P324",
+      "P031",
+      "P204",
+      "P122",
+      "P385"
+    ],
+    "sign_count": 5,
+    "source_code": "CISI_MAYIG"
+  },
+  {
+    "id": "M-165A",
+    "description": "unicorn IV seal",
+    "signs": [
+      "P324",
+      "P332",
+      "P121",
+      "P325",
+      "P086",
+      "P122",
+      "P385",
+      "P324",
+      "P076"
+    ],
+    "sign_count": 9,
+    "source_code": "CISI_MAYIG"
+  },
+  {
+    "id": "M-166A",
+    "description": "unicorn IV seal",
+    "signs": [
+      "P086",
+      "P349",
+      "P062",
+      "P364",
+      "P122",
+      "P385"
+    ],
+    "sign_count": 6,
+    "source_code": "CISI_MAYIG"
+  },
+  {
+    "id": "M-167A",
+    "description": "unicorn IV seal",
+    "signs": [
+      "P324",
+      "P000",
+      "P385"
+    ],
+    "sign_count": 3,
+    "source_code": "CISI_MAYIG"
+  },
+  {
+    "id": "M-169A",
+    "description": "unicorn IV seal",
+    "signs": [
+      "P324",
+      "P289",
+      "P127",
+      "P000",
+      "P145"
+    ],
+    "sign_count": 5,
+    "source_code": "CISI_MAYIG"
+  },
+  {
+    "id": "M-16A",
+    "description": "unicorn II seal",
+    "signs": [
+      "P378",
+      "P026",
+      "P151",
+      "P346"
+    ],
+    "sign_count": 4,
+    "source_code": "CISI_MAYIG"
+  },
+  {
+    "id": "M-170A",
+    "description": "unicorn IV seal",
+    "signs": [
+      "P324",
+      "P175",
+      "P086",
+      "P204",
+      "P114",
+      "P145",
+      "P325",
+      "P385"
+    ],
+    "sign_count": 8,
+    "source_code": "CISI_MAYIG"
+  },
+  {
+    "id": "M-171A",
+    "description": "unicorn IV seal",
+    "signs": [
+      "P086",
+      "P204",
+      "P324",
+      "P175",
+      "P058",
+      "P364",
+      "P120",
+      "P256"
+    ],
+    "sign_count": 8,
+    "source_code": "CISI_MAYIG"
+  },
+  {
+    "id": "M-172A",
+    "description": "unicorn IV seal",
+    "signs": [
+      "P086",
+      "P128",
+      "P121",
+      "P050",
+      "P117",
+      "P355"
+    ],
+    "sign_count": 6,
+    "source_code": "CISI_MAYIG"
+  },
+  {
+    "id": "M-173A",
+    "description": "unicorn IV seal",
+    "signs": [
+      "P324",
+      "P110",
+      "P160",
+      "P303",
+      "P364"
+    ],
+    "sign_count": 5,
+    "source_code": "CISI_MAYIG"
+  },
+  {
+    "id": "M-174A",
+    "description": "unicorn IV seal",
+    "signs": [
+      "P324",
+      "P175",
+      "P050",
+      "P145",
+      "P122",
+      "P378"
+    ],
+    "sign_count": 6,
+    "source_code": "CISI_MAYIG"
+  },
+  {
+    "id": "M-175A",
+    "description": "unicorn V seal",
+    "signs": [
+      "P000",
+      "P122",
+      "P385"
+    ],
+    "sign_count": 3,
+    "source_code": "CISI_MAYIG"
+  },
+  {
+    "id": "M-176A",
+    "description": "unicorn V seal",
+    "signs": [
+      "P000",
+      "P255"
+    ],
+    "sign_count": 2,
+    "source_code": "CISI_MAYIG"
+  },
+  {
+    "id": "M-177A",
+    "description": "unicorn V seal",
+    "signs": [
+      "P086",
+      "P123",
+      "P122",
+      "P385"
+    ],
+    "sign_count": 4,
+    "source_code": "CISI_MAYIG"
+  },
+  {
+    "id": "M-178A",
+    "description": "unicorn V seal",
+    "signs": [
+      "P086",
+      "P126"
+    ],
+    "sign_count": 2,
+    "source_code": "CISI_MAYIG"
+  },
+  {
+    "id": "M-179A",
+    "description": "unicorn V seal",
+    "signs": [
+      "P086",
+      "P123"
+    ],
+    "sign_count": 2,
+    "source_code": "CISI_MAYIG"
+  },
+  {
+    "id": "M-17A",
+    "description": "unicorn II seal",
+    "signs": [
+      "P086",
+      "P126",
+      "P122",
+      "P369",
+      "P232"
+    ],
+    "sign_count": 5,
+    "source_code": "CISI_MAYIG"
+  },
+  {
+    "id": "M-180A",
+    "description": "unicorn V seal",
+    "signs": [
+      "P324",
+      "P265"
+    ],
+    "sign_count": 2,
+    "source_code": "CISI_MAYIG"
+  },
+  {
+    "id": "M-181A",
+    "description": "unicorn V seal",
+    "signs": [
+      "P217",
+      "P193",
+      "P122",
+      "P205",
+      "P207"
+    ],
+    "sign_count": 5,
+    "source_code": "CISI_MAYIG"
+  },
+  {
+    "id": "M-182A",
+    "description": "unicorn V seal",
+    "signs": [
+      "P324",
+      "P095"
+    ],
+    "sign_count": 2,
+    "source_code": "CISI_MAYIG"
+  },
+  {
+    "id": "M-183A",
+    "description": "unicorn V seal",
+    "signs": [
+      "P217",
+      "P058",
+      "P120",
+      "P205"
+    ],
+    "sign_count": 4,
+    "source_code": "CISI_MAYIG"
+  },
+  {
+    "id": "M-184A",
+    "description": "unicorn V seal",
+    "signs": [
+      "P013",
+      "P324",
+      "P010",
+      "P359"
+    ],
+    "sign_count": 4,
+    "source_code": "CISI_MAYIG"
+  },
+  {
+    "id": "M-18A",
+    "description": "unicorn II seal",
+    "signs": [
+      "P341",
+      "P324",
+      "P142"
+    ],
+    "sign_count": 3,
+    "source_code": "CISI_MAYIG"
+  },
+  {
+    "id": "M-19A",
+    "description": "unicorn II seal",
+    "signs": [
+      "P000",
+      "P122",
+      "P385"
+    ],
+    "sign_count": 3,
+    "source_code": "CISI_MAYIG"
+  },
+  {
+    "id": "M-1A",
+    "description": "unicorn I seal",
+    "signs": [
+      "P121",
+      "P202",
+      "P385",
+      "P073",
+      "P108"
+    ],
+    "sign_count": 5,
+    "source_code": "CISI_MAYIG"
+  },
+  {
+    "id": "M-20A",
+    "description": "unicorn II seal",
+    "signs": [
+      "P086",
+      "P125",
+      "P122",
+      "P385",
+      "P147",
+      "P147",
+      "P215",
+      "P275"
+    ],
+    "sign_count": 8,
+    "source_code": "CISI_MAYIG"
+  },
+  {
+    "id": "M-21A",
+    "description": "unicorn II seal",
+    "signs": [
+      "P091",
+      "P121",
+      "P324",
+      "P272",
+      "P256",
+      "P145",
+      "P122",
+      "P385"
+    ],
+    "sign_count": 8,
+    "source_code": "CISI_MAYIG"
+  },
+  {
+    "id": "M-22A",
+    "description": "unicorn II seal",
+    "signs": [
+      "P324",
+      "P172",
+      "P194",
+      "P050",
+      "P145",
+      "P230",
+      "P000"
+    ],
+    "sign_count": 7,
+    "source_code": "CISI_MAYIG"
+  },
+  {
+    "id": "M-23A",
+    "description": "unicorn II seal",
+    "signs": [
+      "P324",
+      "P197",
+      "P120",
+      "P256",
+      "P217",
+      "P050",
+      "P060",
+      "P121",
+      "P160",
+      "P350",
+      "P390",
+      "P076",
+      "P202"
+    ],
+    "sign_count": 13,
+    "source_code": "CISI_MAYIG"
+  },
+  {
+    "id": "M-24A",
+    "description": "unicorn II seal",
+    "signs": [
+      "P013",
+      "P324",
+      "P062",
+      "P060",
+      "P122",
+      "P174",
+      "P011"
+    ],
+    "sign_count": 7,
+    "source_code": "CISI_MAYIG"
+  },
+  {
+    "id": "M-25A",
+    "description": "unicorn II seal",
+    "signs": [
+      "P268",
+      "P268",
+      "P050",
+      "P316",
+      "P276"
+    ],
+    "sign_count": 5,
+    "source_code": "CISI_MAYIG"
+  },
+  {
+    "id": "M-26A",
+    "description": "unicorn II seal",
+    "signs": [
+      "P013",
+      "P324",
+      "P228",
+      "P120",
+      "P256"
+    ],
+    "sign_count": 5,
+    "source_code": "CISI_MAYIG"
+  },
+  {
+    "id": "M-27A",
+    "description": "unicorn II seal",
+    "signs": [
+      "P238",
+      "P060",
+      "P364",
+      "P325",
+      "P311",
+      "P154",
+      "P123"
+    ],
+    "sign_count": 7,
+    "source_code": "CISI_MAYIG"
+  },
+  {
+    "id": "M-28A",
+    "description": "unicorn II seal",
+    "signs": [
+      "P000",
+      "P103",
+      "P324",
+      "P332",
+      "P349",
+      "P095",
+      "P122",
+      "P385"
+    ],
+    "sign_count": 8,
+    "source_code": "CISI_MAYIG"
+  },
+  {
+    "id": "M-29A",
+    "description": "unicorn II seal",
+    "signs": [
+      "P324",
+      "P142",
+      "P062",
+      "P060",
+      "P364",
+      "P122",
+      "P050",
+      "P221",
+      "P210"
+    ],
+    "sign_count": 9,
+    "source_code": "CISI_MAYIG"
+  },
+  {
+    "id": "M-30A",
+    "description": "unicorn II seal",
+    "signs": [
+      "P324",
+      "P332",
+      "P127",
+      "P210",
+      "P062",
+      "P060",
+      "P364"
+    ],
+    "sign_count": 7,
+    "source_code": "CISI_MAYIG"
+  },
+  {
+    "id": "M-31A",
+    "description": "unicorn III seal",
+    "signs": [
+      "P324",
+      "P067",
+      "P275",
+      "P058",
+      "P120",
+      "P378"
+    ],
+    "sign_count": 6,
+    "source_code": "CISI_MAYIG"
+  },
+  {
+    "id": "M-32A",
+    "description": "unicorn III seal",
+    "signs": [
+      "P086",
+      "P123",
+      "P122",
+      "P385"
+    ],
+    "sign_count": 4,
+    "source_code": "CISI_MAYIG"
+  },
+  {
+    "id": "M-33A",
+    "description": "unicorn III seal",
+    "signs": [
+      "P324",
+      "P145",
+      "P175",
+      "P111",
+      "P058",
+      "P122",
+      "P041"
+    ],
+    "sign_count": 7,
+    "source_code": "CISI_MAYIG"
+  },
+  {
+    "id": "M-34A",
+    "description": "unicorn III seal",
+    "signs": [
+      "P324",
+      "P309",
+      "P194",
+      "P122",
+      "P086",
+      "P108",
+      "P103"
+    ],
+    "sign_count": 7,
+    "source_code": "CISI_MAYIG"
+  },
+  {
+    "id": "M-35A",
+    "description": "unicorn III seal",
+    "signs": [
+      "P324",
+      "P086",
+      "P276",
+      "P058",
+      "P056",
+      "P122",
+      "P007"
+    ],
+    "sign_count": 7,
+    "source_code": "CISI_MAYIG"
+  },
+  {
+    "id": "M-36A",
+    "description": "unicorn III seal",
+    "signs": [
+      "P324",
+      "P358",
+      "P270",
+      "P050",
+      "P145",
+      "P122",
+      "P202",
+      "P174",
+      "P307"
+    ],
+    "sign_count": 9,
+    "source_code": "CISI_MAYIG"
+  },
+  {
+    "id": "M-37A",
+    "description": "unicorn III seal",
+    "signs": [
+      "P217",
+      "P050",
+      "P092"
+    ],
+    "sign_count": 3,
+    "source_code": "CISI_MAYIG"
+  },
+  {
+    "id": "M-38A",
+    "description": "unicorn III seal",
+    "signs": [
+      "P324",
+      "P256",
+      "P188",
+      "P073",
+      "P050",
+      "P145",
+      "P062",
+      "P060",
+      "P122",
+      "P086",
+      "P035",
+      "P270",
+      "P145"
+    ],
+    "sign_count": 13,
+    "source_code": "CISI_MAYIG"
+  },
+  {
+    "id": "M-39A",
+    "description": "unicorn III seal",
+    "signs": [
+      "P000",
+      "P316",
+      "P062",
+      "P060",
+      "P139",
+      "P083",
+      "P303"
+    ],
+    "sign_count": 7,
+    "source_code": "CISI_MAYIG"
+  },
+  {
+    "id": "M-3A",
+    "description": "unicorn I seal",
+    "signs": [
+      "P320",
+      "P145",
+      "P094"
+    ],
+    "sign_count": 3,
+    "source_code": "CISI_MAYIG"
+  },
+  {
+    "id": "M-40A",
+    "description": "unicorn III seal",
+    "signs": [
+      "P089",
+      "P122",
+      "P301",
+      "P186",
+      "P125"
+    ],
+    "sign_count": 5,
+    "source_code": "CISI_MAYIG"
+  },
+  {
+    "id": "M-41A",
+    "description": "unicorn III seal",
+    "signs": [
+      "P324",
+      "P270",
+      "P062",
+      "P060",
+      "P122",
+      "P086",
+      "P035",
+      "P378"
+    ],
+    "sign_count": 8,
+    "source_code": "CISI_MAYIG"
+  },
+  {
+    "id": "M-42A",
+    "description": "unicorn III seal",
+    "signs": [
+      "P301",
+      "P230",
+      "P062",
+      "P122",
+      "P385"
+    ],
+    "sign_count": 5,
+    "source_code": "CISI_MAYIG"
+  },
+  {
+    "id": "M-43A",
+    "description": "unicorn III seal",
+    "signs": [
+      "P324",
+      "P230",
+      "P056",
+      "P122",
+      "P142",
+      "P360"
+    ],
+    "sign_count": 6,
+    "source_code": "CISI_MAYIG"
+  },
+  {
+    "id": "M-44A",
+    "description": "unicorn III seal",
+    "signs": [
+      "P324",
+      "P332",
+      "P147",
+      "P316",
+      "P364",
+      "P122",
+      "P154",
+      "P296"
+    ],
+    "sign_count": 8,
+    "source_code": "CISI_MAYIG"
+  },
+  {
+    "id": "M-45A",
+    "description": "unicorn III seal",
+    "signs": [
+      "P268",
+      "P268",
+      "P372",
+      "P139",
+      "P205",
+      "P349",
+      "P145"
+    ],
+    "sign_count": 7,
+    "source_code": "CISI_MAYIG"
+  },
+  {
+    "id": "M-46A",
+    "description": "unicorn III seal",
+    "signs": [
+      "P324",
+      "P230",
+      "P062",
+      "P060",
+      "P122",
+      "P050",
+      "P201",
+      "P353"
+    ],
+    "sign_count": 8,
+    "source_code": "CISI_MAYIG"
+  },
+  {
+    "id": "M-47A",
+    "description": "unicorn III seal",
+    "signs": [
+      "P324",
+      "P332",
+      "P060",
+      "P122",
+      "P385"
+    ],
+    "sign_count": 5,
+    "source_code": "CISI_MAYIG"
+  },
+  {
+    "id": "M-48A",
+    "description": "unicorn III seal",
+    "signs": [
+      "P086",
+      "P378",
+      "P215",
+      "P120",
+      "P202",
+      "P154"
+    ],
+    "sign_count": 6,
+    "source_code": "CISI_MAYIG"
+  },
+  {
+    "id": "M-49A",
+    "description": "unicorn III seal",
+    "signs": [
+      "P000",
+      "P230",
+      "P062",
+      "P050",
+      "P145",
+      "P122",
+      "P205",
+      "P091",
+      "P145",
+      "P076"
+    ],
+    "sign_count": 10,
+    "source_code": "CISI_MAYIG"
+  },
+  {
+    "id": "M-4A",
+    "description": "unicorn I seal",
+    "signs": [
+      "P205",
+      "P186",
+      "P147",
+      "P316",
+      "P056",
+      "P122",
+      "P237",
+      "P268",
+      "P268",
+      "P147"
+    ],
+    "sign_count": 10,
+    "source_code": "CISI_MAYIG"
+  },
+  {
+    "id": "M-50A",
+    "description": "unicorn III seal",
+    "signs": [
+      "P324",
+      "P288",
+      "P127",
+      "P147",
+      "P316",
+      "P062",
+      "P230",
+      "P122",
+      "P000"
+    ],
+    "sign_count": 9,
+    "source_code": "CISI_MAYIG"
+  },
+  {
+    "id": "M-51A",
+    "description": "unicorn III seal",
+    "signs": [
+      "P324",
+      "P230",
+      "P215",
+      "P091",
+      "P060",
+      "P324",
+      "P086",
+      "P011"
+    ],
+    "sign_count": 8,
+    "source_code": "CISI_MAYIG"
+  },
+  {
+    "id": "M-52A",
+    "description": "unicorn III seal",
+    "signs": [
+      "P324",
+      "P172",
+      "P145",
+      "P050",
+      "P092",
+      "P060",
+      "P364",
+      "P122",
+      "P211",
+      "P320"
+    ],
+    "sign_count": 10,
+    "source_code": "CISI_MAYIG"
+  },
+  {
+    "id": "M-53A",
+    "description": "unicorn III seal",
+    "signs": [
+      "P013",
+      "P324",
+      "P050",
+      "P126",
+      "P122",
+      "P205",
+      "P076",
+      "P154",
+      "P011"
+    ],
+    "sign_count": 9,
+    "source_code": "CISI_MAYIG"
+  },
+  {
+    "id": "M-54A",
+    "description": "unicorn III seal",
+    "signs": [
+      "P051",
+      "P062",
+      "P147",
+      "P316",
+      "P230",
+      "P122",
+      "P378"
+    ],
+    "sign_count": 7,
+    "source_code": "CISI_MAYIG"
+  },
+  {
+    "id": "M-55A",
+    "description": "unicorn III seal",
+    "signs": [
+      "P000",
+      "P332",
+      "P215",
+      "P275",
+      "P121",
+      "P256"
+    ],
+    "sign_count": 6,
+    "source_code": "CISI_MAYIG"
+  },
+  {
+    "id": "M-56A",
+    "description": "unicorn III seal",
+    "signs": [
+      "P324",
+      "P382",
+      "P145",
+      "P060",
+      "P120",
+      "P230",
+      "P281",
+      "P349"
+    ],
+    "sign_count": 8,
+    "source_code": "CISI_MAYIG"
+  },
+  {
+    "id": "M-57A",
+    "description": "unicorn III seal",
+    "signs": [
+      "P051",
+      "P145",
+      "P056",
+      "P230",
+      "P122",
+      "P258"
+    ],
+    "sign_count": 6,
+    "source_code": "CISI_MAYIG"
+  },
+  {
+    "id": "M-58A",
+    "description": "unicorn III seal",
+    "signs": [
+      "P324",
+      "P215",
+      "P210",
+      "P122",
+      "P385"
+    ],
+    "sign_count": 5,
+    "source_code": "CISI_MAYIG"
+  },
+  {
+    "id": "M-59A",
+    "description": "unicorn III seal",
+    "signs": [
+      "P202",
+      "P123",
+      "P326",
+      "P120",
+      "P160"
+    ],
+    "sign_count": 5,
+    "source_code": "CISI_MAYIG"
+  },
+  {
+    "id": "M-5A",
+    "description": "unicorn I seal",
+    "signs": [
+      "P324",
+      "P096",
+      "P062",
+      "P060",
+      "P120",
+      "P256"
+    ],
+    "sign_count": 6,
+    "source_code": "CISI_MAYIG"
+  },
+  {
+    "id": "M-60A",
+    "description": "unicorn III seal",
+    "signs": [
+      "P001",
+      "P000"
+    ],
+    "sign_count": 2,
+    "source_code": "CISI_MAYIG"
+  },
+  {
+    "id": "M-61A",
+    "description": "unicorn III seal",
+    "signs": [
+      "P324",
+      "P251",
+      "P056",
+      "P050",
+      "P221",
+      "P268",
+      "P246"
+    ],
+    "sign_count": 7,
+    "source_code": "CISI_MAYIG"
+  },
+  {
+    "id": "M-62A",
+    "description": "unicorn III seal",
+    "signs": [
+      "P051",
+      "P122",
+      "P325",
+      "P230",
+      "P310",
+      "P234"
+    ],
+    "sign_count": 6,
+    "source_code": "CISI_MAYIG"
+  },
+  {
+    "id": "M-63A",
+    "description": "unicorn III seal",
+    "signs": [
+      "P301",
+      "P230",
+      "P120",
+      "P230"
+    ],
+    "sign_count": 4,
+    "source_code": "CISI_MAYIG"
+  },
+  {
+    "id": "M-64A",
+    "description": "unicorn III seal",
+    "signs": [
+      "P217",
+      "P147",
+      "P316",
+      "P120",
+      "P050",
+      "P124"
+    ],
+    "sign_count": 6,
+    "source_code": "CISI_MAYIG"
+  },
+  {
+    "id": "M-65A",
+    "description": "unicorn III seal",
+    "signs": [
+      "P217",
+      "P050",
+      "P144",
+      "P121",
+      "P316",
+      "P289"
+    ],
+    "sign_count": 6,
+    "source_code": "CISI_MAYIG"
+  },
+  {
+    "id": "M-66A",
+    "description": "unicorn III seal",
+    "signs": [
+      "P086",
+      "P276",
+      "P060",
+      "P122",
+      "P103",
+      "P206",
+      "P091",
+      "P324"
+    ],
+    "sign_count": 8,
+    "source_code": "CISI_MAYIG"
+  },
+  {
+    "id": "M-67A",
+    "description": "unicorn III seal",
+    "signs": [
+      "P324",
+      "P342",
+      "P154",
+      "P120",
+      "P040",
+      "P289",
+      "P223"
+    ],
+    "sign_count": 7,
+    "source_code": "CISI_MAYIG"
+  },
+  {
+    "id": "M-68A",
+    "description": "unicorn III seal",
+    "signs": [
+      "P013",
+      "P324",
+      "P194",
+      "P326",
+      "P120",
+      "P160",
+      "P260",
+      "P047"
+    ],
+    "sign_count": 8,
+    "source_code": "CISI_MAYIG"
+  },
+  {
+    "id": "M-69A",
+    "description": "unicorn III seal",
+    "signs": [
+      "P324",
+      "P364",
+      "P056",
+      "P120",
+      "P256"
+    ],
+    "sign_count": 5,
+    "source_code": "CISI_MAYIG"
+  },
+  {
+    "id": "M-6A",
+    "description": "unicorn I seal",
+    "signs": [
+      "P378",
+      "P384",
+      "P201",
+      "P065"
+    ],
+    "sign_count": 4,
+    "source_code": "CISI_MAYIG"
+  },
+  {
+    "id": "M-70A",
+    "description": "unicorn III seal",
+    "signs": [
+      "P051",
+      "P145",
+      "P122",
+      "P086",
+      "P256"
+    ],
+    "sign_count": 5,
+    "source_code": "CISI_MAYIG"
+  },
+  {
+    "id": "M-71A",
+    "description": "unicorn III seal",
+    "signs": [
+      "P001",
+      "P108",
+      "P031",
+      "P122",
+      "P086",
+      "P023"
+    ],
+    "sign_count": 6,
+    "source_code": "CISI_MAYIG"
+  },
+  {
+    "id": "M-72A",
+    "description": "unicorn III seal",
+    "signs": [
+      "P324",
+      "P073",
+      "P316",
+      "P011",
+      "P125",
+      "P385"
+    ],
+    "sign_count": 6,
+    "source_code": "CISI_MAYIG"
+  },
+  {
+    "id": "M-73A",
+    "description": "unicorn III seal",
+    "signs": [
+      "P098",
+      "P217",
+      "P181",
+      "P000"
+    ],
+    "sign_count": 4,
+    "source_code": "CISI_MAYIG"
+  },
+  {
+    "id": "M-74A",
+    "description": "unicorn III seal",
+    "signs": [
+      "P280",
+      "P289",
+      "P316",
+      "P011"
+    ],
+    "sign_count": 4,
+    "source_code": "CISI_MAYIG"
+  },
+  {
+    "id": "M-75A",
+    "description": "unicorn III seal",
+    "signs": [
+      "P217",
+      "P050",
+      "P124",
+      "P122",
+      "P385"
+    ],
+    "sign_count": 5,
+    "source_code": "CISI_MAYIG"
+  },
+  {
+    "id": "M-77A",
+    "description": "unicorn IV seal",
+    "signs": [
+      "P366",
+      "P086",
+      "P364",
+      "P122",
+      "P385"
+    ],
+    "sign_count": 5,
+    "source_code": "CISI_MAYIG"
+  },
+  {
+    "id": "M-78A",
+    "description": "unicorn IV seal",
+    "signs": [
+      "P324",
+      "P043",
+      "P145",
+      "P226"
+    ],
+    "sign_count": 4,
+    "source_code": "CISI_MAYIG"
+  },
+  {
+    "id": "M-79A",
+    "description": "unicorn IV seal",
+    "signs": [
+      "P324",
+      "P012",
+      "P062",
+      "P058",
+      "P122",
+      "P385",
+      "P247"
+    ],
+    "sign_count": 7,
+    "source_code": "CISI_MAYIG"
+  },
+  {
+    "id": "M-7A",
+    "description": "unicorn I seal",
+    "signs": [
+      "P086",
+      "P352",
+      "P011",
+      "P324",
+      "P154",
+      "P009",
+      "P154",
+      "P175",
+      "P062",
+      "P122",
+      "P385"
+    ],
+    "sign_count": 11,
+    "source_code": "CISI_MAYIG"
+  },
+  {
+    "id": "M-80A",
+    "description": "unicorn IV seal",
+    "signs": [
+      "P004",
+      "P123",
+      "P120",
+      "P202",
+      "P385"
+    ],
+    "sign_count": 5,
+    "source_code": "CISI_MAYIG"
+  },
+  {
+    "id": "M-81A",
+    "description": "unicorn IV seal",
+    "signs": [
+      "P301",
+      "P230",
+      "P062",
+      "P122",
+      "P268",
+      "P268",
+      "P217"
+    ],
+    "sign_count": 7,
+    "source_code": "CISI_MAYIG"
+  },
+  {
+    "id": "M-82A",
+    "description": "unicorn IV seal",
+    "signs": [
+      "P324",
+      "P053",
+      "P122",
+      "P082",
+      "P230",
+      "P086"
+    ],
+    "sign_count": 6,
+    "source_code": "CISI_MAYIG"
+  },
+  {
+    "id": "M-83A",
+    "description": "unicorn IV seal",
+    "signs": [
+      "P086",
+      "P128",
+      "P180"
+    ],
+    "sign_count": 3,
+    "source_code": "CISI_MAYIG"
+  },
+  {
+    "id": "M-84A",
+    "description": "unicorn IV seal",
+    "signs": [
+      "P324",
+      "P335",
+      "P062",
+      "P121",
+      "P202",
+      "P154"
+    ],
+    "sign_count": 6,
+    "source_code": "CISI_MAYIG"
+  },
+  {
+    "id": "M-85A",
+    "description": "unicorn IV seal",
+    "signs": [
+      "P217",
+      "P058",
+      "P325",
+      "P251",
+      "P070"
+    ],
+    "sign_count": 5,
+    "source_code": "CISI_MAYIG"
+  },
+  {
+    "id": "M-86A",
+    "description": "unicorn IV seal",
+    "signs": [
+      "P217",
+      "P147",
+      "P316",
+      "P056",
+      "P122",
+      "P378",
+      "P310"
+    ],
+    "sign_count": 7,
+    "source_code": "CISI_MAYIG"
+  },
+  {
+    "id": "M-87A",
+    "description": "unicorn IV seal",
+    "signs": [
+      "P098",
+      "P178",
+      "P020"
+    ],
+    "sign_count": 3,
+    "source_code": "CISI_MAYIG"
+  },
+  {
+    "id": "M-88A",
+    "description": "unicorn IV seal",
+    "signs": [
+      "P301",
+      "P110",
+      "P058"
+    ],
+    "sign_count": 3,
+    "source_code": "CISI_MAYIG"
+  },
+  {
+    "id": "M-89A",
+    "description": "unicorn IV seal",
+    "signs": [
+      "P324",
+      "P358",
+      "P313",
+      "P145",
+      "P060"
+    ],
+    "sign_count": 5,
+    "source_code": "CISI_MAYIG"
+  },
+  {
+    "id": "M-8A",
+    "description": "unicorn I seal",
+    "signs": [
+      "P316",
+      "P011",
+      "P270"
+    ],
+    "sign_count": 3,
+    "source_code": "CISI_MAYIG"
+  },
+  {
+    "id": "M-90A",
+    "description": "unicorn IV seal",
+    "signs": [
+      "P324",
+      "P349",
+      "P139",
+      "P144",
+      "P122",
+      "P385"
+    ],
+    "sign_count": 6,
+    "source_code": "CISI_MAYIG"
+  },
+  {
+    "id": "M-91A",
+    "description": "unicorn IV seal",
+    "signs": [
+      "P324",
+      "P009",
+      "P230",
+      "P050",
+      "P145",
+      "P122",
+      "P385",
+      "P073",
+      "P095"
+    ],
+    "sign_count": 9,
+    "source_code": "CISI_MAYIG"
+  },
+  {
+    "id": "M-92A",
+    "description": "unicorn IV seal",
+    "signs": [
+      "P324",
+      "P075",
+      "P215",
+      "P091",
+      "P122",
+      "P369",
+      "P253"
+    ],
+    "sign_count": 7,
+    "source_code": "CISI_MAYIG"
+  },
+  {
+    "id": "M-93A",
+    "description": "unicorn IV seal",
+    "signs": [
+      "P004",
+      "P123",
+      "P062",
+      "P325",
+      "P043"
+    ],
+    "sign_count": 5,
+    "source_code": "CISI_MAYIG"
+  },
+  {
+    "id": "M-94A",
+    "description": "unicorn IV seal",
+    "signs": [
+      "P324",
+      "P086",
+      "P276",
+      "P050",
+      "P123"
+    ],
+    "sign_count": 5,
+    "source_code": "CISI_MAYIG"
+  },
+  {
+    "id": "M-95A",
+    "description": "unicorn IV seal",
+    "signs": [
+      "P086",
+      "P123",
+      "P122",
+      "P040",
+      "P342"
+    ],
+    "sign_count": 5,
+    "source_code": "CISI_MAYIG"
+  },
+  {
+    "id": "M-96A",
+    "description": "unicorn IV seal",
+    "signs": [
+      "P004",
+      "P124"
+    ],
+    "sign_count": 2,
+    "source_code": "CISI_MAYIG"
+  },
+  {
+    "id": "M-97A",
+    "description": "unicorn IV seal",
+    "signs": [
+      "P004",
+      "P188",
+      "P073"
+    ],
+    "sign_count": 3,
+    "source_code": "CISI_MAYIG"
+  },
+  {
+    "id": "M-98A",
+    "description": "unicorn IV seal",
+    "signs": [
+      "P324",
+      "P288",
+      "P127"
+    ],
+    "sign_count": 3,
+    "source_code": "CISI_MAYIG"
+  },
+  {
+    "id": "M-99A",
+    "description": "unicorn IV seal",
+    "signs": [
+      "P324",
+      "P353",
+      "P122",
+      "P202",
+      "P038"
+    ],
+    "sign_count": 5,
+    "source_code": "CISI_MAYIG"
+  },
+  {
+    "id": "M-9A",
+    "description": "unicorn I seal",
+    "signs": [
+      "P144",
+      "P205",
+      "P327"
+    ],
+    "sign_count": 3,
+    "source_code": "CISI_MAYIG"
+  }
+]

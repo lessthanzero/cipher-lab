@@ -69,3 +69,29 @@
   - [ ] Create `null_engine.py`: $N=10,000$ Monte Carlo order-shuffled surrogate generator.
   - [ ] Create `runner.py`: Corpus-wide sweep confirming Jeremiah 25:26 (`ששך` -> `בבל`) and testing disputed candidates.
   - [ ] Create `tests/test_biblical_atbash.py`.
+
+---
+
+## Phase 6: Indus Script Epistemic Discovery & Grammar Breakthrough (`projects/indus/`)
+- [x] **Data Ingestion & Tri-Catalog Normalization**:
+  - [x] Ingest 179 Mohenjo-Daro unicorn seal inscriptions (1,003 tokens, 182 types) into `data/indus/mohenjodaro_cisi_inscriptions.json`.
+  - [x] Compile 396-sign concordance mapping Parpola CISI ($P$) $\leftrightarrow$ Mahadevan M77 ($M$) $\leftrightarrow$ Wells ICIT ($W$) in `projects/indus/concordance.py`.
+  - [x] Stage comparative control datasets: Minoan Linear A administrative tags (GORILA) and synthetic non-linguistic controls (Sproat heraldry and Meluhha cargo tags).
+- [x] **Statistical Sieve & Permutation Null Engines**:
+  - [x] Implement H1 (Edge-to-middle positional entropy and Friedman $\chi^2 = 45.39, p = 7.64 \times 10^{-10}$).
+  - [x] Implement H2 (Sign repetition deficit test: $Z = -5.81, p = 0.0002$ vs unigram draw; $1.99\%$ token repetition).
+  - [x] Implement H3 (Conditional block entropy drop ratio $0.414$ vs Sproat non-linguistic heraldic control $0.453$).
+  - [x] Implement H4 (Shannon unicity distance $U_0 = 907.5$ tokens vs $L_{\max} = 13$; combinatorial capacity $612.4\text{M}$ unique IDs).
+- [x] **Unsupervised Grammar Induction & Latent State Space Breakthrough**:
+  - [x] Implement H5: Normalized Laplacian spectral graph decomposition (`spectral_clustering.py`); discovered invariant eigengap at index 6 and 5 functional sign classes ($82.2\%$ feed-forward compliance across Parpola and Mahadevan).
+  - [x] Implement H6: Discrete Baum-Welch HMM sweep across $K \in \{2..8\}$ states (`hmm_induction.py`); established strict global BIC minimum at $K=4$ states ($\text{BIC} = 2,493.45$).
+  - [x] Implement H7: Dynamic programming Viterbi state decoder and hostile permutation sieve (`grammar_engine.py`, `breakthrough_pc.py`); $67.04\%$ monotonic DAG trajectory compliance, separating from frequency-shuffled nulls by $Z = +17.85$ ($p < 0.0005$).
+  - [x] Implement H8: Minimum Description Length (MDL) evaluation; 4-state PFSA achieves $73.02\%$ compression over raw encoding ($7,530.3 \rightarrow 2,031.8$ bits).
+- [x] **Distributed Compute-Fabric Execution**:
+  - [x] Execute $N=5,000$ discovery batch and $N=2,000$ breakthrough batch on remote Fedora Linux worker (`pc`).
+  - [x] Log all 9 hypothesis trials to `data/derived/epistemic_ledger.duckdb` with Bonferroni ($\alpha_{\text{crit}} = 0.00556$) and FDR control (multiplicity survived).
+- [x] **Consilium Multi-Peer Epistemic Review**:
+  - [x] Convene 3-peer Consilium panel (`qwen2.5:7b`, `gemini-3.8-flash-med`, `gpt-5.6-terra`) with complete 3/3 consensus affirming compact regular PFSA template while strictly precluding speculative natural language decipherment.
+- [x] **Preprint & Test Suite**:
+  - [x] Publish comprehensive research paper preprint: [`docs/research/INDUS_STRUCTURAL_DISCRIMINATION_SPRINT.md`](docs/research/INDUS_STRUCTURAL_DISCRIMINATION_SPRINT.md).
+  - [x] Implement 131/131 passing automated tests across macOS Darwin (Python 3.12) and Fedora Linux (Python 3.13).
