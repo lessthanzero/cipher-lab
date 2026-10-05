@@ -2,9 +2,9 @@
 
 **Date**: 2026-10-05  
 **Laboratory**: Computational Cryptanalysis Laboratory (`cipher-lab`)  
-**Status**: Core Cipher Tracks Complete & Released (v1.0.0); Pan-Indus Macro-Syntactic Discovery & Archaeology Complete; Visibility Infrastructure & Upstream PRs Live; Episteme Canvas Scaffolded; Bibleistics Track Initialized  
-**Test Suite Baseline**: 157 / 157 passing tests (`uv run pytest` in ~25s on macOS Darwin, ~15.6s on Fedora Linux `pc`)  
-**Ledger State**: `data/derived/epistemic_ledger.duckdb` (All 12 Pan-Indus trials `PAN-H1`..`PAN-H12`, `qumran-h1`, and `biblical-h1` confirmed and surviving Bonferroni FWER control \alpha_{\text{crit}} = 0.00357)  
+**Status**: Core Cipher Tracks Complete & Released (v1.0.0); Pan-Indus 4 Frontiers Executed on Apple M3 Air; Visibility Infrastructure Live; Bibleistics Track Operational  
+**Test Suite Baseline**: 161 / 161 passing tests (`uv run pytest` in ~25s on macOS Darwin M1 Pro, ~1.9s on Apple M3 Air, ~3.8s on Fedora Linux `pc`)  
+**Ledger State**: `data/derived/epistemic_ledger.duckdb` (All 15 Pan-Indus trials `PAN-H1`..`PAN-H15`, `qumran-h1`, and `biblical-h1` confirmed and surviving Bonferroni FWER control \alpha_{\text{crit}} = 0.00294)  
 **Remotes**: Synchronized across GitHub `origin/main` (`lessthanzero/cipher-lab`) and local `forgejo/main`
 
 ---
@@ -69,6 +69,27 @@
   - Ran $N=10,000$ Monte Carlo surrogate permutation engine on Fedora PC worker (`pc`).
   - Confirmed Jeremiah 25:26 & 51:41 (`ששך` $\to$ `בבל`, $Z = 10.49\sigma, p = 0.009$) and Jeremiah 51:1 (`לב קמי` $\to$ `כשדים`, $Z \gg 100\sigma, p = 0.0$).
   - Registered trial `biblical-h1-atbash-tanakh-sweep`. All unit tests passing (157/157).
+
+### J. The 4 Sequential Indus Script Frontiers on Apple Silicon M3 & Compute Fabric (PAN-H13..PAN-H15)
+- **Frontier 1: Full-Corpus Automated Transcription Ledger (`projects/indus/transcription_ledger.py`)**:
+  - Segmented, glossed, and parsed all 3,219 inscriptions across the Pan-Indus corpus with 96.12% regular clausal compliance.
+  - Formulated 5 administrative typologies: Authority Consignments (893), Guild Vouchers (345), Commodity Tallies (340), Multi-Register Tablets (1,637), Creolized Foreign Trade (4).
+  - Preserved zero-decipherment discipline ($U_0 \approx 907.5 \gg L_{\max}=13$). Registered trial `pan-h13-full-corpus-transcription-ledger`.
+- **Frontier 2: Diachronic Stratigraphy & Syntactic Crystallization on Apple M3 (`projects/indus/stratigraphy.py`)**:
+  - Tracked progression across HARP archaeological phases (Pre-Urban Graffiti $\to$ Mature Seals $\to$ Period 3B Molded Tablets $\to$ Period 3C Incised Tablets $\to$ Copper Tablets).
+  - Proved Period 3B Molded $\to$ Period 3C Incised displays rigid formulaic crystallization: clausal compliance leaps $+3.18\%$ ($96.28\% \to 99.46\%$, only 3 irregulars out of 556) and conditional transition entropy drops $-0.1271$ bits ($1.9608 \to 1.8337$ b).
+  - $N=2,000$ Monte Carlo permutations executed on Kate's MacBook Air (Apple M3, arm64, 0.48s): confirmed $Z = +3.67\sigma, p < 0.0005$. Registered trial `pan-h14-stratigraphic-grammar-crystallization`.
+- **Frontier 3: Intra-Site Spatial Archaeology & Administrative Segregation on Apple M3 (`projects/indus/spatial_archaeology.py`)**:
+  - Mapped excavated urban sectors across Mohenjo-Daro (Citadel SD, Residential HR, Commercial VS, Artisans DK-G) and Harappa (Citadel Mound AB, Workmen Mound F, Lower Town Mound E).
+  - Proved extreme administrative medium segregation: Harappa Workmen Mound F (90.58% tablets, 5.07% unicorn seals) vs Mohenjo-Daro VS Commercial (10.61% tablets, 95.53% unicorn seals monopoly), disparity $\Delta = +79.97\%, Z = +16.73\sigma, p < 0.0005$.
+  - Controlled for intra-site taphonomy: within Mohenjo-Daro, VS Commercial vs DK-G Artisans ($Z = +5.62\sigma, p < 0.0005$); within Harappa, Workmen F vs Lower Town E ($Z = +5.31\sigma, p < 0.0005$). Registered trial `pan-h15-spatial-administrative-segregation`.
+- **Frontier 4: Searchable Corpus Web Visualizer & Workbench Integration (`site/indus_reader.html`, `projects/indus/web_export.py`)**:
+  - Upgraded interactive platform to 6 tabs: Masterwork Showcase, Full Corpus Search (3,219 records), Diachronic Stratigraphy, Spatial Archaeology, Syntax Sandbox, and Epistemic Ledger (15 trials).
+  - Backed by compact, pre-indexed `site/indus_data.json` (2.98 MB).
+- **Consilium Multi-Peer Review (2/3 Consensus: `agy`, `codex`)**:
+  - Validated mathematical rigor and zero-decipherment compliance while enforcing exact Monte Carlo reporting bounds ($p < 0.0005$) and strictly intra-site spatial controls.
+- **Cross-Node Verification**:
+  - 161/161 tests passing across macOS M1 Pro, macOS M3 Air (`kates-macbook`), and Fedora Linux (`pc`).
 
 ---
 

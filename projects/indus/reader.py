@@ -210,6 +210,9 @@ class IndusReader:
         ins = self.find_inscription(identifier)
         if ins is None:
             return None
+        return self.read_inscription(ins)
+
+    def read_inscription(self, ins: PanInscription) -> StructuralReading:
         return self.read_sequence(
             signs=ins.signs_parpola,
             artifact_id=ins.artifact_id or ins.cisi_id,
