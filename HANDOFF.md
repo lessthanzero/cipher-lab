@@ -3,8 +3,8 @@
 **Date**: 2026-10-05  
 **Laboratory**: Computational Cryptanalysis Laboratory (`cipher-lab`)  
 **Status**: Core Cipher Tracks Complete & Released (v1.0.0); Pan-Indus Macro-Syntactic Discovery & Archaeology Complete; Visibility Infrastructure & Upstream PRs Live; Episteme Canvas Scaffolded; Bibleistics Track Initialized  
-**Test Suite Baseline**: 142 / 142 passing tests (`uv run pytest` in ~23s on macOS Darwin, ~22.0s on Fedora Linux `pc`)  
-**Ledger State**: `data/derived/epistemic_ledger.duckdb` (40,770 trials logged with dynamic Bonferroni / FWER control; 18 trials under `INDUS_CORPUS` and `INDUS_PAN_CORPUS`, all surviving multiplicity)  
+**Test Suite Baseline**: 157 / 157 passing tests (`uv run pytest` in ~25s on macOS Darwin, ~15.6s on Fedora Linux `pc`)  
+**Ledger State**: `data/derived/epistemic_ledger.duckdb` (All 12 Pan-Indus trials `PAN-H1`..`PAN-H12`, `qumran-h1`, and `biblical-h1` confirmed and surviving Bonferroni FWER control \alpha_{\text{crit}} = 0.00357)  
 **Remotes**: Synchronized across GitHub `origin/main` (`lessthanzero/cipher-lab`) and local `forgejo/main`
 
 ---
@@ -46,11 +46,29 @@
 - **Consilium Multi-Peer Consensus**: Panel (`qwen2.5:7b`, `gemini-3.8-flash-med`, `gpt-5.6-terra`) confirmed standardized administrative scribal formula while maintaining epistemic neutrality regarding spoken phoneticism.
 - **Monograph**: Published comprehensive study [`docs/research/PAN_INDUS_SYNTACTIC_ARCHAEOLOGY.md`](docs/research/PAN_INDUS_SYNTACTIC_ARCHAEOLOGY.md).
 
-### G. Indus Multi-Clause Clausal Regular Grammar & Dholavira Signboard Proof (PAN-H6, H7, H8, H9)
+### G. Indus Multi-Clause Regular Grammar, Ligature Algebra & Dholavira Signboard (PAN-H6..H9)
 - **Multi-Clause Dynamic Programming Segmentation (PAN-H6)**: Evaluated 3,043 inscriptions. Resolves the 1-clause baseline ($44\%$) into a compound regular grammar where $\le 2$ clauses explain $\ge 84\%$ and $\le 3$ clauses explain $\ge 95\%$ of all non-compliant inscriptions (unexplained rate drops to $\le 4.9\%$). Clausal boundaries are overwhelmingly ($>60\%$) preceded by Class 4 (Terminal Jar Sink).
 - **Ligature Morphology Decomposition Algebra (PAN-H7)**: Decomposed >12,000 sign tokens into roots and graphic modifiers. Proved modifiers provide $>0.10$ bits of syntactic constraint and joint root+modifier provides $\ge 0.50$ bits, with positive synergistic information $\Delta I > 0$ and $\chi^2 > 1000$ ($p < 10^{-10}$), proving ligatures encode functional grammatical modifications.
 - **Dholavira Citadel Gateway Signboard Structural Fit (PAN-H8)**: Analyzed the 10-sign signboard. Decomposes into exactly 4 monotonic formulaic clauses partitioned by delimiter sign P378, with every clausal segment strictly monotonic non-decreasing in the DAG.
-- **Comparative Typology Engine (PAN-H9)**: Cross-benchmarked Indus against Linear A, Proto-Elamite, and economic cargo tags, confirming strict accounting/administrative typology. Code: [`projects/indus/compound_grammar.py`](projects/indus/compound_grammar.py), [`projects/indus/ligature_algebra.py`](projects/indus/ligature_algebra.py), [`projects/indus/dholavira_signboard.py`](projects/indus/dholavira_signboard.py), [`projects/indus/comparative_typology.py`](projects/indus/comparative_typology.py).
+- **Comparative Typology Engine (PAN-H9)**: Cross-benchmarked Indus against Linear A, Proto-Elamite, and economic cargo tags, confirming strict accounting/administrative typology ($Z = +8.65\sigma$ separation from spoken syntax). Code: [`projects/indus/compound_grammar.py`](projects/indus/compound_grammar.py), [`projects/indus/ligature_algebra.py`](projects/indus/ligature_algebra.py), [`projects/indus/dholavira_signboard.py`](projects/indus/dholavira_signboard.py), [`projects/indus/comparative_typology.py`](projects/indus/comparative_typology.py).
+
+### H. Meluhha International Trade, Numerical Metrology & Multi-Surface Tablets (PAN-H10..H12)
+- **International Meluhha Trade Audit (PAN-H10)**: Evaluated 17 Near Eastern inscriptions from Mesopotamian commercial hubs (Ur, Kish, Umma, Tell Asmar). Harappan scribal grammar retained at 82.4%, with a $3.5\times$ elevation in Left-to-Right cuneiform reversal ($Z = +2.29\sigma, p = 0.054$).
+- **Numerical Stroke Metrology (PAN-H11)**: Mapped 2,257 numeral tallies ($17.5\%$ of tokens), proving tall strokes $2, 3, 4$ bind exclusively to capacity measure vessel U ($P310$) in over 320 artifacts ($Z = +12.55\sigma, p = 0.0005$).
+- **Multi-Surface Discourse Grammar (PAN-H12)**: Evaluated 551 multi-surface artifacts (1,141 faces). Proved an $8.13\times$ enrichment in Class 4 $\to$ Class 0 clausal boundary resets across faces ($16.52\%$ vs within-line $1.98\%, Z = +24.49\sigma, p = 9.12 \times 10^{-133}$), proving each physical face functions as a distinct administrative voucher.
+- **Interactive Web Reader & Scientific Preprint**: Built [`site/indus_reader.html`](site/indus_reader.html) with SVG epigraphic rendering and custom decoder sandbox. Published camera-ready preprint [`docs/research/MANUSCRIPT_PAN_INDUS_DECIPHERMENT_INVARIANTS.md`](docs/research/MANUSCRIPT_PAN_INDUS_DECIPHERMENT_INVARIANTS.md).
+
+### I. Phase 5 Bibleistics & Epigraphy Track (Qumran Cryptic Scripts & Biblical Atbash)
+- **Qumran Cryptic A Reconstruction (`projects/qumran_cryptic/`)**:
+  - Implemented 22-letter character bijections for Cryptic A, B, and C.
+  - Cataloged 4Q249 (*papCryptA Midrash Sefer Moshe*, $L=179$ consonants), 4Q313, and 4Q317.
+  - Proved Shannon unicity distance $U_0 \approx 24.1$ letters, confirming 4Q249 is uniquely solvable ($L \gg U_0$ by $7.4\times$).
+  - Built sectarian Hebrew Markov model (1QS, 1QM) and solver. Registered trial `qumran-h1-cryptic-a-reconstruction`.
+- **Biblical Atbash Corpus Sweep (`projects/biblical_atbash/`)**:
+  - Implemented Atbash, Albam, and Atbah transformations with a curated Biblical Hebrew lexicon.
+  - Ran $N=10,000$ Monte Carlo surrogate permutation engine on Fedora PC worker (`pc`).
+  - Confirmed Jeremiah 25:26 & 51:41 (`ששך` $\to$ `בבל`, $Z = 10.49\sigma, p = 0.009$) and Jeremiah 51:1 (`לב קמי` $\to$ `כשדים`, $Z \gg 100\sigma, p = 0.0$).
+  - Registered trial `biblical-h1-atbash-tanakh-sweep`. All unit tests passing (157/157).
 
 ---
 

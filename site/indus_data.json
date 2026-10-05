@@ -1,0 +1,1562 @@
+{
+  "metadata": {
+    "title": "Indus Epigraphic Reader & Structural Syntax Explorer",
+    "version": "1.0.0",
+    "corpus_size": 3219,
+    "unicity_distance": 907.5,
+    "max_inscription_length": 13
+  },
+  "classes": {
+    "0": "AUTHORITY / INSTITUTION / TITLE",
+    "1": "ADMINISTRATIVE SPECIFIER / CADRE",
+    "2": "COMMODITY / TRANSACTIONAL SPECIFIER",
+    "3": "NUMERICAL QUANTITY / MEASURE TALLY",
+    "4": "TERMINAL VERIFICATION SINK / CONSIGNMENT SEAL"
+  },
+  "showcase": [
+    {
+      "artifact_id": "144.1",
+      "site": "Dholavira",
+      "medium": "other",
+      "animal_motif": "",
+      "guild_context": "Guild Emblem: ",
+      "direction": "R/L",
+      "length": 9,
+      "num_clauses": 4,
+      "is_compliant": true,
+      "structural_english_gloss": "Administrative Reading for 144.1 (Dholavira, OTHER, R/L):\nAuthority Sphere: Guild Emblem: \nSyntactic Complexity: 4-clause formulaic structure (Regular Monotonic).\n  [Clause 1]: AUTHORITY / INSTITUTION / TITLE [WHEEL (P378)]  \u2192  ADMINISTRATIVE SPECIFIER / CADRE [OTHER (P281)]  \u2192  COMMODITY / TRANSACTIONAL SPECIFIER [STROKE + ROOF_CARET (P110)]\n  [Clause 2]: AUTHORITY / INSTITUTION / TITLE [WHEEL (P378)]  \u2192  TERMINAL VERIFICATION SINK / CONSIGNMENT SEAL [OTHER + HATCHED (P355)]\n  [Clause 3]: ADMINISTRATIVE SPECIFIER / CADRE [OTHER (P240)]  \u2192  TERMINAL VERIFICATION SINK / CONSIGNMENT SEAL [STROKE (P144)]\n  [Clause 4]: AUTHORITY / INSTITUTION / TITLE [OTHER (821)]  \u2192  TERMINAL VERIFICATION SINK / CONSIGNMENT SEAL [STROKE (P075)]",
+      "clauses": [
+        {
+          "clause_index": 0,
+          "start_pos": 0,
+          "end_pos": 3,
+          "is_monotonic": true,
+          "gloss_text": "AUTHORITY / INSTITUTION / TITLE [WHEEL (P378)]  \u2192  ADMINISTRATIVE SPECIFIER / CADRE [OTHER (P281)]  \u2192  COMMODITY / TRANSACTIONAL SPECIFIER [STROKE + ROOF_CARET (P110)]",
+          "signs": [
+            {
+              "position": 0,
+              "sign_parpola": "P378",
+              "sign_mahadevan": "M391",
+              "sign_wells": "W820",
+              "root": "WHEEL",
+              "modifier": "BARE",
+              "syntactic_class": 0,
+              "slot_role": "AUTHORITY / INSTITUTION / TITLE",
+              "description": "Wheel with 6 spokes with even angles"
+            },
+            {
+              "position": 1,
+              "sign_parpola": "P281",
+              "sign_mahadevan": "M256",
+              "sign_wells": "W611",
+              "root": "OTHER",
+              "modifier": "BARE",
+              "syntactic_class": 1,
+              "slot_role": "ADMINISTRATIVE SPECIFIER / CADRE",
+              "description": "Vertical line with two small boxes attached to the top"
+            },
+            {
+              "position": 2,
+              "sign_parpola": "P110",
+              "sign_mahadevan": "M327",
+              "sign_wells": "W388",
+              "root": "STROKE",
+              "modifier": "ROOF_CARET",
+              "syntactic_class": 2,
+              "slot_role": "COMMODITY / TRANSACTIONAL SPECIFIER",
+              "description": "Upside-down heart symbol with horizontal hatching, with vertical stroke coming from bottom of heart. Heart has two small decorations coming off the top center"
+            }
+          ]
+        },
+        {
+          "clause_index": 1,
+          "start_pos": 3,
+          "end_pos": 5,
+          "is_monotonic": true,
+          "gloss_text": "AUTHORITY / INSTITUTION / TITLE [WHEEL (P378)]  \u2192  TERMINAL VERIFICATION SINK / CONSIGNMENT SEAL [OTHER + HATCHED (P355)]",
+          "signs": [
+            {
+              "position": 3,
+              "sign_parpola": "P378",
+              "sign_mahadevan": "M391",
+              "sign_wells": "W820",
+              "root": "WHEEL",
+              "modifier": "BARE",
+              "syntactic_class": 0,
+              "slot_role": "AUTHORITY / INSTITUTION / TITLE",
+              "description": "Wheel with 6 spokes with even angles"
+            },
+            {
+              "position": 4,
+              "sign_parpola": "P355",
+              "sign_mahadevan": "M261",
+              "sign_wells": "W790",
+              "root": "OTHER",
+              "modifier": "HATCHED",
+              "syntactic_class": 4,
+              "slot_role": "TERMINAL VERIFICATION SINK / CONSIGNMENT SEAL",
+              "description": "Simple leaf or diamond, possibly rotated 45 degrees"
+            }
+          ]
+        },
+        {
+          "clause_index": 2,
+          "start_pos": 5,
+          "end_pos": 7,
+          "is_monotonic": true,
+          "gloss_text": "ADMINISTRATIVE SPECIFIER / CADRE [OTHER (P240)]  \u2192  TERMINAL VERIFICATION SINK / CONSIGNMENT SEAL [STROKE (P144)]",
+          "signs": [
+            {
+              "position": 5,
+              "sign_parpola": "P240",
+              "sign_mahadevan": "M137",
+              "sign_wells": "W645",
+              "root": "OTHER",
+              "modifier": "BARE",
+              "syntactic_class": 1,
+              "slot_role": "ADMINISTRATIVE SPECIFIER / CADRE",
+              "description": "An 'X' with no decoration"
+            },
+            {
+              "position": 6,
+              "sign_parpola": "P144",
+              "sign_mahadevan": "M086",
+              "sign_wells": "W031",
+              "root": "STROKE",
+              "modifier": "BARE",
+              "syntactic_class": 4,
+              "slot_role": "TERMINAL VERIFICATION SINK / CONSIGNMENT SEAL",
+              "description": "One full-height vertical stroke"
+            }
+          ]
+        },
+        {
+          "clause_index": 3,
+          "start_pos": 7,
+          "end_pos": 9,
+          "is_monotonic": true,
+          "gloss_text": "AUTHORITY / INSTITUTION / TITLE [OTHER (821)]  \u2192  TERMINAL VERIFICATION SINK / CONSIGNMENT SEAL [STROKE (P075)]",
+          "signs": [
+            {
+              "position": 7,
+              "sign_parpola": "821",
+              "sign_mahadevan": "-",
+              "sign_wells": "-",
+              "root": "OTHER",
+              "modifier": "BARE",
+              "syntactic_class": 0,
+              "slot_role": "AUTHORITY / INSTITUTION / TITLE",
+              "description": ""
+            },
+            {
+              "position": 8,
+              "sign_parpola": "P075",
+              "sign_mahadevan": "M053",
+              "sign_wells": "W193",
+              "root": "STROKE",
+              "modifier": "BARE",
+              "syntactic_class": 4,
+              "slot_role": "TERMINAL VERIFICATION SINK / CONSIGNMENT SEAL",
+              "description": "Leaf with 'pincers' coming off the right, possibly with small stroke legs off top and bottom of leaf"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "artifact_id": "5.1",
+      "site": "Allahdino",
+      "medium": "tag",
+      "animal_motif": "Bull",
+      "guild_context": "Bovid Agrarian / Commercial Guild",
+      "direction": "R/L",
+      "length": 2,
+      "num_clauses": 1,
+      "is_compliant": true,
+      "structural_english_gloss": "Administrative Reading for 5.1 (Allahdino, TAG, R/L):\nAuthority Sphere: Bovid Agrarian / Commercial Guild\nSyntactic Complexity: 1-clause formulaic structure (Regular Monotonic).\n  [Clause 1]: AUTHORITY / INSTITUTION / TITLE [FISH + ROOF_CARET (P060)]  \u2192  TERMINAL VERIFICATION SINK / CONSIGNMENT SEAL [JAR + HANDLES_WINGS (P324)]",
+      "clauses": [
+        {
+          "clause_index": 0,
+          "start_pos": 0,
+          "end_pos": 2,
+          "is_monotonic": true,
+          "gloss_text": "AUTHORITY / INSTITUTION / TITLE [FISH + ROOF_CARET (P060)]  \u2192  TERMINAL VERIFICATION SINK / CONSIGNMENT SEAL [JAR + HANDLES_WINGS (P324)]",
+          "signs": [
+            {
+              "position": 0,
+              "sign_parpola": "P060",
+              "sign_mahadevan": "M065",
+              "sign_wells": "W235",
+              "root": "FISH",
+              "modifier": "ROOF_CARET",
+              "syntactic_class": 0,
+              "slot_role": "AUTHORITY / INSTITUTION / TITLE",
+              "description": "Fish with a caret shaped hat"
+            },
+            {
+              "position": 1,
+              "sign_parpola": "P324",
+              "sign_mahadevan": "M342",
+              "sign_wells": "W740",
+              "root": "JAR",
+              "modifier": "HANDLES_WINGS",
+              "syntactic_class": 4,
+              "slot_role": "TERMINAL VERIFICATION SINK / CONSIGNMENT SEAL",
+              "description": "Classic jar symbol with two horizontal handles at the top of each arm pointed outward"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "artifact_id": "6.1",
+      "site": "Allahdino",
+      "medium": "seal",
+      "animal_motif": "Bull1",
+      "guild_context": "Guild Emblem: Bull1",
+      "direction": "R/L",
+      "length": 3,
+      "num_clauses": 1,
+      "is_compliant": true,
+      "structural_english_gloss": "Administrative Reading for 6.1 (Allahdino, SEAL, R/L):\nAuthority Sphere: Guild Emblem: Bull1\nSyntactic Complexity: 1-clause formulaic structure (Regular Monotonic).\n  [Clause 1]: COMMODITY / TRANSACTIONAL SPECIFIER [OTHER (P276)]  \u2192  TERMINAL VERIFICATION SINK / CONSIGNMENT SEAL [TREE (P086)]  \u2192  TERMINAL VERIFICATION SINK / CONSIGNMENT SEAL [JAR + HANDLES_WINGS (P324)]",
+      "clauses": [
+        {
+          "clause_index": 0,
+          "start_pos": 0,
+          "end_pos": 3,
+          "is_monotonic": true,
+          "gloss_text": "COMMODITY / TRANSACTIONAL SPECIFIER [OTHER (P276)]  \u2192  TERMINAL VERIFICATION SINK / CONSIGNMENT SEAL [TREE (P086)]  \u2192  TERMINAL VERIFICATION SINK / CONSIGNMENT SEAL [JAR + HANDLES_WINGS (P324)]",
+          "signs": [
+            {
+              "position": 0,
+              "sign_parpola": "P276",
+              "sign_mahadevan": "M249",
+              "sign_wells": "W590",
+              "root": "OTHER",
+              "modifier": "BARE",
+              "syntactic_class": 2,
+              "slot_role": "COMMODITY / TRANSACTIONAL SPECIFIER",
+              "description": "Square at bottom with vertical bar coming off top middle"
+            },
+            {
+              "position": 1,
+              "sign_parpola": "P086",
+              "sign_mahadevan": "M161",
+              "sign_wells": "W390",
+              "root": "TREE",
+              "modifier": "BARE",
+              "syntactic_class": 4,
+              "slot_role": "TERMINAL VERIFICATION SINK / CONSIGNMENT SEAL",
+              "description": "Simple tree with branches at the top"
+            },
+            {
+              "position": 2,
+              "sign_parpola": "P324",
+              "sign_mahadevan": "M342",
+              "sign_wells": "W740",
+              "root": "JAR",
+              "modifier": "HANDLES_WINGS",
+              "syntactic_class": 4,
+              "slot_role": "TERMINAL VERIFICATION SINK / CONSIGNMENT SEAL",
+              "description": "Classic jar symbol with two horizontal handles at the top of each arm pointed outward"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "artifact_id": "7.1",
+      "site": "Allahdino",
+      "medium": "seal",
+      "animal_motif": "Bull1:J",
+      "guild_context": "Guild Emblem: Bull1:J",
+      "direction": "R/L",
+      "length": 4,
+      "num_clauses": 2,
+      "is_compliant": true,
+      "structural_english_gloss": "Administrative Reading for 7.1 (Allahdino, SEAL, R/L):\nAuthority Sphere: Guild Emblem: Bull1:J\nSyntactic Complexity: 2-clause formulaic structure (Regular Monotonic).\n  [Clause 1]: AUTHORITY / INSTITUTION / TITLE [STROKE (P147)]  \u2192  ADMINISTRATIVE SPECIFIER / CADRE [PERSON (P035)]  \u2192  TERMINAL VERIFICATION SINK / CONSIGNMENT SEAL [TREE (P086)]\n  [Clause 2]: ADMINISTRATIVE SPECIFIER / CADRE [STROKE + HANDLES_WINGS (P202)]",
+      "clauses": [
+        {
+          "clause_index": 0,
+          "start_pos": 0,
+          "end_pos": 3,
+          "is_monotonic": true,
+          "gloss_text": "AUTHORITY / INSTITUTION / TITLE [STROKE (P147)]  \u2192  ADMINISTRATIVE SPECIFIER / CADRE [PERSON (P035)]  \u2192  TERMINAL VERIFICATION SINK / CONSIGNMENT SEAL [TREE (P086)]",
+          "signs": [
+            {
+              "position": 0,
+              "sign_parpola": "P147",
+              "sign_mahadevan": "M089",
+              "sign_wells": "W033",
+              "root": "STROKE",
+              "modifier": "BARE",
+              "syntactic_class": 0,
+              "slot_role": "AUTHORITY / INSTITUTION / TITLE",
+              "description": "Three adjacent full-height vertical strokes"
+            },
+            {
+              "position": 1,
+              "sign_parpola": "P035",
+              "sign_mahadevan": "M028",
+              "sign_wells": "W125",
+              "root": "PERSON",
+              "modifier": "BARE",
+              "syntactic_class": 1,
+              "slot_role": "ADMINISTRATIVE SPECIFIER / CADRE",
+              "description": "Person with bow and arrow"
+            },
+            {
+              "position": 2,
+              "sign_parpola": "P086",
+              "sign_mahadevan": "M161",
+              "sign_wells": "W390",
+              "root": "TREE",
+              "modifier": "BARE",
+              "syntactic_class": 4,
+              "slot_role": "TERMINAL VERIFICATION SINK / CONSIGNMENT SEAL",
+              "description": "Simple tree with branches at the top"
+            }
+          ]
+        },
+        {
+          "clause_index": 1,
+          "start_pos": 3,
+          "end_pos": 4,
+          "is_monotonic": true,
+          "gloss_text": "ADMINISTRATIVE SPECIFIER / CADRE [STROKE + HANDLES_WINGS (P202)]",
+          "signs": [
+            {
+              "position": 3,
+              "sign_parpola": "P202",
+              "sign_mahadevan": "M402",
+              "sign_wells": "W365",
+              "root": "STROKE",
+              "modifier": "HANDLES_WINGS",
+              "syntactic_class": 1,
+              "slot_role": "ADMINISTRATIVE SPECIFIER / CADRE",
+              "description": "Vertical stroke with a triangular wing attached near the middle"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "artifact_id": "8.1",
+      "site": "Allahdino",
+      "medium": "seal",
+      "animal_motif": "Bull1:II",
+      "guild_context": "Guild Emblem: Bull1:II",
+      "direction": "R/L",
+      "length": 5,
+      "num_clauses": 2,
+      "is_compliant": true,
+      "structural_english_gloss": "Administrative Reading for 8.1 (Allahdino, SEAL, R/L):\nAuthority Sphere: Guild Emblem: Bull1:II\nSyntactic Complexity: 2-clause formulaic structure (Regular Monotonic).\n  [Clause 1]: AUTHORITY / INSTITUTION / TITLE [FISH + ROOF_CARET (P060)]  \u2192  ADMINISTRATIVE SPECIFIER / CADRE [STROKE (P316)]\n  [Clause 2]: AUTHORITY / INSTITUTION / TITLE [STROKE (P147)]  \u2192  NUMERICAL QUANTITY / MEASURE TALLY [OTHER + BRACKETED (P172)]  \u2192  TERMINAL VERIFICATION SINK / CONSIGNMENT SEAL [JAR + HANDLES_WINGS (P324)]",
+      "clauses": [
+        {
+          "clause_index": 0,
+          "start_pos": 0,
+          "end_pos": 2,
+          "is_monotonic": true,
+          "gloss_text": "AUTHORITY / INSTITUTION / TITLE [FISH + ROOF_CARET (P060)]  \u2192  ADMINISTRATIVE SPECIFIER / CADRE [STROKE (P316)]",
+          "signs": [
+            {
+              "position": 0,
+              "sign_parpola": "P060",
+              "sign_mahadevan": "M065",
+              "sign_wells": "W235",
+              "root": "FISH",
+              "modifier": "ROOF_CARET",
+              "syntactic_class": 0,
+              "slot_role": "AUTHORITY / INSTITUTION / TITLE",
+              "description": "Fish with a caret shaped hat"
+            },
+            {
+              "position": 1,
+              "sign_parpola": "P316",
+              "sign_mahadevan": "M336",
+              "sign_wells": "W704",
+              "root": "STROKE",
+              "modifier": "BARE",
+              "syntactic_class": 1,
+              "slot_role": "ADMINISTRATIVE SPECIFIER / CADRE",
+              "description": "U with a long vertical stroke inserted into the gap of U"
+            }
+          ]
+        },
+        {
+          "clause_index": 1,
+          "start_pos": 2,
+          "end_pos": 5,
+          "is_monotonic": true,
+          "gloss_text": "AUTHORITY / INSTITUTION / TITLE [STROKE (P147)]  \u2192  NUMERICAL QUANTITY / MEASURE TALLY [OTHER + BRACKETED (P172)]  \u2192  TERMINAL VERIFICATION SINK / CONSIGNMENT SEAL [JAR + HANDLES_WINGS (P324)]",
+          "signs": [
+            {
+              "position": 2,
+              "sign_parpola": "P147",
+              "sign_mahadevan": "M089",
+              "sign_wells": "W033",
+              "root": "STROKE",
+              "modifier": "BARE",
+              "syntactic_class": 0,
+              "slot_role": "AUTHORITY / INSTITUTION / TITLE",
+              "description": "Three adjacent full-height vertical strokes"
+            },
+            {
+              "position": 3,
+              "sign_parpola": "P172",
+              "sign_mahadevan": "M294",
+              "sign_wells": "W904",
+              "root": "OTHER",
+              "modifier": "BRACKETED",
+              "syntactic_class": 3,
+              "slot_role": "NUMERICAL QUANTITY / MEASURE TALLY",
+              "description": "Two slightly nested right parentheses"
+            },
+            {
+              "position": 4,
+              "sign_parpola": "P324",
+              "sign_mahadevan": "M342",
+              "sign_wells": "W740",
+              "root": "JAR",
+              "modifier": "HANDLES_WINGS",
+              "syntactic_class": 4,
+              "slot_role": "TERMINAL VERIFICATION SINK / CONSIGNMENT SEAL",
+              "description": "Classic jar symbol with two horizontal handles at the top of each arm pointed outward"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "artifact_id": "9.1",
+      "site": "Allahdino",
+      "medium": "seal",
+      "animal_motif": "Bull1:II",
+      "guild_context": "Guild Emblem: Bull1:II",
+      "direction": "R/L",
+      "length": 6,
+      "num_clauses": 2,
+      "is_compliant": true,
+      "structural_english_gloss": "Administrative Reading for 9.1 (Allahdino, SEAL, R/L):\nAuthority Sphere: Guild Emblem: Bull1:II\nSyntactic Complexity: 2-clause formulaic structure (Regular Monotonic).\n  [Clause 1]: ADMINISTRATIVE SPECIFIER / CADRE [ARROW + ROOF_CARET (P185)]  \u2192  COMMODITY / TRANSACTIONAL SPECIFIER [JAR + HANDLES_WINGS (P325)]\n  [Clause 2]: AUTHORITY / INSTITUTION / TITLE [FISH + ROOF_CARET (P060)]  \u2192  AUTHORITY / INSTITUTION / TITLE [OTHER (495)]  \u2192  TERMINAL VERIFICATION SINK / CONSIGNMENT SEAL [STROKE (P127)]  \u2192  TERMINAL VERIFICATION SINK / CONSIGNMENT SEAL [JAR + HANDLES_WINGS (P324)]",
+      "clauses": [
+        {
+          "clause_index": 0,
+          "start_pos": 0,
+          "end_pos": 2,
+          "is_monotonic": true,
+          "gloss_text": "ADMINISTRATIVE SPECIFIER / CADRE [ARROW + ROOF_CARET (P185)]  \u2192  COMMODITY / TRANSACTIONAL SPECIFIER [JAR + HANDLES_WINGS (P325)]",
+          "signs": [
+            {
+              "position": 0,
+              "sign_parpola": "P185",
+              "sign_mahadevan": "M129",
+              "sign_wells": "W066",
+              "root": "ARROW",
+              "modifier": "ROOF_CARET",
+              "syntactic_class": 1,
+              "slot_role": "ADMINISTRATIVE SPECIFIER / CADRE",
+              "description": "Tall, slightly narrow caret (mountain motif), with a bit of the right leg removed"
+            },
+            {
+              "position": 1,
+              "sign_parpola": "P325",
+              "sign_mahadevan": "M343",
+              "sign_wells": "W741",
+              "root": "JAR",
+              "modifier": "HANDLES_WINGS",
+              "syntactic_class": 2,
+              "slot_role": "COMMODITY / TRANSACTIONAL SPECIFIER",
+              "description": "Classic jar symbol with two horizontal handles at the top of each arm pointed outward, single small vertical stroke inside mouth of jar"
+            }
+          ]
+        },
+        {
+          "clause_index": 1,
+          "start_pos": 2,
+          "end_pos": 6,
+          "is_monotonic": true,
+          "gloss_text": "AUTHORITY / INSTITUTION / TITLE [FISH + ROOF_CARET (P060)]  \u2192  AUTHORITY / INSTITUTION / TITLE [OTHER (495)]  \u2192  TERMINAL VERIFICATION SINK / CONSIGNMENT SEAL [STROKE (P127)]  \u2192  TERMINAL VERIFICATION SINK / CONSIGNMENT SEAL [JAR + HANDLES_WINGS (P324)]",
+          "signs": [
+            {
+              "position": 2,
+              "sign_parpola": "P060",
+              "sign_mahadevan": "M065",
+              "sign_wells": "W235",
+              "root": "FISH",
+              "modifier": "ROOF_CARET",
+              "syntactic_class": 0,
+              "slot_role": "AUTHORITY / INSTITUTION / TITLE",
+              "description": "Fish with a caret shaped hat"
+            },
+            {
+              "position": 3,
+              "sign_parpola": "495",
+              "sign_mahadevan": "-",
+              "sign_wells": "-",
+              "root": "OTHER",
+              "modifier": "BARE",
+              "syntactic_class": 0,
+              "slot_role": "AUTHORITY / INSTITUTION / TITLE",
+              "description": ""
+            },
+            {
+              "position": 4,
+              "sign_parpola": "P127",
+              "sign_mahadevan": "M110",
+              "sign_wells": "W007",
+              "root": "STROKE",
+              "modifier": "BARE",
+              "syntactic_class": 4,
+              "slot_role": "TERMINAL VERIFICATION SINK / CONSIGNMENT SEAL",
+              "description": "Seven short vertical strokes"
+            },
+            {
+              "position": 5,
+              "sign_parpola": "P324",
+              "sign_mahadevan": "M342",
+              "sign_wells": "W740",
+              "root": "JAR",
+              "modifier": "HANDLES_WINGS",
+              "syntactic_class": 4,
+              "slot_role": "TERMINAL VERIFICATION SINK / CONSIGNMENT SEAL",
+              "description": "Classic jar symbol with two horizontal handles at the top of each arm pointed outward"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "artifact_id": "11.1",
+      "site": "Allahdino",
+      "medium": "seal",
+      "animal_motif": "Rhin",
+      "guild_context": "Guild Emblem: Rhin",
+      "direction": "R/L",
+      "length": 5,
+      "num_clauses": 2,
+      "is_compliant": true,
+      "structural_english_gloss": "Administrative Reading for 11.1 (Allahdino, SEAL, R/L):\nAuthority Sphere: Guild Emblem: Rhin\nSyntactic Complexity: 2-clause formulaic structure (Regular Monotonic).\n  [Clause 1]: ADMINISTRATIVE SPECIFIER / CADRE [STROKE (P139)]  \u2192  ADMINISTRATIVE SPECIFIER / CADRE [OTHER (P349)]  \u2192  TERMINAL VERIFICATION SINK / CONSIGNMENT SEAL [JAR + HANDLES_WINGS (P324)]\n  [Clause 2]: NUMERICAL QUANTITY / MEASURE TALLY [OTHER (P348)]  \u2192  TERMINAL VERIFICATION SINK / CONSIGNMENT SEAL [PERSON (P114)]",
+      "clauses": [
+        {
+          "clause_index": 0,
+          "start_pos": 0,
+          "end_pos": 3,
+          "is_monotonic": true,
+          "gloss_text": "ADMINISTRATIVE SPECIFIER / CADRE [STROKE (P139)]  \u2192  ADMINISTRATIVE SPECIFIER / CADRE [OTHER (P349)]  \u2192  TERMINAL VERIFICATION SINK / CONSIGNMENT SEAL [JAR + HANDLES_WINGS (P324)]",
+          "signs": [
+            {
+              "position": 0,
+              "sign_parpola": "P139",
+              "sign_mahadevan": "M103",
+              "sign_wells": "W013",
+              "root": "STROKE",
+              "modifier": "BARE",
+              "syntactic_class": 1,
+              "slot_role": "ADMINISTRATIVE SPECIFIER / CADRE",
+              "description": "Two small vertical strokes over one small vertical stroke"
+            },
+            {
+              "position": 1,
+              "sign_parpola": "P349",
+              "sign_mahadevan": "M403",
+              "sign_wells": "W840",
+              "root": "OTHER",
+              "modifier": "BARE",
+              "syntactic_class": 1,
+              "slot_role": "ADMINISTRATIVE SPECIFIER / CADRE",
+              "description": "Two vertical leaves, slightly overlapping"
+            },
+            {
+              "position": 2,
+              "sign_parpola": "P324",
+              "sign_mahadevan": "M342",
+              "sign_wells": "W740",
+              "root": "JAR",
+              "modifier": "HANDLES_WINGS",
+              "syntactic_class": 4,
+              "slot_role": "TERMINAL VERIFICATION SINK / CONSIGNMENT SEAL",
+              "description": "Classic jar symbol with two horizontal handles at the top of each arm pointed outward"
+            }
+          ]
+        },
+        {
+          "clause_index": 1,
+          "start_pos": 3,
+          "end_pos": 5,
+          "is_monotonic": true,
+          "gloss_text": "NUMERICAL QUANTITY / MEASURE TALLY [OTHER (P348)]  \u2192  TERMINAL VERIFICATION SINK / CONSIGNMENT SEAL [PERSON (P114)]",
+          "signs": [
+            {
+              "position": 3,
+              "sign_parpola": "P348",
+              "sign_mahadevan": "M409",
+              "sign_wells": "W170",
+              "root": "OTHER",
+              "modifier": "BARE",
+              "syntactic_class": 3,
+              "slot_role": "NUMERICAL QUANTITY / MEASURE TALLY",
+              "description": "Two leaves horizontally adjacent, with a small horizontal line connecting them. Caged by two inward sloping vertical lines"
+            },
+            {
+              "position": 4,
+              "sign_parpola": "P114",
+              "sign_mahadevan": "M155",
+              "sign_wells": "W070",
+              "root": "PERSON",
+              "modifier": "BARE",
+              "syntactic_class": 4,
+              "slot_role": "TERMINAL VERIFICATION SINK / CONSIGNMENT SEAL",
+              "description": "A single vertical line, with two person arms; head may be circle or continuation of line"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "artifact_id": "19.1",
+      "site": "Bala-kot",
+      "medium": "seal",
+      "animal_motif": "Bull1",
+      "guild_context": "Guild Emblem: Bull1",
+      "direction": "R/L",
+      "length": 7,
+      "num_clauses": 3,
+      "is_compliant": true,
+      "structural_english_gloss": "Administrative Reading for 19.1 (Bala-kot, SEAL, R/L):\nAuthority Sphere: Guild Emblem: Bull1\nSyntactic Complexity: 3-clause formulaic structure (Regular Monotonic).\n  [Clause 1]: AUTHORITY / INSTITUTION / TITLE [OTHER (P099)]  \u2192  ADMINISTRATIVE SPECIFIER / CADRE [PERSON (P035)]  \u2192  TERMINAL VERIFICATION SINK / CONSIGNMENT SEAL [OTHER (P091)]  \u2192  TERMINAL VERIFICATION SINK / CONSIGNMENT SEAL [OTHER (P205)]\n  [Clause 2]: ADMINISTRATIVE SPECIFIER / CADRE [STROKE (P122)]\n  [Clause 3]: AUTHORITY / INSTITUTION / TITLE [STROKE (P123)]  \u2192  TERMINAL VERIFICATION SINK / CONSIGNMENT SEAL [FISH + STROKE_DIACRITIC (P051)]",
+      "clauses": [
+        {
+          "clause_index": 0,
+          "start_pos": 0,
+          "end_pos": 4,
+          "is_monotonic": true,
+          "gloss_text": "AUTHORITY / INSTITUTION / TITLE [OTHER (P099)]  \u2192  ADMINISTRATIVE SPECIFIER / CADRE [PERSON (P035)]  \u2192  TERMINAL VERIFICATION SINK / CONSIGNMENT SEAL [OTHER (P091)]  \u2192  TERMINAL VERIFICATION SINK / CONSIGNMENT SEAL [OTHER (P205)]",
+          "signs": [
+            {
+              "position": 0,
+              "sign_parpola": "P099",
+              "sign_mahadevan": "M177",
+              "sign_wells": "W413",
+              "root": "OTHER",
+              "modifier": "BARE",
+              "syntactic_class": 0,
+              "slot_role": "AUTHORITY / INSTITUTION / TITLE",
+              "description": "Vertical line with small horizontal lines crossing it across the entire height"
+            },
+            {
+              "position": 1,
+              "sign_parpola": "P035",
+              "sign_mahadevan": "M028",
+              "sign_wells": "W125",
+              "root": "PERSON",
+              "modifier": "BARE",
+              "syntactic_class": 1,
+              "slot_role": "ADMINISTRATIVE SPECIFIER / CADRE",
+              "description": "Person with bow and arrow"
+            },
+            {
+              "position": 2,
+              "sign_parpola": "P091",
+              "sign_mahadevan": "M174",
+              "sign_wells": "W350",
+              "root": "OTHER",
+              "modifier": "BARE",
+              "syntactic_class": 4,
+              "slot_role": "TERMINAL VERIFICATION SINK / CONSIGNMENT SEAL",
+              "description": "Horizontal line with multiple lines out the top, lines or U out the bottom"
+            },
+            {
+              "position": 3,
+              "sign_parpola": "P205",
+              "sign_mahadevan": "M180",
+              "sign_wells": "W289",
+              "root": "OTHER",
+              "modifier": "BARE",
+              "syntactic_class": 4,
+              "slot_role": "TERMINAL VERIFICATION SINK / CONSIGNMENT SEAL",
+              "description": "Prismed light rays, with opposite slanting on top vs bottom, more rays on bottom"
+            }
+          ]
+        },
+        {
+          "clause_index": 1,
+          "start_pos": 4,
+          "end_pos": 5,
+          "is_monotonic": true,
+          "gloss_text": "ADMINISTRATIVE SPECIFIER / CADRE [STROKE (P122)]",
+          "signs": [
+            {
+              "position": 4,
+              "sign_parpola": "P122",
+              "sign_mahadevan": "M099",
+              "sign_wells": "W002",
+              "root": "STROKE",
+              "modifier": "BARE",
+              "syntactic_class": 1,
+              "slot_role": "ADMINISTRATIVE SPECIFIER / CADRE",
+              "description": "Two adjacent half-height simple vertical strokes"
+            }
+          ]
+        },
+        {
+          "clause_index": 2,
+          "start_pos": 5,
+          "end_pos": 7,
+          "is_monotonic": true,
+          "gloss_text": "AUTHORITY / INSTITUTION / TITLE [STROKE (P123)]  \u2192  TERMINAL VERIFICATION SINK / CONSIGNMENT SEAL [FISH + STROKE_DIACRITIC (P051)]",
+          "signs": [
+            {
+              "position": 5,
+              "sign_parpola": "P123",
+              "sign_mahadevan": "M102",
+              "sign_wells": "W003",
+              "root": "STROKE",
+              "modifier": "BARE",
+              "syntactic_class": 0,
+              "slot_role": "AUTHORITY / INSTITUTION / TITLE",
+              "description": "Three adjacent half-height simple vertical strokes"
+            },
+            {
+              "position": 6,
+              "sign_parpola": "P051",
+              "sign_mahadevan": "M060",
+              "sign_wells": "W226",
+              "root": "FISH",
+              "modifier": "STROKE_DIACRITIC",
+              "syntactic_class": 4,
+              "slot_role": "TERMINAL VERIFICATION SINK / CONSIGNMENT SEAL",
+              "description": "Fish with four small vertical strokes around the four corners"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "artifact_id": "27.1",
+      "site": "Banawali",
+      "medium": "seal",
+      "animal_motif": "Bull1:O",
+      "guild_context": "Guild Emblem: Bull1:O",
+      "direction": "R/L",
+      "length": 7,
+      "num_clauses": 2,
+      "is_compliant": true,
+      "structural_english_gloss": "Administrative Reading for 27.1 (Banawali, SEAL, R/L):\nAuthority Sphere: Guild Emblem: Bull1:O\nSyntactic Complexity: 2-clause formulaic structure (Regular Monotonic).\n  [Clause 1]: AUTHORITY / INSTITUTION / TITLE [OTHER (821)]  \u2192  TERMINAL VERIFICATION SINK / CONSIGNMENT SEAL [OTHER (P230)]\n  [Clause 2]: ADMINISTRATIVE SPECIFIER / CADRE [STROKE + HANDLES_WINGS (P202)]  \u2192  ADMINISTRATIVE SPECIFIER / CADRE [STROKE (P122)]  \u2192  TERMINAL VERIFICATION SINK / CONSIGNMENT SEAL [FISH (P050)]  \u2192  TERMINAL VERIFICATION SINK / CONSIGNMENT SEAL [JAR + HANDLES_WINGS (P324)]  \u2192  TERMINAL VERIFICATION SINK / CONSIGNMENT SEAL [PERSON (P013)]",
+      "clauses": [
+        {
+          "clause_index": 0,
+          "start_pos": 0,
+          "end_pos": 2,
+          "is_monotonic": true,
+          "gloss_text": "AUTHORITY / INSTITUTION / TITLE [OTHER (821)]  \u2192  TERMINAL VERIFICATION SINK / CONSIGNMENT SEAL [OTHER (P230)]",
+          "signs": [
+            {
+              "position": 0,
+              "sign_parpola": "821",
+              "sign_mahadevan": "-",
+              "sign_wells": "-",
+              "root": "OTHER",
+              "modifier": "BARE",
+              "syntactic_class": 0,
+              "slot_role": "AUTHORITY / INSTITUTION / TITLE",
+              "description": ""
+            },
+            {
+              "position": 1,
+              "sign_parpola": "P230",
+              "sign_mahadevan": "M216",
+              "sign_wells": "W550",
+              "root": "OTHER",
+              "modifier": "BARE",
+              "syntactic_class": 4,
+              "slot_role": "TERMINAL VERIFICATION SINK / CONSIGNMENT SEAL",
+              "description": "The 'pincer' motif. Right-pointing isocoles triangle on left, left-pointing isosceles triangle on right, with small part of right line removed in middle"
+            }
+          ]
+        },
+        {
+          "clause_index": 1,
+          "start_pos": 2,
+          "end_pos": 7,
+          "is_monotonic": true,
+          "gloss_text": "ADMINISTRATIVE SPECIFIER / CADRE [STROKE + HANDLES_WINGS (P202)]  \u2192  ADMINISTRATIVE SPECIFIER / CADRE [STROKE (P122)]  \u2192  TERMINAL VERIFICATION SINK / CONSIGNMENT SEAL [FISH (P050)]  \u2192  TERMINAL VERIFICATION SINK / CONSIGNMENT SEAL [JAR + HANDLES_WINGS (P324)]  \u2192  TERMINAL VERIFICATION SINK / CONSIGNMENT SEAL [PERSON (P013)]",
+          "signs": [
+            {
+              "position": 2,
+              "sign_parpola": "P202",
+              "sign_mahadevan": "M402",
+              "sign_wells": "W365",
+              "root": "STROKE",
+              "modifier": "HANDLES_WINGS",
+              "syntactic_class": 1,
+              "slot_role": "ADMINISTRATIVE SPECIFIER / CADRE",
+              "description": "Vertical stroke with a triangular wing attached near the middle"
+            },
+            {
+              "position": 3,
+              "sign_parpola": "P122",
+              "sign_mahadevan": "M099",
+              "sign_wells": "W002",
+              "root": "STROKE",
+              "modifier": "BARE",
+              "syntactic_class": 1,
+              "slot_role": "ADMINISTRATIVE SPECIFIER / CADRE",
+              "description": "Two adjacent half-height simple vertical strokes"
+            },
+            {
+              "position": 4,
+              "sign_parpola": "P050",
+              "sign_mahadevan": "M059",
+              "sign_wells": "W220",
+              "root": "FISH",
+              "modifier": "BARE",
+              "syntactic_class": 4,
+              "slot_role": "TERMINAL VERIFICATION SINK / CONSIGNMENT SEAL",
+              "description": "Fish with no other decoration"
+            },
+            {
+              "position": 5,
+              "sign_parpola": "P324",
+              "sign_mahadevan": "M342",
+              "sign_wells": "W740",
+              "root": "JAR",
+              "modifier": "HANDLES_WINGS",
+              "syntactic_class": 4,
+              "slot_role": "TERMINAL VERIFICATION SINK / CONSIGNMENT SEAL",
+              "description": "Classic jar symbol with two horizontal handles at the top of each arm pointed outward"
+            },
+            {
+              "position": 6,
+              "sign_parpola": "P013",
+              "sign_mahadevan": "M001",
+              "sign_wells": "W090",
+              "root": "PERSON",
+              "modifier": "BARE",
+              "syntactic_class": 4,
+              "slot_role": "TERMINAL VERIFICATION SINK / CONSIGNMENT SEAL",
+              "description": "Person with two arms and two legs, \ue06e"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "artifact_id": "70.1",
+      "site": "Chanhu-daro",
+      "medium": "seal",
+      "animal_motif": "Bull1:II",
+      "guild_context": "Guild Emblem: Bull1:II",
+      "direction": "R/L",
+      "length": 4,
+      "num_clauses": 1,
+      "is_compliant": true,
+      "structural_english_gloss": "Administrative Reading for 70.1 (Chanhu-daro, SEAL, R/L):\nAuthority Sphere: Guild Emblem: Bull1:II\nSyntactic Complexity: 1-clause formulaic structure (Regular Monotonic).\n  [Clause 1]: AUTHORITY / INSTITUTION / TITLE [FISH + ROOF_CARET (P060)]  \u2192  NUMERICAL QUANTITY / MEASURE TALLY [FISH (P062)]  \u2192  TERMINAL VERIFICATION SINK / CONSIGNMENT SEAL [JAR + HANDLES_WINGS (P324)]  \u2192  TERMINAL VERIFICATION SINK / CONSIGNMENT SEAL [PERSON (P001)]",
+      "clauses": [
+        {
+          "clause_index": 0,
+          "start_pos": 0,
+          "end_pos": 4,
+          "is_monotonic": true,
+          "gloss_text": "AUTHORITY / INSTITUTION / TITLE [FISH + ROOF_CARET (P060)]  \u2192  NUMERICAL QUANTITY / MEASURE TALLY [FISH (P062)]  \u2192  TERMINAL VERIFICATION SINK / CONSIGNMENT SEAL [JAR + HANDLES_WINGS (P324)]  \u2192  TERMINAL VERIFICATION SINK / CONSIGNMENT SEAL [PERSON (P001)]",
+          "signs": [
+            {
+              "position": 0,
+              "sign_parpola": "P060",
+              "sign_mahadevan": "M065",
+              "sign_wells": "W235",
+              "root": "FISH",
+              "modifier": "ROOF_CARET",
+              "syntactic_class": 0,
+              "slot_role": "AUTHORITY / INSTITUTION / TITLE",
+              "description": "Fish with a caret shaped hat"
+            },
+            {
+              "position": 1,
+              "sign_parpola": "P062",
+              "sign_mahadevan": "M067",
+              "sign_wells": "W240",
+              "root": "FISH",
+              "modifier": "BARE",
+              "syntactic_class": 3,
+              "slot_role": "NUMERICAL QUANTITY / MEASURE TALLY",
+              "description": "Fish with extra whiskers on cheeks"
+            },
+            {
+              "position": 2,
+              "sign_parpola": "P324",
+              "sign_mahadevan": "M342",
+              "sign_wells": "W740",
+              "root": "JAR",
+              "modifier": "HANDLES_WINGS",
+              "syntactic_class": 4,
+              "slot_role": "TERMINAL VERIFICATION SINK / CONSIGNMENT SEAL",
+              "description": "Classic jar symbol with two horizontal handles at the top of each arm pointed outward"
+            },
+            {
+              "position": 3,
+              "sign_parpola": "P001",
+              "sign_mahadevan": "M012",
+              "sign_wells": "W151",
+              "root": "PERSON",
+              "modifier": "BARE",
+              "syntactic_class": 4,
+              "slot_role": "TERMINAL VERIFICATION SINK / CONSIGNMENT SEAL",
+              "description": "Person carrying two burdens, \ue008"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "artifact_id": "1971.1",
+      "site": "Kish",
+      "medium": "seal",
+      "animal_motif": "Bull1:L",
+      "guild_context": "Guild Emblem: Bull1:L",
+      "direction": "R/L",
+      "length": 8,
+      "num_clauses": 3,
+      "is_compliant": true,
+      "structural_english_gloss": "Administrative Reading for 1971.1 (Kish, SEAL, R/L):\nAuthority Sphere: Guild Emblem: Bull1:L\nSyntactic Complexity: 3-clause formulaic structure (Regular Monotonic).\n  [Clause 1]: AUTHORITY / INSTITUTION / TITLE [OTHER (P095)]  \u2192  ADMINISTRATIVE SPECIFIER / CADRE [OTHER (P349)]  \u2192  ADMINISTRATIVE SPECIFIER / CADRE [OTHER (P120)]\n  [Clause 2]: AUTHORITY / INSTITUTION / TITLE [STROKE (P123)]  \u2192  TERMINAL VERIFICATION SINK / CONSIGNMENT SEAL [FISH (P050)]\n  [Clause 3]: COMMODITY / TRANSACTIONAL SPECIFIER [OTHER (P276)]  \u2192  TERMINAL VERIFICATION SINK / CONSIGNMENT SEAL [TREE (P086)]  \u2192  TERMINAL VERIFICATION SINK / CONSIGNMENT SEAL [JAR + HANDLES_WINGS (P324)]",
+      "clauses": [
+        {
+          "clause_index": 0,
+          "start_pos": 0,
+          "end_pos": 3,
+          "is_monotonic": true,
+          "gloss_text": "AUTHORITY / INSTITUTION / TITLE [OTHER (P095)]  \u2192  ADMINISTRATIVE SPECIFIER / CADRE [OTHER (P349)]  \u2192  ADMINISTRATIVE SPECIFIER / CADRE [OTHER (P120)]",
+          "signs": [
+            {
+              "position": 0,
+              "sign_parpola": "P095",
+              "sign_mahadevan": "M173",
+              "sign_wells": "W416",
+              "root": "OTHER",
+              "modifier": "BARE",
+              "syntactic_class": 0,
+              "slot_role": "AUTHORITY / INSTITUTION / TITLE",
+              "description": "Pitckfork with two stacked heads"
+            },
+            {
+              "position": 1,
+              "sign_parpola": "P349",
+              "sign_mahadevan": "M403",
+              "sign_wells": "W840",
+              "root": "OTHER",
+              "modifier": "BARE",
+              "syntactic_class": 1,
+              "slot_role": "ADMINISTRATIVE SPECIFIER / CADRE",
+              "description": "Two vertical leaves, slightly overlapping"
+            },
+            {
+              "position": 2,
+              "sign_parpola": "P120",
+              "sign_mahadevan": "M123",
+              "sign_wells": "W060",
+              "root": "OTHER",
+              "modifier": "BARE",
+              "syntactic_class": 1,
+              "slot_role": "ADMINISTRATIVE SPECIFIER / CADRE",
+              "description": "A single small vertical line, then another vertical line with the bottom half slanting under the first line (like a Japanese 'ri' character)."
+            }
+          ]
+        },
+        {
+          "clause_index": 1,
+          "start_pos": 3,
+          "end_pos": 5,
+          "is_monotonic": true,
+          "gloss_text": "AUTHORITY / INSTITUTION / TITLE [STROKE (P123)]  \u2192  TERMINAL VERIFICATION SINK / CONSIGNMENT SEAL [FISH (P050)]",
+          "signs": [
+            {
+              "position": 3,
+              "sign_parpola": "P123",
+              "sign_mahadevan": "M102",
+              "sign_wells": "W003",
+              "root": "STROKE",
+              "modifier": "BARE",
+              "syntactic_class": 0,
+              "slot_role": "AUTHORITY / INSTITUTION / TITLE",
+              "description": "Three adjacent half-height simple vertical strokes"
+            },
+            {
+              "position": 4,
+              "sign_parpola": "P050",
+              "sign_mahadevan": "M059",
+              "sign_wells": "W220",
+              "root": "FISH",
+              "modifier": "BARE",
+              "syntactic_class": 4,
+              "slot_role": "TERMINAL VERIFICATION SINK / CONSIGNMENT SEAL",
+              "description": "Fish with no other decoration"
+            }
+          ]
+        },
+        {
+          "clause_index": 2,
+          "start_pos": 5,
+          "end_pos": 8,
+          "is_monotonic": true,
+          "gloss_text": "COMMODITY / TRANSACTIONAL SPECIFIER [OTHER (P276)]  \u2192  TERMINAL VERIFICATION SINK / CONSIGNMENT SEAL [TREE (P086)]  \u2192  TERMINAL VERIFICATION SINK / CONSIGNMENT SEAL [JAR + HANDLES_WINGS (P324)]",
+          "signs": [
+            {
+              "position": 5,
+              "sign_parpola": "P276",
+              "sign_mahadevan": "M249",
+              "sign_wells": "W590",
+              "root": "OTHER",
+              "modifier": "BARE",
+              "syntactic_class": 2,
+              "slot_role": "COMMODITY / TRANSACTIONAL SPECIFIER",
+              "description": "Square at bottom with vertical bar coming off top middle"
+            },
+            {
+              "position": 6,
+              "sign_parpola": "P086",
+              "sign_mahadevan": "M161",
+              "sign_wells": "W390",
+              "root": "TREE",
+              "modifier": "BARE",
+              "syntactic_class": 4,
+              "slot_role": "TERMINAL VERIFICATION SINK / CONSIGNMENT SEAL",
+              "description": "Simple tree with branches at the top"
+            },
+            {
+              "position": 7,
+              "sign_parpola": "P324",
+              "sign_mahadevan": "M342",
+              "sign_wells": "W740",
+              "root": "JAR",
+              "modifier": "HANDLES_WINGS",
+              "syntactic_class": 4,
+              "slot_role": "TERMINAL VERIFICATION SINK / CONSIGNMENT SEAL",
+              "description": "Classic jar symbol with two horizontal handles at the top of each arm pointed outward"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "artifact_id": "3884.1",
+      "site": "Tell Umma",
+      "medium": "tag",
+      "animal_motif": "Bull1",
+      "guild_context": "Guild Emblem: Bull1",
+      "direction": "R/L",
+      "length": 5,
+      "num_clauses": 1,
+      "is_compliant": true,
+      "structural_english_gloss": "Administrative Reading for 3884.1 (Tell Umma, TAG, R/L):\nAuthority Sphere: Guild Emblem: Bull1\nSyntactic Complexity: 1-clause formulaic structure (Regular Monotonic).\n  [Clause 1]: AUTHORITY / INSTITUTION / TITLE [PERSON (P036)]  \u2192  ADMINISTRATIVE SPECIFIER / CADRE [STROKE (P316)]  \u2192  ADMINISTRATIVE SPECIFIER / CADRE [STROKE (P122)]  \u2192  COMMODITY / TRANSACTIONAL SPECIFIER [STROKE (P124)]  \u2192  TERMINAL VERIFICATION SINK / CONSIGNMENT SEAL [TREE (P086)]",
+      "clauses": [
+        {
+          "clause_index": 0,
+          "start_pos": 0,
+          "end_pos": 5,
+          "is_monotonic": true,
+          "gloss_text": "AUTHORITY / INSTITUTION / TITLE [PERSON (P036)]  \u2192  ADMINISTRATIVE SPECIFIER / CADRE [STROKE (P316)]  \u2192  ADMINISTRATIVE SPECIFIER / CADRE [STROKE (P122)]  \u2192  COMMODITY / TRANSACTIONAL SPECIFIER [STROKE (P124)]  \u2192  TERMINAL VERIFICATION SINK / CONSIGNMENT SEAL [TREE (P086)]",
+          "signs": [
+            {
+              "position": 0,
+              "sign_parpola": "P036",
+              "sign_mahadevan": "M029",
+              "sign_wells": "W127",
+              "root": "PERSON",
+              "modifier": "BARE",
+              "syntactic_class": 0,
+              "slot_role": "AUTHORITY / INSTITUTION / TITLE",
+              "description": "Person with two bows and arrows"
+            },
+            {
+              "position": 1,
+              "sign_parpola": "P316",
+              "sign_mahadevan": "M336",
+              "sign_wells": "W704",
+              "root": "STROKE",
+              "modifier": "BARE",
+              "syntactic_class": 1,
+              "slot_role": "ADMINISTRATIVE SPECIFIER / CADRE",
+              "description": "U with a long vertical stroke inserted into the gap of U"
+            },
+            {
+              "position": 2,
+              "sign_parpola": "P122",
+              "sign_mahadevan": "M099",
+              "sign_wells": "W002",
+              "root": "STROKE",
+              "modifier": "BARE",
+              "syntactic_class": 1,
+              "slot_role": "ADMINISTRATIVE SPECIFIER / CADRE",
+              "description": "Two adjacent half-height simple vertical strokes"
+            },
+            {
+              "position": 3,
+              "sign_parpola": "P124",
+              "sign_mahadevan": "M104",
+              "sign_wells": "W004",
+              "root": "STROKE",
+              "modifier": "BARE",
+              "syntactic_class": 2,
+              "slot_role": "COMMODITY / TRANSACTIONAL SPECIFIER",
+              "description": "Four adjacent half-height simple vertical strokes"
+            },
+            {
+              "position": 4,
+              "sign_parpola": "P086",
+              "sign_mahadevan": "M161",
+              "sign_wells": "W390",
+              "root": "TREE",
+              "modifier": "BARE",
+              "syntactic_class": 4,
+              "slot_role": "TERMINAL VERIFICATION SINK / CONSIGNMENT SEAL",
+              "description": "Simple tree with branches at the top"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "prisms": [
+    {
+      "base_id": "222",
+      "cisi_id": "",
+      "site": "Harappa",
+      "type_code": "TAB:I",
+      "n_surfaces": 3,
+      "concatenated_signs": [
+        "P092",
+        "P290",
+        "P145",
+        "824",
+        "799",
+        "P349",
+        "714",
+        "P324",
+        "P150",
+        "P310"
+      ],
+      "n_clauses": 4,
+      "is_compliant": false,
+      "faces": [
+        {
+          "face_index": 1,
+          "signs": [
+            "P092",
+            "P290",
+            "P145",
+            "824"
+          ],
+          "classes": [
+            3,
+            1,
+            4,
+            2
+          ],
+          "is_monotonic": false
+        },
+        {
+          "face_index": 2,
+          "signs": [
+            "799",
+            "P349",
+            "714",
+            "P324"
+          ],
+          "classes": [
+            0,
+            1,
+            2,
+            4
+          ],
+          "is_monotonic": true
+        },
+        {
+          "face_index": 3,
+          "signs": [
+            "P150",
+            "P310"
+          ],
+          "classes": [
+            0,
+            1
+          ],
+          "is_monotonic": true
+        }
+      ]
+    },
+    {
+      "base_id": "407",
+      "cisi_id": "",
+      "site": "Harappa",
+      "type_code": "TAB:I",
+      "n_surfaces": 3,
+      "concatenated_signs": [
+        "P147",
+        "P310",
+        "P092",
+        "P290",
+        "P145",
+        "824",
+        "799",
+        "P349",
+        "P332",
+        "P324"
+      ],
+      "n_clauses": 4,
+      "is_compliant": false,
+      "faces": [
+        {
+          "face_index": 1,
+          "signs": [
+            "P147",
+            "P310"
+          ],
+          "classes": [
+            0,
+            1
+          ],
+          "is_monotonic": true
+        },
+        {
+          "face_index": 2,
+          "signs": [
+            "P092",
+            "P290",
+            "P145",
+            "824"
+          ],
+          "classes": [
+            3,
+            1,
+            4,
+            2
+          ],
+          "is_monotonic": false
+        },
+        {
+          "face_index": 3,
+          "signs": [
+            "799",
+            "P349",
+            "P332",
+            "P324"
+          ],
+          "classes": [
+            0,
+            1,
+            2,
+            4
+          ],
+          "is_monotonic": true
+        }
+      ]
+    },
+    {
+      "base_id": "484",
+      "cisi_id": "",
+      "site": "Harappa",
+      "type_code": "TAB:I",
+      "n_surfaces": 3,
+      "concatenated_signs": [
+        "P150",
+        "P310",
+        "P092",
+        "P290",
+        "P145",
+        "824",
+        "799",
+        "P349",
+        "P332",
+        "P324"
+      ],
+      "n_clauses": 4,
+      "is_compliant": false,
+      "faces": [
+        {
+          "face_index": 1,
+          "signs": [
+            "P150",
+            "P310"
+          ],
+          "classes": [
+            0,
+            1
+          ],
+          "is_monotonic": true
+        },
+        {
+          "face_index": 2,
+          "signs": [
+            "P092",
+            "P290",
+            "P145",
+            "824"
+          ],
+          "classes": [
+            3,
+            1,
+            4,
+            2
+          ],
+          "is_monotonic": false
+        },
+        {
+          "face_index": 3,
+          "signs": [
+            "799",
+            "P349",
+            "P332",
+            "P324"
+          ],
+          "classes": [
+            0,
+            1,
+            2,
+            4
+          ],
+          "is_monotonic": true
+        }
+      ]
+    },
+    {
+      "base_id": "672",
+      "cisi_id": "",
+      "site": "Harappa",
+      "type_code": "TAB:I",
+      "n_surfaces": 3,
+      "concatenated_signs": [
+        "P147",
+        "P310",
+        "799",
+        "P349",
+        "P332",
+        "P324",
+        "876",
+        "P145",
+        "P290",
+        "P092"
+      ],
+      "n_clauses": 4,
+      "is_compliant": false,
+      "faces": [
+        {
+          "face_index": 1,
+          "signs": [
+            "P147",
+            "P310"
+          ],
+          "classes": [
+            0,
+            1
+          ],
+          "is_monotonic": true
+        },
+        {
+          "face_index": 2,
+          "signs": [
+            "799",
+            "P349",
+            "P332",
+            "P324"
+          ],
+          "classes": [
+            0,
+            1,
+            2,
+            4
+          ],
+          "is_monotonic": true
+        },
+        {
+          "face_index": 3,
+          "signs": [
+            "876",
+            "P145",
+            "P290",
+            "P092"
+          ],
+          "classes": [
+            0,
+            4,
+            1,
+            3
+          ],
+          "is_monotonic": false
+        }
+      ]
+    },
+    {
+      "base_id": "679",
+      "cisi_id": "",
+      "site": "Harappa",
+      "type_code": "TAB:I",
+      "n_surfaces": 3,
+      "concatenated_signs": [
+        "P145",
+        "P310",
+        "P145",
+        "854",
+        "P098",
+        "P293",
+        "257"
+      ],
+      "n_clauses": 4,
+      "is_compliant": false,
+      "faces": [
+        {
+          "face_index": 1,
+          "signs": [
+            "P145",
+            "P310"
+          ],
+          "classes": [
+            4,
+            1
+          ],
+          "is_monotonic": false
+        },
+        {
+          "face_index": 2,
+          "signs": [
+            "P145",
+            "854",
+            "P098"
+          ],
+          "classes": [
+            4,
+            1,
+            3
+          ],
+          "is_monotonic": false
+        },
+        {
+          "face_index": 3,
+          "signs": [
+            "P293",
+            "257"
+          ],
+          "classes": [
+            1,
+            1
+          ],
+          "is_monotonic": true
+        }
+      ]
+    },
+    {
+      "base_id": "693",
+      "cisi_id": "",
+      "site": "Harappa",
+      "type_code": "TAB:I",
+      "n_surfaces": 3,
+      "concatenated_signs": [
+        "P147",
+        "P310",
+        "P123",
+        "P385",
+        "P123",
+        "P004"
+      ],
+      "n_clauses": 2,
+      "is_compliant": true,
+      "faces": [
+        {
+          "face_index": 1,
+          "signs": [
+            "P147",
+            "P310"
+          ],
+          "classes": [
+            0,
+            1
+          ],
+          "is_monotonic": true
+        },
+        {
+          "face_index": 2,
+          "signs": [
+            "P123",
+            "P385"
+          ],
+          "classes": [
+            0,
+            0
+          ],
+          "is_monotonic": true
+        },
+        {
+          "face_index": 3,
+          "signs": [
+            "P123",
+            "P004"
+          ],
+          "classes": [
+            0,
+            1
+          ],
+          "is_monotonic": true
+        }
+      ]
+    }
+  ],
+  "trials": [
+    {
+      "id": "PAN-H1",
+      "name": "Cross-Site Syntactic Invariance",
+      "finding": "Mohenjo-Daro vs Harappa invariance (D_SKL=0.0664 b, Z=+20.37\u03c3)"
+    },
+    {
+      "id": "PAN-H2",
+      "name": "Cross-Medium Syntactic Generalization",
+      "finding": "Seals (76.3%), Tablets (75.6%), Tags (86.7%) share identical DAG"
+    },
+    {
+      "id": "PAN-H3",
+      "name": "Iconographic Motif Coupling",
+      "finding": "Animal heraldry couples to initial administrative class (\u03c7\u00b2=35.57, p=0.0033)"
+    },
+    {
+      "id": "PAN-H4",
+      "name": "Information-Theoretic Directionality",
+      "finding": "Right-to-Left reading direction proven (3.15x asymmetry, Z=+26.93\u03c3)"
+    },
+    {
+      "id": "PAN-H5",
+      "name": "Pan-Indus Global MDL Induction",
+      "finding": "Optimal 4-state HMM achieves 78.49% bit compression"
+    },
+    {
+      "id": "PAN-H6",
+      "name": "Hierarchical Multi-Clause Grammar",
+      "finding": "96.25% of corpus explained by \u22643 monotonic clauses (Z=+31.13\u03c3)"
+    },
+    {
+      "id": "PAN-H7",
+      "name": "Ligature Decomposition Algebra",
+      "finding": "Root \u2295 Modifier vector space reduces entropy by 26.1% (Z=+441.63\u03c3)"
+    },
+    {
+      "id": "PAN-H8",
+      "name": "Dholavira Citadel Signboard Proof",
+      "finding": "100% monotonic fit across 4 clauses partitioned by Spoked Wheel P378"
+    },
+    {
+      "id": "PAN-H9",
+      "name": "Comparative Ancient Typology",
+      "finding": "Separates from spoken syntax (Z=+8.65\u03c3); vector proximity to Proto-Elamite accounts"
+    },
+    {
+      "id": "PAN-H10",
+      "name": "Meluhha International Trade Audit",
+      "finding": "82.4% syntax retention in Mesopotamia; 3.5x elevation in cuneiform LTR reversal"
+    },
+    {
+      "id": "PAN-H11",
+      "name": "Numerical Stroke Metrology",
+      "finding": "2,257 numeral tallies bind directly to capacity measure vessel U (Z=+12.55\u03c3)"
+    },
+    {
+      "id": "PAN-H12",
+      "name": "Multi-Surface Discourse Grammar",
+      "finding": "551 multi-face tablets show 8.13x enrichment in Class 4->0 clausal resets across faces"
+    }
+  ]
+}
