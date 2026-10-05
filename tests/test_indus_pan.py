@@ -261,5 +261,61 @@ def test_ancient_comparative_typology(pan_corpus: PanIndusCorpus, analyzer: PanI
     assert report.indus_vs_proto_elamite_similarity < 0.25
 
 
+def test_indus_structural_reader(pan_corpus: PanIndusCorpus, analyzer: PanIndusAnalyzer) -> None:
+    """Verify end-to-end structural parser and administrative glossing engine."""
+    from projects.indus.reader import IndusReader
+
+    reader = IndusReader(corpus=pan_corpus, analyzer=analyzer)
+
+    # Test Dholavira Signboard 144.1
+    res_dh = reader.read_artifact("144.1")
+    assert res_dh is not None
+    assert res_dh.length == 9
+    assert res_dh.n_clauses == 4
+    assert res_dh.is_fully_compliant is True
+    assert "WHEEL" in res_dh.clauses[0].gloss_text
+
+    # Test Allahdino Cargo Tag 5.1
+    res_tag = reader.read_artifact("5.1")
+    assert res_tag is not None
+    assert res_tag.n_clauses == 1
+    assert res_tag.is_fully_compliant is True
+    assert "TERMINAL VERIFICATION SINK" in res_tag.clauses[0].gloss_text
+
+
+def test_meluhha_international_trade_audit(pan_corpus: PanIndusCorpus, analyzer: PanIndusAnalyzer) -> None:
+    """PAN-H10: Verify Meluhha international trade audit across Near-Eastern sites."""
+    from projects.indus.international_trade import MeluhhaTradeAuditor
+
+    auditor = MeluhhaTradeAuditor(corpus=pan_corpus, analyzer=analyzer)
+    report, audits = auditor.audit_international_corpus()
+
+    assert report.total_foreign_inscriptions >= 15
+    # Over 80% of expatriate inscriptions maintain Harappan scribal grammar
+    assert report.compliance_rate >= 0.80
+    # Left-to-Right writing direction is elevated by >2.5x due to cuneiform influence
+    assert report.lr_elevation_ratio > 2.5
+    # Creolized anomalies (Ur, Susa, Janabiyah) are systematically isolated
+    assert len(report.creolized_anomalies) >= 2
+
+
+def test_numerical_stroke_metrology(pan_corpus: PanIndusCorpus, analyzer: PanIndusAnalyzer) -> None:
+    """PAN-H11: Verify Indus numerical stroke system and commodity binding algebra."""
+    from projects.indus.numerical_system import IndusNumericalAnalyzer
+
+    num_analyzer = IndusNumericalAnalyzer(corpus=pan_corpus, analyzer=analyzer)
+    report, patterns = num_analyzer.analyze_numerals()
+
+    assert report.total_numeral_tokens > 2000
+    assert report.numeral_token_percentage > 15.0
+    # Numeral -> successor mutual information must exceed 1.0 bit
+    assert report.numeral_noun_mutual_information > 1.0
+    # Tall numerals (P145, P147, P150) must bind to container measure U (P310)
+    u_patterns = [p for p in patterns if p.target_sign == "P310"]
+    assert len(u_patterns) >= 3
+    assert sum(p.co_occurrence_count for p in u_patterns) > 250
+
+
+
 
 

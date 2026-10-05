@@ -139,10 +139,41 @@ class CompoundGrammarEngine:
                     clause_boundaries=(best_k1, best_k2), boundary_transitions=b_trans, clauses=(p1, p2, p3),
                 )
 
+        # Check 4-clause if permitted
+        if max_clauses >= 4:
+            b_k1, b_k2, b_k3 = -1, -1, -1
+            for k1 in range(1, T - 2):
+                if self.is_dag_monotonic(classes[:k1]):
+                    for k2 in range(k1 + 1, T - 1):
+                        if self.is_dag_monotonic(classes[k1:k2]):
+                            for k3 in range(k2 + 1, T):
+                                if self.is_dag_monotonic(classes[k2:k3]) and self.is_dag_monotonic(classes[k3:]):
+                                    b_k1, b_k2, b_k3 = k1, k2, k3
+                                    break
+                        if b_k1 > 0:
+                            break
+                if b_k1 > 0:
+                    break
+
+            if b_k1 > 0:
+                p1 = ClausePartition(0, 0, b_k1, tuple(classes[:b_k1]), tuple(signs[:b_k1]), True)
+                p2 = ClausePartition(1, b_k1, b_k2, tuple(classes[b_k1:b_k2]), tuple(signs[b_k1:b_k2]), True)
+                p3 = ClausePartition(2, b_k2, b_k3, tuple(classes[b_k2:b_k3]), tuple(signs[b_k2:b_k3]), True)
+                p4 = ClausePartition(3, b_k3, T, tuple(classes[b_k3:]), tuple(signs[b_k3:]), True)
+                b_trans = (
+                    (classes[b_k1 - 1], classes[b_k1]),
+                    (classes[b_k2 - 1], classes[b_k2]),
+                    (classes[b_k3 - 1], classes[b_k3]),
+                )
+                return CompoundParseResult(
+                    artifact_id=artifact_id, length=T, n_clauses=4, is_compliant=True,
+                    clause_boundaries=(b_k1, b_k2, b_k3), boundary_transitions=b_trans, clauses=(p1, p2, p3, p4),
+                )
+
         # Non-compliant (> max_clauses or anomalous)
         part = ClausePartition(0, 0, T, tuple(classes), tuple(signs), False)
         return CompoundParseResult(
-            artifact_id=artifact_id, length=T, n_clauses=4, is_compliant=False,
+            artifact_id=artifact_id, length=T, n_clauses=max_clauses + 1, is_compliant=False,
             clause_boundaries=(), boundary_transitions=(), clauses=(part,),
         )
 
