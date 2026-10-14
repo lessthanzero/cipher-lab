@@ -1,0 +1,782 @@
+{
+  "tier": 1,
+  "phase": "blind_search",
+  "dataset_name": "kryptos_k4_ciphertext",
+  "dataset_sha256": "verified",
+  "ciphertext": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+  "statistical_profile": {
+    "text_length": 97,
+    "unique_characters": 26,
+    "character_counts": {
+      "A": 4,
+      "B": 5,
+      "C": 2,
+      "D": 3,
+      "E": 2,
+      "F": 4,
+      "G": 4,
+      "H": 2,
+      "I": 4,
+      "J": 3,
+      "K": 8,
+      "L": 4,
+      "M": 1,
+      "N": 3,
+      "O": 5,
+      "P": 3,
+      "Q": 4,
+      "R": 4,
+      "S": 6,
+      "T": 6,
+      "U": 6,
+      "V": 2,
+      "W": 5,
+      "X": 2,
+      "Y": 1,
+      "Z": 4
+    },
+    "index_of_coincidence": 0.03608,
+    "natural_english_ioc_reference": 0.0667,
+    "random_alphabet_ioc_reference": 0.0385,
+    "ioc_interpretation": "Polyalphabetic-like",
+    "shannon_entropy_bits": 4.5548,
+    "chi_squared_vs_english": 576.5,
+    "autocorrelation_top_lags": [
+      {
+        "lag": 7,
+        "matches": 9,
+        "comparisons": 90,
+        "match_ratio": 0.1,
+        "z_score": 3.036
+      },
+      {
+        "lag": 38,
+        "matches": 5,
+        "comparisons": 59,
+        "match_ratio": 0.0847,
+        "z_score": 1.849
+      },
+      {
+        "lag": 43,
+        "matches": 4,
+        "comparisons": 54,
+        "match_ratio": 0.0741,
+        "z_score": 1.361
+      },
+      {
+        "lag": 41,
+        "matches": 4,
+        "comparisons": 56,
+        "match_ratio": 0.0714,
+        "z_score": 1.283
+      },
+      {
+        "lag": 1,
+        "matches": 6,
+        "comparisons": 96,
+        "match_ratio": 0.0625,
+        "z_score": 1.225
+      }
+    ],
+    "kasiski_repeated_ngrams": {},
+    "factorization_constraints": {
+      "length": 97,
+      "is_prime": true,
+      "implication": "Because N=97 is prime, a simple rectangular transposition R x C = 97 is mathematically impossible. Any transposition MUST be: (1) an incomplete irregular columnar grid, (2) padded with nulls or stripped of margin padding, or (3) governed by a physical geometric mask/stencil or variable-step route.",
+      "nearby_composite_candidates": [
+        {
+          "target_len": 82,
+          "delta": -15,
+          "interpretation": "padding_stripped",
+          "rectangles": [
+            {
+              "rows": 2,
+              "cols": 41
+            },
+            {
+              "rows": 41,
+              "cols": 2
+            }
+          ]
+        },
+        {
+          "target_len": 84,
+          "delta": -13,
+          "interpretation": "padding_stripped",
+          "rectangles": [
+            {
+              "rows": 2,
+              "cols": 42
+            },
+            {
+              "rows": 42,
+              "cols": 2
+            },
+            {
+              "rows": 3,
+              "cols": 28
+            },
+            {
+              "rows": 28,
+              "cols": 3
+            },
+            {
+              "rows": 4,
+              "cols": 21
+            },
+            {
+              "rows": 21,
+              "cols": 4
+            },
+            {
+              "rows": 6,
+              "cols": 14
+            },
+            {
+              "rows": 14,
+              "cols": 6
+            },
+            {
+              "rows": 7,
+              "cols": 12
+            },
+            {
+              "rows": 12,
+              "cols": 7
+            }
+          ]
+        },
+        {
+          "target_len": 85,
+          "delta": -12,
+          "interpretation": "padding_stripped",
+          "rectangles": [
+            {
+              "rows": 5,
+              "cols": 17
+            },
+            {
+              "rows": 17,
+              "cols": 5
+            }
+          ]
+        },
+        {
+          "target_len": 86,
+          "delta": -11,
+          "interpretation": "padding_stripped",
+          "rectangles": [
+            {
+              "rows": 2,
+              "cols": 43
+            },
+            {
+              "rows": 43,
+              "cols": 2
+            }
+          ]
+        },
+        {
+          "target_len": 87,
+          "delta": -10,
+          "interpretation": "padding_stripped",
+          "rectangles": [
+            {
+              "rows": 3,
+              "cols": 29
+            },
+            {
+              "rows": 29,
+              "cols": 3
+            }
+          ]
+        },
+        {
+          "target_len": 88,
+          "delta": -9,
+          "interpretation": "padding_stripped",
+          "rectangles": [
+            {
+              "rows": 2,
+              "cols": 44
+            },
+            {
+              "rows": 44,
+              "cols": 2
+            },
+            {
+              "rows": 4,
+              "cols": 22
+            },
+            {
+              "rows": 22,
+              "cols": 4
+            },
+            {
+              "rows": 8,
+              "cols": 11
+            },
+            {
+              "rows": 11,
+              "cols": 8
+            }
+          ]
+        },
+        {
+          "target_len": 90,
+          "delta": -7,
+          "interpretation": "padding_stripped",
+          "rectangles": [
+            {
+              "rows": 2,
+              "cols": 45
+            },
+            {
+              "rows": 45,
+              "cols": 2
+            },
+            {
+              "rows": 3,
+              "cols": 30
+            },
+            {
+              "rows": 30,
+              "cols": 3
+            },
+            {
+              "rows": 5,
+              "cols": 18
+            },
+            {
+              "rows": 18,
+              "cols": 5
+            },
+            {
+              "rows": 6,
+              "cols": 15
+            },
+            {
+              "rows": 15,
+              "cols": 6
+            },
+            {
+              "rows": 9,
+              "cols": 10
+            },
+            {
+              "rows": 10,
+              "cols": 9
+            }
+          ]
+        },
+        {
+          "target_len": 91,
+          "delta": -6,
+          "interpretation": "padding_stripped",
+          "rectangles": [
+            {
+              "rows": 7,
+              "cols": 13
+            },
+            {
+              "rows": 13,
+              "cols": 7
+            }
+          ]
+        },
+        {
+          "target_len": 92,
+          "delta": -5,
+          "interpretation": "padding_stripped",
+          "rectangles": [
+            {
+              "rows": 2,
+              "cols": 46
+            },
+            {
+              "rows": 46,
+              "cols": 2
+            },
+            {
+              "rows": 4,
+              "cols": 23
+            },
+            {
+              "rows": 23,
+              "cols": 4
+            }
+          ]
+        },
+        {
+          "target_len": 93,
+          "delta": -4,
+          "interpretation": "padding_stripped",
+          "rectangles": [
+            {
+              "rows": 3,
+              "cols": 31
+            },
+            {
+              "rows": 31,
+              "cols": 3
+            }
+          ]
+        },
+        {
+          "target_len": 94,
+          "delta": -3,
+          "interpretation": "padding_stripped",
+          "rectangles": [
+            {
+              "rows": 2,
+              "cols": 47
+            },
+            {
+              "rows": 47,
+              "cols": 2
+            }
+          ]
+        },
+        {
+          "target_len": 95,
+          "delta": -2,
+          "interpretation": "padding_stripped",
+          "rectangles": [
+            {
+              "rows": 5,
+              "cols": 19
+            },
+            {
+              "rows": 19,
+              "cols": 5
+            }
+          ]
+        },
+        {
+          "target_len": 96,
+          "delta": -1,
+          "interpretation": "padding_stripped",
+          "rectangles": [
+            {
+              "rows": 2,
+              "cols": 48
+            },
+            {
+              "rows": 48,
+              "cols": 2
+            },
+            {
+              "rows": 3,
+              "cols": 32
+            },
+            {
+              "rows": 32,
+              "cols": 3
+            },
+            {
+              "rows": 4,
+              "cols": 24
+            },
+            {
+              "rows": 24,
+              "cols": 4
+            },
+            {
+              "rows": 6,
+              "cols": 16
+            },
+            {
+              "rows": 16,
+              "cols": 6
+            },
+            {
+              "rows": 8,
+              "cols": 12
+            },
+            {
+              "rows": 12,
+              "cols": 8
+            }
+          ]
+        },
+        {
+          "target_len": 98,
+          "delta": 1,
+          "interpretation": "padding_added",
+          "rectangles": [
+            {
+              "rows": 2,
+              "cols": 49
+            },
+            {
+              "rows": 49,
+              "cols": 2
+            },
+            {
+              "rows": 7,
+              "cols": 14
+            },
+            {
+              "rows": 14,
+              "cols": 7
+            }
+          ]
+        },
+        {
+          "target_len": 99,
+          "delta": 2,
+          "interpretation": "padding_added",
+          "rectangles": [
+            {
+              "rows": 3,
+              "cols": 33
+            },
+            {
+              "rows": 33,
+              "cols": 3
+            },
+            {
+              "rows": 9,
+              "cols": 11
+            },
+            {
+              "rows": 11,
+              "cols": 9
+            }
+          ]
+        },
+        {
+          "target_len": 100,
+          "delta": 3,
+          "interpretation": "padding_added",
+          "rectangles": [
+            {
+              "rows": 2,
+              "cols": 50
+            },
+            {
+              "rows": 50,
+              "cols": 2
+            },
+            {
+              "rows": 4,
+              "cols": 25
+            },
+            {
+              "rows": 25,
+              "cols": 4
+            },
+            {
+              "rows": 5,
+              "cols": 20
+            },
+            {
+              "rows": 20,
+              "cols": 5
+            },
+            {
+              "rows": 10,
+              "cols": 10
+            }
+          ]
+        },
+        {
+          "target_len": 102,
+          "delta": 5,
+          "interpretation": "padding_added",
+          "rectangles": [
+            {
+              "rows": 2,
+              "cols": 51
+            },
+            {
+              "rows": 51,
+              "cols": 2
+            },
+            {
+              "rows": 3,
+              "cols": 34
+            },
+            {
+              "rows": 34,
+              "cols": 3
+            },
+            {
+              "rows": 6,
+              "cols": 17
+            },
+            {
+              "rows": 17,
+              "cols": 6
+            }
+          ]
+        },
+        {
+          "target_len": 104,
+          "delta": 7,
+          "interpretation": "padding_added",
+          "rectangles": [
+            {
+              "rows": 2,
+              "cols": 52
+            },
+            {
+              "rows": 52,
+              "cols": 2
+            },
+            {
+              "rows": 4,
+              "cols": 26
+            },
+            {
+              "rows": 26,
+              "cols": 4
+            },
+            {
+              "rows": 8,
+              "cols": 13
+            },
+            {
+              "rows": 13,
+              "cols": 8
+            }
+          ]
+        },
+        {
+          "target_len": 105,
+          "delta": 8,
+          "interpretation": "padding_added",
+          "rectangles": [
+            {
+              "rows": 3,
+              "cols": 35
+            },
+            {
+              "rows": 35,
+              "cols": 3
+            },
+            {
+              "rows": 5,
+              "cols": 21
+            },
+            {
+              "rows": 21,
+              "cols": 5
+            },
+            {
+              "rows": 7,
+              "cols": 15
+            },
+            {
+              "rows": 15,
+              "cols": 7
+            }
+          ]
+        },
+        {
+          "target_len": 106,
+          "delta": 9,
+          "interpretation": "padding_added",
+          "rectangles": [
+            {
+              "rows": 2,
+              "cols": 53
+            },
+            {
+              "rows": 53,
+              "cols": 2
+            }
+          ]
+        },
+        {
+          "target_len": 108,
+          "delta": 11,
+          "interpretation": "padding_added",
+          "rectangles": [
+            {
+              "rows": 2,
+              "cols": 54
+            },
+            {
+              "rows": 54,
+              "cols": 2
+            },
+            {
+              "rows": 3,
+              "cols": 36
+            },
+            {
+              "rows": 36,
+              "cols": 3
+            },
+            {
+              "rows": 4,
+              "cols": 27
+            },
+            {
+              "rows": 27,
+              "cols": 4
+            },
+            {
+              "rows": 6,
+              "cols": 18
+            },
+            {
+              "rows": 18,
+              "cols": 6
+            },
+            {
+              "rows": 9,
+              "cols": 12
+            },
+            {
+              "rows": 12,
+              "cols": 9
+            }
+          ]
+        },
+        {
+          "target_len": 110,
+          "delta": 13,
+          "interpretation": "padding_added",
+          "rectangles": [
+            {
+              "rows": 2,
+              "cols": 55
+            },
+            {
+              "rows": 55,
+              "cols": 2
+            },
+            {
+              "rows": 5,
+              "cols": 22
+            },
+            {
+              "rows": 22,
+              "cols": 5
+            },
+            {
+              "rows": 10,
+              "cols": 11
+            },
+            {
+              "rows": 11,
+              "cols": 10
+            }
+          ]
+        },
+        {
+          "target_len": 111,
+          "delta": 14,
+          "interpretation": "padding_added",
+          "rectangles": [
+            {
+              "rows": 3,
+              "cols": 37
+            },
+            {
+              "rows": 37,
+              "cols": 3
+            }
+          ]
+        },
+        {
+          "target_len": 112,
+          "delta": 15,
+          "interpretation": "padding_added",
+          "rectangles": [
+            {
+              "rows": 2,
+              "cols": 56
+            },
+            {
+              "rows": 56,
+              "cols": 2
+            },
+            {
+              "rows": 4,
+              "cols": 28
+            },
+            {
+              "rows": 28,
+              "cols": 4
+            },
+            {
+              "rows": 7,
+              "cols": 16
+            },
+            {
+              "rows": 16,
+              "cols": 7
+            },
+            {
+              "rows": 8,
+              "cols": 14
+            },
+            {
+              "rows": 14,
+              "cols": 8
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "unicity_audit": {
+    "corpus_length": 97,
+    "available_redundancy_budget_bits": 310.44,
+    "families": [
+      {
+        "model_name": "Periodic Vigen\u00e8re (Period 7)",
+        "key_entropy_bits": 32.9,
+        "unicity_distance_chars": 10.28,
+        "corpus_length": 97,
+        "is_determined": true,
+        "entropy_ratio": 9.435,
+        "recommendation": "ROBUST: Corpus significantly exceeds unicity distance; unique solution mathematically reachable."
+      },
+      {
+        "model_name": "Quagmire III (Keywords L1=8, L2=7)",
+        "key_entropy_bits": 70.51,
+        "unicity_distance_chars": 22.03,
+        "corpus_length": 97,
+        "is_determined": true,
+        "entropy_ratio": 4.403,
+        "recommendation": "ROBUST: Corpus significantly exceeds unicity distance; unique solution mathematically reachable."
+      },
+      {
+        "model_name": "Double Columnar Transposition (10x10)",
+        "key_entropy_bits": 43.58,
+        "unicity_distance_chars": 13.62,
+        "corpus_length": 97,
+        "is_determined": true,
+        "entropy_ratio": 7.123,
+        "recommendation": "ROBUST: Corpus significantly exceeds unicity distance; unique solution mathematically reachable."
+      },
+      {
+        "model_name": "Compound Quagmire III + Double Transposition",
+        "key_entropy_bits": 114.09,
+        "unicity_distance_chars": 35.65,
+        "corpus_length": 97,
+        "is_determined": true,
+        "entropy_ratio": 2.721,
+        "recommendation": "ROBUST: Corpus significantly exceeds unicity distance; unique solution mathematically reachable."
+      },
+      {
+        "model_name": "Unconstrained Arbitrary Substitution + Transposition",
+        "key_entropy_bits": 593.26,
+        "unicity_distance_chars": 185.37,
+        "corpus_length": 97,
+        "is_determined": false,
+        "entropy_ratio": 0.523,
+        "recommendation": "REJECT / UNDERDETERMINED: Corpus length violates Shannon unicity bound (N < U_0). Refuse unconstrained text generation!"
+      }
+    ]
+  },
+  "conclusions": {
+    "ioc_verdict": "Ciphertext IoC is 0.03608, which is much lower than natural English (0.0667) and close to random (0.0385). This definitively rules out simple monoalphabetic substitution or pure transposition without substitution.",
+    "factorization_verdict": "N=97 is prime. Any pure grid transposition without padding or masking is structurally impossible.",
+    "unicity_verdict": "Compound classical models (e.g. Quagmire III or structured double columnar transposition) remain well within the Shannon unicity budget (H(K) <= 120 bits vs available 310 bits). Arbitrary unconstrained substitution + transposition is rejected as underdetermined."
+  }
+}

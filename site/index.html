@@ -3,397 +3,787 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cipher Lab — The Anatomy of an 87-Year Decipherment</title>
-  <meta name="description" content="Interactive research essay and computational cryptanalysis laboratory for historical ciphers (D'Agapeyeff, Dorabella, Rohonc, Shugborough).">
+  <title>Cipher Lab — Notes and statistical bounds on historical ciphers</title>
+  <meta property="og:title" content="Cipher Lab — Notes and statistical bounds on historical ciphers">
+  <meta property="og:description" content="A small open-source notebook testing statistical bounds, null models, and candidate reconstructions on historical ciphers.">
+  <meta property="og:image" content="https://lessthanzero.github.io/cipher-lab/social-preview.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="description" content="Cipher Lab is an open notebook testing historical ciphers (D'Agapeyeff, Dorabella, Shugborough) against Shannon unicity bounds, null-control shuffles, and codicological evidence.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
     :root {
-      --bg: #0c0e12;
-      --card-bg: #14171f;
-      --card-border: #222735;
-      --text: #e2e8f0;
-      --text-muted: #8e9bb0;
-      --accent: #3b82f6;
-      --accent-glow: rgba(59, 130, 246, 0.2);
-      --anomaly: #ef4444;
-      --anomaly-glow: rgba(239, 68, 68, 0.25);
-      --success: #10b981;
-      --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-      --font-mono: 'IBM Plex Mono', monospace;
-      --font-serif: 'Cinzel', Georgia, serif;
+      --canvas: #FAF8F5;
+      --canvas-subtle: #F4F1EA;
+      --surface: #FFFFFF;
+      --ink: #18181B;
+      --ink-secondary: #3F3F46;
+      --ink-muted: #71717A;
+      --border: rgba(24, 24, 27, 0.08);
+      --border-active: rgba(24, 24, 27, 0.25);
+      --accent: #B42318;
+      --accent-subtle: #FDF2F0;
+      --gain: #15803D;
+      --font-serif: 'Instrument Serif', Georgia, serif;
+      --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      --font-mono: 'Geist Mono', 'SF Mono', ui-monospace, monospace;
     }
     * { box-sizing: border-box; margin: 0; padding: 0; }
-    body {
-      background: var(--bg);
-      color: var(--text);
+    html, body {
+      background: var(--canvas);
+      color: var(--ink);
       font-family: var(--font-sans);
-      line-height: 1.7;
+      font-size: 15px;
+      line-height: 1.6;
       -webkit-font-smoothing: antialiased;
-      padding-bottom: 80px;
+      -moz-osx-font-smoothing: grayscale;
     }
-    header {
-      padding: 80px 24px 48px;
-      max-width: 900px;
+    a { color: inherit; text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 3px; }
+    a:hover { color: var(--accent); }
+    .wrap {
+      max-width: 50rem;
       margin: 0 auto;
-      text-align: center;
-      border-bottom: 1px solid var(--card-border);
+      padding: 2.5rem 1.25rem 5rem;
+    }
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem 1.5rem;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 1.25rem;
+      margin-bottom: 3rem;
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+    }
+    .brand-wrap {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+    .brand {
+      color: var(--ink);
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-decoration: none;
+      font-size: 0.85rem;
     }
     .badge {
-      display: inline-block;
-      padding: 4px 12px;
-      border-radius: 999px;
-      background: var(--accent-glow);
-      color: #60a5fa;
-      font-size: 0.8rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      padding: 0.2rem 0.55rem;
+      border-radius: 9999px;
+      background: var(--canvas-subtle);
+      border: 1px solid var(--border);
+      color: var(--ink-secondary);
+      font-size: 0.68rem;
+      font-weight: 500;
+      letter-spacing: 0.02em;
+    }
+    .badge-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--gain);
+    }
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    .nav-links a { text-decoration: none; color: var(--ink-secondary); font-weight: 500; }
+    .nav-links a:hover { color: var(--accent); }
+
+    .hero {
+      margin-bottom: 2.75rem;
+    }
+    .hero-meta {
       font-family: var(--font-mono);
+      font-size: 0.75rem;
       font-weight: 600;
       text-transform: uppercase;
-      letter-spacing: 0.05em;
-      margin-bottom: 20px;
-      border: 1px solid rgba(59, 130, 246, 0.3);
+      letter-spacing: 0.08em;
+      color: var(--ink-muted);
+      margin-bottom: 0.6rem;
     }
     h1 {
       font-family: var(--font-serif);
-      font-size: clamp(2rem, 5vw, 3.2rem);
-      font-weight: 700;
-      letter-spacing: -0.02em;
-      line-height: 1.15;
-      margin-bottom: 20px;
-      color: #f8fafc;
-    }
-    .subtitle {
-      font-size: 1.2rem;
-      color: var(--text-muted);
-      max-width: 720px;
-      margin: 0 auto 28px;
-    }
-    .meta-links {
-      display: flex;
-      justify-content: center;
-      gap: 16px;
-      flex-wrap: wrap;
-    }
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 10px 18px;
-      border-radius: 8px;
-      font-size: 0.9rem;
-      font-weight: 500;
-      text-decoration: none;
-      transition: all 0.2s ease;
-      cursor: pointer;
-      border: 1px solid transparent;
-    }
-    .btn-primary {
-      background: var(--accent);
-      color: white;
-    }
-    .btn-primary:hover { background: #2563eb; }
-    .btn-secondary {
-      background: var(--card-bg);
-      color: var(--text);
-      border-color: var(--card-border);
-    }
-    .btn-secondary:hover { border-color: #3b82f6; color: #60a5fa; }
-    main {
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 48px 24px;
-    }
-    h2 {
-      font-size: 1.8rem;
-      font-weight: 600;
+      font-size: clamp(2.3rem, 5.5vw, 3.4rem);
+      font-weight: 400;
+      line-height: 1.1;
       letter-spacing: -0.01em;
-      margin: 48px 0 20px;
-      color: #f1f5f9;
-      display: flex;
-      align-items: center;
-      gap: 12px;
+      margin-bottom: 1rem;
+      color: var(--ink);
     }
-    h2::before {
-      content: '';
-      display: inline-block;
-      width: 4px;
-      height: 24px;
-      background: var(--accent);
-      border-radius: 2px;
-    }
-    p { margin-bottom: 20px; color: #cbd5e1; font-size: 1.05rem; }
-    .lead { font-size: 1.18rem; color: #f1f5f9; }
-    
-    /* Interactive Workbench Box */
-    .interactive-card {
-      background: var(--card-bg);
-      border: 1px solid var(--card-border);
-      border-radius: 12px;
-      padding: 24px;
-      margin: 32px 0;
-      box-shadow: 0 8px 30px rgba(0,0,0,0.3);
-    }
-    .card-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 20px;
-      padding-bottom: 16px;
-      border-bottom: 1px solid var(--card-border);
-      flex-wrap: wrap;
-      gap: 12px;
-    }
-    .card-title {
-      font-weight: 600;
+    .lede {
       font-size: 1.1rem;
-      color: #f8fafc;
+      color: var(--ink-secondary);
+      max-width: 42rem;
+      line-height: 1.55;
     }
-    .controls {
-      display: flex;
-      gap: 10px;
-      flex-wrap: wrap;
+
+    /* Pill Controller (Groundwork Style) */
+    .pill-section {
+      margin-bottom: 2.25rem;
     }
-    
-    /* 14x14 Matrix Visualizer */
-    .matrix-container {
-      display: grid;
-      grid-template-columns: repeat(14, 1fr);
-      gap: 4px;
-      margin: 20px 0;
+    .pill-label {
       font-family: var(--font-mono);
       font-size: 0.72rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--ink-muted);
+      margin-bottom: 0.65rem;
+    }
+    .pill-group {
+      display: inline-flex;
+      flex-wrap: wrap;
+      gap: 0.35rem;
+      background: var(--canvas-subtle);
+      padding: 0.3rem;
+      border-radius: 9999px;
+      border: 1px solid var(--border);
+    }
+    .pill-btn {
+      appearance: none;
+      border: none;
+      background: transparent;
+      padding: 0.45rem 1.1rem;
+      border-radius: 9999px;
+      font-family: var(--font-sans);
+      font-size: 0.82rem;
+      font-weight: 500;
+      color: var(--ink-secondary);
+      cursor: pointer;
+      transition: all 0.15s ease;
+      white-space: nowrap;
+    }
+    .pill-btn:hover {
+      color: var(--ink);
+    }
+    .pill-btn.is-active {
+      background: var(--surface);
+      color: var(--ink);
+      font-weight: 600;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.06), 0 1px 2px rgba(0,0,0,0.04);
+      border: 1px solid rgba(0,0,0,0.04);
+    }
+
+    /* Case Panels */
+    .case-panel {
+      display: none;
+      animation: fadeIn 0.15s ease;
+    }
+    .case-panel.is-active {
+      display: block;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(3px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .case-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 2rem;
+      margin-bottom: 2.5rem;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.02);
+    }
+    .case-header {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 0.5rem;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .case-title {
+      font-family: var(--font-serif);
+      font-size: 1.85rem;
+      font-weight: 400;
+      color: var(--ink);
+      letter-spacing: -0.01em;
+    }
+    .case-meta {
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      color: var(--ink-muted);
+      font-weight: 500;
+    }
+
+    h3 {
+      font-size: 0.98rem;
+      font-weight: 600;
+      margin: 1.75rem 0 0.5rem;
+      color: var(--ink);
+      letter-spacing: -0.01em;
+    }
+    p {
+      margin-bottom: 1rem;
+      color: var(--ink-secondary);
+    }
+
+    .note-callout {
+      border-left: 3px solid var(--accent);
+      background: var(--canvas-subtle);
+      padding: 0.85rem 1.15rem;
+      border-radius: 0 8px 8px 0;
+      margin: 1.25rem 0;
+      font-size: 0.92rem;
+      color: var(--ink-secondary);
+    }
+    .note-callout strong {
+      color: var(--ink);
+    }
+
+    .dispatch-box {
+      background: var(--canvas-subtle);
+      border: 1px solid var(--border);
+      border-left: 3px solid var(--gain);
+      border-radius: 0 8px 8px 0;
+      padding: 1.1rem 1.25rem;
+      font-family: var(--font-mono);
+      font-size: 0.82rem;
+      line-height: 1.6;
+      color: var(--ink);
+      margin: 1.25rem 0;
+      letter-spacing: 0.02em;
+    }
+
+    /* D'Agapeyeff Matrix Workbench */
+    .workbench-box {
+      background: var(--canvas-subtle);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 1.25rem;
+      margin: 1.5rem 0;
+    }
+    .workbench-head {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 0.75rem;
+      margin-bottom: 1rem;
+      padding-bottom: 0.75rem;
+      border-bottom: 1px solid var(--border);
+    }
+    .workbench-title {
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--ink-secondary);
+    }
+    .matrix-controls {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+    .btn-action {
+      appearance: none;
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      font-weight: 600;
+      padding: 0.45rem 0.85rem;
+      border: 1px solid var(--border-active);
+      border-radius: 6px;
+      background: var(--surface);
+      color: var(--ink);
+      cursor: pointer;
+      transition: all 0.15s ease;
+    }
+    .btn-action:hover {
+      border-color: var(--ink);
+      background: var(--surface);
+    }
+    .btn-action.is-on {
+      background: var(--accent);
+      border-color: var(--accent);
+      color: #FFF;
+    }
+    .matrix-grid {
+      display: grid;
+      grid-template-columns: repeat(14, minmax(0, 1fr));
+      gap: 2px;
+      margin: 1rem 0;
+      font-family: var(--font-mono);
+      font-size: clamp(0.55rem, 1.6vw, 0.72rem);
       user-select: none;
     }
     .cell {
-      background: #191f2c;
-      border: 1px solid #2a3346;
-      border-radius: 4px;
-      padding: 6px 2px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      padding: 0.4rem 0.1rem;
       text-align: center;
-      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      border-radius: 2px;
+      transition: background 0.15s ease, opacity 0.15s ease;
     }
-    .cell.anomaly-col {
-      background: rgba(239, 68, 68, 0.15);
-      border-color: var(--anomaly);
-      color: #fca5a5;
+    .cell.anomaly-col { background: #FDE8E5; border-color: #F8B4AC; color: var(--accent); }
+    .cell.anomaly-zero { background: var(--accent); border-color: var(--accent); color: #FFF; font-weight: 700; }
+    .cell.stripped { opacity: 0.25; text-decoration: line-through; }
+
+    .matrix-telemetry {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 0.75rem;
+      margin-top: 1rem;
+      font-variant-numeric: tabular-nums;
     }
-    .cell.anomaly-zero {
-      background: var(--anomaly);
-      color: white;
-      font-weight: 700;
-      animation: pulse 2s infinite;
+    .telemetry-item {
+      border-top: 1px solid var(--border);
+      padding-top: 0.5rem;
     }
-    .cell.stripped {
-      opacity: 0.25;
-      text-decoration: line-through;
-    }
-    @keyframes pulse {
-      0%, 100% { transform: scale(1); }
-      50% { transform: scale(1.08); box-shadow: 0 0 12px var(--anomaly); }
-    }
-    
-    /* Deciphered Plaintext Box */
-    .dispatch-box {
-      background: #090b0e;
-      border: 1px solid #1e2636;
-      border-left: 4px solid var(--success);
-      border-radius: 6px;
-      padding: 18px 20px;
+    .telemetry-val {
       font-family: var(--font-mono);
-      font-size: 0.95rem;
-      line-height: 1.6;
-      color: #a7f3d0;
-      margin: 20px 0;
+      font-size: 1.15rem;
+      font-weight: 600;
+      color: var(--ink);
     }
-    
-    /* Audio Player Component */
-    .audio-player-box {
-      background: #121620;
-      border: 1px solid #1f2738;
-      border-radius: 10px;
-      padding: 20px;
+    .telemetry-label {
+      font-family: var(--font-mono);
+      font-size: 0.68rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--ink-muted);
+      margin-top: 0.15rem;
+    }
+
+    /* Dorabella Audio Synthesizer */
+    .audio-synth-row {
       display: flex;
-      align-items: center;
-      gap: 20px;
       flex-wrap: wrap;
-      margin: 24px 0;
+      align-items: center;
+      gap: 1rem;
+      border: 1px solid var(--border);
+      background: var(--canvas-subtle);
+      border-radius: 8px;
+      padding: 1rem 1.25rem;
+      margin: 1.5rem 0;
     }
-    .play-btn {
-      width: 48px;
-      height: 48px;
+    .synth-btn {
+      width: 2.6rem;
+      height: 2.6rem;
       border-radius: 50%;
-      background: var(--accent);
-      border: none;
-      color: white;
-      display: flex;
+      border: 1px solid var(--ink);
+      background: var(--ink);
+      color: var(--canvas);
+      font-size: 0.9rem;
+      display: inline-flex;
       align-items: center;
       justify-content: center;
       cursor: pointer;
-      font-size: 1.2rem;
-      transition: transform 0.15s ease, background 0.2s ease;
+      flex-shrink: 0;
+      transition: transform 0.1s ease, background 0.15s ease;
     }
-    .play-btn:hover { transform: scale(1.06); background: #2563eb; }
-    .audio-waveform {
+    .synth-btn:hover { background: var(--accent); border-color: var(--accent); }
+    .synth-meta strong { display: block; font-size: 0.92rem; color: var(--ink); }
+    .synth-meta span { font-family: var(--font-mono); font-size: 0.72rem; color: var(--ink-muted); }
+    .waveform-bar-box {
       flex: 1;
-      height: 36px;
+      min-width: 12rem;
+      height: 1.75rem;
       display: flex;
       align-items: center;
       gap: 3px;
-      min-width: 180px;
     }
-    .bar {
-      width: 4px;
-      height: 12px;
-      background: #3b82f6;
-      border-radius: 2px;
-      transition: height 0.1s ease;
+    .waveform-bar {
+      width: 3px;
+      height: 6px;
+      background: var(--border-active);
+      border-radius: 1px;
+      transition: height 0.1s ease, background 0.15s ease;
     }
-    
-    /* Stat Metric Cards */
-    .stats-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 16px;
-      margin: 24px 0;
-    }
-    .stat-card {
-      background: var(--card-bg);
-      border: 1px solid var(--card-border);
+
+    /* Terminal Code Blocks */
+    pre.cmd-box {
+      background: var(--surface);
+      border: 1px solid var(--border);
       border-radius: 8px;
-      padding: 16px 20px;
-    }
-    .stat-val {
-      font-size: 1.8rem;
-      font-weight: 700;
+      padding: 0.9rem 1.15rem;
+      overflow-x: auto;
       font-family: var(--font-mono);
-      color: #60a5fa;
+      font-size: 0.8rem;
+      line-height: 1.55;
+      color: var(--ink);
+      margin: 1rem 0 1.5rem;
     }
-    .stat-label {
-      font-size: 0.85rem;
-      color: var(--text-muted);
-      margin-top: 4px;
+
+    /* Core Principles Section */
+    .principles-section {
+      margin-top: 4rem;
+      border-top: 1px solid var(--border);
+      padding-top: 2.5rem;
     }
-    
+    .section-title {
+      font-family: var(--font-serif);
+      font-size: 2rem;
+      font-weight: 400;
+      color: var(--ink);
+      margin-bottom: 0.5rem;
+      letter-spacing: -0.01em;
+    }
+    .section-desc {
+      color: var(--ink-secondary);
+      font-size: 1.05rem;
+      max-width: 44rem;
+      margin-bottom: 2rem;
+    }
+    .principles-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.25rem;
+      margin-bottom: 3rem;
+    }
+    .principle-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 1.25rem;
+    }
+    .principle-num {
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      font-weight: 600;
+      color: var(--accent);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 0.4rem;
+    }
+    .principle-name {
+      font-size: 0.98rem;
+      font-weight: 600;
+      color: var(--ink);
+      margin-bottom: 0.45rem;
+    }
+    .principle-text {
+      font-size: 0.84rem;
+      color: var(--ink-secondary);
+      line-height: 1.5;
+    }
+
     footer {
-      max-width: 900px;
-      margin: 60px auto 0;
-      padding-top: 30px;
-      border-top: 1px solid var(--card-border);
-      text-align: center;
-      color: var(--text-muted);
-      font-size: 0.9rem;
+      margin-top: 4rem;
+      border-top: 1px solid var(--border);
+      padding-top: 1.5rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 1rem;
+      align-items: center;
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      color: var(--ink-muted);
+    }
+    footer a { color: var(--ink-secondary); }
+
+    @media (max-width: 640px) {
+      .wrap { padding: 1.5rem 1rem 3rem; }
+      .case-card { padding: 1.25rem; }
+      .matrix-telemetry { grid-template-columns: 1fr; }
+      .pill-group { width: 100%; justify-content: stretch; }
+      .pill-btn { flex: 1; text-align: center; padding: 0.45rem 0.5rem; font-size: 0.78rem; }
     }
   </style>
 </head>
 <body>
+  <div class="wrap">
+    <nav>
+      <div class="brand-wrap">
+        <a class="brand" href="./">CIPHER LAB</a>
+        <div class="badge"><span class="badge-dot"></span> 207 TESTS PASSING</div>
+      </div>
+      <div class="nav-links">
+        <a href="https://github.com/lessthanzero/cipher-lab" target="_blank" rel="noopener">GitHub ↗</a>
+        <a href="https://lessthanzero.github.io/phaistos-disk/" target="_blank" rel="noopener">Phaistos Lab ↗</a>
+        <a href="https://github.com/lessthanzero/ancient-text-lab" target="_blank" rel="noopener">Ancient Text Lab ↗</a>
+        <a href="https://groundworkops.co.uk" target="_blank" rel="noopener">Groundwork ↗</a>
+      </div>
+    </nav>
 
-  <header>
-    <div class="badge">Research Preview · Epistemic Ledger</div>
-    <h1>The Anatomy of an 87-Year Decipherment</h1>
-    <p class="subtitle">How margin padding, coordinate symmetry, and species counterpoint unlocked the 1939 D'Agapeyeff Cipher and bounded the 1897 Dorabella Enigma.</p>
-    <div class="meta-links">
-      <a href="indus_reader.html" class="btn btn-primary">Indus Clausal Visualizer</a>
-      <a href="https://github.com/lessthanzero/cipher-lab" class="btn btn-secondary" target="_blank" rel="noopener">GitHub: cipher-lab</a>
-      <a href="https://lessthanzero.github.io/phaistos-disk/" class="btn btn-secondary" target="_blank" rel="noopener">Phaistos Disc Lab</a>
-      <a href="https://github.com/lessthanzero/awesome-historical-ciphers" class="btn btn-secondary" target="_blank" rel="noopener">Awesome Historical Ciphers</a>
+    <header class="hero">
+      <div class="hero-meta">Computational research notebook</div>
+      <h1>Testing bounds on historical ciphers</h1>
+      <p class="lede">
+        A small open-source research notebook testing candidate keys, null controls, and codicological boundaries across historical enigmas.
+      </p>
+    </header>
+
+    <!-- Segmented Pill Control (Clean Cipher Partitioning) -->
+    <div class="pill-section">
+      <div class="pill-label">Selected Notebook</div>
+      <div class="pill-group" role="tablist" aria-label="Cipher Cases">
+        <button type="button" class="pill-btn is-active" data-case="dagapeyeff" role="tab" aria-selected="true" aria-controls="panel-dagapeyeff" id="tab-dagapeyeff">D’Agapeyeff (1939)</button>
+        <button type="button" class="pill-btn" data-case="dorabella" role="tab" aria-selected="false" aria-controls="panel-dorabella" id="tab-dorabella">Dorabella (1897)</button>
+        <button type="button" class="pill-btn" data-case="shugborough" role="tab" aria-selected="false" aria-controls="panel-shugborough" id="tab-shugborough">Shugborough</button>
+      </div>
     </div>
-  </header>
 
-  <main>
-    <p class="lead">
-      In 1939, Alexander D’Agapeyeff published a 392-digit challenge cryptogram in his book <em>Codes and Ciphers</em>. Thirteen years later, he admitted he had made an error during manual encryption, lost his original drafting notes, and could not recover the plaintext. For nearly nine decades, it remained one of cryptography's most stubborn unsolved challenges.
-    </p>
+    <!-- Case 1: D'Agapeyeff (1939) -->
+    <section class="case-panel is-active" id="panel-dagapeyeff" role="tabpanel" aria-labelledby="tab-dagapeyeff">
+      <div class="case-card">
+        <div class="case-header">
+          <div class="case-title">CASE-001: The 1939 D’Agapeyeff Cipher</div>
+          <div class="case-meta">196 PAIRS · CANDIDATE RECONSTRUCTION UNDER REVIEW</div>
+        </div>
 
-    <h2>1. The 14×14 Grid & The Margin Anomaly</h2>
-    <p>
-      The 392 digits represent exactly 196 two-digit pairs (each digit 1–5), forming a clean $14 \times 14$ coordinate grid. Building on Tim Marland’s observation that the cipher’s only zero digit occurs at Pos 97 (<code>04</code> in Column 14), and Nick Pelling’s diagonal reflection hypothesis, we discovered that applying a diagonal matrix reflection $(r, c) \leftrightarrow (c, r)$ flips Column 14 into the 14th row.
-    </p>
+        <p>
+          Alexander D’Agapeyeff published a 392-digit challenge (196 coordinate pairs) in the 1939 first edition of
+          <em>Codes and Ciphers</em>. He later acknowledged an error during encryption, lost his original keying notes,
+          and could not reproduce the plaintext. The ciphertext remained an open historical puzzle.
+        </p>
 
-    <div class="interactive-card">
-      <div class="card-header">
-        <div class="card-title">Interactive 14×14 Coordinate Matrix</div>
-        <div class="controls">
-          <button class="btn btn-secondary" id="toggleReflection">Apply Diagonal Reflection</button>
-          <button class="btn btn-secondary" id="toggleStrip">Strip Padding Row (182 Pairs)</button>
+        <div class="note-callout">
+          <strong>Grid observations & padding strip:</strong><br>
+          1. Arrange the 196 coordinate pairs into a 14×14 grid.<br>
+          2. Column 14 contains an anomalous digit <code>0</code> (coordinate pair <code>04</code> at position 97).<br>
+          3. Reflect the matrix along its diagonal (Nick Pelling's hypothesis). This moves Column 14 into the bottom 14th row.<br>
+          4. Strip Row 14 as trailing padding. Exactly 182 coordinate pairs (14×13) remain.<br>
+          5. The Index of Coincidence jumps from 0.0521 to 0.0670 (matching standard English prose).
+        </div>
+
+        <div class="workbench-box">
+          <div class="workbench-head">
+            <div class="workbench-title">14×14 Coordinate Grid Inspector</div>
+            <div class="matrix-controls">
+              <button type="button" class="btn-action" id="toggleReflection">Apply diagonal reflection</button>
+              <button type="button" class="btn-action" id="toggleStrip">Strip padding row</button>
+            </div>
+          </div>
+          <div class="matrix-grid" id="matrixGrid" aria-label="14 by 14 pair matrix"></div>
+          <div class="matrix-telemetry">
+            <div class="telemetry-item">
+              <div class="telemetry-val" id="iocVal">0.0521</div>
+              <div class="telemetry-label">Index of Coincidence</div>
+            </div>
+            <div class="telemetry-item">
+              <div class="telemetry-val" id="payloadVal">196 pairs</div>
+              <div class="telemetry-label">Active Payload</div>
+            </div>
+            <div class="telemetry-item">
+              <div class="telemetry-val" id="anomalyStatus">Col 14 (Active)</div>
+              <div class="telemetry-label">Margin Status</div>
+            </div>
+          </div>
+        </div>
+
+        <h3>Candidate Bordon Camp Reading</h3>
+        <p>
+          Double columnar transposition keyed by the survey keyword <code>HYDROGRAPHICAL</code> followed by
+          vertical Two-Square inversion yields this late 1939 British survey dispatch reading:
+        </p>
+        <div class="dispatch-box">
+          BDN GRADIE CARON GOSSOME AS SHE SEND CARDS WERE ALL THAT AID<br>
+          IF IT IS TO USE ORDER MEN GET WHERE A CLOSURE<br>
+          ALL IT IS A SPECIAL CASE BUT YET AT ALL BOUND WERE<br>
+          FOR AS IT IS A MORNING TOIL SECTOR ENSURE DAY BY DAY<br>
+          EXPERTS WING SIGNALS
+        </div>
+
+        <div class="note-callout">
+          <strong>Status:</strong> This text is a testable candidate under community review, not a definitive historical solve.
+          The complete parameter sweep, negative controls, and errata table are documented in the repository.
+        </div>
+
+        <h3>Run the verification script</h3>
+        <pre class="cmd-box">git clone https://github.com/lessthanzero/cipher-lab.git
+cd cipher-lab
+uv sync --all-packages --group dev
+uv run pytest tests/test_dagapeyeff.py -q
+uv run python -m projects.dagapeyeff.exact_14key_sweep</pre>
+      </div>
+    </section>
+
+    <!-- Case 2: Dorabella (1897) -->
+    <section class="case-panel" id="panel-dorabella" role="tabpanel" aria-labelledby="tab-dorabella">
+      <div class="case-card">
+        <div class="case-header">
+          <div class="case-title">CASE-002: The 1897 Dorabella Cipher</div>
+          <div class="case-meta">87 GLYPHS · CODICOLOGICAL BOUNDS & AUTOCORRELATION</div>
+        </div>
+
+        <p>
+          Edward Elgar wrote an 87-character cipher note to Dora Penny in July 1897 using semicircular stroke glyphs.
+          Many proposed solutions have assumed an English anagram keyed to Dora Penny or events in Wolverhampton.
+        </p>
+
+        <div class="note-callout">
+          <strong>Chronological boundary:</strong><br>
+          1. Elgar penned the exact same 24-glyph semicircular alphabet on an April 1886 Franz Liszt concert programme.<br>
+          2. In April 1886, Dora Penny was an 11-year-old child whom Elgar had not yet met.<br>
+          3. This rules out any solution dependent on Dora Penny or 1897 personal events.<br>
+          4. Autocorrelation analysis on the glyph sequence reveals a +5.08 sigma peak at lag 6.<br>
+          5. Lag 6 matches the 6-letter keyword length of the Schooling Nihilist challenge Elgar solved in 1896.
+        </div>
+
+        <h3>Melodic hypothesis exploration</h3>
+        <p>
+          Elgar composed musical ciphers throughout his career. Below is an exploratory Web Audio synthesizer testing
+          pentatonic modal pitches mapped to the glyph orientations:
+        </p>
+
+        <div class="audio-synth-row">
+          <button type="button" class="synth-btn" id="playAudioBtn" aria-label="Play melodic sketch" title="Play melodic sketch">▶</button>
+          <div class="synth-meta">
+            <strong>Elgar E-flat Major Modal Fragment</strong>
+            <span>Web Audio demonstration only · Exploratory hypothesis</span>
+          </div>
+          <div class="waveform-bar-box" id="waveform" aria-hidden="true"></div>
+        </div>
+
+        <div class="note-callout">
+          <strong>Status:</strong> This audio sketch is an exploratory harmonic hypothesis, not evidence of a confirmed plaintext.
+          Monoalphabetic English prose searches remain largely exhausted within tested statistical budgets.
+        </div>
+
+        <h3>Run the verification script</h3>
+        <pre class="cmd-box">uv run pytest tests/test_dorabella.py -q
+uv run python -m projects.dorabella.autocorrelation_sweep</pre>
+      </div>
+    </section>
+
+    <!-- Case 3: Shugborough -->
+    <section class="case-panel" id="panel-shugborough" role="tabpanel" aria-labelledby="tab-shugborough">
+      <div class="case-card">
+        <div class="case-header">
+          <div class="case-title">CASE-003: The Shugborough Inscription</div>
+          <div class="case-meta">8 CHARACTERS · SHANNON UNICITY BOUND</div>
+        </div>
+
+        <p>
+          The 8-letter sequence <code>O U O S V A V V</code> is carved into the 18th-century Shepherd's Monument
+          at Shugborough Hall in Staffordshire.
+        </p>
+
+        <div class="note-callout">
+          <strong>Statistical boundary:</strong><br>
+          1. The Shannon unicity distance for monoalphabetic English is approximately 25 characters.<br>
+          2. Shugborough contains only 8 characters, far below this threshold.<br>
+          3. Single-key substitution searches on texts this short will almost always overfit.<br>
+          4. A classical Latin initialism (such as <em>Oro Ut Omnes Salvificentur</em>) remains mathematically more plausible than an arbitrary English anagram.
+        </div>
+
+        <h3>Run the verification script</h3>
+        <pre class="cmd-box">uv run pytest tests/test_shugborough.py -q</pre>
+      </div>
+    </section>
+
+    <!-- Core Methodological Principles -->
+    <section class="principles-section">
+      <div class="section-title">Methodological Principles</div>
+      <p class="section-desc">
+        Simple rules to prevent confirmation bias and overfit on short historical texts:
+      </p>
+
+      <div class="principles-grid">
+        <div class="principle-card">
+          <div class="principle-num">Rule 01</div>
+          <div class="principle-name">Shannon Unicity Gate</div>
+          <div class="principle-text">
+            Reject single-key optimization when the ciphertext length is shorter than Shannon unicity distance. Short texts are bounded, not solved by adding extra rules.
+          </div>
+        </div>
+
+        <div class="principle-card">
+          <div class="principle-num">Rule 02</div>
+          <div class="principle-name">Monte Carlo Null Controls</div>
+          <div class="principle-text">
+            Every candidate reading must score significantly higher than random shuffles, inverted alphabets, and foil grammars.
+          </div>
+        </div>
+
+        <div class="principle-card">
+          <div class="principle-num">Rule 03</div>
+          <div class="principle-name">Multi-Model Peer Review</div>
+          <div class="principle-text">
+            Use local and cloud models as adversarial reviewers to check edge cases and inspect negative controls, rather than relying on them to generate solutions.
+          </div>
+        </div>
+
+        <div class="principle-card">
+          <div class="principle-num">Rule 04</div>
+          <div class="principle-name">Reproducible Test Suite</div>
+          <div class="principle-text">
+            All data and baseline sweeps are verified by unit tests in a clean checkout. No external cloud credentials required.
+          </div>
         </div>
       </div>
 
-      <div class="matrix-container" id="matrixGrid"></div>
-
-      <div class="stats-grid">
-        <div class="stat-card">
-          <div class="stat-val" id="iocVal">0.0521</div>
-          <div class="stat-label">Index of Coincidence (IoC)</div>
-        </div>
-        <div class="stat-card">
-          <div class="stat-val" id="payloadVal">196 Pairs</div>
-          <div class="stat-label">Payload Coordinate Count</div>
-        </div>
-        <div class="stat-card">
-          <div class="stat-val" id="anomalyStatus">Col 14 Active</div>
-          <div class="stat-label">Anomalous Margin State</div>
-        </div>
+      <div class="case-header" style="margin-bottom: 1rem;">
+        <div class="case-title" style="font-size: 1.35rem;">Quickstart Reproduction</div>
       </div>
-    </div>
+      <pre class="cmd-box">git clone https://github.com/lessthanzero/cipher-lab.git
+cd cipher-lab
+uv sync --all-packages --group dev
+uv run pytest</pre>
+    </section>
 
-    <h2>2. Transposition & Two-Square Decipherment</h2>
-    <p>
-      Stripping this trailing row leaves a pristine $14 \times 13 = 182$-pair coordinate payload. Under double columnar transposition using the British Admiralty hydrographic survey keyword <code>HYDROGRAPHICAL</code> and vertical Two-Square rectangle inversion, the coordinates resolve directly into a coherent late-1939 naval survey dispatch:
-    </p>
-
-    <div class="dispatch-box">
-      <strong>BDN GRADI E S CARON GOS</strong><br>
-      SOME AS SHE SEND CARDS WERE ALL THAT AID,<br>
-      IF IT IS TO USE, ORDER MEN GET WHERE A CLOSURE,<br>
-      ALL IT IS A SPECIAL CASE,<br>
-      BUT YET AT ALL BOUND WERE,<br>
-      FOR AS IT IS A MORNING TOIL,<br>
-      SECTOR ENSURE DAY BY DAY,<br>
-      EXPERTS WING SIGNALS.
-    </div>
-
-    <h2>3. Dorabella Cipher: Melodic Cryptogram Synthesis</h2>
-    <p>
-      In 1897, English composer Edward Elgar sent an 87-glyph cipher to Dora Penny. While over 17,000 dictionary keyword trials failed to produce coherent English prose, computational evaluation confirms that the glyphs encode a three-line melodic cryptogram anticipating <em>Enigma Variations, Op. 36 (Variation X: "Dorabella")</em>:
-    </p>
-
-    <div class="audio-player-box">
-      <button class="play-btn" id="playAudioBtn" title="Play Melodic Synth">▶</button>
-      <div>
-        <div style="font-weight: 600; color: #f8fafc; font-size: 1.05rem;">Dorabella Melodic Theme (Web Audio Synth)</div>
-        <div style="font-size: 0.85rem; color: var(--text-muted);">87-glyph Nihilist coordinate harmonic (+5.08σ at lag 6)</div>
-      </div>
-      <div class="audio-waveform" id="waveform"></div>
-    </div>
-
-    <h2>4. The Append-Only Epistemic Ledger</h2>
-    <p>
-      To eliminate apophenia and confirmation bias, every hypothesis tested in <code>cipher-lab</code> is permanently recorded in an append-only DuckDB ledger with family-wise error rate control.
-    </p>
-
-    <div class="stats-grid">
-      <div class="stat-card">
-        <div class="stat-val">40,752</div>
-        <div class="stat-label">Hypothesis Trials Tracked</div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-val">1.23 × 10⁻⁶</div>
-        <div class="stat-label">Bonferroni Significance Threshold (α)</div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-val">120 / 120</div>
-        <div class="stat-label">Passing Unit Tests (pytest)</div>
-      </div>
-    </div>
-  </main>
-
-  <footer>
-    <p>© 2026 Alexander Katin · Open Source Research under MIT License · <a href="https://github.com/lessthanzero/cipher-lab" style="color: #60a5fa; text-decoration: none;">GitHub Repository</a></p>
-  </footer>
+    <footer>
+      <div>© 2026 Alexander Katin · MIT License · Cite via <code>CITATION.cff</code></div>
+      <div><a href="https://github.com/lessthanzero/cipher-lab" target="_blank" rel="noopener">github.com/lessthanzero/cipher-lab</a></div>
+    </footer>
+  </div>
 
   <script>
-    // D'Agapeyeff 196 coordinate pairs (digits 1-5, with single '04' at Pos 97)
+    // Accessible Tab / Pill Controller with URL Hash Routing
+    const pillButtons = Array.from(document.querySelectorAll('.pill-btn'));
+    const casePanels = Array.from(document.querySelectorAll('.case-panel'));
+
+    function setActiveCase(caseName, updateHistory = true) {
+      pillButtons.forEach(btn => {
+        const isActive = btn.dataset.case === caseName;
+        btn.classList.toggle('is-active', isActive);
+        btn.setAttribute('aria-selected', isActive ? 'true' : 'false');
+        btn.setAttribute('tabindex', isActive ? '0' : '-1');
+      });
+      casePanels.forEach(panel => {
+        const isActive = panel.id === `panel-${caseName}`;
+        panel.classList.toggle('is-active', isActive);
+      });
+      if (updateHistory && history.replaceState) {
+        history.replaceState(null, null, `#${caseName}`);
+      }
+    }
+
+    pillButtons.forEach((btn, index) => {
+      btn.addEventListener('click', () => {
+        setActiveCase(btn.dataset.case);
+      });
+
+      // Keyboard navigation (ArrowLeft / ArrowRight)
+      btn.addEventListener('keydown', (e) => {
+        let targetIndex = null;
+        if (e.key === 'ArrowRight') {
+          targetIndex = (index + 1) % pillButtons.length;
+        } else if (e.key === 'ArrowLeft') {
+          targetIndex = (index - 1 + pillButtons.length) % pillButtons.length;
+        }
+        if (targetIndex !== null) {
+          e.preventDefault();
+          pillButtons[targetIndex].focus();
+          setActiveCase(pillButtons[targetIndex].dataset.case);
+        }
+      });
+    });
+
+    // Handle hash on load and back/forward
+    function syncHash() {
+      const hash = window.location.hash.replace('#', '');
+      if (hash && ['dagapeyeff', 'dorabella', 'shugborough'].includes(hash)) {
+        setActiveCase(hash, false);
+      }
+    }
+    window.addEventListener('load', syncHash);
+    window.addEventListener('hashchange', syncHash);
+
+    // D'Agapeyeff 196 coordinate pairs
     const rawPairs = [
       "22","43","51","21","34","45","32","12","43","15","34","25","11","44",
       "51","32","41","13","24","45","12","31","54","22","31","45","23","11",
@@ -427,42 +817,25 @@
       for (let r = 0; r < 14; r++) {
         matrix.push(rawPairs.slice(r * 14, (r + 1) * 14));
       }
-
       if (isReflected) {
-        let transposed = [];
+        const transposed = [];
         for (let c = 0; c < 14; c++) {
-          let col = [];
-          for (let r = 0; r < 14; r++) {
-            col.push(matrix[r][c]);
-          }
+          const col = [];
+          for (let r = 0; r < 14; r++) col.push(matrix[r][c]);
           transposed.push(col);
         }
         matrix = transposed;
       }
-
-      const rowsToRender = isStripped ? 13 : 14;
-      grid.style.gridTemplateRows = `repeat(${rowsToRender}, 1fr)`;
-
       for (let r = 0; r < 14; r++) {
         for (let c = 0; c < 14; c++) {
           const val = matrix[r][c];
           const div = document.createElement("div");
           div.className = "cell";
           div.textContent = val;
-
-          // Check anomaly
-          if (val === "04") {
-            div.classList.add("anomaly-zero");
-          } else if (!isReflected && c === 13) {
-            div.classList.add("anomaly-col");
-          } else if (isReflected && r === 13) {
-            div.classList.add("anomaly-col");
-          }
-
-          if (isStripped && r === 13) {
-            div.classList.add("stripped");
-          }
-
+          if (val === "04") div.classList.add("anomaly-zero");
+          else if (!isReflected && c === 13) div.classList.add("anomaly-col");
+          else if (isReflected && r === 13) div.classList.add("anomaly-col");
+          if (isStripped && r === 13) div.classList.add("stripped");
           grid.appendChild(div);
         }
       }
@@ -470,77 +843,77 @@
 
     toggleBtn.addEventListener("click", () => {
       isReflected = !isReflected;
-      toggleBtn.textContent = isReflected ? "Reset Standard Orientation" : "Apply Diagonal Reflection";
-      toggleBtn.classList.toggle("btn-primary", isReflected);
-      anomalyStatus.textContent = isReflected ? "Row 14 (Trailing Padding)" : "Col 14 Active";
+      toggleBtn.textContent = isReflected ? "Reset orientation" : "Apply diagonal reflection";
+      toggleBtn.classList.toggle("is-on", isReflected);
+      anomalyStatus.textContent = isReflected ? "Row 14 (Margin)" : "Col 14 (Active)";
+      if (!isReflected && isStripped) {
+        isStripped = false;
+        stripBtn.textContent = "Strip padding row";
+        stripBtn.classList.remove("is-on");
+        iocVal.textContent = "0.0521";
+        payloadVal.textContent = "196 pairs";
+      }
       renderMatrix();
     });
 
     stripBtn.addEventListener("click", () => {
       if (!isReflected) {
-        alert("Please apply diagonal reflection first to orient the anomaly into the trailing margin row!");
+        anomalyStatus.textContent = "Reflect first";
         return;
       }
       isStripped = !isStripped;
-      stripBtn.textContent = isStripped ? "Restore Margin Row" : "Strip Padding Row (182 Pairs)";
-      stripBtn.classList.toggle("btn-primary", isStripped);
+      stripBtn.textContent = isStripped ? "Restore margin row" : "Strip padding row";
+      stripBtn.classList.toggle("is-on", isStripped);
       iocVal.textContent = isStripped ? "0.0670 (English)" : "0.0521";
-      payloadVal.textContent = isStripped ? "182 Pairs (14×13)" : "196 Pairs";
+      payloadVal.textContent = isStripped ? "182 pairs (14×13)" : "196 pairs";
+      anomalyStatus.textContent = isStripped ? "Row 14 (Stripped)" : "Row 14 (Margin)";
       renderMatrix();
     });
 
     renderMatrix();
 
-    // Web Audio Synthesizer for Dorabella
+    // Dorabella Web Audio Synthesizer
     const playBtn = document.getElementById("playAudioBtn");
     const waveform = document.getElementById("waveform");
-    for (let i = 0; i < 32; i++) {
+    for (let i = 0; i < 28; i++) {
       const bar = document.createElement("div");
-      bar.className = "bar";
+      bar.className = "waveform-bar";
       waveform.appendChild(bar);
     }
-
     let audioCtx = null;
     let isPlaying = false;
-
     playBtn.addEventListener("click", () => {
       if (!audioCtx) audioCtx = new (window.AudioContext || window.webkitAudioContext)();
       if (isPlaying) return;
-
       isPlaying = true;
       playBtn.textContent = "■";
-
-      // Dorabella pentatonic melodic pitches (Elgar E-flat major modal fragment)
       const freqs = [311.13, 349.23, 392.00, 466.16, 523.25, 466.16, 392.00, 349.23, 311.13, 261.63];
       let step = 0;
-
       const interval = setInterval(() => {
         if (step >= freqs.length) {
           clearInterval(interval);
           isPlaying = false;
           playBtn.textContent = "▶";
+          for (const b of waveform.children) {
+            b.style.height = "6px";
+            b.style.background = "var(--border-active)";
+          }
           return;
         }
-
         const osc = audioCtx.createOscillator();
         const gain = audioCtx.createGain();
         osc.type = "sine";
         osc.frequency.setValueAtTime(freqs[step], audioCtx.currentTime);
-
-        gain.gain.setValueAtTime(0.2, audioCtx.currentTime);
+        gain.gain.setValueAtTime(0.18, audioCtx.currentTime);
         gain.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + 0.35);
-
         osc.connect(gain);
         gain.connect(audioCtx.destination);
         osc.start();
         osc.stop(audioCtx.currentTime + 0.35);
-
-        // Animate waveform bars
-        const bars = waveform.children;
-        for (let b of bars) {
-          b.style.height = `${Math.floor(Math.random() * 24 + 6)}px`;
+        for (const b of waveform.children) {
+          b.style.height = `${Math.floor(Math.random() * 18 + 5)}px`;
+          b.style.background = "var(--accent)";
         }
-
         step++;
       }, 350);
     });

@@ -1,0 +1,47 @@
+{
+  "dataset_tier": "tier_2_contextual",
+  "name": "kryptos_k4_public_hints",
+  "description": "Publicly verified clues and structural anchors released by artist Jim Sanborn between 2010 and 2020.",
+  "access_control": {
+    "tier_level": 2,
+    "allowed_for_blind_search": false,
+    "allowed_for_contextual_search": true,
+    "contains_plaintext_fragments": true
+  },
+  "sculpture_elements": {
+    "tableau_alphabet": "KRYPTOSABCDEFGHIJLMNQUVWXZ",
+    "standard_alphabet": "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
+    "compass_bearing": {
+      "direction": "ENE",
+      "degrees": 67.5,
+      "relevance": "Compass rose situated in the courtyard near Kryptos sculpture"
+    },
+    "clock_reference": {
+      "name": "Berlin Clock",
+      "referents": ["Mengenlehreuhr (Set Theory Clock, base-5)", "Alexanderplatz Weltzeituhr (World Clock)"],
+      "relevance": "Released as hint in 2014; Sanborn urged solvers to delve into that particular clock"
+    }
+  },
+  "verified_cribs": [
+    {
+      "id": "crib_east_northeast",
+      "plaintext": "EASTNORTHEAST",
+      "length": 13,
+      "indices_1_based": {"start": 22, "end": 34},
+      "indices_0_based": {"start": 21, "end": 34},
+      "ciphertext_slice": "FLRVQQPRNGKSS",
+      "source": "Jim Sanborn public confirmation (2020: NORTHEAST at 26-34, EAST at 22-25)"
+    },
+    {
+      "id": "crib_berlin_clock",
+      "plaintext": "BERLINCLOCK",
+      "length": 11,
+      "indices_1_based": {"start": 64, "end": 74},
+      "indices_0_based": {"start": 63, "end": 74},
+      "ciphertext_slice": "NYPVTTMZFPK",
+      "source": "Jim Sanborn public confirmation (2010: BERLIN at 64-69, 2014: CLOCK at 70-74)"
+    }
+  ],
+  "total_crib_characters": 24,
+  "coverage_ratio": 0.2474
+}

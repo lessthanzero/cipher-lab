@@ -1,0 +1,37 @@
+name: Experiment idea
+description: Propose a controlled experiment or hypothesis to test.
+title: "[experiment] "
+labels: ["experiment"]
+body:
+  - type: textarea
+    id: hypothesis
+    attributes:
+      label: Hypothesis
+      description: What claim are you testing? Keep it falsifiable.
+    validations:
+      required: true
+  - type: textarea
+    id: controls
+    attributes:
+      label: Controls & constraints
+      description: Negative controls, unicity considerations, corpora needed.
+    validations:
+      required: true
+  - type: dropdown
+    id: case
+    attributes:
+      label: Related case (if any)
+      options:
+        - CASE-001 D'Agapeyeff
+        - CASE-002 Dorabella
+        - CASE-003 Shugborough
+        - Other / new case
+        - Harness-wide
+    validations:
+      required: true
+  - type: textarea
+    id: success
+    attributes:
+      label: What would count as support or falsification?
+    validations:
+      required: true

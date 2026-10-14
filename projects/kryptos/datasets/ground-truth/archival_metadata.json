@@ -1,0 +1,25 @@
+{
+  "dataset_tier": "tier_3_ground_truth",
+  "name": "kryptos_k4_archival_metadata",
+  "description": "Provenance and metadata of the archival plaintext recovery from the Smithsonian Archives of American Art (September 2025).",
+  "access_control": {
+    "tier_level": 3,
+    "allowed_for_blind_search": false,
+    "allowed_for_contextual_search": false,
+    "allowed_for_adversarial_verification_only": true,
+    "firewall_enforced": true
+  },
+  "provenance": {
+    "discoverers": ["Jarett Kobek", "Richard Byrne"],
+    "date": "September 2025",
+    "location": "Smithsonian Institution, Archives of American Art, Washington, D.C.",
+    "collection": "Jim Sanborn Papers",
+    "nature_of_documents": "Five pages of paper strips cut into scrambled sentences created in 1990 for CIA Historical Intelligence review to prove text was non-offensive.",
+    "artist_authentication": "Confirmed by Jim Sanborn in late 2025 as inadvertent donation during personal archiving.",
+    "auction_status": "Sold at RR Auction in November 2025 for $962,500; archive sealed from public reproduction.",
+    "cryptographic_status": "Archival recovery of plaintext; underlying encryption algorithm, key, and mathematical system remain unrevealed and unsolved."
+  },
+  "completion_policy": {
+    "completion_standard": "If candidate model discovers an encryption method producing plaintext consistent with archival findings without ad hoc errata, classify as Cryptographically Recovered. If plaintext is known but method unverified, classify as Plaintext known; decryption method unverified."
+  }
+}

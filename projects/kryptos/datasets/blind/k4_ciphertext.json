@@ -1,0 +1,14 @@
+{
+  "dataset_tier": "tier_1_blind",
+  "name": "kryptos_k4_ciphertext",
+  "description": "Verified transcription of the 97-character K4 section of Jim Sanborn's Kryptos sculpture (1990) at CIA Headquarters, Langley, VA.",
+  "length": 97,
+  "alphabet": "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
+  "ciphertext": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+  "access_control": {
+    "tier_level": 1,
+    "allowed_for_blind_search": true,
+    "contains_cribs": false,
+    "contains_plaintext": false
+  }
+}

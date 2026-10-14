@@ -1,0 +1,8 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Phaistos Disc Lab
+    url: https://github.com/lessthanzero/phaistos-disk
+    about: Flagship ancient-script investigation sibling to Cipher Lab.
+  - name: Scientific limitations
+    url: https://github.com/lessthanzero/cipher-lab/blob/main/SCIENTIFIC_LIMITATIONS.md
+    about: Read before filing a decipherment claim.

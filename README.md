@@ -1,104 +1,118 @@
 # Cipher Lab
 
-Modular, reproducible research infrastructure for computational analysis of historical ciphers, tachygraphy, and cryptograms. Sibling repository to [`ancient-text-lab`](../ancient-text-lab).
+[![CI](https://github.com/lessthanzero/cipher-lab/actions/workflows/ci.yml/badge.svg)](https://github.com/lessthanzero/cipher-lab/actions/workflows/ci.yml)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![Python 3.12+](https://img.shields.io/badge/python-3.12%2B-blue.svg)](https://www.python.org/)
+[![uv](https://img.shields.io/badge/packaging-uv-de5fe9.svg)](https://docs.astral.sh/uv/)
 
-## Scope & Taxonomy
+**Reproducible research harness for solving and studying historical ciphers and encrypted texts.**
 
-While `ancient-text-lab` is dedicated to natural ancient writing systems and archaeological epigraphy (Linear A/B, Indus Script, Rongorongo, Phaistos Disc), `cipher-lab` focuses on deliberate artificial ciphers, early-modern shorthand systems, and historical enigmas:
+Open computational investigations of historical cryptograms: hypotheses, experiments, failed approaches, and results you can re-run from a clean checkout. This is research software (preview maturity), not a product launch.
 
-1. **[D’Agapeyeff Cipher (1939)](projects/dagapeyeff/README.md)**: 392 digits (196 pairs, digits 1–5). **Deciphered & Reconstructed** by coupling Erik van Eykelen's 14th column anomaly and Nick Pelling's diagonal reflection with 182-pair payload extraction, Tim Marland's Two-Square baseline, `HYDROGRAPHICAL` double transposition, and vertical Two-Square rectangle inversion ($Q = -760.67$, $\text{Cohen's } d = 4.49$ vs negative-control shuffles).
-2. **[Dorabella Cipher (1897) & 1886 Liszt Inscription](projects/dorabella/README.md)**: 87 glyphs in 3 lines across 24 symbols. **Codicologically Bounded & Structurally Characterized** as a melodic cryptogram anticipating *Enigma Variations, Op. 36, Variation X ("Dorabella")*, cross-validated against the 1886 Liszt Inscription negative control ($N=18$), isolating John Holt Schooling's April 1896 Nihilist coordinate harmonic ($+5.08\sigma$ at lag 6), while establishing a definitive negative result for standard English prose across 17,000+ keywords.
-3. **[Rohonc Codex (c. 1530–1550)](projects/rohonc/README.md)**: 448 pages, ~87k characters, ~150 core signs, 87 Christian Passion illustrations. **Resolved as an Early-Modern Liturgical Tachygraphic Codebook & Controlled Syllabary** (Király & Tokai 2018; Láng 2021). Watermark anchored to Venetian mills (1530–1540, Briquet 541); unstructured hoax and modern forgery myths mathematically rejected ($Z = +14.27\sigma$ syntax permutation test); 50 core codebook entries mapped; formulaic liturgical collocations extracted (`Apostoli`, `Pater et Filius`, `Pilatus et Christus`); Diatessaron sequence aligned to Passion scenes (Folio 125v Golgotha Crucifixion $Z = +2.07\sigma, p = 0.048$).
-4. **[Shugborough Inscription (c. 1748–1756)](projects/shugborough/README.md)**: 8 letters (`OUOSVAVV`) flanked by `D · M ·` on Peter Scheemakers' Shepherd's Monument. **Codicologically Bounded & Epigraphically Characterized**: Shannon unicity violation ($N \ll U_0$) mathematically bounds single-key cryptanalysis; carved interpuncts (`·`) and rounded `U` vs pointed `V` letterforms prove an 18th-century memorial Latin initialism under *Dis Manibus*; Bayesian transition modeling benchmarks historical candidates while falsifying the popular "widower" and polyalphabetic "Magdalen" myths.
+Interactive essay: [lessthanzero.github.io/cipher-lab](https://lessthanzero.github.io/cipher-lab/)
 
-## Key Publications & Documentation
+---
 
-- **[D'Agapeyeff Decipherment Report](projects/dagapeyeff/README.md)**: Complete mathematical formulation, diplomatic consensus text, and calibrated English reading.
-- **[Dorabella Research Report](projects/dorabella/README.md)**: Epistemic ledger (40,752 trials), 1886 Liszt negative control, species counterpoint evaluation, and dual MIDI synthesis.
-- **[Rohonc Codex Academic Preprint](docs/ROHONC_CODEBOOK_RESOLUTION_PAPER.md)**: Formal codicological, tachygraphic morphology, and liturgical Diatessaron resolution paper (*Cryptologia* / *Early Modern Studies*).
-- **[Shugborough Research Report](projects/shugborough/README.md)**: Epigraphic interpunct audit, Shannon unicity violation proof, Bayesian Latin initialism model, and pseudohistory refutations.
-- **[Shugborough Academic Preprint](docs/SHUGBOROUGH_EPIGRAPHIC_PAPER.md)**: Formal codicological, epigraphic, and information-theoretic resolution paper (*The Antiquaries Journal* / *Cryptologia*).
-- **[Scientific Limitations & Epistemic Boundaries](SCIENTIFIC_LIMITATIONS.md)**: Explicit scope of proven vs hypothesized claims, falsification criteria, and ledger multiplicity correction.
-- **[Community Review & Announcement Package](docs/ANNOUNCEMENT_AND_COMMUNITY_REVIEW.md)**: Sanity check outreach package for Tim Marland (@TimMarland), Reddit (r/codes, r/cryptography), and LinkedIn.
+## Why it exists
 
-## Core Principles
+Classical cryptanalysis of short historical texts is easy to overfit. Cipher Lab keeps observations, candidate keys, negative controls, and multiplicity-corrected trial counts in one place so claims stay auditable.
 
-- **Strict Epistemic Boundaries**: Raw observations, transcriptions, candidate keys, and falsifications remain structurally partitioned.
-- **Zero-Token Statistical Gating**: 95% of hypothesis trials are evaluated via deterministic math (IC, entropy, quadgrams, permutation tests) before invoking LLM referees.
-- **Unicity Distance Gate ($U_0$)**: If payload length $N < U_0$, single-key optimization is rejected, preventing combinatorial hallucinations.
-- **Double-Blind Refereeing with Foils**: LLM referees evaluate candidate decryptions alongside negative-control decoys to eliminate confirmation bias.
-- **Append-Only Epistemic Ledger**: Multiplicity-corrected $p$-values are computed across the full denominator of all trials (40,752 trials tracked in DuckDB).
+Sibling labs:
 
-## Distributed Compute Harness & Hardware Architecture
+- [`ancient-text-lab`](https://github.com/lessthanzero/ancient-text-lab) — natural ancient scripts / epigraphy
+- [`phaistos-disk`](https://github.com/lessthanzero/phaistos-disk) — flagship Phaistos Disc investigation (same epistemic habits)
 
-The laboratory operates across a coordinated heterogeneous multi-node computing architecture designed for memory safety, reproducible batch execution, and high-throughput permutation sweeps:
+---
 
-1. **Local Apple Silicon Workstation (Darwin M1 Pro, 16GB)**:
-   - **Darwin Memory-Safe Telemetry**: Computes true available physical RAM via Mach page accounting (`vm_stat` parsing `Pages free`, `speculative`, `inactive`, `purgeable` at 16 KB default page size). Prevents memory exhaustion or disk swap thrashing when processing large n-gram arrays.
-   - **Interactive & Real-Time Engines**: Executes deterministic unicity gating, Fuxian species counterpoint rules engines, DuckDB ledger tracking, and pure-Python MIDI audio synthesis.
+## Research cases
 
-2. **Remote Fedora Linux PC Worker (`pc:192.168.1.172`, 8 CPU Cores)**:
-   - **Remote Compute Dispatch**: Orchestrated via `RemoteComputeWorker` over SSH with automated health checking and batch serialization.
-   - **Heavy Monte Carlo Permutations**: Runs massive parallel null simulations (e.g. 724 multi-core permutation batches totaling >700,000 token order shuffles for the Rohonc syntax test at $Z = +14.27\sigma$).
-   - **Exhaustive Parameter Sweeps**: Dispatches multi-threaded grid sweeps across 14x14 transposition matrices, dictionary key sweeps (17,000+ words for Dorabella), and polyalphabetic fractionations.
+| Case | Subject | Status (landing summary) | Details |
+|------|---------|--------------------------|---------|
+| [CASE-001](cases/CASE-001-dagapeyeff.md) | D’Agapeyeff (1939) | Best current reconstruction under active peer review | [project](projects/dagapeyeff/README.md) |
+| [CASE-002](cases/CASE-002-dorabella.md) | Dorabella (1897) | Structurally characterized; English-prose monoalphabetic routes largely exhausted | [project](projects/dorabella/README.md) |
+| [CASE-003](cases/CASE-003-shugborough.md) | Shugborough (`OUOSVAVV`) | Unicity-bounded; Latin initialism model preferred over popular myths | [project](projects/shugborough/README.md) |
+| [CASE-004](cases/CASE-004-kryptos-k4.md) | Kryptos K4 (1990) | Plaintext known via 2025 archival recovery; decryption method unverified | [case](cases/CASE-004-kryptos-k4.md) |
 
-3. **Append-Only Epistemic Ledger (DuckDB)**:
-   - Persistent embedded ledger (`data/derived/epistemic_ledger.duckdb`) tracking every hypothesis trial across all ciphers (40,752 trials logged).
-   - Enforces dynamic family-wise error rate (FWER) control via Bonferroni correction ($\alpha_{\text{critical}} = 0.05 / 40{,}752 = 1.23 \times 10^{-6}$) and Benjamini-Hochberg False Discovery Rate (FDR) adjustments.
+Also in-tree (see project folders): Rohonc Codex liturgical tachygraphy track, Indus structural experiments, Qumran cryptic / Biblical Atbash probes.
 
-## Model Referee Architecture & LLM Telemetry
+**Landing language is deliberately cautious.** Full mathematical claims, plaintext editions, and errata live in project READMEs and [`SCIENTIFIC_LIMITATIONS.md`](SCIENTIFIC_LIMITATIONS.md).
 
-To eliminate LLM apophenia, confirmation bias, and hallucinated "translations," `cipher-lab` employs a multi-tiered referee protocol that couples closed and open models under double-blind controls:
+---
 
-1. **Double-Blind Referee Protocol with Foils (`evaluate_with_blinded_foils`)**:
-   - The candidate decipherment is shuffled alongside 2–3 negative-control decoys (synthetic anagrams or scrambled ciphertexts).
-   - Referees evaluate linguistic coherence blindly. If an LLM selects a decoy or scores a scrambled foil highly, its evaluation is marked as an apophenic failure and penalized.
+## One concrete experiment (CASE-001)
 
-2. **Multi-Tier Model Stack**:
-   - **OpenAI Codex (`gpt-5.6` / `gpt-6-astra`)**: Invoked via CLI (`codex exec --sandbox read-only`) with low reasoning effort for high-level adversarial critique and hypothesis falsification.
-   - **Google Antigravity 3.8 Flash**: Multi-repo agent synthesis, epistemic protocol orchestration, and experimental plan management.
-   - **Homelab Ollama Worker Cluster (`pc:11434` & `127.0.0.1:11434`)**:
-     - `qwen2.5:7b`: Statistical and adversarial linguistic peer review passes.
-     - `gemma2:9b`: Archaeological, epigraphic, and historical sanity checks.
-     - `qwen2.5-coder:7b`: Code hygiene, packaging, and reproducibility verification.
-     - `llama3.2:3b` & `phi4-mini:latest`: Fast word-boundary segmentation and low-latency blinded foil scoring.
+The D’Agapeyeff textbook challenge (392 digits) remained open for decades after the author lost his own keying notes. This lab couples prior community observations (14th-column anomaly, diagonal reflection, Two-Square baselines) with a deterministic reconstruction pipeline and negative-control shuffles.
 
-3. **Structured Telemetry Logging**:
-   - All local and remote model requests are logged to `~/.local/share/local-models/usage.jsonl` recording ISO timestamp, project name, task, provider, model ID, token counts, and execution latency in milliseconds.
-
-## Quickstart & Verification
+Reproduce from a clean checkout:
 
 ```bash
-# 1. Sync environment
 uv sync --all-packages --group dev
-
-# 2. Run full test suite (120 passing tests)
-uv run pytest
-
-# 3. Verify D'Agapeyeff decipherment
+uv run pytest tests/test_dagapeyeff.py -q
 uv run python -m projects.dagapeyeff.exact_14key_sweep
-uv run python -m projects.dagapeyeff.linguistic_reconstruction
-
-# 4. Verify Dorabella species counterpoint & Nihilist coordinate solver
-uv run python -m projects.dorabella.counterpoint_evaluator
-uv run python -m projects.dorabella.nihilist_coordinate_solver
-
-# 5. Synthesize Dorabella and 1886 Liszt MIDI audio streams
-uv run python -m projects.dorabella.dual_musical_engine
-
-# 6. Verify Shugborough epigraphy, Bayesian initialisms & DuckDB ledger
-uv run python -m projects.shugborough.runner
-
-# 7. Verify Rohonc Codex codebook extraction, liturgical alignment & distributed MC
-uv run python -m projects.rohonc.runner --mode all
 ```
 
-## Acknowledgements & Community Attribution
+See [cases/CASE-001-dagapeyeff.md](cases/CASE-001-dagapeyeff.md) for inputs, constraints, and verification notes.
 
-`cipher-lab` stands on the shoulders of the open-source and independent historical cryptanalysis community:
-- **Erik van Eykelen ([@hackteck](https://x.com/hackteck))**: For isolating the 14th Column Anomaly (14 March 2026) in D'Agapeyeff, which was the crucial structural observation that identified Column 14 as non-payload margin padding.
-- **Tim Marland ([dagapeyeffresearch.com](https://dagapeyeffresearch.com))**: For the foundational 7-phase computational analysis of D'Agapeyeff and pioneering the vertical Two-Square cipher hypothesis.
-- **Nick Pelling ([ciphermysteries.com](https://ciphermysteries.com))**: For proposing the diagonal reflection hypothesis across the $14 \times 14$ grid and tireless historical cipher research.
-- **Viktor Wase**: For the 2023 simulated annealing bounds establishing that Dorabella is mathematically non-monoalphabetic.
-- **Levente Zoltán Király & Gábor Tokai**; **Benedek Láng**: For the breakthrough codebook, controlled syllabary, and codicological decipherment of the Rohonc Codex.
+---
 
+## Methods
+
+- **Epistemic partitions** — observations, transcriptions, candidate keys, and falsifications stay separated.
+- **Unicity gate ($U_0$)** — if payload length $N < U_0$, single-key optimization is rejected.
+- **Statistical gating first** — IC, entropy, quadgrams, permutation tests before any LLM referee.
+- **Append-only ledger** — DuckDB trial denominator for multiplicity correction (local artifact under `data/derived/`).
+- **Negative controls** — shuffles / foils required when claiming linguistic viability.
+
+Optional distributed compute (homelab Fedora worker) and LLM double-blind refereeing exist for heavy sweeps; they are **not** required for the quickstart or CI.
+
+---
+
+## Reproduction
+
+**Requirements:** Python 3.12+, [`uv`](https://docs.astral.sh/uv/).
+
+```bash
+git clone https://github.com/lessthanzero/cipher-lab.git
+cd cipher-lab
+uv sync --all-packages --group dev
+uv run pytest   # 161 tests
+```
+
+Tracked corpora live under `data/corpora/` and `data/indus/`. Heavy derived artifacts (`data/derived/`, `*.duckdb`) are gitignored and regenerated by project runners.
+
+Per-case reproduce commands: [cases/](cases/).
+
+---
+
+## Results & documentation
+
+- [D’Agapeyeff report](projects/dagapeyeff/README.md)
+- [Dorabella report](projects/dorabella/README.md)
+- [Rohonc preprint](docs/ROHONC_CODEBOOK_RESOLUTION_PAPER.md)
+- [Shugborough report](projects/shugborough/README.md) · [preprint](docs/SHUGBOROUGH_EPIGRAPHIC_PAPER.md)
+- [Scientific limitations](SCIENTIFIC_LIMITATIONS.md)
+- [Cite this repository](CITATION.cff)
+
+---
+
+## Contributing
+
+See [CONTRIBUTING.md](CONTRIBUTING.md). Useful contributions: reproduction reports, failed experiments with controls, corpus corrections, and new case stubs that obey the unicity / negative-control rules.
+
+---
+
+## Support the research
+
+Independent open-source historical cryptanalysis. Funding links will appear here once GitHub Sponsors (or similar) is enabled — nothing essential is gated.
+
+---
+
+## Acknowledgements
+
+Built on community cryptanalysis:
+
+- **Erik van Eykelen ([@hackteck](https://x.com/hackteck))** — 14th-column anomaly (D’Agapeyeff)
+- **Tim Marland ([dagapeyeffresearch.com](https://dagapeyeffresearch.com))** — Two-Square / computational baselines
+- **Nick Pelling ([ciphermysteries.com](https://ciphermysteries.com))** — diagonal reflection hypothesis
+- **Viktor Wase** — Dorabella non-monoalphabetic annealing bounds
+- **Levente Zoltán Király & Gábor Tokai; Benedek Láng** — Rohonc codebook / codicology

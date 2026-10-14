@@ -1,0 +1,36 @@
+name: Reproduction report
+description: You tried to reproduce a published case from a clean checkout.
+title: "[reproduction] "
+labels: ["reproduction"]
+body:
+  - type: input
+    id: case
+    attributes:
+      label: Case ID
+      placeholder: CASE-001
+    validations:
+      required: true
+  - type: dropdown
+    id: outcome
+    attributes:
+      label: Outcome
+      options:
+        - Matched documented result
+        - Partial match
+        - Failed / diverged
+        - Could not run
+    validations:
+      required: true
+  - type: textarea
+    id: commands
+    attributes:
+      label: Commands run
+    validations:
+      required: true
+  - type: textarea
+    id: notes
+    attributes:
+      label: Notes / diffs / logs
+      description: Paste the interesting part of stdout/stderr (trim secrets).
+    validations:
+      required: false

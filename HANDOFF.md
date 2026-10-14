@@ -1,11 +1,70 @@
 # HANDOFF & STATE OF THE LAB: RESEARCH RESOLUTIONS, VISIBILITY INFRASTRUCTURE & STRATEGIC ROADMAP
 
-**Date**: 2026-10-05  
-**Laboratory**: Computational Cryptanalysis Laboratory (`cipher-lab`)  
-**Status**: Core Cipher Tracks Complete & Released (v1.0.0); Pan-Indus 4 Frontiers Executed on Apple M3 Air; Visibility Infrastructure Live; Bibleistics Track Operational  
-**Test Suite Baseline**: 161 / 161 passing tests (`uv run pytest` in ~25s on macOS Darwin M1 Pro, ~1.9s on Apple M3 Air, ~3.8s on Fedora Linux `pc`)  
-**Ledger State**: `data/derived/epistemic_ledger.duckdb` (All 15 Pan-Indus trials `PAN-H1`..`PAN-H15`, `qumran-h1`, and `biblical-h1` confirmed and surviving Bonferroni FWER control \alpha_{\text{crit}} = 0.00294)  
-**Remotes**: Synchronized across GitHub `origin/main` (`lessthanzero/cipher-lab`) and local `forgejo/main`
+**Date**: 2026-10-10 (pickup section); research body below from 2026-10-05  
+**Laboratory**: Computational Cryptanalysis Laboratory (`cipher-lab`) + sibling `phaistos-disk`  
+**Test Suite Baseline**: 161 / 161 passing (`uv run pytest`)  
+**Remotes**: GitHub `origin/main` (`lessthanzero/cipher-lab`); Phaistos `lessthanzero/phaistos-disk`
+
+---
+
+## 0. PICKUP — Traction + Pages essay (2026-10-07 → 2026-10-10)
+
+**Session outcome:** GitHub Traction Prep implemented locally on **both** repos; Cipher Lab Pages longread rewritten (F1 Atlas aesthetics + coherent CASE-001 story); X/HN announcement drafts ready. **Nothing from this wave is committed/pushed yet.**
+
+### Uncommitted — `cipher-lab`
+
+| Area | Paths |
+|------|--------|
+| License + CI | `LICENSE`, `.github/workflows/ci.yml` |
+| Community | `CONTRIBUTING.md`, `.github/ISSUE_TEMPLATE/*` |
+| Cases | `cases/README.md`, `CASE-001`…`003` |
+| Public face | Softened `README.md`, `CITATION.cff` → 0.1.0 |
+| Pages essay | `site/index.html` (paper/ink/IBM Plex; D’Agapeyeff demo; soft claims) |
+| Social / announce | `docs/media/social-preview.png`, `site/social-preview.png`, `docs/visibility/ANNOUNCE_CIPHER_LAB_PAGES.md` |
+
+### Uncommitted — `phaistos-disk` (`~/Developer/phaistos-disk`)
+
+| Area | Paths |
+|------|--------|
+| Epistemics | `questions.md` (research-log banner; no CONFIRMED slogans) |
+| Cases | `cases/PH-DISK-001`…`003` |
+| Community | `CONTRIBUTING.md`, `.github/ISSUE_TEMPLATE/*`, `RELEASE_READINESS.md` |
+| README | Related lab → Cipher Lab; Support stub; cases link |
+| Social | `docs/media/social-preview.png` (+ Pages OG via `docs/index.html`) |
+
+**Also dirty on Phaistos (pre-existing / unrelated):** `experiments/registry.yaml` — review before commit.
+
+### Decisions locked (do not reverse casually)
+
+- Soften **landing** claims; deep project READMEs keep detail + `SCIENTIFIC_LIMITATIONS.md`.
+- **No `FUNDING.yml`** until GitHub Sponsors / BMC exists.
+- Thin `cases/` / `PH-DISK-*` index over existing IDs — no registry rename.
+- Pages essay = **lab spine + D’Agapeyeff demo**; Dorabella/Phaistos = sibling probes, not co-equal wins.
+- Consilium (agy): monograph framing; qwen panel was weak/off-topic — trust agy arc.
+
+### Next actions (in order)
+
+1. **Commit + push** cipher-lab traction + Pages essay (then Phaistos traction separately).
+2. **Manual GitHub UI:** Settings → Social preview for both repos (`docs/media/social-preview.png`). CipherLab license stays `null` until `LICENSE` hits `main`.
+3. Confirm Pages live: https://lessthanzero.github.io/cipher-lab/ (essay) · https://lessthanzero.github.io/phaistos-disk/
+4. **Announce** from `docs/visibility/ANNOUNCE_CIPHER_LAB_PAGES.md` — X thread + Show HN essay URL. Do **not** re-cold-launch Dorabella/D’Agapeyeff/Phaistos on Reddit (already posted); Phaistos Show HN already at https://news.ycombinator.com/item?id=49866163.
+5. Optional later: Sponsors → `FUNDING.yml`; monitor awesome-list PRs in `TODO.md`.
+
+### Reproduce smoke (CASE-001)
+
+```bash
+uv sync --all-packages --group dev
+uv run pytest tests/test_dagapeyeff.py -q
+uv run python -m projects.dagapeyeff.exact_14key_sweep
+```
+
+Note: `linguistic_reconstruction` can hang / run long — not the clean-checkout path.
+
+### Public positioning reminder
+
+- CipherLab = reusable research harness.  
+- Phaistos = flagship open investigation.  
+- Growth loop: question → experiment → unexpected result → artifact → post → discovery — not “please star.”
 
 ---
 
@@ -160,6 +219,17 @@ Synthesizing multi-peer discovery (Consilium: Qwen 2.5, AGY, Codex), continuing 
   - Sectarian Hebrew n-gram model (1QS, 1QM, CD), Cryptic A/B/C sign inventories, simulated annealing substitution solver on *4Q249* (*papCryptA Midrash Sefer Moshe*) and *4Q317*.
 - **Target 2: Systematic Biblical Atbash & Reciprocal Ciphers** (`projects/biblical_atbash/`):
   - Classical Biblical Hebrew root lexicon, Atbash/Albam/Atbah mathematical transformations, and $N=10,000$ Monte Carlo order-shuffled surrogate generator testing Jeremiah 25:26 (`ששך` $\rightarrow$ `בבל`) and disputed candidates.
+
+### 5.1 Target 3: CASE-004 — Kryptos K4 (1990)
+- **Status**: Exhaustively bounded under Blind Cryptanalysis Protocol. Plaintext known via Smithsonian Archives recovery (Sep 2025); decryption method unverified.
+- **Suite Baseline**: 65 / 65 tests passing on Darwin Python 3.12 (64.33s) and Fedora Linux Python 3.13 (74.32s).
+- **Epistemic Ledger**: 61 formal trials registered (`k4-h1` to `k4-h61`) in `data/derived/epistemic_ledger.duckdb`.
+- **Compute Fabric Execution**:
+  - `mac-primary`: Interactive orchestrator, Z3 SMT solver, differential matrix analyzer.
+  - `pc` (Fedora PC worker): 16 cores, 323 GB free; executed 403k keystone grid trials, 35M+ two-key trials, 14M+ irregular transpositions, 1M+ Fleissner grilles, 641k dual sheet trials, 341k physical fold trials, 75k aperture mask trials, 204k keyed coordinate selection trials, 52k compound double transposition trials, 60k additive vernier mask trials, 20.8k VIC disrupted transposition trials (105k evals), 193 lodestone geodetic trials (5.9k evals), 383,976 K1-K3 errata & mixed-alphabet running key trials (`k4-h54`, 4.35s), 385 exact Z3 SMT polygraphic fractionation trials (`k4-h55`, 14.26s), 47,988 Two-Sheet Piecewise Quagmire trials across all 98 null cell phases (`k4-h56`, 2.18s), 291,680 Restricted Coordinate Transposition trials (`k4-h57`, 137.39s), 1,481,760 Unconstrained S_7 Columnar Transposition trials across all 5,040 permutations, 98 null positions, and readout routes (53,343,360 evaluations in 213.20s on Fedora, `k4-h58`), 1,589,364 7-Channel Stateful Progressive Autokey trials across 98 nulls, 3 routes, and 5 stateful families (`k4-h59`, 11.37s on Fedora), 6,915,930 Multi-Null & 10x10 Defect Topology trials across 50,004 triplets, 4,851 pairs, and typo slips (`k4-h60`, 56.95s on Fedora), and 88,929,600 Error-Tolerant Artisanal Composite SMT trials across all 5,040 $S_7$ permutations, 98 null positions, causal directions, and historical keywords under $k \le 2$ defects (185.49s on Fedora, `k4-h61`).
+  - `macbook-mobile` (Kate's MacBook Air M3): Leased typed jobs via `local-harness` (job `3378ef10` text_stats, job `6fa2ecfe` coding LLM, jobs `a6a2678c` & `a585877d` coordinate/matrix audits).
+- **Core Falsifications**: Two-Square SMT proved 100% UNSAT across 5x5, 6x6, 7x7; Keystone 7x14 column-transposition sweep falsified; 7-strip physical jigsaw falsified; ACA Quagmire I–IV falsified; static two-key alternating parity proved algebraically impossible; linear column steppers and LFSR recurrences falsified; physical paper folds, accordion pleats, and 2-phase interlocking Cardan aperture masks falsified; numerical rank indicator schedules and interrupted transposition grids falsified; compound double columnar transposition and transposed key schedule inversion falsified; additive vernier and dual-layer key masks falsified; Cold War VIC straddling checkerboards and triangular disrupted transpositions falsified (`k4-h52`); sculpture lodestone compass bearings and geodetic vector projections falsified (`k4-h53`); K1–K3 sculptural errata tokens, errata-keyed mixed alphabets, and full running keys falsified (`k4-h54`); polygraphic coordinate fractionation (Trifid L in 3..15, Delastelle Bifid 5x5/6x6 L in 2..14, and asymmetric Sheet A/B blocks) proved 100% UNSAT under dual-crib constraints (`k4-h55`); two-sheet piecewise Quagmire tableaus across all 98 null phases, 35 historical keywords, and uniform/stepped Delta shifts falsified (`k4-h56`); coordinate transpositions with invariant Column 0 across all 98 null cell positions and independent sheet band pairs falsified (`k4-h57`); unconstrained S_7 columnar transposition across all 5,040 permutations, 98 null positions, and readout routes falsified (`k4-h58`, 53.3M evals); 7-channel stateful progressive autokeys and columnar steppers falsified across 98 nulls and 3 routes (`k4-h59`, 1.59M evals); 10x10 3-null grids, 14x7 dual-null topologies, and local typo slips (+/-2) falsified (`k4-h60`, 6.92M evals); and error-tolerant 2-stage classical composite ciphers under bounded $k \le 2$ artisanal defects falsified (`k4-h61`, 88.9M evals, peak 6/18).
+- **Consilium Consensus**: 26 multi-peer review gates complete; panel mandates maintaining formal status as **"Plaintext known; decryption method unverified"**, formally endorses refutation of error-tolerant artisanal composite models (`k4-h61`), and unanimously recommends locking the ledger and publishing a formal synthesized Milestone Audit of the 61 falsified classical hypotheses.
 
 ---
 
